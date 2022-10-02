@@ -1,0 +1,12 @@
+// {
+//   "routes": [
+//     {
+//       "method": "GET",
+//       "path": "/reviews",
+//       "handler": "review.find",
+//       "config": {
+//         "policies": []
+//       }
+//     }
+//   ]
+// }
