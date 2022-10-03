@@ -4,7 +4,8 @@
   "info": {
     "singularName": "review",
     "pluralName": "reviews",
-    "displayName": "Review"
+    "displayName": "Review",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,14 +18,12 @@
       "unique": true,
       "private": true
     },
-    "rating": {
-      "type": "integer",
-      "required": true,
-      "max": 10,
-      "min": 1
-    },
-    "body": {
+    "content": {
       "type": "richtext",
+      "required": true
+    },
+    "reviewer": {
+      "type": "string",
       "required": true
     }
   }
