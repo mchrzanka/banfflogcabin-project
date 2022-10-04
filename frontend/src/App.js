@@ -17,7 +17,7 @@ function App() {
 		<div className='App'>
 			<SiteHeader />
 			<Switch>
-				<Route path='/'>
+				<Route exact path='/'>
 					<HomePage />
 				</Route>
 				<Route path='/aboutus'>
@@ -33,6 +33,7 @@ function App() {
 					<Booking />
 				</Route>
 			</Switch>
+			<Footer />
 		</div>
 	);
 }
