@@ -1,12 +1,12 @@
 //lets us set up the router. Installed with npm install react-router-dom
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 //page import
 import HomePage from './pages/homePage';
 import AboutUs from './pages/aboutUs';
 import Rates from './pages/rates';
-import Contact from '/pages/contact';
-import Booking from '/pages/booking';
+import Contact from './pages/contact';
+import Booking from './pages/booking';
 
 //components import
 import SiteHeader from './components/header';
@@ -14,27 +14,19 @@ import Footer from './components/footer';
 
 function App() {
 	return (
-		<div className='App'>
-			<SiteHeader />
-			<Switch>
-				<Route exact path='/'>
-					<HomePage />
-				</Route>
-				<Route path='/aboutus'>
-					<AboutUs />
-				</Route>
-				<Route path='/rates'>
-					<Rates />
-				</Route>
-				<Route path='/contact'>
-					<Contact />
-				</Route>
-				<Route path='/booking'>
-					<Booking />
-				</Route>
-			</Switch>
-			<Footer />
-		</div>
+		<Router>
+			<div className='App'>
+				<SiteHeader />
+				<Routes>
+					<Route path='/' element={<HomePage />}></Route>
+					<Route path='/aboutus' element={<AboutUs />}></Route>
+					<Route path='/rates' element={<Rates />}></Route>
+					<Route path='/contact' element={<Contact />}></Route>
+					<Route path='/booking' element={<Booking />}></Route>
+				</Routes>
+				<Footer />
+			</div>
+		</Router>
 	);
 }
 
