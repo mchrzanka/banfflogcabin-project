@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 //get data from strapi
 const useFetch = (url) => {
 	//for the data that we're going to get back from the fetch request
-	const [data, setData] = useState([]);
+	const [data, setData] = useState([]); //make sure useState is an array as strapi changed arrays into objects.
 	//if we get an error back from strapi
 	const [error, setError] = useState([]);
 	//when we start to use the hook, it will ititialize the loading state to be true and then once we've finished fetching the data we will make it false.
