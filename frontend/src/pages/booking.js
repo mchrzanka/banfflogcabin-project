@@ -1,5 +1,13 @@
 import React from 'react';
+import CheckoutForm from '../components/forms/CheckoutForm';
 
 export default function Booking() {
-	return <div>Booking Page</div>;
+	return (
+		<main>
+			<div>Booking Page</div>
+			<div>
+				<CheckoutForm />
+			</div>
+		</main>
+	);
 }
