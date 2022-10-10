@@ -6,7 +6,7 @@ module.exports = ({ env }) => ({
       port: env.int("DATABASE_PORT", 1337),
       database: env("DATABASE_NAME", "banfflogcabin"),
       user: env("DATABASE_USERNAME", "maya"),
-      password: env("DATABASE_PASSWORD", "1382NUGGET"),
+      password: env("DATABASE_PASSWORD", "admin"),
       // ssl: {
       //   rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false),
       // },
