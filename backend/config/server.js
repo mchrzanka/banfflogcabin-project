@@ -13,3 +13,11 @@ module.exports = ({ env }) => ({
     keys: env.array("APP_KEYS"),
   },
 });
+
+module.exports = ({ env }) => ({
+  host: env("APP_HOST", "0.0.0.0"),
+  port: env.int("NODE_PORT", 1337),
+});
+
+const strapi = require("@strapi/strapi");
+strapi().start();
