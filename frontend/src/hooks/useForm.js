@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import validateFormInfo from '../validation/validateFormInfo';
+
 const useForm = () => {
 	//https://www.youtube.com/watch?v=O6P86uwfdR0
 	const [values, setValues] = useState({
@@ -27,9 +29,11 @@ const useForm = () => {
 	//stop form from refreshing on submit
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		setErrors(validateFormInfo(values));
 	};
 
-	return { handleChange, values, handleSubmit };
+	return { handleChange, values, handleSubmit, errors };
 };
 
 export default useForm;
