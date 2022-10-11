@@ -6,9 +6,7 @@ import useForm from '../../hooks/useForm';
 //form validation
 import validateFormInfo from '../../validation/validateFormInfo';
 
-import ToggleSwitch from '../buttons/ToggleSwitch';
-
-const CheckoutForm = () => {
+const ContactForm = () => {
 	const { handleChange, values, handleSubmit, errors } =
 		useForm(validateFormInfo);
 
@@ -18,8 +16,11 @@ const CheckoutForm = () => {
 				<p>{{ ...values }.firstname}</p>
 				<p>{{ ...values }.lastname}</p>
 				<p>{{ ...values }.email}</p>
-				<p>{{ ...values }.phone}</p>
-				<p>{{ ...values }.breakfast}</p>
+				<p>{{ ...values }.message}</p>
+				<p>
+					If you have any questions, please don't hesitate to reach out. You can
+					send us an email by filling in the form below.
+				</p>
 			</div>
 			<form className='booking-form' onSubmit={handleSubmit}>
 				<div>
@@ -56,42 +57,20 @@ const CheckoutForm = () => {
 					{errors.email && <p>{errors.email}</p>}
 				</div>
 				<div>
-					<label>Phone</label>
-					<input
-						type='tel'
-						name='phone'
-						value={values.phone}
-						onChange={handleChange}
-						placeholder='888-888-8888'
-					/>
-					{errors.phone && <p>{errors.phone}</p>}
-				</div>
-				<div>
-					<label>Dietary Restrictions</label>
-					<p>
-						Banff Log Cabin delivers breakfast in the morning. Please let us
-						know if you have any food allergies, and we will do our best to
-						accommodate.
-					</p>
+					<label></label>
 					<textarea
-						name='breakfast'
-						value={values.breakfast}
+						name='message'
+						value={values.message}
 						onChange={handleChange}
-						placeholder='Tell us of any dietary restrictions.'
+						placeholder='Message'
 					/>
 				</div>
 				<div>
-					<label>Pay Full Amount Now?</label>
-					<React.Fragment>
-						<ToggleSwitch label='Payment' />
-					</React.Fragment>
-				</div>
-				<div>
-					<input type='submit' value='Book' name='book' />
+					<input type='submit' value='Submit' name='contact' />
 				</div>
 			</form>
 		</div>
 	);
 };
 
-export default CheckoutForm;
+export default ContactForm;
