@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/ToggleSwitch.css';
+import '../../css/ToggleSwitch.css';
 
 const ToggleSwitch = ({ label }) => {
 	return (

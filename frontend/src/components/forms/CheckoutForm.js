@@ -1,110 +1,87 @@
 import React, { Component } from 'react';
-import ToggleSwitch from '../ToggleSwitch';
 
-//controlled component
-export class CheckoutForm extends Component {
-	constructor(props) {
-		super(props);
+import useForm from '../../hooks/useForm';
 
-		//we set the input as a state property, which is supplied as a value to the value attribute of the input element.
-		this.state = {
-			firstname: '',
-			lastname: '',
-			email: '',
-			phone: '',
-			checkbox: 'fullPayCheck',
-		};
-	}
+import ToggleSwitch from '../buttons/ToggleSwitch';
 
-	//When there is a change, or a new value, that new value is propogated to handle the change, which sets the state property to the updated value. The new value is now available as a property.
-	handleFirstnameChange = (event) => {
-		this.setState({
-			firstname: event.target.value,
-		});
-	};
+const CheckoutForm = () => {
+	const { handleChange, values, handleSubmit } = useForm();
 
-	handleLastnameChange = (event) => {
-		this.setState({
-			lastname: event.target.value,
-		});
-	};
+	console.log({ ...values });
+	console.log({ ...values }.firstname);
 
-	handleEmailChange = (event) => {
-		this.setState({
-			email: event.target.value,
-		});
-	};
-
-	handlePhoneChange = (event) => {
-		this.setState({
-			phone: event.target.value,
-		});
-	};
-
-	handleSubmit = (event) => {
-		alert(
-			`${this.state.firstname} ${this.state.lastname} ${this.state.email} ${this.state.phone}`
-		);
-		event.preventDefault();
-	};
-
-	render() {
-		return (
+	return (
+		<div>
 			<div>
-				<form onSubmit={this.handleSubmit}>
-					<div>
-						<label>First Name</label>
-						<input
-							type='text'
-							value={this.state.firstname}
-							onChange={this.handleFirstnameChange}
-							placeholder='Jane'
-							required
-						></input>
-					</div>
-					<div>
-						<label>Last Name</label>
-						<input
-							type='text'
-							value={this.state.lastname}
-							onChange={this.handleLastnameChange}
-							placeholder='Doe'
-							required
-						></input>
-					</div>
-					<div>
-						<label>Email</label>
-						<input
-							type='email'
-							value={this.state.email}
-							onChange={this.handleEmailChange}
-							placeholder='email@address.com'
-							required
-						></input>
-					</div>
-					<div>
-						<label>Phone No.</label>
-						<input
-							type='tel'
-							value={this.state.phone}
-							onChange={this.handlePhoneChange}
-							placeholder='888-888-8888'
-							required
-						></input>
-					</div>
-					<div>
-						<label>Pay Full Amount Now?</label>
-						<React.Fragment>
-							<ToggleSwitch label='Payment' />
-						</React.Fragment>
-					</div>
-					<div>
-						<input type='submit' value='Book'></input>
-					</div>
-				</form>
+				<p>{{ ...values }.firstname}</p>
 			</div>
-		);
-	}
-}
+			<form className='booking-form' onSubmit={handleSubmit}>
+				<div>
+					<label>First Name</label>
+					<input
+						type='text'
+						name='firstname'
+						value={values.firstname}
+						onChange={handleChange}
+						placeholder='Jane'
+						required
+					></input>
+				</div>
+				<div>
+					<label>Last Name</label>
+					<input
+						type='text'
+						name='lastname'
+						value={values.lastname}
+						onChange={handleChange}
+						placeholder='Doe'
+						required
+					></input>
+				</div>
+				<div>
+					<label>Email</label>
+					<input
+						type='email'
+						name='email'
+						value={values.email}
+						onChange={handleChange}
+						placeholder='email@address.com'
+						required
+					></input>
+				</div>
+				<div>
+					<label>Phone No.</label>
+					<input
+						type='tel'
+						name='phone'
+						value={values.phone}
+						onChange={handleChange}
+						placeholder='888-888-8888'
+						required
+					></input>
+				</div>
+				<div>
+					<label>Dietary Restrictions</label>
+					<input
+						type='text'
+						name='breakfast'
+						value={values.breakfast}
+						onChange={handleChange}
+						placeholder='Tell us of any dietary restrictions.'
+					></input>
+				</div>
+				<div>
+					<label>Pay Full Amount Now?</label>
+					<React.Fragment>
+						<ToggleSwitch label='Payment' />
+					</React.Fragment>
+				</div>
+				<div>
+					<input type='submit' value='Book'></input>
+				</div>
+			</form>
+		</div>
+	);
+};
 
 export default CheckoutForm;
