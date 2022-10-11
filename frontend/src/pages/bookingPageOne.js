@@ -1,19 +1,16 @@
+//first booking page, for calendar and confirm price/dates. Will have button that says "Continue Booking", that takes you to bookingPageTwo.
+
 import React from 'react';
 import CheckoutForm from '../components/forms/CheckoutForm';
 import CalendarMain from '../components/calendar/Calendar';
 
-
-export default function Booking() {
+export default function BookingPageOne() {
 	return (
 		<main>
-			<div>Booking Page</div>
+			<div>Booking Page 1</div>
 
 			<div>
 				<CalendarMain />
-			</div>
-
-			<div>
-				<CheckoutForm />
 			</div>
 		</main>
 	);

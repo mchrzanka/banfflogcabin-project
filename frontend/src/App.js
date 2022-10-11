@@ -6,7 +6,8 @@ import HomePage from './pages/homePage';
 import AboutUs from './pages/aboutUs';
 import Rates from './pages/rates';
 import Contact from './pages/contact';
-import Booking from './pages/booking';
+import BookingPageOne from './pages/bookingPageOne';
+import BookingPageTwo from './pages/bookingPageTwo';
 
 //components import
 import SiteHeader from './components/header';
@@ -22,7 +23,8 @@ function App() {
 					<Route path='/aboutus' element={<AboutUs />}></Route>
 					<Route path='/rates' element={<Rates />}></Route>
 					<Route path='/contact' element={<Contact />}></Route>
-					<Route path='/booking' element={<Booking />}></Route>
+					<Route path='/booking' element={<BookingPageOne />}></Route>
+					<Route path='/confirmbooking' element={<BookingPageTwo />}></Route>
 				</Routes>
 				<Footer />
 			</div>

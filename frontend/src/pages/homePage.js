@@ -4,7 +4,7 @@ import useFetch from '../hooks/useFetch';
 
 export default function HomePage() {
 	const { loading, error, data } = useFetch(
-		'http://localhost:1337/api/reviews'
+		'http://147.182.207.198:1337/api/reviews'
 	);
 
 	if (loading) {
@@ -18,8 +18,8 @@ export default function HomePage() {
 		<div>
 			{data.data.map((review) => (
 				<div key={review.id}>
-					<div className='content'>{review.attributes.content}</div>
-					<div className='reviewer'>{review.attributes.reviewer}</div>
+					<div className='content'>{review.attributes.Content}</div>
+					<div className='reviewer'>{review.attributes.Reviewer}</div>
 				</div>
 			))}
 		</div>
