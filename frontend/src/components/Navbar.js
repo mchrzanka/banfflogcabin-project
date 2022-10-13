@@ -74,10 +74,11 @@ const Navbar = () => {
 							Banff Log Cabin
 						</Typography>
 						<Stack id='menuItems' sx={styles.submenuPadding}>
+							<Button href='/ourcabin'>Our Cabin</Button>
 							<Button href='/aboutus'>About Us</Button>
-							<Button>Hellooo</Button>
-							<Button>Hellooo</Button>
-							<Button>Hellooo</Button>
+							<Button href='/rates'>Rates</Button>
+							<Button href='/contact'>Contact</Button>
+							<Button href='/booking'>Book Now</Button>
 						</Stack>
 						<IconButton onClick={handleClick} color='inherit' aria-label='Menu'>
 							<Menu />

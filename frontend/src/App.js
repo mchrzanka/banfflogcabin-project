@@ -8,7 +8,6 @@ import AboutUs from './pages/aboutUs';
 import Rates from './pages/rates';
 import Contact from './pages/contact';
 import BookingPageOne from './pages/bookingPageOne';
-import BookingPageTwo from './pages/bookingPageTwo';
 
 //components import
 import SiteHeader from './components/header';
@@ -21,12 +20,11 @@ function App() {
 				<SiteHeader />
 				<Routes>
 					<Route path='/' element={<HomePage />}></Route>
-					<Route path='/ourcabin' element={<AboutUs />}></Route>
-					<Route path='/aboutus' element={<OurCabin />}></Route>
+					<Route path='/ourcabin' element={<OurCabin />}></Route>
+					<Route path='/aboutus' element={<AboutUs />}></Route>
 					<Route path='/rates' element={<Rates />}></Route>
 					<Route path='/contact' element={<Contact />}></Route>
 					<Route path='/booking' element={<BookingPageOne />}></Route>
-					<Route path='/confirmbooking' element={<BookingPageTwo />}></Route>
 				</Routes>
 				<Footer />
 			</div>
