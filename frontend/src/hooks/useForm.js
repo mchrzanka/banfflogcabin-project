@@ -27,13 +27,13 @@ const useForm = () => {
 	};
 
 	//stop form from refreshing on submit
-	const handleSubmit = (e) => {
+	const handleSubmitValidation = (e) => {
 		e.preventDefault();
 
 		setErrors(validateFormInfo(values));
 	};
 
-	return { handleChange, values, handleSubmit, errors };
+	return { handleChange, values, handleSubmitValidation, errors };
 };
 
 export default useForm;

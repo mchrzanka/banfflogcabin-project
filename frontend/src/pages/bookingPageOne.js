@@ -1,6 +1,7 @@
 //first booking page, for calendar and confirm price/dates. Will have button that says "Continue Booking", that takes you to bookingPageTwo.
 
 import React, { useState } from 'react';
+import CheckoutForm from '../components/forms/CheckoutForm';
 import StripeContainer from '../components/stripe/StripeContainer';
 
 import CalendarMain from '../components/calendar/Calendar';
@@ -17,7 +18,10 @@ export default function BookingPageOne() {
 			</div>
 			<div>
 				{showItem ? (
-					<StripeContainer />
+					<div>
+						{/* <CheckoutForm /> */}
+						<StripeContainer />
+					</div>
 				) : (
 					<>
 						{' '}

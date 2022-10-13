@@ -1,50 +1,15 @@
 import React, { useState } from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import axios from 'axios';
-
-const CARD_OPTIONS = {
-	theme: 'flat',
-	variables: {
-		fontFamily: ' "Gill Sans", sans-serif',
-		fontLineHeight: '1.5',
-		borderRadius: '10px',
-		colorBackground: '#F6F8FA',
-		colorPrimaryText: '#262626',
-	},
-	rules: {
-		'.Block': {
-			backgroundColor: 'var(--colorBackground)',
-			boxShadow: 'none',
-			padding: '12px',
-		},
-		'.Input': {
-			padding: '12px',
-		},
-		'.Input:disabled, .Input--invalid:disabled': {
-			color: 'lightgray',
-		},
-		'.Tab': {
-			padding: '10px 12px 8px 12px',
-			border: 'none',
-		},
-		'.Tab:hover': {
-			border: 'none',
-			boxShadow:
-				'0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 7px rgba(18, 42, 66, 0.04)',
-		},
-		'.Tab--selected, .Tab--selected:focus, .Tab--selected:hover': {
-			border: 'none',
-			backgroundColor: '#fff',
-			boxShadow:
-				'0 0 0 1.5px var(--colorPrimaryText), 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 7px rgba(18, 42, 66, 0.04)',
-		},
-		'.Label': {
-			fontWeight: '500',
-		},
-	},
-};
+import useForm from '../../hooks/useForm';
+import validateFormInfo from '../../validation/validateFormInfo';
+import ToggleSwitch from '../buttons/ToggleSwitch';
 
 export default function PaymentForm() {
+	//this is for capturing the client info in the form.
+	const { handleChange, values, handleSubmitValidation, errors } =
+		useForm(validateFormInfo);
+
 	//if payment goes through
 	const [success, setSuccess] = useState(false);
 
@@ -83,16 +48,97 @@ export default function PaymentForm() {
 		}
 	};
 	return (
+		//capturing client info
+
 		//once the successful payment has gone through, we're going to hide all the form stuff and show the success message.
+		//{} around something is a dynamic value. For style ={{}}, we tell react that the outer brackets are a dynamic value, and the inner brackets are the javascript object. So inside, we do key value pairs for styling.
 		<>
 			{!success ? (
-				<form onSubmit={handleSubmit}>
-					<fieldset className='FormGroup'>
-						<div class='FormRow'>
-							<CardElement options={CARD_OPTIONS} />
+				<form
+					onSubmit={handleSubmit}
+					style={{
+						backgroundColor: 'pink',
+					}}
+				>
+					<fieldset>
+						{/* <div>
+							<p>{{ ...values }.firstname}</p>
+							<p>{{ ...values }.lastname}</p>
+							<p>{{ ...values }.email}</p>
+							<p>{{ ...values }.phone}</p>
+							<p>{{ ...values }.breakfast}</p>
+						</div> */}
+						<div>
+							<label>First Name</label>
+							<input
+								type='text'
+								name='firstname'
+								value={values.firstname}
+								onChange={handleChange}
+								placeholder='Jane'
+							/>
+							{errors.firstname && <p>{errors.firstname}</p>}
+						</div>
+						<div>
+							<label>Last Name</label>
+							<input
+								type='text'
+								name='lastname'
+								value={values.lastname}
+								onChange={handleChange}
+								placeholder='Doe'
+							/>
+							{errors.lastname && <p>{errors.lastname}</p>}
+						</div>
+						<div>
+							<label>Email</label>
+							<input
+								type='text'
+								name='email'
+								value={values.email}
+								onChange={handleChange}
+								placeholder='email@address.com'
+							/>
+							{errors.email && <p>{errors.email}</p>}
+						</div>
+						<div>
+							<label>Phone</label>
+							<input
+								type='tel'
+								name='phone'
+								value={values.phone}
+								onChange={handleChange}
+								placeholder='888-888-8888'
+							/>
+							{errors.phone && <p>{errors.phone}</p>}
+						</div>
+						<div>
+							<label>Dietary Restrictions</label>
+							<p>
+								Banff Log Cabin delivers breakfast in the morning. Please let us
+								know if you have any food allergies, and we will do our best to
+								accommodate.
+							</p>
+							<textarea
+								name='breakfast'
+								value={values.breakfast}
+								onChange={handleChange}
+								placeholder='Tell us of any dietary restrictions.'
+							/>
+						</div>
+						<div>
+							<label>Pay Full Amount Now?</label>
+							<React.Fragment>
+								<ToggleSwitch label='Payment' />
+							</React.Fragment>
 						</div>
 					</fieldset>
-					<button>Pay</button>
+					<fieldset className='FormGroup'>
+						<div class='FormRow'>
+							<CardElement />
+						</div>
+					</fieldset>
+					<button onClick={handleSubmitValidation}>Pay</button>
 				</form>
 			) : (
 				<div>
