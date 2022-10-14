@@ -3,7 +3,6 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import axios from 'axios';
 import useForm from '../../hooks/useForm';
 import validateFormInfo from '../../validation/validateFormInfo';
-import ToggleSwitch from '../buttons/ToggleSwitch';
 
 export default function PaymentForm() {
 	//this is for capturing the client info in the form.
@@ -15,6 +14,14 @@ export default function PaymentForm() {
 
 	const stripe = useStripe();
 	const elements = useElements();
+
+	const handleDeposit = (message) => {
+		console.log(message);
+	};
+
+	const handleFull = (message) => {
+		console.log(message);
+	};
 
 	const handleSubmit = async (e) => {
 		// We don't want to let default form submission happen here,
@@ -127,10 +134,21 @@ export default function PaymentForm() {
 							/>
 						</div>
 						<div>
-							<label>Pay Full Amount Now?</label>
-							<React.Fragment>
-								<ToggleSwitch label='Payment' />
-							</React.Fragment>
+							<label>Payment Amount</label>
+							<button
+								onClick={() => {
+									handleDeposit('deposit price variable goes here');
+								}}
+							>
+								Pay Deposit
+							</button>
+							<button
+								onClick={() => {
+									handleFull('full price goes here');
+								}}
+							>
+								Pay Full Amount
+							</button>
 						</div>
 					</fieldset>
 					<fieldset className='FormGroup'>
