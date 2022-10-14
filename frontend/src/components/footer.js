@@ -31,10 +31,8 @@ const Footer = () => {
 				<Box>
 					<Toolbar >
 						<Stack id='footerItems' sx={styles.footerPadding}>
-							<Link to='/'>
-								<Typography>Book Now</Typography>
-							</Link>
-							<Button aria-label='contact' variant='outlined'>Contact Us</Button>
+							<Button href="/booking" aria-label='contact' variant='outlined'>Book Now</Button>
+							<Typography variant="h6">Contact Us</Typography>
 								<Typography>222 Glen Crescent Banff, AB T1L 1A6 +1 (403) 762-3516</Typography>
 								<Typography>2022 Banff Log Cabin</Typography>
 						</Stack>
