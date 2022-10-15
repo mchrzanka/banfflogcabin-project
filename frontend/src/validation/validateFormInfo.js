@@ -41,5 +41,9 @@ export default function validateFormInfo(values) {
 		errors.phone = 'Phone number must be between 10 to 20 numbers.';
 	}
 
+	if (!values.message) {
+		errors.message = 'Message required.';
+	}
+
 	return errors;
 }

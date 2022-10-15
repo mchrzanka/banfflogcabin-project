@@ -10,7 +10,7 @@ const useForm = () => {
 		email: '',
 		phone: '',
 		breakfast: '',
-		checkbox: 'fullPayCheck',
+		message: '',
 	});
 
 	const [errors, setErrors] = useState({});

@@ -1,15 +1,14 @@
 /* CSS GOES HERE. ALREADY LINKED */
 
-body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+:root,
+html {
+	font-size: 62.5%; /* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
+:root {
+	--almost-black: #2f2f2f;
+	--green: #626e60;
+	--brown: #c09f80;
+	--grey: #ececec;
+	--off-white: #ebebeb;
 }

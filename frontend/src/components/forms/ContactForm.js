@@ -7,7 +7,7 @@ import useForm from '../../hooks/useForm';
 import validateFormInfo from '../../validation/validateFormInfo';
 
 const ContactForm = () => {
-	const { handleChange, values, handleSubmit, errors } =
+	const { handleChange, values, handleSubmitValidation, errors } =
 		useForm(validateFormInfo);
 
 	return (
@@ -22,7 +22,7 @@ const ContactForm = () => {
 					send us an email by filling in the form below.
 				</p>
 			</div>
-			<form className='booking-form' onSubmit={handleSubmit}>
+			<form className='booking-form' onSubmit={handleSubmitValidation}>
 				<div>
 					<label>First Name</label>
 					<input
@@ -64,6 +64,7 @@ const ContactForm = () => {
 						onChange={handleChange}
 						placeholder='Message'
 					/>
+					{errors.message && <p>{errors.message}</p>}
 				</div>
 				<div>
 					<input type='submit' value='Submit' name='contact' />
