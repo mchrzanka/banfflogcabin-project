@@ -28,6 +28,23 @@ export default function PaymentForm() {
 		// which would refresh the page.
 		e.preventDefault();
 
+		//when user hits submit, the form input will be sent to strapi.
+		// const addBooking = async () => {
+		// 	let res = await axios
+		// 		.post('http://localhost:1337/api/bookings/', {
+		// 			data: {
+		// 				firstname: values.firstname,
+		// 				lastname: values.lastname,
+		// 				email: values.email,
+		// 				phone: values.phone,
+		// 				dietrestriction: values.breakfast,
+		// 			},
+		// 		})
+
+		// 		.catch((err) => console.log(err));
+		// };
+
+		//creating stripe
 		const [error, paymentMethod] = await stripe.createPaymentMethod({
 			type: 'card',
 			card: elements.getElement(CardElement),
@@ -68,13 +85,13 @@ export default function PaymentForm() {
 					}}
 				>
 					<fieldset>
-						{/* <div>
-							<p>{{ ...values }.firstname}</p>
-							<p>{{ ...values }.lastname}</p>
-							<p>{{ ...values }.email}</p>
-							<p>{{ ...values }.phone}</p>
-							<p>{{ ...values }.breakfast}</p>
-						</div> */}
+						<div>
+							<p>{values.firstname}</p>
+							<p>{values.lastname}</p>
+							<p>{values.email}</p>
+							<p>{values.phone}</p>
+							<p>{values.breakfast}</p>
+						</div>
 						<div>
 							<label>First Name</label>
 							<input
