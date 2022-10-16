@@ -1,0 +1,73 @@
+li {
+    margin: 4rem;
+}
+
+a {
+    color: #fff;
+}
+
+
+.customizeToolbar {
+	display: 'none';
+}
+.flex {
+	display: 'flex';
+	flex: 1;
+	justify-content: 'space-between';
+}
+.mainNavStack {
+	display: 'none';
+	flex-direction: 'column';
+	background: 'brown';
+	position: 'absolute';
+	bottom: '100';
+	top: '0px';
+	left: '0';
+	width: '100vw';
+	padding: '3rem 0';
+}
+@media (min-width: 780px) {
+	.mainNavStack {
+		display: 'inline-block';
+		position: 'relative';
+		text-transform: 'uppercase';
+	}
+}
+
+.mainNavStackHidden {
+	display: 'none';
+}
+
+.toolbarStyle {
+	min-height: '80px';
+	display: 'flex';
+	flex: 1;
+	justify-content: 'space-between';
+	background-color: 'green';
+}
+
+@media screen and (min-width: 768px) {
+
+    #menuItems {
+    display: static;
+    flex-direction: 'column';
+    position: 'absolute';
+    bottom: '100';
+    top: '0px';
+    left: '0';
+    background: 'brown';
+    width: '100vw';
+    padding: '3rem 0';
+    }
+
+    .hamburger {
+        color: blue;
+        background-color: blue;
+    }
+
+	.iconButton {
+		height: '0px';
+		width: '0px';
+	}
+    
+}
