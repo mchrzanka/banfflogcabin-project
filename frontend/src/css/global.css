@@ -1,2 +1,28 @@
-/* I THINK WE CAN IMPORT THIS IN EVERYTHING AND IT ISN'T A MODULE
-SO FOR TYPOGRAPHY ETC IT'LL WORK AS A GENERAL STYLESHEET */
+/* CSS GOES HERE. ALREADY LINKED */
+
+:root,
+html {
+	font-size: 62.5%; /* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
+}
+
+:root {
+	--almost-black: #2f2f2f;
+	--green: #626e60;
+	--brown: #c09f80;
+	--grey: #f1f1f1;
+	--off-white: #ebebeb;
+
+	--poppins: poppins, sans-serif;
+	--light-weight: 300;
+
+	--poppins-italic: poppins, sans-serif;
+	--poppins-italic-style: italic;
+
+	--highsummit: HighSummit;
+}
+
+@font-face {
+	font-family: HighSummit;
+	src: url('../font/HighSummit.otf') format('otf'),
+		url('../font/HighSummit.ttf') format('ttf');
+}
