@@ -26,3 +26,14 @@ html {
 	src: url('../font/HighSummit.otf') format('otf'),
 		url('../font/HighSummit.ttf') format('ttf');
 }
+
+p,
+a,
+span {
+	font-size: 1.8rem;
+}
+
+a {
+	text-decoration: none;
+	color: var(--off-white);
+}
