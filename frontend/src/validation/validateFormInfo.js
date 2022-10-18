@@ -2,13 +2,13 @@ export default function validateFormInfo(values) {
 	let errors = {};
 
 	//firstname
-	if (!values.firstname.trim()) {
+	if (!values.firstname) {
 		errors.firstname = 'First name required';
 	} else if (!/^[A-Za-z\s]+$/.test(values.firstname)) {
 		errors.firstname = 'First name can only contain letters.';
 	}
 	//lastname
-	if (!values.lastname.trim()) {
+	if (!values.lastname) {
 		errors.lastname = 'Last name required.';
 	} else if (!/^[A-Za-z\s]+$/.test(values.lastname)) {
 		errors.lastname = 'Last name can only contain letters.';

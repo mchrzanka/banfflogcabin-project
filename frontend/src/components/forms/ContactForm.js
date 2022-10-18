@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 
 //handles capturing the input
 import useForm from '../../hooks/useForm';
@@ -8,20 +7,8 @@ import useForm from '../../hooks/useForm';
 import validateFormInfo from '../../validation/validateFormInfo';
 
 const ContactForm = () => {
-	const { handleChange, values, handleSubmitValidation, errors } =
+	const { handleChange, values, handleSubmitValidation, errors, sendEmail } =
 		useForm(validateFormInfo);
-
-	//post to strapi
-	const addContactMessage = async () => {
-		let res = await axios.post('http://147.182.207.198:1337/api/contacts', {
-			data: {
-				firstname: values.firstname,
-				lastname: values.lastname,
-				email: values.email,
-				message: values.message,
-			},
-		});
-	};
 
 	return (
 		<div>
@@ -77,7 +64,7 @@ const ContactForm = () => {
 				</div>
 				<div>
 					<input
-						onClick={addContactMessage}
+						onClick={sendEmail}
 						type='submit'
 						value='Submit'
 						name='contact'

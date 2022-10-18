@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 
 import validateFormInfo from '../validation/validateFormInfo';
 
+import emailjs from '@emailjs/browser';
+
 const useForm = () => {
 	//https://www.youtube.com/watch?v=O6P86uwfdR0
 	const [values, setValues] = useState({
@@ -33,7 +35,21 @@ const useForm = () => {
 		setErrors(validateFormInfo(values));
 	};
 
-	return { handleChange, values, handleSubmitValidation, errors };
+	//sends an email using EmailJS from the contact form.
+	const sendEmail = (e) => {
+		emailjs
+			.send('service_ar906mc', 'template_zb02dvw', values, 'CLGxzbssWzPEH6ONl')
+			.then((result) => {
+				setValues({
+					firstName: '',
+					lastName: '',
+					email: '',
+					message: '',
+				});
+			});
+	};
+
+	return { handleChange, values, handleSubmitValidation, errors, sendEmail };
 };
 
 export default useForm;
