@@ -1,73 +1,76 @@
-li {
-    margin: 4rem;
+header {
+	height: 4rem;
 }
 
-a {
-    color: #fff;
+div.toolbarStyle {
+	display: flex;
+	justify-content: space-between;
+	background-color: green;
 }
 
-
-.customizeToolbar {
-	display: 'none';
-}
-.flex {
-	display: 'flex';
-	flex: 1;
-	justify-content: 'space-between';
-}
 .mainNavStack {
-	display: 'none';
-	flex-direction: 'column';
-	background: 'brown';
-	position: 'absolute';
-	bottom: '100';
-	top: '0px';
-	left: '0';
-	width: '100vw';
-	padding: '3rem 0';
+	text-align: center;
+	display: none;
+	flex-direction: column;
+	background: brown;
+	position: absolute;
+	bottom: 90%;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	padding: 3rem 0;
 }
-@media (min-width: 780px) {
-	.mainNavStack {
-		display: 'inline-block';
-		position: 'relative';
-		text-transform: 'uppercase';
-	}
+
+.hamburger,
+.hamburgerWrapper {
+	position: relative;
+	z-index: 3;
+	min-height: 4rem;
+	height: 4rem;
+	max-height: 4rem;
+	max-width: 4rem;
 }
 
 .mainNavStackHidden {
-	display: 'none';
+	display: none;
 }
 
-.toolbarStyle {
-	min-height: '80px';
-	display: 'flex';
-	flex: 1;
-	justify-content: 'space-between';
-	background-color: 'green';
-}
+
 
 @media screen and (min-width: 768px) {
-
-    #menuItems {
-    display: static;
-    flex-direction: 'column';
-    position: 'absolute';
-    bottom: '100';
-    top: '0px';
-    left: '0';
-    background: 'brown';
-    width: '100vw';
-    padding: '3rem 0';
+	div.toolbarStyle {
+		display: flex;
+		justify-content: start;
+		gap: 1rem;
+		background-color: green;
+	}
+	ul.mainNavStack {
+		display: inline-block;
+		flex-direction: row;
+		text-transform: uppercase;
+		bottom: 0px;
+		top: 0px;
+		left: 0px;
+		position: static;
+		background: brown;
+		width: auto;
+		height: auto;
+		padding: 1rem;
     }
+	.mainNavStack li {
+		display: inline-block;
+		margin-left: 1rem;
+	}
 
-    .hamburger {
-        color: blue;
-        background-color: blue;
+    .hamburger,
+	.hamburgerWrapper {
+        display: none;
+		height: 0px;
     }
 
 	.iconButton {
-		height: '0px';
-		width: '0px';
+		height: 0px;
+		width: 0px;
 	}
     
 }

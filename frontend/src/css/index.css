@@ -12,3 +12,12 @@ html {
 	--grey: #ececec;
 	--off-white: #ebebeb;
 }
+
+p, a, span {
+	font-size: 1.8rem;
+}
+
+a {
+	text-decoration: none;
+	color: var(--off-white);
+}
