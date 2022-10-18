@@ -1,20 +1,11 @@
 import React from 'react';
 //npm install react-router-dom
-import { Link } from 'react-router-dom';
-import { AppBar, Box, Toolbar, Typography, IconButton, Avatar, Button} from '@material-ui/core';
-import { Stack } from "@mui/material";
-import { makeStyles } from '@material-ui/styles';
-import '../css/footer.css'
+import "../css/index.css";
+import styles from './footer.module.css';
 
 
   
 
-const styles = {
-  footerPadding: {    
-    width: "80%",
-	margin: "0 auto",
-  },
-};
 
 
   
@@ -26,20 +17,18 @@ const handleClick = () => {
 const Footer = () => {
   return (
     <>
-		<div className='site-footer' id="siteFooter">
-			<div className='container' >
-				<Box>
-					<Toolbar >
-						<Stack id='footerItems' sx={styles.footerPadding}>
-							<Button href="/booking" aria-label='contact' variant='outlined'>Book Now</Button>
-							<Typography variant="h6">Contact Us</Typography>
-								<Typography>222 Glen Crescent Banff, AB T1L 1A6 +1 (403) 762-3516</Typography>
-								<Typography>2022 Banff Log Cabin</Typography>
-						</Stack>
-					</Toolbar>
-				</Box>
+		<footer className={styles.siteFooter} id="siteFooter">
+			<div className={styles.container}>
+				<div>
+					<ul id='footerItems' sx={styles.footerPadding}>
+						<li><a href="/booking" aria-label='book' className={styles.btn}>Book Now</a></li>
+						<li><p>Contact Us</p></li>
+						<li><p>222 Glen Crescent Banff, AB T1L 1A6 +1 (403) 762-3516</p></li>
+						<li><p>2022 Banff Log Cabin</p></li>
+					</ul>
+				</div>
 			</div>
-	    </div>
+	    </footer>
     </>
   );
 };

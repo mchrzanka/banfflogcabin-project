@@ -1,16 +1,17 @@
 import React from 'react';
 import {
 	AppBar,
-	Box,
+	div,
 	Toolbar,
 	Typography,
-	IconButton,
+	Icona,
 	Avatar,
-	Button,
+	a,
 } from '@material-ui/core';
 import { Stack } from '@mui/material';
 import { Menu } from '@mui/icons-material';
-import "./Navbar.module.css";
+import "../css/index.css";
+import styles from "./Navbar.module.css";
 
 //WONT WORK WITHOUT THIS
 //npm install @mui/icons-material @mui/material @emotion/styled @emotion/react @material-ui/core --legacy-peer-deps
@@ -21,8 +22,10 @@ const handleClick = () => {
 	console.log('click');
 	if (document.querySelector('#menuItems').style.display == 'flex') {
 		document.querySelector('#menuItems').style.display = 'none';
+		document.querySelector('#menuItems').style.height = 'initial';
 	} else {
 		document.querySelector('#menuItems').style.display = 'flex';
+		document.querySelector('#menuItems').style.height = '23rem';
 	}
 };
 
@@ -30,30 +33,28 @@ const handleClick = () => {
 const Navbar = () => {
 	return (
 		<>
-			<Box>
-				<AppBar position='sticky' disablegutters='true' display='flex'>
-					<Toolbar className='toolbarStyle'>
-						<Avatar
-							sx={{ width: 40, height: 40 }}
-							alt='Banff Log Cabin Logo'
-							src='https://miro.medium.com/max/1400/0*0fClPmIScV5pTLoE.jpg'
-						/>
-						<Typography variant='h6' color='inherit' className='flex'>
-							Banff Log Cabin
-						</Typography>
-						<Stack id='menuItems' className='menuItems mainNavStack'>
-							<Button href='/ourcabin'>Our Cabin</Button>
-							<Button href='/aboutus'>About Us</Button>
-							<Button href='/rates'>Rates</Button>
-							<Button href='/contact'>Contact</Button>
-							<Button href='/booking'>Book Now</Button>
-						</Stack>
-						<IconButton onClick={handleClick} color='inherit' aria-label='Menu'>
-							<Menu />
-						</IconButton>
-					</Toolbar>
-				</AppBar>
-			</Box>
+			<header>
+				<nav>
+					<div className={styles.toolbarStyle} id='toobarStyle'>
+						<a href='/ourcabin'>
+							<img width="40" height="40" 
+								alt='Banff Log Cabin Logo'
+								src='https://miro.medium.com/max/1400/0*0fClPmIScV5pTLoE.jpg'
+							/>
+						</a>
+						<ul id='menuItems' className={styles.mainNavStack}>
+							<li><a href='/ourcabin'>Our Cabin</a></li>
+							<li><a href='/aboutus'>About Us</a></li>
+							<li><a href='/rates'>Rates</a></li>
+							<li><a href='/contact'>Contact</a></li>
+							<li><a href='/booking'>Book Now</a></li>
+						</ul>
+						<div onClick={handleClick} aria-label='Main Menu' className={styles.hamburgerWrapper}>
+							<img src='https://miro.medium.com/max/1400/0*0fClPmIScV5pTLoE.jpg' width="40" height="40"  alt="menubtn" className={styles.hamburger}></img>
+						</div>
+					</div>
+				</nav>
+			</header>
 		</>
 	);
 };
