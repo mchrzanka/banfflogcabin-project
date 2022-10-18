@@ -36,6 +36,7 @@ const useForm = () => {
 	};
 
 	//sends an email using EmailJS from the contact form.
+	//NEED TO FIGURE OUT .ENV VARIABLES
 	const sendEmail = (e) => {
 		emailjs
 			.send('service_ar906mc', 'template_zb02dvw', values, 'CLGxzbssWzPEH6ONl')
