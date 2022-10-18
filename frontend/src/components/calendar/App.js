@@ -1,35 +1,50 @@
-//lets us set up the router. Installed with npm install react-router-dom
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState } from "react";
+import DatePicker, {
+  Calendar,
+  getAllDatesInRange
+} from "react-multi-date-picker";
+import "./styles.css";
 
-//page import
-import HomePage from '../../pages/homePage';
-import OurCabin from '../../pages/ourCabin';
-import AboutUs from '../../pages/aboutUs';
-import Rates from '../../pages/rates';
-import Contact from '../../pages/contact';
-import BookingPage from '../../pages/bookingPage';
+export default function App() {
+  let [inputValue, setInputValue] = useState("");
+  let [inputValue2, setInput2Value] = useState("");
+  let [value, setValue] = useState([]);
 
-//components import
-import SiteHeader from '../header';
-import Footer from '../footer';
+  return (
+    <div className="App">
+      
+      <h1>Banff Log Cabin</h1>
+      <Calendar
+        multiple
+        /**
+         * set "onlyShowInRangeDates" to false,
+         * if you want to see selected dates that
+         * are not in range of min and max date
+         */
+        onlyShowInRangeDates={true}
+        minDate={inputValue}
+        maxDate={inputValue2}
+        value={value}
+        onChange={setValue}
+      />
+      <hr />
+      
+      <DatePicker
+        range
+        /**
+         * Keep in mind that activating this prop
+         * may cause slow rendering at
+         * big ranges of Dates
+         */
+        eachDaysInRange
+        onChange={(dateObjects) => {
+          let allDates = getAllDatesInRange(dateObjects, true);
 
-function App() {
-	return (
-		<Router>
-			<div className='App'>
-				<SiteHeader />
-				<Routes>
-					<Route path='/' element={<HomePage />}></Route>
-					<Route path='/ourcabin' element={<OurCabin />}></Route>
-					<Route path='/aboutus' element={<AboutUs />}></Route>
-					<Route path='/rates' element={<Rates />}></Route>
-					<Route path='/contact' element={<Contact />}></Route>
-					<Route path='/booking' element={<BookingPage />}></Route>
-				</Routes>
-				<Footer />
-			</div>
-		</Router>
-	);
+          if (allDates.length < 2) return;
+
+          alert("you selected \n" + allDates.join(",\n"));
+        }}
+      />
+    </div>
+  );
 }
-
-export default App;
