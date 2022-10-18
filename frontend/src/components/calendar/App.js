@@ -2,16 +2,16 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 //page import
-import HomePage from './pages/homePage';
-import OurCabin from './pages/ourCabin';
-import AboutUs from './pages/aboutUs';
-import Rates from './pages/rates';
-import Contact from './pages/contact';
-import BookingPage from './pages/bookingPage';
+import HomePage from '../../pages/homePage';
+import OurCabin from '../../pages/ourCabin';
+import AboutUs from '../../pages/aboutUs';
+import Rates from '../../pages/rates';
+import Contact from '../../pages/contact';
+import BookingPage from '../../pages/bookingPage';
 
 //components import
-import SiteHeader from './components/header';
-import Footer from './components/footer';
+import SiteHeader from '../header';
+import Footer from '../footer';
 
 function App() {
 	return (
