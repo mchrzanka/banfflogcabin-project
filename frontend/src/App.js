@@ -8,6 +8,7 @@ import AboutUs from './pages/aboutUs';
 import Rates from './pages/rates';
 import Contact from './pages/contact';
 import BookingPage from './pages/bookingPage';
+import BookingTerms from './pages/bookingTerms';
 
 //components import
 import SiteHeader from './components/header';
@@ -24,6 +25,7 @@ function App() {
 					<Route path='/aboutus' element={<AboutUs />}></Route>
 					<Route path='/rates' element={<Rates />}></Route>
 					<Route path='/contact' element={<Contact />}></Route>
+					<Route path='/bookingterms' element={<BookingTerms />}></Route>
 					<Route path='/booking' element={<BookingPage />}></Route>
 				</Routes>
 				<Footer />
