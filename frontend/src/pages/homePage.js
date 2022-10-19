@@ -15,7 +15,7 @@ export default function HomePage() {
 	}
 
 	return (
-		<main>
+		<div>
 			<div>
 				{data.data.map((home) => (
 					<div key={home.id}>
@@ -31,6 +31,6 @@ export default function HomePage() {
 				<h2>Reviews</h2>
 				<Reviews />
 			</div>
-		</main>
+		</div>
 	);
 }

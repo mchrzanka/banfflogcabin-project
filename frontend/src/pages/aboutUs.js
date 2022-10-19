@@ -14,7 +14,7 @@ export default function AboutUs() {
 	}
 
 	return (
-		<main>
+		<div>
 			<div>
 				{data.data.map((about) => (
 					<div key={about.id}>
@@ -29,6 +29,6 @@ export default function AboutUs() {
 			<div>
 				<History />
 			</div>
-		</main>
+		</div>
 	);
 }

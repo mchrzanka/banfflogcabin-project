@@ -13,7 +13,7 @@ export default function OurCabin() {
 	}
 
 	return (
-		<main>
+		<div>
 			<div>
 				{data.data.map((ourcabin) => (
 					<div key={ourcabin.id}>
@@ -23,6 +23,6 @@ export default function OurCabin() {
 					</div>
 				))}
 			</div>
-		</main>
+		</div>
 	);
 }
