@@ -18,6 +18,7 @@ export default function BookingPageOne() {
 			<div>
 				{showItem ? (
 					<div>
+						{/* <CheckoutForm /> */}
 						<StripeContainer />
 					</div>
 				) : (
