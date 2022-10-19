@@ -13,7 +13,7 @@ export default function BookingTerms() {
 	}
 
 	return (
-		<div>
+		<main>
 			<div>
 				{data.data.map((bookingpage) => (
 					<div key={bookingpage.id}>
@@ -24,6 +24,6 @@ export default function BookingTerms() {
 					</div>
 				))}
 			</div>
-		</div>
+		</main>
 	);
 }
