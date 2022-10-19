@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import StripeContainer from '../components/stripe/StripeContainer';
 
-import CalendarMain from '../components/calendar/Calendar';
+import CalendarMain from '../components/calendar/Calen';
 
 export default function BookingPageOne() {
 	const [showItem, setShowItem] = useState(false);

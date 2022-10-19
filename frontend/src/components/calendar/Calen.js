@@ -5,13 +5,13 @@ import DatePicker, {
 } from "react-multi-date-picker";
 import "./styles.css";
 
-export default function App() {
+export default function CalendarMain() {
   let [inputValue, setInputValue] = useState("");
   let [inputValue2, setInput2Value] = useState("");
   let [value, setValue] = useState([]);
 
   return (
-    <div className="App">
+    <div className="CalendarMain">
       
       <h1>Banff Log Cabin</h1>
       <Calendar

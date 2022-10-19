@@ -46,3 +46,7 @@ a {
 	text-decoration: none;
 	color: var(--off-white);
 }
+
+main {
+	padding-top: 4rem;
+}
