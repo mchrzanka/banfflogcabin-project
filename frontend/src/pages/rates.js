@@ -13,15 +13,17 @@ export default function Rates() {
 	}
 
 	return (
-		<div>
-			{data.data.map((rate) => (
-				<div key={rate.id}>
-					<div className='heading1'>{rate.attributes.h1}</div>
-					<div className='content'>{rate.attributes.content1}</div>
-					<div className='heading2'>{rate.attributes.h2}</div>
-					<div className='content'>{rate.attributes.content2}</div>
-				</div>
-			))}
-		</div>
+		<main>
+			<div>
+				{data.data.map((rate) => (
+					<div key={rate.id}>
+						<div className='heading1'>{rate.attributes.h1}</div>
+						<div className='content'>{rate.attributes.content1}</div>
+						<div className='heading2'>{rate.attributes.h2}</div>
+						<div className='content'>{rate.attributes.content2}</div>
+					</div>
+				))}
+			</div>
+		</main>
 	);
 }

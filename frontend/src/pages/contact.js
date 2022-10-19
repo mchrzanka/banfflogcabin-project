@@ -14,7 +14,7 @@ export default function Contact() {
 	}
 
 	return (
-		<div>
+		<main>
 			<div>
 				<div>
 					{data.data.map((contactus) => (
@@ -45,6 +45,6 @@ export default function Contact() {
 					referrerpolicy='no-referrer-when-downgrade'
 				></iframe>
 			</div>
-		</div>
+		</main>
 	);
 }
