@@ -18,7 +18,9 @@ function App() {
 	return (
 		<Router>
 			<div className='App'>
+				
 				<SiteHeader />
+				<main>
 				<Routes>
 					<Route path='/' element={<HomePage />}></Route>
 					<Route path='/ourcabin' element={<OurCabin />}></Route>
@@ -28,6 +30,7 @@ function App() {
 					<Route path='/bookingterms' element={<BookingTerms />}></Route>
 					<Route path='/booking' element={<BookingPage />}></Route>
 				</Routes>
+				</main>
 				<Footer />
 			</div>
 		</Router>

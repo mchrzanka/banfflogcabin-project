@@ -9,7 +9,7 @@ export default function BookingPageOne() {
 	const [showItem, setShowItem] = useState(false);
 
 	return (
-		<main>
+		<div>
 			<div>Booking Page 1</div>
 
 			<div>
@@ -29,6 +29,6 @@ export default function BookingPageOne() {
 					</>
 				)}
 			</div>
-		</main>
+		</div>
 	);
 }
