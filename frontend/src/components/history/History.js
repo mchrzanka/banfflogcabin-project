@@ -1,5 +1,6 @@
 import React from 'react';
 import useFetch from '../../hooks/useFetch';
+import './history.scss';
 
 export default function History() {
 	const { loading, error, data } = useFetch(
@@ -13,7 +14,7 @@ export default function History() {
 	}
 
 	return (
-		<div>
+		<div className='history'>
 			{data.data.map((ourhistory) => (
 				<div key={ourhistory.id}>
 					<div className='heading2'>{ourhistory.attributes.h2}</div>

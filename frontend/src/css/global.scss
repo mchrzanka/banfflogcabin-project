@@ -12,6 +12,9 @@ html {
 	--grey: #f1f1f1;
 	--off-white: #ebebeb;
 
+	//hover
+	--green-hover: #4f5e4c;
+
 	--poppins: poppins, sans-serif;
 	--light-weight: 300;
 
@@ -28,25 +31,15 @@ html {
 }
 
 p,
-a,
-span {
-	font-size: 1.8rem;
+a {
+	font-size: 1.6rem;
 }
 
 a {
 	text-decoration: none;
-	color: var(--off-white);
-}
-
-p, a, span {
-	font-size: 1.8rem;
-}
-
-a {
-	text-decoration: none;
-	color: var(--off-white);
 }
 
 main {
 	padding-top: 4rem;
+	background-color: #c09f80;
 }

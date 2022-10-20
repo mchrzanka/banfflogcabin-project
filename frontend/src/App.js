@@ -11,25 +11,24 @@ import BookingPage from './pages/bookingPage';
 import BookingTerms from './pages/bookingTerms';
 
 //components import
-import SiteHeader from './components/header';
-import Footer from './components/footer';
+import SiteHeader from './components/header/header';
+import Footer from './components/footer/footer';
 
 function App() {
 	return (
 		<Router>
 			<div className='App'>
-				
 				<SiteHeader />
 				<main>
-				<Routes>
-					<Route path='/' element={<HomePage />}></Route>
-					<Route path='/ourcabin' element={<OurCabin />}></Route>
-					<Route path='/aboutus' element={<AboutUs />}></Route>
-					<Route path='/rates' element={<Rates />}></Route>
-					<Route path='/contact' element={<Contact />}></Route>
-					<Route path='/bookingterms' element={<BookingTerms />}></Route>
-					<Route path='/booking' element={<BookingPage />}></Route>
-				</Routes>
+					<Routes>
+						<Route path='/' element={<HomePage />}></Route>
+						<Route path='/ourcabin' element={<OurCabin />}></Route>
+						<Route path='/aboutus' element={<AboutUs />}></Route>
+						<Route path='/rates' element={<Rates />}></Route>
+						<Route path='/contact' element={<Contact />}></Route>
+						<Route path='/bookingterms' element={<BookingTerms />}></Route>
+						<Route path='/booking' element={<BookingPage />}></Route>
+					</Routes>
 				</main>
 				<Footer />
 			</div>
