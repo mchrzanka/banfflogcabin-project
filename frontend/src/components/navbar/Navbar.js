@@ -14,7 +14,7 @@ const Navbar = () => {
 				<nav>
 					<div className='main-menu container'>
 						<div>
-							<a href='/ourcabin'>
+							<a href='/'>
 								<img
 									width='40'
 									height='40'
@@ -53,8 +53,8 @@ const Navbar = () => {
 							<span></span>
 						</button>
 					</div>
-					<div>
-						<ul className={isActive ? 'mobile-menu' : 'mobile-menu is-active'}>
+					<div className={isActive ? 'mobile-menu' : 'mobile-menu is-active'}>
+						<ul>
 							<li>
 								<a href='/ourcabin'>Our Cabin</a>
 							</li>

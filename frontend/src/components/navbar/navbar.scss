@@ -6,6 +6,7 @@ nav {
 	left: 0;
 	right: 0;
 	z-index: 99;
+	position: relative;
 
 	.container {
 		max-width: 128rem;
@@ -13,18 +14,23 @@ nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		div {
+			z-index: 99;
+		}
 	}
 
 	.hamburger {
 		display: block;
 		position: relative;
-		z-index: 1;
+		z-index: 99;
 		user-select: none;
 		appearance: none;
 		border: none;
 		outline: none;
 		background: none;
 		cursor: pointer;
+		padding-right: 2rem;
 	}
 
 	.hamburger span {
@@ -69,12 +75,12 @@ nav {
 	}
 
 	.mobile-menu {
-		display: block;
-		top: 0;
-		left: 0;
+		position: absolute;
+		top: 70px;
 		width: 100%;
 		z-index: 98;
-		transition: 0.4s;
+		transition: 1.5s;
+		background-color: var(--green);
 
 		a {
 			text-align: center;
@@ -82,6 +88,7 @@ nav {
 	}
 
 	.mobile-menu.is-active {
+		top: -1000px;
 	}
 
 	@media (min-width: 768px) {
