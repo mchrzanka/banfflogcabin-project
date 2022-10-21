@@ -3,7 +3,7 @@ import DatePicker, {
   Calendar,
   getAllDatesInRange
 } from "react-multi-date-picker";
-import "./styles.css";
+import './calen.scss';
 
 export default function CalendarMain() {
   let [inputValue, setInputValue] = useState("");
@@ -12,7 +12,7 @@ export default function CalendarMain() {
 
   return (
     <div className="CalendarMain">
-      
+
       <h1>Banff Log Cabin</h1>
       <Calendar
         multiple
@@ -28,7 +28,7 @@ export default function CalendarMain() {
         onChange={setValue}
       />
       <hr />
-      
+
       <DatePicker
         range
         /**
