@@ -1,0 +1,12 @@
+.history div {
+  background-color: rgb(170, 235, 197);
+}
+.history .history-desc {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+.history .history-year {
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+/*# sourceMappingURL=history.css.map */
