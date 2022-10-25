@@ -1,6 +1,7 @@
 //shortcut : rfc tab (creates a react functional component)
 import React from 'react';
 import useFetch from '../../hooks/useFetch';
+import './reviews.scss'
 
 const Reviews = () => {
 	const { loading, error, data } = useFetch(
