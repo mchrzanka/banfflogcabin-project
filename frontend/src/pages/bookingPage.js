@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import StripeContainer from '../components/stripe/StripeContainer';
 
-import CalendarMain from '../components/calendar/Calen';
+import Calen from "./../components/calendar/Calen"
 
 export default function BookingPageOne() {
 	const [showItem, setShowItem] = useState(false);
@@ -12,7 +12,7 @@ export default function BookingPageOne() {
 		<div>
 			<div>Booking Page 1</div>
 
-			<div>{/* <CalendarMain /> */}</div>
+			<div><Calen /></div>
 			<div>
 				{showItem ? (
 					<div>
