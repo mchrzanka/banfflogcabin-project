@@ -5,34 +5,66 @@ html {
 	font-size: 62.5%; /* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
 }
 
-:root {
-	--almost-black: #2f2f2f;
-	--green: #626e60;
-	--brown: #c09f80;
-	--grey: #f1f1f1;
-	--off-white: #ebebeb;
 
-	//hover
-	--green-hover: #4f5e4c;
+$almost-black: #2f2f2f;
+$green: #626e60;
+$brown: #c09f80;
+$grey: #f1f1f1;
+$off-white: #ebebeb;
 
-	--poppins: poppins, sans-serif;
-	--light-weight: 300;
+//hover
+$green-hover: #4f5e4c;
 
-	--poppins-italic: poppins, sans-serif;
-	--poppins-italic-style: italic;
 
-	--highsummit: HighSummit;
-}
+$italiano: 'Italianno', cursive;
+$allura: 'Allura', cursive;
+$poppins: 'Poppins', sans-serif;
+$light-weight: 300;
+
+$poppins-italic: 'Poppins', sans-serif;
+$poppins-italic-style: italic;
+
+
 
 @font-face {
 	font-family: HighSummit;
-	src: url('../font/HighSummit.otf') format('otf'),
-		url('../font/HighSummit.ttf') format('ttf');
+	src: url('../font/HighSummit.otf');
+	src: url('../font/HighSummit.ttf');
+}
+
+$highsummit: HighSummit;
+
+.heading1,
+.quote {
+	font-family: $allura;
+	font-size: 6.4rem;
+}
+
+.heading2 {
+	font-family: $allura;
+	font-size: 3.6rem;	
+}
+
+@media screen and (min-width: 1000px) {
+	.heading1,
+	.quote {
+		font-family: HighSummit;
+	}
+	
+	.heading2 {
+		font-family: HighSummit;
+	}
+	
 }
 
 p,
-a {
+a,
+.content,
+label,
+input,
+textarea {
 	font-size: 1.6rem;
+	font-family: $poppins;
 }
 
 a {
@@ -41,5 +73,13 @@ a {
 
 main {
 	padding-top: 4rem;
-	background-color: #c09f80;
+	background-color: $brown;
+}
+
+button,
+.btn {
+	border-radius: 4px;
+	background-color: $brown;
+	padding: .6rem 3rem;
+	color: $almost-black;
 }
