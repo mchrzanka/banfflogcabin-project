@@ -38,16 +38,9 @@ const useForm = () => {
 	//sends an email using EmailJS from the contact form.
 	//NEED TO FIGURE OUT .ENV VARIABLES
 	const sendEmail = (e) => {
+		e.preventDefault();
 		emailjs
-			.send('service_ar906mc', 'template_zb02dvw', values, 'CLGxzbssWzPEH6ONl')
-			.then((result) => {
-				setValues({
-					firstName: '',
-					lastName: '',
-					email: '',
-					message: '',
-				});
-			});
+			.send('service_ar906mc', 'template_zb02dvw', values, 'CLGxzbssWzPEH6ONl');
 	};
 
 	return { handleChange, values, handleSubmitValidation, errors, sendEmail };
