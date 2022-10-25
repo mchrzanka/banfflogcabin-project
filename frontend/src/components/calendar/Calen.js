@@ -36,8 +36,6 @@ export default function CalendarMain() {
         onChange={setValue}
       />
 
-
-
     </div>
   );
 }
