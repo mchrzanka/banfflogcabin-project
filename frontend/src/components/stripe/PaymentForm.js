@@ -16,7 +16,7 @@ const handleSubmit = (stripe, elements) => async () => {
 	const cardElement = elements.getElement(CardElement);
 
 	// SUPPOSE TO BE ON BACKEND
-	let secretKey = 'put key here';
+	let secretKey = process.env.REACT_APP_STRIPE_SECRET_KEY;
 
 	//will have to change the price to the dynamic price from the logic, and maybe change description to full or deposit payment.
 	let stripeResult = await axios.post(

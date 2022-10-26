@@ -39,8 +39,12 @@ const useForm = () => {
 	//NEED TO FIGURE OUT .ENV VARIABLES
 	const sendEmail = (e) => {
 		e.preventDefault();
-		emailjs
-			.send('service_ar906mc', 'template_zb02dvw', values, 'CLGxzbssWzPEH6ONl');
+		emailjs.send(
+			process.env.REACT_APP_EMAILJS_SERVICE_ID,
+			process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+			values,
+			process.env.REACT_APP_EMAILJS_USER_ID
+		);
 	};
 
 	return { handleChange, values, handleSubmitValidation, errors, sendEmail };
