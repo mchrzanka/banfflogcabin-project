@@ -31,23 +31,27 @@ $poppins-italic-style: italic;
 $highsummit: HighSummit;
 
 .heading1,
-.quote {
+.quote,
+h1, .h1-style {
 	font-family: $allura;
 	font-size: 6.4rem;
 }
 
-.heading2 {
+.heading2,
+h2 {
 	font-family: $allura;
-	font-size: 3.6rem;
+	font-size: 3.6rem;	
+	font-weight: normal;	
 }
 
 @media screen and (min-width: 1000px) {
 	.heading1,
-	.quote {
+	.quote, h1,
+	.h1-style {
 		font-family: HighSummit;
 	}
-
-	.heading2 {
+	
+	.heading2, h2 {
 		font-family: HighSummit;
 	}
 }
@@ -57,7 +61,8 @@ a,
 .content,
 label,
 input,
-textarea {
+textarea,
+.reviewer {
 	font-size: 1.6rem;
 	font-family: $poppins;
 }
@@ -66,15 +71,24 @@ a {
 	text-decoration: none;
 }
 
+.larger-text {
+	font-size: 2.8rem;
+	font-weight: 300;
+	font-family: $poppins;
+}
+
 main {
 	padding-top: 4rem;
 	background-color: $brown;
 }
 
 button,
-.btn {
+.btn,
+input[type="submit"] {
 	border-radius: 4px;
 	background-color: $brown;
 	padding: 0.6rem 3rem;
 	color: $almost-black;
+	box-shadow: 1px 2px $almost-black;
+}
 }
