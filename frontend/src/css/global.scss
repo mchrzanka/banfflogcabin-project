@@ -32,7 +32,8 @@ $highsummit: HighSummit;
 
 .heading1,
 .quote,
-h1, .h1-style {
+h1,
+.h1-style {
 	font-family: $allura;
 	font-size: 6.4rem;
 }
@@ -40,18 +41,20 @@ h1, .h1-style {
 .heading2,
 h2 {
 	font-family: $allura;
-	font-size: 3.6rem;	
-	font-weight: normal;	
+	font-size: 3.6rem;
+	font-weight: normal;
 }
 
 @media screen and (min-width: 1000px) {
 	.heading1,
-	.quote, h1,
+	.quote,
+	h1,
 	.h1-style {
 		font-family: HighSummit;
 	}
-	
-	.heading2, h2 {
+
+	.heading2,
+	h2 {
 		font-family: HighSummit;
 	}
 }
@@ -84,11 +87,10 @@ main {
 
 button,
 .btn,
-input[type="submit"] {
+input[type='submit'] {
 	border-radius: 4px;
 	background-color: $brown;
 	padding: 0.6rem 3rem;
 	color: $almost-black;
 	box-shadow: 1px 2px $almost-black;
 }
-
