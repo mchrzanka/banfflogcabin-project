@@ -60,17 +60,17 @@ nav {
 		z-index: 2;
 		height: 4px;
 		position: relative;
-		background-color: black;
+		background-color: rgb(33, 12, 3);
 	}
 	span.roofline {
 		width: 20px;
 		rotate: -40deg;
-		top: 13px;
+		top: 18px;
 	}
 	span.roofline2 {
 		width: 20px;
 		rotate: 40deg;
-		bottom: 9px;
+		bottom: 4px;
 		left: 15px;
 	}
 
@@ -97,8 +97,19 @@ nav {
 		transform: translate(-3px, 2px) rotate(-45deg);
 	}
 
+	.hamburger.is-active p {
+		display: none;
+	}
+
 	.menu {
 		display: none;
+	}
+
+	.hamburger p {
+		display:inline-block;
+		position: relative;
+   	    bottom: 21px;
+        right: 7px;
 	}
 
 	a {
@@ -130,7 +141,8 @@ nav {
 
 	@media (min-width: 768px) {
 		.hamburger,
-		.hamburger span {
+		.hamburger span,
+		.hamburger p {
 			display: none;
 		}
 
