@@ -37,7 +37,7 @@ const Navbar = () => {
 								<li>
 									<a href='/contact'>Contact</a>
 								</li>
-								<li className='btn'>
+								<li className='tan'>
 									<a href='/booking'>Book Now</a>
 								</li>
 							</ul>
@@ -71,7 +71,7 @@ const Navbar = () => {
 							<li>
 								<a href='/contact'>Contact</a>
 							</li>
-							<li className='btn'>
+							<li className='tan'>
 								<a href='/booking'>Book Now</a>
 							</li>
 						</ul>

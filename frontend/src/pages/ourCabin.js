@@ -17,9 +17,15 @@ export default function OurCabin() {
 			<div>
 				{data.data.map((ourcabin) => (
 					<div key={ourcabin.id}>
-						<div className='heading1'>{ourcabin.attributes.h1}</div>
-						<div className='content'>{ourcabin.attributes.content}</div>
-						<div className='quote'>{ourcabin.attributes.quote}</div>
+						<div className="container">
+						    <div className='heading1'>{ourcabin.attributes.h1}</div>
+						</div>
+						<div className="container">
+						    <div className='content'>{ourcabin.attributes.content}</div>
+						</div>
+						<div className="container">
+						    <div className='quote'>{ourcabin.attributes.quote}</div>
+						</div>
 					</div>
 				))}
 			</div>

@@ -68,6 +68,7 @@ const ContactForm = () => {
 						type='submit'
 						value='Submit'
 						name='contact'
+						className='green'
 					/>
 				</div>
 			</form>

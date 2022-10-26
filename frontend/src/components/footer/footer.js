@@ -14,7 +14,7 @@ const Footer = () => {
 					<div>
 						<ul id='footerItems' className='footer-padding'>
 							<li>
-								<a href='/booking' aria-label='book' className='btn'>
+								<a href='/booking' aria-label='book' className='tan'>
 									Book Now
 								</a>
 							</li>
@@ -30,7 +30,7 @@ const Footer = () => {
 								<p>+1 (403) 762-3516 reservations@banfflogcabin.ca</p>
 							</li>
 							<li>
-						    	<a href='https://www.facebook.com/BanffLogCabin' aria-label='book' className='btn'>Find us on Facebook</a>
+						    	<a href='https://www.facebook.com/BanffLogCabin' aria-label='book' className='dark'>Find us on Facebook</a>
 							</li>
 							<li>
 								<p>©2022 Banff Log Cabin</p>

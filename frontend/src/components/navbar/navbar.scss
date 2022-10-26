@@ -140,9 +140,10 @@ nav {
 	}
 
 	@media (min-width: 768px) {
-		.hamburger,
-		.hamburger span,
-		.hamburger p {
+
+		.container .hamburger,
+		.hamburger span {
+
 			display: none;
 		}
 

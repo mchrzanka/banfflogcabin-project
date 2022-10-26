@@ -59,8 +59,8 @@ h2 {
 	}
 }
 
-p,
 a,
+p,
 .content,
 label,
 input,
@@ -85,12 +85,53 @@ main {
 	background-color: $brown;
 }
 
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.tan, a.dark, .green,
 button,
 .btn,
 input[type='submit'] {
+	font-size: 2.4rem;
 	border-radius: 4px;
-	background-color: $brown;
 	padding: 0.6rem 3rem;
-	color: $almost-black;
 	box-shadow: 1px 2px $almost-black;
+}
+
+.tan {
+	background-color: $brown;
+	color: $almost-black;
+}
+.tan:hover, a.tan:focus {
+	background-color: #997f66;
+}
+.tan:visited {
+	color: $almost-black;
+}
+
+a.dark {
+	background-color: $almost-black;
+	color: $off-white;
+}
+a.dark:hover, a.dark:focus {
+	background-color: transparent;
+	color: $almost-black;
+}
+a.dark:visited {
+	color: $off-white;
+}
+
+.green {
+	background-color: $green;
+	color: $brown;
+	border: 1px solid $brown;
+}
+.green:hover, .green:focus {
+	background-color: $brown;
+	color: $almost-black;
+}
+.green:visited {
+	color: $brown;
 }
