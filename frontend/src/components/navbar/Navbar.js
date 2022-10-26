@@ -54,6 +54,7 @@ const Navbar = () => {
 							<span className='line'></span>
 							<span className='line'></span>
 							<span className='wall'></span>
+							<p>menu</p>
 						</button>
 					</div>
 					<div className={isActive ? 'mobile-menu' : 'mobile-menu is-active'}>
