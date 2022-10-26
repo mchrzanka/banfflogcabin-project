@@ -1,0 +1,19 @@
+.site-footer {
+  background-color: #626e60;
+  margin-top: 8rem;
+}
+.site-footer .site-container {
+  padding: 1.6rem;
+  text-align: center;
+}
+.site-footer .footer-padding {
+  width: 80%;
+  margin: 0 auto;
+}
+.site-footer .btn {
+  background-color: #c09f80;
+}
+.site-footer ul li {
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=footer.css.map */

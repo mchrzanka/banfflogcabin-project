@@ -37,7 +37,7 @@ const Navbar = () => {
 								<li>
 									<a href='/contact'>Contact</a>
 								</li>
-								<li>
+								<li className='btn'>
 									<a href='/booking'>Book Now</a>
 								</li>
 							</ul>
@@ -48,9 +48,12 @@ const Navbar = () => {
 							aria-label='Main Menu'
 							className={isActive ? 'hamburger is-active' : 'hamburger'}
 						>
-							<span></span>
-							<span></span>
-							<span></span>
+							<span className='roofline'></span>
+							<span className='roofline2'></span>							
+							<span className='line'></span>
+							<span className='line'></span>
+							<span className='line'></span>
+							<span className='wall'></span>
 						</button>
 					</div>
 					<div className={isActive ? 'mobile-menu' : 'mobile-menu is-active'}>
@@ -67,7 +70,7 @@ const Navbar = () => {
 							<li>
 								<a href='/contact'>Contact</a>
 							</li>
-							<li>
+							<li className='btn'>
 								<a href='/booking'>Book Now</a>
 							</li>
 						</ul>

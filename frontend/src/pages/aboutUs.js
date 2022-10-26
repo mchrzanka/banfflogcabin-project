@@ -21,7 +21,7 @@ export default function AboutUs() {
 						<div className='heading1'>{about.attributes.h1}</div>
 						<div className='heading2'>{about.attributes.h2}</div>
 						<div className='content'>{about.attributes.content1}</div>
-						<div className='quote'>{about.attributes.quote}</div>
+						<div className='larger-text'>{about.attributes.quote}</div>
 						<div className='content'>{about.attributes.content2}</div>
 					</div>
 				))}

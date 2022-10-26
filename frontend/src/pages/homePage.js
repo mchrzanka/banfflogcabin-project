@@ -20,10 +20,12 @@ export default function HomePage() {
 				{data.data.map((home) => (
 					<div key={home.id}>
 						<div className='heading1'>{home.attributes.h1}</div>
+						<a className='btn' href='/booking'>Book Now</a>
 						<div className='heading2'>{home.attributes.h21}</div>
 						<div className='content'>{home.attributes.content1}</div>
 						<div className='heading2'>{home.attributes.h22}</div>
 						<div className='content'>{home.attributes.content2}</div>
+						<a className='btn' href='/rates'>Our Rates</a>
 					</div>
 				))}
 			</div>
