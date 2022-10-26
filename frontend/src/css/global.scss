@@ -5,7 +5,6 @@ html {
 	font-size: 62.5%; /* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
 }
 
-
 $almost-black: #2f2f2f;
 $green: #626e60;
 $brown: #c09f80;
@@ -15,7 +14,6 @@ $off-white: #ebebeb;
 //hover
 $green-hover: #4f5e4c;
 
-
 $italiano: 'Italianno', cursive;
 $allura: 'Allura', cursive;
 $poppins: 'Poppins', sans-serif;
@@ -23,8 +21,6 @@ $light-weight: 300;
 
 $poppins-italic: 'Poppins', sans-serif;
 $poppins-italic-style: italic;
-
-
 
 @font-face {
 	font-family: HighSummit;
@@ -58,7 +54,6 @@ h2 {
 	.heading2, h2 {
 		font-family: HighSummit;
 	}
-	
 }
 
 p,
@@ -92,7 +87,8 @@ button,
 input[type="submit"] {
 	border-radius: 4px;
 	background-color: $brown;
-	padding: .6rem 3rem;
+	padding: 0.6rem 3rem;
 	color: $almost-black;
 	box-shadow: 1px 2px $almost-black;
+}
 }
