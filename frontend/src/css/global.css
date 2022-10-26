@@ -11,7 +11,8 @@ html {
 }
 .heading1,
 .quote,
-h1, .h1-style {
+h1,
+.h1-style {
   font-family: "Allura", cursive;
   font-size: 6.4rem;
 }
@@ -25,16 +26,18 @@ h2 {
 
 @media screen and (min-width: 1000px) {
   .heading1,
-.quote, h1,
+.quote,
+h1,
 .h1-style {
     font-family: HighSummit;
   }
-  .heading2, h2 {
+  .heading2,
+h2 {
     font-family: HighSummit;
   }
 }
-p,
 a,
+p,
 .content,
 label,
 input,
@@ -59,13 +62,60 @@ main {
   background-color: #c09f80;
 }
 
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tan, a.dark, .green,
 button,
 .btn,
 input[type=submit] {
+  font-size: 2.4rem;
   border-radius: 4px;
-  background-color: #c09f80;
   padding: 0.6rem 3rem;
-  color: #2f2f2f;
   box-shadow: 1px 2px #2f2f2f;
+}
+
+.tan {
+  background-color: #c09f80;
+  color: #2f2f2f;
+}
+
+.tan:hover, a.tan:focus {
+  background-color: #997f66;
+}
+
+.tan:visited {
+  color: #2f2f2f;
+}
+
+a.dark {
+  background-color: #2f2f2f;
+  color: #ebebeb;
+}
+
+a.dark:hover, a.dark:focus {
+  background-color: transparent;
+  color: #2f2f2f;
+}
+
+a.dark:visited {
+  color: #ebebeb;
+}
+
+.green {
+  background-color: #626e60;
+  color: #c09f80;
+  border: 1px solid #c09f80;
+}
+
+.green:hover, .green:focus {
+  background-color: #c09f80;
+  color: #2f2f2f;
+}
+
+.green:visited {
+  color: #c09f80;
 }
 /*# sourceMappingURL=global.css.map */

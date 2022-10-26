@@ -106,7 +106,7 @@ nav .mobile-menu {
   top: 70px;
   width: 100%;
   z-index: 98;
-  transition: 1.5s;
+  transition: 1s;
   background-color: #626e60;
 }
 nav .mobile-menu a {
@@ -116,7 +116,7 @@ nav .mobile-menu.is-active {
   top: -1000px;
 }
 @media (min-width: 768px) {
-  nav .hamburger,
+  nav .container .hamburger,
 nav .hamburger span {
     display: none;
   }

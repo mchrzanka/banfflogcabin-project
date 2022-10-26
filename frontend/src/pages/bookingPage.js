@@ -23,7 +23,7 @@ export default function BookingPageOne() {
 					<>
 						{' '}
 						<h3>$10.00</h3>
-						<button onClick={() => setShowItem(true)}>Book Now</button>
+						<button className='tan' onClick={() => setShowItem(true)}>Continue</button>
 					</>
 				)}
 			</div>
