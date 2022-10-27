@@ -18,9 +18,8 @@ const Pricing = () => {
 			{data.data.map((pricing) => (
 				<div key={pricing.id}>
 					<div>{pricing.attributes.season}</div>
-                    <div>{pricing.attributes.startdate}</div>
-                    <div>{pricing.attributes.enddate}</div>
-                    <div>{pricing.attributes.price}</div>
+                    <div>{pricing.attributes.startdate} - {pricing.attributes.enddate}</div>
+                    <div>${pricing.attributes.price}</div>
 				</div>
 			))}
 		</div>
