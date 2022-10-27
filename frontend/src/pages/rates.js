@@ -1,5 +1,6 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
+import Pricing from './../components/pricing/Pricing'
 
 export default function Rates() {
 	const { loading, error, data } = useFetch(
@@ -17,6 +18,12 @@ export default function Rates() {
 			{data.data.map((rate) => (
 				<div key={rate.id}>
 					<div className='heading1'>{rate.attributes.h1}</div>
+				</div>
+			))}
+
+<Pricing/>
+{data.data.map((rate) => (
+				<div key={rate.id}>
 					<div className='content'>{rate.attributes.content1}</div>
 					<div className='heading2'>{rate.attributes.h2}</div>
 					<div className='content'>{rate.attributes.content2}</div>
