@@ -1,0 +1,15 @@
+@use '../assets' as a;
+
+.history {
+	.history-desc {
+		font-size: 1.6rem;
+		font-family: a.$poppins;
+		font-weight: a.$light-weight;
+	}
+
+	.history-year {
+		font-size: 4rem;
+		font-family: a.$poppins;
+		font-weight: a.$light-weight;
+	}
+}

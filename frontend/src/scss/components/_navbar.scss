@@ -1,7 +1,9 @@
+@use '../assets' as *;
+
 nav {
-	background-color: #626e60;
-	font-family: var(--poppins);
-	font-weight: var(--light-weight);
+	background-color: $green;
+	font-family: $poppins;
+	font-weight: $light-weight;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -40,7 +42,7 @@ nav {
 		height: 0.4rem;
 		margin-bottom: 5px;
 		position: relative;
-		background-color: var(--almost-black);
+		background-color: $almost-black;
 		border-radius: 0.6rem;
 		z-index: 1;
 
@@ -60,7 +62,7 @@ nav {
 		z-index: 2;
 		height: 4px;
 		position: relative;
-		background-color: rgb(33, 12, 3);
+		background-color: $almost-black;
 	}
 	span.roofline {
 		width: 20px;
@@ -113,13 +115,13 @@ nav {
 	}
 
 	a {
-		color: #ebebeb;
+		color: $off-white;
 		display: block;
 		padding: 2rem;
 	}
 
 	a:hover {
-		background-color: var(--green-hover);
+		background-color: $green-hover;
 	}
 
 	.mobile-menu {
@@ -128,7 +130,7 @@ nav {
 		width: 100%;
 		z-index: 98;
 		transition: 1s;
-		background-color: #626e60;
+		background-color: $green;
 
 		a {
 			text-align: center;

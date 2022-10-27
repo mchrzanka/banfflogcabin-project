@@ -1,0 +1,80 @@
+//THIS IS GLOBAL. ALL SCSS WRITTEN HERE WILL AFFECT THE ENTIRE PROJECT. 
+//PLEASE USE THIS FILE SPARINGLY.
+@use './colors' as c;
+@use './fonts' as f;
+
+:root,
+html {
+	font-size: 62.5%; /* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
+}
+
+
+
+//GLOBAL STYLING
+
+.heading1,
+.quote,
+h1,
+.h1-style {
+	font-family: f.$allura;
+	font-size: 6.4rem;
+}
+
+.heading2,
+h2 {
+	font-family: f.$allura;
+	font-size: 3.6rem;
+	font-weight: normal;
+}
+
+a,
+p,
+.content,
+label,
+input,
+textarea,
+.reviewer {
+	font-size: 1.6rem;
+	font-family: f.$poppins;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+.larger-text {
+	font-size: 2.8rem;
+	font-weight: f.$light-weight;
+	font-family: f.$poppins;
+}
+
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+main {
+	padding-top: 4rem;
+	background-color: c.$brown;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+	.heading1,
+	.quote,
+	h1,
+	.h1-style {
+		font-family: HighSummit;
+	}
+
+	.heading2,
+	h2 {
+		font-family: HighSummit;
+	}
+}

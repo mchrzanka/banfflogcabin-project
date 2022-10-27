@@ -1,6 +1,6 @@
 import React from 'react';
 import useFetch from '../../hooks/useFetch';
-import './history.scss';
+import '../../scss/components/_history.scss'
 
 export default function History() {
 	const { loading, error, data } = useFetch(

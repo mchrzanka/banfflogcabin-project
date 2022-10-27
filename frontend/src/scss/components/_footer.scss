@@ -1,5 +1,7 @@
+@use '../assets' as a;
+
 .site-footer {
-	background-color: #626e60;
+	background-color: a.$green;
 
 	.site-container {
 		padding: 1.6rem;
@@ -12,7 +14,7 @@
 	}
 
 	.btn {
-		background-color: #c09f80;
+		background-color: a.$brown;
 	}
 
 	ul li {
