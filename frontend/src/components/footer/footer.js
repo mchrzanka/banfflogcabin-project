@@ -10,11 +10,11 @@ const Footer = () => {
 	return (
 		<>
 			<footer className='site-footer' id='siteFooter'>
-				<div className='site-container'>
+				<div className='container'>
 					<div>
 						<ul id='footerItems' className='footer-padding'>
 							<li>
-								<a href='/booking' aria-label='book' className='tan'>
+								<a href='/booking' aria-label='book' className='tan wide-btn'>
 									Book Now
 								</a>
 							</li>

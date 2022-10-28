@@ -1,14 +1,28 @@
 @use './colors' as c;
 @use './fonts' as f;
 
+
+
+
 .tan, a.dark, .green,
-button,
+button:not(.hamburger),
 .btn,
 input[type='submit'] {
 	font-size: 2.4rem;
 	border-radius: 4px;
-	padding: 0.6rem 3rem;
 	box-shadow: 1px 2px c.$almost-black;
+}
+
+body {
+	.tan, a.dark, .green,
+	button:not(.hamburger),
+	.btn,
+	input[type='submit'] {
+		display: inline-block;
+		padding: 0.6rem 3rem;
+		margin: .6rem auto 1.6rem auto;
+		box-shadow: 1px 2px c.$almost-black;
+	}
 }
 
 .tan {
@@ -45,4 +59,9 @@ a.dark:visited {
 }
 .green:visited {
 	color: c.$brown;
+}
+
+.wide-btn {
+	min-width: 30rem;
+	width: 30rem;
 }
