@@ -123,6 +123,16 @@ nav {
 	a:hover {
 		background-color: $green-hover;
 	}
+	.tan {
+		width: 100%;
+	}
+	.tan a {
+		position: static;
+		margin: 1rem auto;
+	}
+	.tan a:hover {
+		background-color: $brown-hover;
+	}
 
 	.mobile-menu {
 		position: absolute;
@@ -151,6 +161,20 @@ nav {
 
 		.menu {
 			display: flex;
+			align-items: center;
+		}
+
+		.tan {
+			width: min-content;
+			height: min-content;
+		}
+		.tan a {
+			display: inline-block;
+			padding: .6rem;
+
+		}
+		.tan a:hover {
+			background-color: $brown-hover;
 		}
 	}
 }
