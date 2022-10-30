@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import useForm from '../../hooks/useForm';
+import useFetch from '../../hooks/useFetch';
 import validateFormInfo from '../../validation/validateFormInfo';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+
 
 const handleDeposit = () => {
 	console.log('deposit');
@@ -12,40 +14,11 @@ const handleFull = () => {
 	console.log('full');
 };
 
-const handleSubmit = (stripe, elements) => async () => {
+const handleSubmit = (stripe, elements, intentKey) => async () => {
+
 	const cardElement = elements.getElement(CardElement);
 
-	// SUPPOSE TO BE ON BACKEND
-	let secretKey = process.env.REACT_APP_STRIPE_SECRET_KEY;
-
-	//will have to change the price to the dynamic price from the logic, and maybe change description to full or deposit payment.
-	let stripeResult = await axios.post(
-		'https://api.stripe.com/v1/payment_intents',
-		{
-			amount: 4000,
-			currency: 'CAD',
-			description: 'Booking Payment',
-			payment_method_types: ['card'],
-		},
-		{
-			headers: {
-				Authorization: `Bearer ${secretKey}`,
-				'content-type': 'application/x-www-form-urlencoded',
-			},
-		}
-	);
-
-	// return result.id; // <---- return this in a json response from your backend (strapi) custom controller endpoint
-
-	console.log('Stripe payment intent:');
-	console.dir(stripeResult);
-
-	let clientSecret = stripeResult.data.client_secret;
-
-	console.log('client secret:');
-	console.dir(clientSecret);
-
-	let attemptPaymentResponse = await stripe.confirmCardPayment(clientSecret, {
+	let attemptPaymentResponse = await stripe.confirmCardPayment(intentKey, {
 		payment_method: {
 			card: cardElement,
 			billing_details: {
@@ -57,39 +30,27 @@ const handleSubmit = (stripe, elements) => async () => {
 	console.dir(attemptPaymentResponse);
 };
 
-// 	const handleSubmit = async (e) => {
 
-// 		let attemptPaymentResponse = await stripe.confirmCardPayment(
-// 			stripeResult.id,
-// 			{
-// 				payment_method: {
-// 					card: elements.getElement(PaymentElement),
-// 					billing_details: {
-// 						name: 'DEMO',
-// 					},
-// 				},
-// 			}
-// 		);
 
-// 		if (attemptPaymentResponse.error) {
-// 			console.log('there is an error:'.error);
-// 		} else {
-// 			console.log('there is no error');
-// 		}
-
-// 		console.dir('payment attempt!');
-// 		console.dir(attemptPaymentResponse);
-// 	};
-
-// 	);
-// }
 
 export default function PaymentForm() {
 	const { handleChange, values, handleSubmitValidation, errors } =
 		useForm(validateFormInfo);
-
+		
 	const stripe = useStripe();
 	const elements = useElements();
+
+	const { loading, error, data } = useFetch(
+		'http://147.182.207.198:1337/api/stripeIntent'
+	);
+
+	if (loading) {
+		return <p>Loading...</p>;
+	} else if (error === []) {
+		return <p>Error</p>;
+	}
+
+	let secret = data.client_secret;
 
 	return (
 		<>
@@ -184,7 +145,7 @@ export default function PaymentForm() {
 					</div>
 				</fieldset>
 				<CardElement />
-				<button onClick={handleSubmit(stripe, elements)}>Buy</button>{' '}
+				<button onClick={handleSubmit(stripe, elements, secret)}>Buy</button>{' '}
 			</form>
 		</>
 	);
