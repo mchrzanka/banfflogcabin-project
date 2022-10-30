@@ -19,7 +19,7 @@ export default function HomePage() {
 	return (
 		<div>
 			<div>
-				{data.data?.map((home) => (
+				{data.data.map((home) => (
 					<div key={home.id}>
 						<div className='heading1'>{home.attributes.h1}</div>
 						<picture>
