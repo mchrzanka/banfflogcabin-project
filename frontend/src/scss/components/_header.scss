@@ -1,0 +1,9 @@
+@use '../assets' as a;
+
+.site-header {
+    font-family: a.$poppins;
+    font-weight: a.$light-weight;
+
+    background-color: a.$green;
+    padding-bottom: 2rem;
+}

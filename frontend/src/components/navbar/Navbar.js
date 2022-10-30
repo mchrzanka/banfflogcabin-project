@@ -23,59 +23,43 @@ const Navbar = () => {
 								/>
 							</a>
 						</div>
-						<div>
-							<ul className='menu'>
-								<li>
-									<a href='/ourcabin'>Our Cabin</a>
+						<div className={isActive ? 'mobile-menu is-active' : 'mobile-menu'}>
+							<ul>
+								<li className='navitem'>
+									<a href='/'>HOME</a>
 								</li>
-								<li>
-									<a href='/aboutus'>About Us</a>
+								<li className='navitem'>
+									<a href='/ourcabin'>OUR CABIN</a>
+								</li >
+								<li className='navitem'>
+									<a href='/aboutus'>ABOUT US</a>
 								</li>
-								<li>
-									<a href='/rates'>Rates</a>
+								<li className='navitem'>
+									<a href='/rates'>RATES</a>
 								</li>
-								<li>
-									<a href='/contact'>Contact</a>
+								<li className='navitem'>
+									<a href='/contact'>CONTACT</a>
 								</li>
-								<li className='tan'>
-									<a href='/booking'>Book Now</a>
+								<li className='booknow-nav'>
+									<a href='/booking'>BOOK NOW</a>
 								</li>
 							</ul>
 						</div>
 
-						<button
+						<div
 							onClick={handleClick}
 							aria-label='Main Menu'
 							className={isActive ? 'hamburger is-active' : 'hamburger'}
 						>
 							<span className='roofline'></span>
-							<span className='roofline2'></span>							
+							<span className='roofline2'></span>
 							<span className='line'></span>
 							<span className='line'></span>
 							<span className='line'></span>
-							<span className='wall'></span>
-							<p>menu</p>
-						</button>
+
+						</div>
 					</div>
-					<div className={isActive ? 'mobile-menu' : 'mobile-menu is-active'}>
-						<ul>
-							<li>
-								<a href='/ourcabin'>Our Cabin</a>
-							</li>
-							<li>
-								<a href='/aboutus'>About Us</a>
-							</li>
-							<li>
-								<a href='/rates'>Rates</a>
-							</li>
-							<li>
-								<a href='/contact'>Contact</a>
-							</li>
-							<li className='tan'>
-								<a href='/booking'>Book Now</a>
-							</li>
-						</ul>
-					</div>
+
 				</nav>
 			</header>
 		</>
