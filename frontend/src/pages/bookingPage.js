@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import StripeContainer from '../components/stripe/StripeContainer';
 
-import Calen from '../components/calendar/Calendar';
+import Calen from '../components/calendar/Calen';
 
 export default function BookingPageOne() {
 	const [showItem, setShowItem] = useState(false);
