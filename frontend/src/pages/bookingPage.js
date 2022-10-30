@@ -12,7 +12,7 @@ export default function BookingPageOne() {
 		<div>
 			<div>Booking Page 1</div>
 
-			{/* <div><Calen /></div> */}
+			<div><Calen /></div>
 			<div>
 				{showItem ? (
 					<div>

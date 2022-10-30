@@ -1,3 +1,48 @@
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import '../../scss/components/_calendar.scss';
+
+// Use onChange prop for getting new values.
+
+
+const Calen = () => {
+
+    const [value, onChange] = useState(new Date());
+
+    const [myArray, updateMyArray] = useState([]);
+
+    const pushDayArray = (value) => {
+        updateMyArray( arr => [...arr, `${value} #${arr.length}`]);
+    };
+
+    const click = (value) => { 
+        alert('New date is: ', value);
+    };
+
+    return (
+        <div className='container'>
+            <h1>hii</h1>
+            <Calendar onChange={onChange} 
+            value={value} 
+            onClickDay={(value, event) => {
+                //alert(`Clicked day: ${value}`); 
+                pushDayArray(value);
+            }}
+            />
+            <h2>Dates Selected:</h2>
+            {myArray.map( e =>
+            <p>{ e }</p>)}
+        </div>
+    );
+};
+export default Calen;
+
+
+
+
+
+
 // import React, { useState } from 'react';
 // import DatePicker, {
 // 	Calendar,

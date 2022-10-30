@@ -1,9 +1,13 @@
 @use '../assets' as a;
 
-.CalendarMain{
-    font-family: sans-serif;
-    text-align: center;
-} 
-.rmdp-wrapper {
-    margin: 0 auto;
-  }
+// .CalendarMain{
+//     font-family: sans-serif;
+//     text-align: center;
+// } 
+// .rmdp-wrapper {
+//     margin: 0 auto;
+//   }
+
+.react-calendar {
+    width: auto;
+}
