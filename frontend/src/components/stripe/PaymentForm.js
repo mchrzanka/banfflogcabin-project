@@ -14,7 +14,8 @@ const handleFull = () => {
 	console.log('full');
 };
 
-const handleSubmit = (stripe, elements, intentKey) => async () => {
+const handleSubmit = (stripe, elements, intentKey, values) => async () => {
+	//STRIPE
 
 	const cardElement = elements.getElement(CardElement);
 
@@ -36,6 +37,21 @@ const handleSubmit = (stripe, elements, intentKey) => async () => {
 export default function PaymentForm() {
 	const { handleChange, values, handleSubmitValidation, errors } =
 		useForm(validateFormInfo);
+
+//put booking form info into strapi. Just need to add an "if booking !errors" kind of thing, so it posts only when the booking 100% goes through. 
+		axios
+		.post('http://147.182.207.198:1337/api/bookings', {
+		  data:{
+		  firstname: values.firstname,
+		  lastname: values.lastname,
+		  email: values.email,
+		  phone: values.phone,
+		  breakfast: values.breakfast,}
+		})
+		.then(response => {
+		  console.log(response);
+		});
+	
 		
 	const stripe = useStripe();
 	const elements = useElements();

@@ -9,7 +9,6 @@ export default function BookingPageOne() {
 
 	return (
 		<div>
-			<div>Booking Page 1</div>
 			<div><Calen /></div>
 			<div>
 				{showItem ? (
