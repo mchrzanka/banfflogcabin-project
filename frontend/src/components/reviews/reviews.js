@@ -15,11 +15,7 @@ const Reviews = () => {
 	}
 
 	return (
-<<<<<<< Updated upstream
-		//I THINK: data? GETS RID OF NO RESPONSE ERROR. since strapi update, the data is nested in attributes. So instead of putting {review.content}, you have to do {review.attributes.content}. There was also some issues with strapi passing data as an object now instead of as an array, so instead of data.map you have to do data.data.map, and make sure in useFetch.js the useState is [].
-=======
 		//since strapi update, the data is nested in attributes. So instead of putting {review.content}, you have to do {review.attributes.content}. There was also some issues with strapi passing data as an object now instead of as an array, so instead of data.map you have to do data.data.map, and make sure in useFetch.js the useState is [].
->>>>>>> Stashed changes
 		<div>
 			{data.data.map((review) => (
 				<div key={review.id}>
