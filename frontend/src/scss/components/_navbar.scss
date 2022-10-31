@@ -1,180 +1,153 @@
-@use '../assets' as *;
+@use '../assets' as a;
 
 nav {
-	background-color: $green;
-	font-family: $poppins;
-	font-weight: $light-weight;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 99;
-	position: relative;
+    .container {
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-	.container {
-		max-width: 128rem;
-		margin: 0 auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+    div.hamburger {
+        display: block;
+        position: relative;
+        z-index: 2;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        transition-duration: 0.4s;
+    }
 
-		div {
-			z-index: 99;
-		}
-	}
+    .mobile-menu {
+        position: absolute;
+        top: -300px;
+        left: 0;
+        background-color: a.$green;
+        width: 100vw;
+        margin-top: 6rem;
 
-	button.hamburger {
-		display: block;
-		position: relative;
-		z-index: 99;
-		user-select: none;
-		appearance: none;
-		border: none;
-		outline: none;
-		background: none;
-		cursor: pointer;
-		padding-right: 2rem;
-		box-shadow: none;
-	}
+        ul {
+            margin: 0 auto;
 
-	.hamburger span {
-		display: block;
-		width: 3rem;
-		height: 0.4rem;
-		margin-bottom: 5px;
-		position: relative;
-		background-color: $almost-black;
-		border-radius: 0.6rem;
-		z-index: 1;
 
-		transform-origin: 0 0;
-		transition: 0.4s;
-	}
+            li {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                width: 100%;
 
-	/* DELETE SOME ON CLICK */
-	button.is-active .roofline,
-	button.is-active .roofline2,
-	button.is-active .wall {
-		display: none;
-	}
+                a {
+                    color: a.$off-white;
+                }
+            }
 
-	/* THESE 4 ARE FOR SETUP HAMBURGER MENU*/
-	.hamburger span {
-		z-index: 2;
-		height: 4px;
-		position: relative;
-		background-color: $almost-black;
-	}
-	span.roofline {
-		width: 20px;
-		rotate: -40deg;
-		top: 18px;
-	}
-	span.roofline2 {
-		width: 20px;
-		rotate: 40deg;
-		bottom: 4px;
-		left: 15px;
-	}
+            .booknow-nav {
+                background-color: a.$brown;
+                // padding: 1.5rem;
+                margin-bottom: 0;
 
-	span.wall {
-		width: 8px;
-		height: 8px;
-		bottom: 14px;
-		left: 11px;
-		border-radius: 0;
-	}
+                a {
+                    color: a.$almost-black;
+                }
 
-	/* THESE 3 ARE FOR ACTIVE HAMBURGER MENU WHEN YOU CLICK*/
-	.hamburger.is-active span:nth-child(4) {
-		transform: translate(0px, -2px) rotate(45deg);
-		bottom: 8px;
-	}
+            }
+        }
 
-	.hamburger.is-active span:nth-child(3) {
-		opacity: 0;
-		transform: translate(15px);
-	}
+    }
 
-	.hamburger.is-active span:nth-child(5) {
-		transform: translate(-3px, 2px) rotate(-45deg);
-	}
+    .is-active {
+        top: 0;
+        right: 0;
+        transition-duration: 0.4s;
+    }
 
-	.hamburger.is-active p {
-		display: none;
-	}
 
-	.menu {
-		display: none;
-	}
+    /* hamburger styling*/
+    .hamburger span {
+        display: block;
+        width: 3rem;
+        height: 0.4rem;
+        margin-bottom: 5px;
+        position: relative;
+        border-radius: 0.6rem;
+        z-index: 1;
+        transform-origin: 0 0;
+        transition: 0.4s;
+    }
 
-	.hamburger p {
-		display:inline-block;
-		position: relative;
-   	    bottom: 21px;
-        right: 7px;
-	}
+    .hamburger span {
+        z-index: 2;
+        height: 4px;
+        position: relative;
+        background-color: a.$almost-black;
+    }
 
-	a {
-		color: $off-white;
-		display: block;
-		padding: 2rem;
-	}
+    span.roofline {
+        width: 20px;
+        rotate: -40deg;
+        top: 18px;
+    }
 
-	a:hover {
-		background-color: $green-hover;
-	}
-	.tan {
-		width: 100%;
-	}
-	.tan a {
-		position: static;
-		margin: 1rem auto;
-	}
-	.tan a:hover {
-		background-color: $brown-hover;
-	}
+    span.roofline2 {
+        width: 20px;
+        rotate: 40deg;
+        bottom: 4px;
+        left: 15px;
+    }
 
-	.mobile-menu {
-		position: absolute;
-		top: 70px;
-		width: 100%;
-		z-index: 98;
-		transition: 1s;
-		background-color: $green;
+    /* Hamburger animation*/
+    div.is-active .roofline,
+    div.is-active .roofline2,
+    div.is-active .wall {
+        display: none;
+    }
 
-		a {
-			text-align: center;
-		}
-	}
+    .hamburger.is-active span:nth-child(4) {
+        transform: translate(0px, -2px) rotate(45deg);
+        bottom: 8px;
+    }
 
-	.mobile-menu.is-active {
-		top: -1000px;
-	}
+    .hamburger.is-active span:nth-child(3) {
+        opacity: 0;
+        transform: translate(15px);
+    }
 
-	@media (min-width: 768px) {
+    .hamburger.is-active span:nth-child(5) {
+        transform: translate(-3px, 2px) rotate(-45deg);
+    }
 
-		.container .hamburger,
-		.hamburger span {
+    // Desktop Navigation Changes
+    @media only screen and (min-width: 800px) {
+        .mobile-menu {
+            top: 0;
+            margin: 0;
+            position: relative;
 
-			display: none;
-		}
+            ul {
+                width: 70rem;
+                margin-right: 1rem;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
+                text-align: center;
 
-		.menu {
-			display: flex;
-			align-items: center;
-		}
+                .navitem {
+                    margin-top: 1rem;
+                    margin-bottom: -1rem;
+                }
 
-		.tan {
-			width: min-content;
-			height: min-content;
-		}
-		.tan a {
-			display: inline-block;
-			padding: .6rem;
+                .booknow-nav {
+                    margin: -2rem 0;
+                    margin-bottom: -3rem;
+                    margin-right: -4rem;
+                    padding-left: 4rem;
+                    padding-right: 4rem;
+                    padding-top: 3rem;
+                }
+            }
+        }
 
-		}
-		.tan a:hover {
-			background-color: $brown-hover;
-		}
-	}
+        .hamburger span {
+            display: none;
+        }
+    }
 }
