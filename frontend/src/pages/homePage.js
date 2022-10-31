@@ -1,6 +1,7 @@
 //shortcut : rfc tab (creates a react functional component)
 import React from 'react';
 import Reviews from '../components/reviews/reviews';
+import Play from '../components/youtube/play';
 import useFetch from '../hooks/useFetch';
 import cabinsm from '../img/cabinsm.jpg';
 import cabin from '../img/cabin.jpg';
@@ -25,7 +26,7 @@ export default function HomePage() {
 						<picture>
 							<source media="(min-width:650px)" srcSet={cabin} />
 							<img src={cabinsm} alt="Flowers" />
-						</picture> 
+						</picture>
 						<a className='tan' href='/booking'>Book Now</a>
 						<div className='heading2'>{home.attributes.h21}</div>
 						<div className='content'>{home.attributes.content1}</div>
@@ -37,6 +38,7 @@ export default function HomePage() {
 					</div>
 				))}
 			</div>
+			<div><Play/></div>
 			<div>
 				<h2>Reviews</h2>
 				<Reviews />
