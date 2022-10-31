@@ -3,27 +3,32 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../../scss/components/_calendar.scss';
 
-// Use onChange prop for getting new values.
-
 
 const Calen = () => {
 
     const [value, onChange] = useState(undefined);
     const [myArray, updateMyArray] = useState([]);
-    // //const [enoughDaysToBook, updateEnoughDaysToBook] = useState(false);
-    // const enoughDaysToBookCurrent = this.enoughDaysToBook.current;
 	
+    const firstDateDisplay = (myArray) => { 
+        //console.log("firstDateDisplay" + myArray); IS THERE A FIRST DAY?
+        return myArray.length > 0 ? true : false;
+    }
+
+    const secondDateDisplay = (myArray) => { 
+        //console.log("secondDateDisplay" + myArray); IS THERE A SECOND DAY?
+        return myArray.length === 2 ? true : false;
+    }
 
     const pushDayArray = (value) => {  
 
-        updateMyArray( 
-            arr => [...arr, `${value} #${arr.length}`]);
-
-        if(myArray.length > 0){console.log('enough days');}  //updateEnoughDaysToBook(true)
-    };
-
-    const click = (value) => { 
-        alert('New date is: ', value);
+        if(myArray.length < 2) { //MODULUS 2 DATE ARRAY NEVER GETS BIG
+        updateMyArray( arr => [...arr, `${value} #${arr.length}`]);
+        }
+        else {
+            updateMyArray(arr => [`${value} #${"1"}`]);
+        }
+        //console.log("pushDayArray"+myArray);
+        if(myArray.length == 1){console.log('enough days');}  //FIRES IF DATE RANGE SELECTED
     };
 
     return (
@@ -41,12 +46,14 @@ const Calen = () => {
             />
             <p>Minimum booking is two days.</p>
             <h2>Dates Selected:</h2>
-            
+
             {/* THIS FORMATS THE DATE */}
             <div>
-                {myArray.length > 0 && <p>{myArray[0].split('00:')[0]} to  {myArray.length > 1 && myArray[1].split('00:')[0]}</p>}
+                {firstDateDisplay(myArray) == true ? //DISPLAY FIRST & SECOND DATE SELECTED IF EXIST
+                <p>{myArray[0].split('00:')[0] + " to "}</p> : ""}
+                {secondDateDisplay(myArray) == true ? <p>{myArray[1].split('00:')[0]}</p> : ""}
             </div>
-        </div>
+        </div> 
     );
 };
 export default Calen;
