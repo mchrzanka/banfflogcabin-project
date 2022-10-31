@@ -50,6 +50,3 @@ const Calen = () => {
     );
 };
 export default Calen;
-
-
-
