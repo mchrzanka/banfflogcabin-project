@@ -8,6 +8,7 @@ const Calen = () => {
 
     const [value, onChange] = useState(undefined);
     const [myArray, updateMyArray] = useState([]);
+    const date = new Date();
 	
     const firstDateDisplay = (myArray) => { 
         //console.log("firstDateDisplay" + myArray); IS THERE A FIRST DAY?
@@ -38,7 +39,7 @@ const Calen = () => {
             //defaultValue={undefined}
             value={value} 
             selectRange={true}
-            
+            minDate={date}
             onClickDay={(value, event) => {
                 //alert(`Clicked day: ${value}`); 
                 pushDayArray(value);
