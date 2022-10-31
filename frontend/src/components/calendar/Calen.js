@@ -8,15 +8,18 @@ import '../../scss/components/_calendar.scss';
 
 const Calen = () => {
 
-    const [value, onChange] = useState(new Date());
+    const [value, onChange] = useState(undefined);
     const [myArray, updateMyArray] = useState([]);
     // //const [enoughDaysToBook, updateEnoughDaysToBook] = useState(false);
     // const enoughDaysToBookCurrent = this.enoughDaysToBook.current;
 	
 
-    const pushDayArray = (value) => {
-        updateMyArray( arr => [...arr, `${value} #${arr.length}`]);
-        if(myArray.length > 0){console.log('big');}  //updateEnoughDaysToBook(true)
+    const pushDayArray = (value) => {  
+
+        updateMyArray( 
+            arr => [...arr, `${value} #${arr.length}`]);
+
+        if(myArray.length > 0){console.log('enough days');}  //updateEnoughDaysToBook(true)
     };
 
     const click = (value) => { 
@@ -27,7 +30,10 @@ const Calen = () => {
         <div className='container'>
             <h1>Booking Calendar</h1>
             <Calendar onChange={onChange} 
+            //defaultValue={undefined}
             value={value} 
+            selectRange={true}
+            
             onClickDay={(value, event) => {
                 //alert(`Clicked day: ${value}`); 
                 pushDayArray(value);
@@ -35,8 +41,11 @@ const Calen = () => {
             />
             <p>Minimum booking is two days.</p>
             <h2>Dates Selected:</h2>
-            {myArray.map( e => //THIS FORMATS THE DATE
-            <p key={e}>{ e.split('00:')[0] }</p>)} 
+            
+            {/* THIS FORMATS THE DATE */}
+            <div>
+                {myArray.length > 0 && <p>{myArray[0].split('00:')[0]} to  {myArray.length > 1 && myArray[1].split('00:')[0]}</p>}
+            </div>
         </div>
     );
 };
