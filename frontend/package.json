@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
+    "@react-google-maps/api": "^2.13.1",
     "@stripe/react-stripe-js": "^1.13.0",
     "@stripe/stripe-js": "^1.42.0",
     "@testing-library/jest-dom": "^5.16.5",

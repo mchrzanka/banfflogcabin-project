@@ -1,0 +1,20 @@
+.Play {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+  }
