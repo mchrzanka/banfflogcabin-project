@@ -1,6 +1,11 @@
 @use '../assets' as a;
 
 nav {
+    .logo {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
     .container {
         padding-top: 1rem;
         display: flex;
@@ -19,7 +24,7 @@ nav {
 
     .mobile-menu {
         position: absolute;
-        top: -300px;
+        top: -400px;
         left: 0;
         background-color: a.$green;
         width: 100vw;
@@ -36,7 +41,14 @@ nav {
 
                 a {
                     color: a.$off-white;
+                    display: block;
+                    padding: 1rem 0;
                 }
+
+                a:hover {
+                    background-color: a.$green-hover;
+                }
+
             }
 
             .booknow-nav {
@@ -48,6 +60,9 @@ nav {
                     color: a.$almost-black;
                 }
 
+                a:hover {
+                    background-color: a.$brown-hover;
+                }
             }
         }
 
@@ -115,7 +130,15 @@ nav {
     }
 
     // Desktop Navigation Changes
-    @media only screen and (min-width: 800px) {
+    @media only screen and (min-width: 820px) {
+        .container {
+            padding-top: 0;
+        }
+
+        .logo {
+            margin-bottom: 1rem;
+        }
+
         .mobile-menu {
             top: 0;
             margin: 0;
@@ -130,19 +153,19 @@ nav {
                 justify-content: space-evenly;
                 text-align: center;
 
-                .navitem {
-                    margin-top: 1rem;
-                    margin-bottom: -1rem;
+                li {
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: -2rem;
+
+                    a {
+                        padding: 2rem 1rem;
+                        display: block;
+
+                    }
                 }
 
-                .booknow-nav {
-                    margin: -2rem 0;
-                    margin-bottom: -3rem;
-                    margin-right: -4rem;
-                    padding-left: 4rem;
-                    padding-right: 4rem;
-                    padding-top: 3rem;
-                }
+
             }
         }
 
