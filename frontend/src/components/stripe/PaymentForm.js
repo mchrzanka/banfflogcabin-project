@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import useForm from '../../hooks/useForm';
 import useFetch from '../../hooks/useFetch';
-import validateFormInfo from '../../validation/validateFormInfo';
+import validateFormInfo from '../../validation/validateBookingForm';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 
 

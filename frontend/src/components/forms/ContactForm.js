@@ -4,11 +4,14 @@ import React from 'react';
 import useForm from '../../hooks/useForm';
 
 //form validation
-import validateFormInfo from '../../validation/validateFormInfo';
+import validateFormInfo from '../../validation/validateBookingForm';
 
 const ContactForm = () => {
-	const { handleChange, values, handleSubmitValidation, errors, sendEmail } =
+	const { handleChange, values, handleSubmitValidationContact, errors, sendEmail, setSuccess } =
 		useForm(validateFormInfo);
+
+
+
 
 	return (
 		<div>
@@ -18,7 +21,7 @@ const ContactForm = () => {
 					send us an email by filling in the form below.
 				</p>
 			</div>
-			<form className='booking-form' onSubmit={handleSubmitValidation}>
+			<form className='booking-form' onSubmit={handleSubmitValidationContact}>
 				<div>
 					<label>First Name</label>
 					<input
@@ -71,6 +74,7 @@ const ContactForm = () => {
 						className='green'
 					/>
 				</div>
+				<p>{setSuccess}</p>
 			</form>
 		</div>
 	);

@@ -1,53 +1,101 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-import validateFormInfo from '../validation/validateFormInfo';
+import validateFormInfo from "../validation/validateBookingForm";
 
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const useForm = () => {
-	//https://www.youtube.com/watch?v=O6P86uwfdR0
-	const [values, setValues] = useState({
-		firstname: '',
-		lastname: '',
-		email: '',
-		phone: '',
-		breakfast: '',
-		message: '',
-	});
+  //https://www.youtube.com/watch?v=O6P86uwfdR0
+  const [values, setValues] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    breakfast: "",
+    message: "",
+  });
 
-	const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({});
 
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setValues({
-			//destructuring the values object
-			...values,
-			//target the name of each input (ex "email")
-			//[e.target.name]:e.target.value;
-			[name]: value,
-		});
-	};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      //destructuring the values object
+      ...values,
+      //target the name of each input (ex "email")
+      //[e.target.name]:e.target.value;
+      [name]: value,
+    });
+  };
 
-	//stop form from refreshing on submit
-	const handleSubmitValidation = (e) => {
-		e.preventDefault();
+  const handleSubmitValidation = (e) => {
+    e.preventDefault();
 
-		setErrors(validateFormInfo(values));
-	};
+    setErrors(validateFormInfo(values));
+  };
 
-	//sends an email using EmailJS from the contact form.
-	//NEED TO FIGURE OUT .ENV VARIABLES
-	const sendEmail = (e) => {
-		e.preventDefault();
-		emailjs.send(
-			process.env.REACT_APP_EMAILJS_SERVICE_ID,
-			process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-			values,
-			process.env.REACT_APP_EMAILJS_USER_ID
-		);
-	};
+  const handleSubmitValidationContact = (e) => {
+    e.preventDefault();
 
-	return { handleChange, values, handleSubmitValidation, errors, sendEmail };
+    setErrors(validateFormInfo(values));
+
+    let isError = false;
+
+    //firstname
+    if (!values.firstname) {
+      errors.firstname = "First name required";
+      isError = true;
+    } else if (!/^[A-Za-z\s]+$/.test(values.firstname)) {
+      errors.firstname = "First name can only contain letters.";
+      isError = true;
+    }
+    //lastname
+    if (!values.lastname) {
+      errors.lastname = "Last name required.";
+      isError = true;
+    } else if (!/^[A-Za-z\s]+$/.test(values.lastname)) {
+      errors.lastname = "Last name can only contain letters.";
+      isError = true;
+    }
+
+    //email
+    if (!values.email) {
+      errors.email = "Email required.";
+      isError = true;
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+      errors.email = "Email address is invalid.";
+      isError = true;
+    }
+
+    if (!values.message) {
+      errors.message = "Message required.";
+      isError = true;
+    }
+
+    if (isError == false) {
+      const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.send(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          values,
+          process.env.REACT_APP_EMAILJS_USER_ID
+        );
+      };
+    }
+  };
+  // 	setSuccess = "We have received your message and will get in touch shortly!";
+  // 	alert('yay!');
+  // };
+
+  return {
+    handleChange,
+    values,
+    handleSubmitValidation,
+    handleSubmitValidationContact,
+    errors,
+    sendEmail,
+  };
 };
 
 export default useForm;
