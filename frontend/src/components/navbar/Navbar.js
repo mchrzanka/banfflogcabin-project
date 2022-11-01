@@ -13,7 +13,7 @@ const Navbar = () => {
 			<header>
 				<nav>
 					<div className='main-menu container'>
-						<div>
+						<div className='logo'>
 							<a href='/'>
 								<img
 									width='40'
@@ -26,22 +26,22 @@ const Navbar = () => {
 						<div className={isActive ? 'mobile-menu is-active' : 'mobile-menu'}>
 							<ul>
 								<li className='navitem'>
-									<a href='/'>HOME</a>
+									<a href='/'>Home</a>
 								</li>
 								<li className='navitem'>
-									<a href='/ourcabin'>OUR CABIN</a>
+									<a href='/ourcabin'>Our Cabin</a>
 								</li >
 								<li className='navitem'>
-									<a href='/aboutus'>ABOUT US</a>
+									<a href='/aboutus'>About us</a>
 								</li>
 								<li className='navitem'>
-									<a href='/rates'>RATES</a>
+									<a href='/rates'>Rates</a>
 								</li>
 								<li className='navitem'>
-									<a href='/contact'>CONTACT</a>
+									<a href='/contact'>Contact</a>
 								</li>
-								<li className='booknow-nav'>
-									<a href='/booking'>BOOK NOW</a>
+								<li className='booknow-nav' >
+									<a href='/booking'>Book Now</a>
 								</li>
 							</ul>
 						</div>
