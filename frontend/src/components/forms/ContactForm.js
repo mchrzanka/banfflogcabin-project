@@ -7,11 +7,11 @@ import useForm from '../../hooks/useForm';
 import validateFormInfo from '../../validation/validateBookingForm';
 
 const ContactForm = () => {
-	const { handleChange, values, handleSubmitValidationContact, errors, sendEmail, setSuccess } =
+	const { handleChange, values, handleSubmitValidationContact, errors, setSuccess } =
 		useForm(validateFormInfo);
 
-
-
+console.log(setSuccess);
+let successMessage = "We have received your message and will be in touch!";
 
 	return (
 		<div>
@@ -67,14 +67,14 @@ const ContactForm = () => {
 				</div>
 				<div>
 					<input
-						onClick={sendEmail}
+						//onClick={sendEmail}
 						type='submit'
 						value='Submit'
 						name='contact'
 						className='green'
 					/>
 				</div>
-				<p>{setSuccess}</p>
+				<p>{setSuccess == true ? successMessage : ''}</p>
 			</form>
 		</div>
 	);

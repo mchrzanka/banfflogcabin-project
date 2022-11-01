@@ -16,6 +16,7 @@ const useForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [success, setSuccess] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -73,20 +74,23 @@ const useForm = () => {
     }
 
     if (isError == false) {
-      const sendEmail = (e) => {
-        e.preventDefault();
-        emailjs.send(
+      emailjs
+        .send(
           process.env.REACT_APP_EMAILJS_SERVICE_ID,
           process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
           values,
           process.env.REACT_APP_EMAILJS_USER_ID
-        );
-      };
+        )
+        .then((resp) => {
+          // it worked
+         success = true;
+        })
+        .catch((err) => {
+          console.log("Mail not sent");
+          console.log(err.message);
+        });
     }
   };
-  // 	setSuccess = "We have received your message and will get in touch shortly!";
-  // 	alert('yay!');
-  // };
 
   return {
     handleChange,
@@ -94,7 +98,7 @@ const useForm = () => {
     handleSubmitValidation,
     handleSubmitValidationContact,
     errors,
-    sendEmail,
+    setSuccess,
   };
 };
 
