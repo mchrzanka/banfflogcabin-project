@@ -144,20 +144,7 @@ export default function PaymentForm() {
 					</div>
 					<div>
 						<label>Payment Amount</label>
-						<button
-							onClick={() => {
-								handleDeposit('deposit price variable goes here');
-							}}
-						>
-							Pay Deposit
-						</button>
-						<button
-							onClick={() => {
-								handleFull('full price goes here');
-							}}
-						>
-							Pay Full Amount
-						</button>
+
 					</div>
 				</fieldset>
 				<CardElement />
