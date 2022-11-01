@@ -6,7 +6,7 @@
 	padding-top: 1.6rem;
 
 	.footer-padding {
-		width: 80%;
+		width: 35rem;
 		margin: 0 auto;
 	}
 
@@ -23,4 +23,88 @@
 	}
 
 	padding-bottom: 5rem;
+
+	.underline {
+		text-decoration: underline;
+	}
+
+
+
+	.facebook-li {
+		background-color: a.$almost-black;
+		border-radius: 8px;
+		margin-top: 2rem;
+		margin-bottom: 3rem;
+		width: 33rem;
+
+		a {
+			display: flex;
+			flex-direction: row;
+			width: 25rem;
+			margin: 0 auto;
+			justify-content: space-around;
+			padding: 1rem;
+			color: a.$off-white;
+
+			p {
+				margin-top: 1.5rem;
+			}
+		}
+
+		.facebook {
+			fill: a.$off-white;
+
+		}
+
+		svg {
+			width: 22px;
+			padding-top: 1rem;
+
+		}
+	}
+
+	.location {
+		margin-bottom: 3rem;
+	}
+
+	.contact {
+		margin-bottom: 3rem;
+	}
+
+
+
+
+	@media only screen and (min-width: 820px) {
+		.footer-padding {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+
+			.book {
+				order: 2;
+			}
+
+			.footer-flex {
+				order: 1;
+			}
+
+			.facebook-li {
+				order: 3;
+				height: 7rem;
+			}
+
+		}
+
+		.loc-cont {
+			text-align: left;
+		}
+
+		.h1-style {
+			text-align: left;
+		}
+
+
+	}
+
+
 }
