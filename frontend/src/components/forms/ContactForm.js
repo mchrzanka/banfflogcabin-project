@@ -19,12 +19,6 @@ const ContactForm = () => {
 
 	return (
 		<div>
-			<div>
-				<p>
-					If you have any questions, please don't hesitate to reach out. You can
-					send us an email by filling in the form below.
-				</p>
-			</div>
 			<form className='booking-form' onSubmit={handleSubmitValidationContact}>
 				<div>
 					<label>First Name</label>

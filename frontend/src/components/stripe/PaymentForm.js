@@ -134,7 +134,7 @@ export default function PaymentForm() {
 				</fieldset>
 				<CardElement />
 				<button onClick={handleSubmit(stripe, elements, secret)}>
-					Buy
+					Confirm Booking
 				</button>{' '}
 			</form>
 		</>
