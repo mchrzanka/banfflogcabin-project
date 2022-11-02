@@ -4,21 +4,22 @@ import React from 'react';
 import useForm from '../../hooks/useForm';
 
 //form validation
-import validateFormInfo from '../../validation/validateFormInfo';
+import validateFormInfo from '../../validation/validateBookingForm';
 
 const ContactForm = () => {
-	const { handleChange, values, handleSubmitValidation, errors, sendEmail } =
-		useForm(validateFormInfo);
+	const {
+		handleChange,
+		values,
+		handleSubmitValidationContact,
+		errors,
+		onSuccess,
+	} = useForm(validateFormInfo);
+
+	let successMessage = 'We have received your message and will be in touch!';
 
 	return (
 		<div>
-			<div>
-				<p>
-					If you have any questions, please don't hesitate to reach out. You can
-					send us an email by filling in the form below.
-				</p>
-			</div>
-			<form className='booking-form' onSubmit={handleSubmitValidation}>
+			<form className='booking-form' onSubmit={handleSubmitValidationContact}>
 				<div>
 					<label>First Name</label>
 					<input
@@ -64,13 +65,14 @@ const ContactForm = () => {
 				</div>
 				<div>
 					<input
-						onClick={sendEmail}
+						//onClick={sendEmail}
 						type='submit'
 						value='Submit'
 						name='contact'
 						className='green'
 					/>
 				</div>
+				<p>{onSuccess == true ? successMessage : ''}</p>
 			</form>
 		</div>
 	);

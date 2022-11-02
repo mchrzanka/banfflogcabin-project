@@ -5,7 +5,7 @@ import Map from '../components/map/Map';
 
 export default function Contact() {
 	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/contactuses'
+		'http://147.182.207.198:1337/api/contactpage'
 	);
 
 	if (loading) {
@@ -18,12 +18,8 @@ export default function Contact() {
 		<div>
 			<div>
 				<div>
-					{data.data.map((contactus) => (
-						<div key={contactus.id}>
-							<div className='heading1'>{contactus.attributes.h1}</div>
-							<div className='content'>{contactus.attributes.content1}</div>
-						</div>
-					))}
+					<div className='heading1'>{data.data.attributes.h1}</div>
+					<div className='content'>{data.data.attributes.content1}</div>
 				</div>
 			</div>
 			<div>
@@ -31,12 +27,8 @@ export default function Contact() {
 			</div>
 			<div>
 				<div>
-					{data.data.map((contactus) => (
-						<div key={contactus.id}>
-							<div className='heading2'>{contactus.attributes.h2}</div>
-							<div className='content'>{contactus.attributes.content2}</div>
-						</div>
-					))}
+					<div className='heading2'>{data.data.attributes.h2}</div>
+					<div className='content'>{data.data.attributes.content2}</div>
 				</div>
 			</div>
 			<Map />

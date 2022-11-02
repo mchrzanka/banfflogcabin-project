@@ -4,7 +4,7 @@ import History from '../components/history/History';
 
 export default function AboutUs() {
 	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/abouts'
+		'http://147.182.207.198:1337/api/aboutpage'
 	);
 
 	if (loading) {
@@ -16,15 +16,11 @@ export default function AboutUs() {
 	return (
 		<div>
 			<div>
-				{data.data.map((about) => (
-					<div key={about.id}>
-						<div className='heading1'>{about.attributes.h1}</div>
-						<div className='heading2'>{about.attributes.h2}</div>
-						<div className='content'>{about.attributes.content1}</div>
-						<div className='larger-text'>{about.attributes.quote}</div>
-						<div className='content'>{about.attributes.content2}</div>
-					</div>
-				))}
+				<div className='heading1'>{data.data.attributes.h1}</div>
+				<div className='heading2'>{data.data.attributes.h2}</div>
+				<div className='content'>{data.data.attributes.content1}</div>
+				<div className='larger-text'>{data.data.attributes.quote}</div>
+				<div className='content'>{data.data.attributes.content2}</div>
 			</div>
 			<div>
 				<History />

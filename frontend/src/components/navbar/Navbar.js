@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import '../../scss/components/_navbar.scss'
+import React, { useState } from 'react';
+import '../../scss/components/_navbar.scss';
 
 const Navbar = () => {
 	const [isActive, setIsActive] = useState(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
 								</li>
 								<li className='navitem'>
 									<a href='/ourcabin'>Our Cabin</a>
-								</li >
+								</li>
 								<li className='navitem'>
 									<a href='/aboutus'>About us</a>
 								</li>
@@ -40,8 +40,8 @@ const Navbar = () => {
 								<li className='navitem'>
 									<a href='/contact'>Contact</a>
 								</li>
-								<li className='booknow-nav' >
-									<a href='/booking'>Book Now</a>
+								<li className='booknow-nav'>
+									<a href='/bookingterms'>Book Now</a>
 								</li>
 							</ul>
 						</div>
@@ -56,10 +56,8 @@ const Navbar = () => {
 							<span className='line'></span>
 							<span className='line'></span>
 							<span className='line'></span>
-
 						</div>
 					</div>
-
 				</nav>
 			</header>
 		</>
