@@ -7,11 +7,15 @@ import useForm from '../../hooks/useForm';
 import validateFormInfo from '../../validation/validateBookingForm';
 
 const ContactForm = () => {
-	const { handleChange, values, handleSubmitValidationContact, errors, setSuccess } =
-		useForm(validateFormInfo);
+	const {
+		handleChange,
+		values,
+		handleSubmitValidationContact,
+		errors,
+		onSuccess,
+	} = useForm(validateFormInfo);
 
-console.log(setSuccess);
-let successMessage = "We have received your message and will be in touch!";
+	let successMessage = 'We have received your message and will be in touch!';
 
 	return (
 		<div>
@@ -74,7 +78,7 @@ let successMessage = "We have received your message and will be in touch!";
 						className='green'
 					/>
 				</div>
-				<p>{setSuccess == true ? successMessage : ''}</p>
+				<p>{onSuccess == true ? successMessage : ''}</p>
 			</form>
 		</div>
 	);
