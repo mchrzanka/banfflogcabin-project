@@ -1,6 +1,9 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
 import Play from '../components/youtube/play';
+import Gallery from '../components/gallery/gallery';
+
+import '../scss/pages/_ourcabin.scss'
 
 export default function OurCabin() {
 	const { loading, error, data } = useFetch(
@@ -22,11 +25,13 @@ export default function OurCabin() {
 				<div className='container'>
 					<div className='content'>{data.data.attributes.content1}</div>
 				</div>
-				<div className='container'>
-					<div className='quote'>{data.data.attributes.quote}</div>
+				<Play />
+				<div className='gallery-container'>
+					<div className='quote container'>{data.data.attributes.quote}</div>
+					<Gallery />
 				</div>
 			</div>
-			<Play />
+
 		</div>
 	);
 }

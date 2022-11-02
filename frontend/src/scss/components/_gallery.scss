@@ -1,0 +1,23 @@
+@use '../assets' as a;
+
+.gallery {
+
+    .images img {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    @media only screen and (min-width: 820px) {
+        .images {
+            column-count: 2;
+            column-gap: 2rem;
+            width: 122rem;
+            margin: 0 auto;
+
+            img {
+                max-width: 60rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,15 @@
+@use '../assets' as a;
+
+.gallery-container {
+    background-color: a.$almost-black;
+    padding-bottom: 2rem;
+
+
+    .quote {
+        color: a.$off-white;
+        max-width: 80rem;
+        margin: 10rem auto;
+    }
+
+    padding-top: 2rem;
+}
