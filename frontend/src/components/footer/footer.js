@@ -17,24 +17,26 @@ const Footer = () => {
 							<li className='book'>
 								<a href='/booking' aria-label='book' className='tan wide-btn'>Book Now</a>
 							</li>
-							<div className='footer-flex'>
-								<li>
-									<p className='h1-style'>Banff Log Cabin</p>
+
+							<li>
+								<p className='h1-style'>Banff Log Cabin</p>
+							</li>
+
+
+							<div className='loc-cont'>
+								<li className='location'>
+									<p className='underline'>Our Location</p>
+									<p>222 Glen Crescent Banff,</p>
+									<p>AB T1L 1A6 +1</p>
+									<p>(403) 762-3516</p>
 								</li>
-								<div className='loc-cont'>
-									<li className='location'>
-										<p className='underline'>Our Location</p>
-										<p>222 Glen Crescent Banff,</p>
-										<p>AB T1L 1A6 +1</p>
-										<p>(403) 762-3516</p>
-									</li>
-									<li className='contact'>
-										<p className='underline'>Contact Us</p>
-										<p>+1 (403) 762-3516</p>
-										<p>reservations@banfflogcabin.ca</p>
-									</li>
-								</div>
+								<li className='contact'>
+									<p className='underline'>Contact Us</p>
+									<p>+1 (403) 762-3516</p>
+									<p>reservations@banfflogcabin.ca</p>
+								</li>
 							</div>
+
 
 
 							<li className='facebook-li'>
