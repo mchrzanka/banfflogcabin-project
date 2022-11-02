@@ -38,6 +38,17 @@ const useForm = () => {
 		});
 	};
 
+	const resetForm = (e) => {
+		setValues({
+			firstname: '',
+			lastname: '',
+			email: '',
+			phone: '',
+			breakfast: '',
+			message: '',
+		});
+	};
+
 	const handleSubmitValidation = (e) => {
 		e.preventDefault();
 
@@ -93,6 +104,7 @@ const useForm = () => {
 				.then((resp) => {
 					// it worked
 					success();
+					resetForm();
 				})
 				.catch((err) => {
 					console.log('Mail not sent');
