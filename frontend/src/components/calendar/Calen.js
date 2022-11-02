@@ -31,6 +31,7 @@ const Calen = () => {
         //console.log("pushDayArray"+myArray);
         if(myArray.length == 1){console.log('enough days');}  //FIRES IF DATE RANGE SELECTED
     };
+    
 
     const tileDisabled = ({ activeStartDate, date, view }) => {
         if(date == 'Fri Nov 18 2022 00:00:00 GMT-0700 (Mountain Standard Time)')
