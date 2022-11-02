@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../../scss/components/_calendar.scss';
+import { differenceInCalendarDays } from "date-fns";
 
 
 const Calen = () => {
@@ -32,11 +33,43 @@ const Calen = () => {
         if(myArray.length == 1){console.log('enough days');}  //FIRES IF DATE RANGE SELECTED
     };
     
+    
 
-    const tileDisabled = ({ activeStartDate, date, view }) => {
-        if(date == 'Fri Nov 18 2022 00:00:00 GMT-0700 (Mountain Standard Time)')
-        return true;
-     }
+    
+
+const all_disabled_dates = [ '2023-03-24', '2022-12-30', '2022-11-05', '2022-10-20' ]  
+const alleventDates = new Date(all_disabled_dates);
+const highlightedDates = all_disabled_dates.map((dateString) => new Date(dateString));
+
+function isSameDay(a, b) {
+  return differenceInCalendarDays(a, b) === 0;
+}
+
+function disableDates({ date, view }) {
+    if (
+      view === "month" &&
+      highlightedDates.find((dDate) => isSameDay(dDate, date))
+    ) {
+      // Or: return "highlight background";
+      console.log(highlightedDates)
+      return true;
+    }
+    else return false;
+  }
+
+
+
+
+
+
+
+
+
+
+    // const tileDisabled = ({ activeStartDate, date, view }) => {
+    //     if(date == 'Fri Nov 18 2022 00:00:00 GMT-0700 (Mountain Standard Time)')
+    //     return true;
+    //  }
 
     return (
         <div className='container'>
@@ -44,7 +77,10 @@ const Calen = () => {
             <Calendar onChange={onChange} 
             //defaultValue={undefined}
             value={value} 
-            tileDisabled={tileDisabled}
+            tileDisabled={disableDates}
+
+            // disableDates={}
+
             selectRange={true}
             minDate={date}
             onClickDay={(value, event) => {
