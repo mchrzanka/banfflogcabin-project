@@ -1,5 +1,6 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
+import Play from '../components/youtube/play';
 
 export default function OurCabin() {
 	const { loading, error, data } = useFetch(
@@ -17,18 +18,19 @@ export default function OurCabin() {
 			<div>
 				{data.data.map((ourcabin) => (
 					<div key={ourcabin.id}>
-						<div className="container">
-						    <div className='heading1'>{ourcabin.attributes.h1}</div>
+						<div className='container'>
+							<div className='heading1'>{ourcabin.attributes.h1}</div>
 						</div>
-						<div className="container">
-						    <div className='content'>{ourcabin.attributes.content}</div>
+						<div className='container'>
+							<div className='content'>{ourcabin.attributes.content}</div>
 						</div>
-						<div className="container">
-						    <div className='quote'>{ourcabin.attributes.quote}</div>
+						<div className='container'>
+							<div className='quote'>{ourcabin.attributes.quote}</div>
 						</div>
 					</div>
 				))}
 			</div>
+			<Play />
 		</div>
 	);
 }

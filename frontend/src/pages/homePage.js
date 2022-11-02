@@ -24,21 +24,24 @@ export default function HomePage() {
 					<div key={home.id}>
 						<div className='heading1'>{home.attributes.h1}</div>
 						<picture>
-							<source media="(min-width:650px)" srcSet={cabin} />
-							<img src={cabinsm} alt="Flowers" />
+							<source media='(min-width:650px)' srcSet={cabin} />
+							<img src={cabinsm} alt='Flowers' />
 						</picture>
-						<a className='tan' href='/booking'>Book Now</a>
+						<a className='tan' href='/booking'>
+							Book Now
+						</a>
 						<div className='heading2'>{home.attributes.h21}</div>
 						<div className='content'>{home.attributes.content1}</div>
 						<div className='heading2'>{home.attributes.h22}</div>
 						<div className='content'>{home.attributes.content2}</div>
-						<a className='green' href='/rates'>Our Cabin</a>
+						<a className='green' href='/rates'>
+							Our Cabin
+						</a>
 						<div className='heading2'>{home.attributes.h23}</div>
 						<div className='content'>{home.attributes.content3}</div>
 					</div>
 				))}
 			</div>
-			<div><Play/></div>
 			<div>
 				<h2>Reviews</h2>
 				<Reviews />
