@@ -11,12 +11,12 @@ const Calen = () => {
     const date = new Date();
 	
     const firstDateDisplay = (myArray) => { 
-        //console.log("firstDateDisplay" + myArray); IS THERE A FIRST DAY?
+        //console.log("firstDateDisplay" + myArray); the first day they click on
         return myArray.length > 0 ? true : false;
     }
 
     const secondDateDisplay = (myArray) => { 
-        //console.log("secondDateDisplay" + myArray); IS THERE A SECOND DAY?
+        //console.log("secondDateDisplay" + myArray); the end day they click on
         return myArray.length === 2 ? true : false;
     }
 
@@ -32,12 +32,18 @@ const Calen = () => {
         if(myArray.length == 1){console.log('enough days');}  //FIRES IF DATE RANGE SELECTED
     };
 
+    const tileDisabled = ({ activeStartDate, date, view }) => {
+        if(date == 'Fri Nov 18 2022 00:00:00 GMT-0700 (Mountain Standard Time)')
+        return true;
+     }
+
     return (
         <div className='container'>
             <h1>Booking Calendar</h1>
             <Calendar onChange={onChange} 
             //defaultValue={undefined}
             value={value} 
+            tileDisabled={tileDisabled}
             selectRange={true}
             minDate={date}
             onClickDay={(value, event) => {
