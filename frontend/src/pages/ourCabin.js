@@ -40,6 +40,9 @@ export default function OurCabin() {
 				<div className='container'>
 					<div className='quote'>{data.data.attributes.quote}</div>
 				</div>
+				<div className='container'>
+					<div className='quotename'>{data.data.attributes.quotename}</div>
+				</div>
 			</div>
 			<Play />
 		</div>
