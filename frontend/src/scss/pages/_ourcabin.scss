@@ -3,6 +3,7 @@
 .gallery-container {
     background-color: a.$almost-black;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 
 
     .quote {
@@ -11,5 +12,10 @@
         margin: 10rem auto;
     }
 
-    padding-top: 2rem;
+    .quote-flex {
+        display: flex;
+        flex-direction: column;
+        color: aqua;
+    }
+
 }

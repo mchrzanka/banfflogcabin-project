@@ -2,6 +2,7 @@ import React from 'react';
 import useFetch from '../hooks/useFetch';
 import Play from '../components/youtube/play';
 import Gallery from '../components/gallery/gallery';
+import '../scss/pages/_ourcabin.scss'
 
 import '../scss/pages/_ourcabin.scss'
 
@@ -42,11 +43,19 @@ export default function OurCabin() {
 					<div className='content'>{data.data.attributes.content6}</div>
 				</div>
 				<div className='container'>
-					<div className='quote'>{data.data.attributes.quote}</div>
+
 
 				</div>
-				<div className='container'>
-					<div className='quotename'>{data.data.attributes.quotename}</div>
+				<div className='gallery-container'>
+					<div className='container quote-flex'>
+						<div className='quote'>
+							{data.data.attributes.quote}
+						</div>
+						<div>
+							{data.data.attributes.quotename}
+						</div>
+					</div>
+					<Gallery />
 				</div>
 			</div>
 
