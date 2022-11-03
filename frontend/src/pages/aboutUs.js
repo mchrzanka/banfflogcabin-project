@@ -21,6 +21,8 @@ export default function AboutUs() {
 				<div className='content'>{data.data.attributes.content1}</div>
 				<div className='larger-text'>{data.data.attributes.quote}</div>
 				<div className='content'>{data.data.attributes.content2}</div>
+				<div className='content'>{data.data.attributes.content3}</div>
+				<div className='content'>{data.data.attributes.content4}</div>
 			</div>
 			<div>
 				<History />
