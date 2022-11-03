@@ -3,13 +3,26 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../../scss/components/_calendar.scss';
 import { differenceInCalendarDays } from "date-fns";
+import useFetch from '../../hooks/useFetch';
 
 
 const Calen = () => {
-
     const [value, onChange] = useState(undefined);
     const [myArray, updateMyArray] = useState([]);
     const date = new Date();
+
+    //GRABBING BOOKED DATES FROM STRAPI
+    const { loading, error, data } = useFetch(
+		'http://147.182.207.198:1337/api/bookings'
+	);
+
+	if (loading) {
+		return <p>Loading...</p>;
+	} else if (error === []) {
+		return <p>Error</p>;
+	}
+
+
 	
     const firstDateDisplay = (myArray) => { 
         //console.log("firstDateDisplay" + myArray); the first day they click on
@@ -51,7 +64,7 @@ function disableDates({ date, view }) {
       highlightedDates.find((dDate) => isSameDay(dDate, date))
     ) {
       // Or: return "highlight background";
-      console.log(highlightedDates)
+    //   console.log(highlightedDates)
       return true;
     }
     else return false;
@@ -59,10 +72,28 @@ function disableDates({ date, view }) {
 
 
 
+//PUTTING THE BOOKED DATES FROM STRAPI INTO AN ARRAY
+const strapiBookedDateStart = [data.data[0].attributes.dateStart]; //how can I store this variable while looping through the array to grab all of them, cause right now it's just getting the first input in the array
+const bookedDateStart = new Date(strapiBookedDateStart);
+console.log("Initial date start: " + bookedDateStart);
 
+const strapiBookedDateEnd = [data.data[0].attributes.dateEnd];
+const bookedDateEnd = new Date(strapiBookedDateEnd);
+console.log("Initial date end: " + bookedDateEnd);
 
+// bookedDateStart.setDate(bookedDateStart.getDate() + 1);
 
+// console.log("The next day: " + bookedDateStart);
 
+const date1 = bookedDateStart;
+const date2 = bookedDateEnd;
+const diffTime = Math.abs(date2 - date1);
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+console.log((diffDays + 1) + " total booked days");
+console.log((diffDays) + " = number of days to loop through");
+
+//the array
+const strapiBookedDates = [data.data[0].attributes.dateStart, data.data[0].attributes.dateEnd];
 
 
 
@@ -74,6 +105,16 @@ function disableDates({ date, view }) {
     return (
         <div className='container'>
             <h1>Booking Calendar</h1>
+<p>Dates from Strapi for disabling:</p>
+            {data.data.map((bookings) => (
+            <div key={bookings.id}>
+                <p>Date Start: {bookings.attributes.dateStart}</p>
+                <p>Date End: {bookings.attributes.dateEnd}</p>
+            </div>
+        ))}
+
+
+
             <Calendar onChange={onChange} 
             //defaultValue={undefined}
             value={value} 
@@ -98,6 +139,7 @@ function disableDates({ date, view }) {
                 {secondDateDisplay(myArray) == true ? <p>{myArray[1].split('00:')[0]}</p> : ""}
             </div>
         </div> 
+        
     );
 };
 export default Calen;

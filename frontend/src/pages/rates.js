@@ -1,4 +1,5 @@
 import React from 'react';
+import Ammenities from '../components/ammenities/Ammenities';
 import useFetch from '../hooks/useFetch';
 import Pricing from './../components/pricing/Pricing';
 
@@ -15,12 +16,13 @@ export default function Rates() {
 
 	return (
 		<div>
-			<div className='heading1'>{data.data.attributes.h1}</div>
+			<h1 className='heading1'>{data.data.attributes.h1}</h1>
 
 			<Pricing />
-			<div className='content'>{data.data.attributes.content1}</div>
-			<div className='heading2'>{data.data.attributes.h2}</div>
-			<div className='content'>{data.data.attributes.content2}</div>
+			<p className='content'>{data.data.attributes.content1}</p>
+			<h2 className='heading2'>{data.data.attributes.h2}</h2>
+			<Ammenities/>
+			<p className='content'>{data.data.attributes.content2}</p>
 		</div>
 	);
 }
