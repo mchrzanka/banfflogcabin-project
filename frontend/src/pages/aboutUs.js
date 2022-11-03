@@ -29,6 +29,8 @@ export default function AboutUs() {
 					<div className='last-con'>
 						<div className='content'>{data.data.attributes.content2}</div>					
 					</div>
+				<div className='content'>{data.data.attributes.content3}</div>
+				<div className='content'>{data.data.attributes.content4}</div>
 				</div>
 			</div>
 			<div>

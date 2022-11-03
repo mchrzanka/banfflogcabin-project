@@ -23,7 +23,25 @@ export default function OurCabin() {
 					<div className='content'>{data.data.attributes.content1}</div>
 				</div>
 				<div className='container'>
+					<div className='content'>{data.data.attributes.content2}</div>
+				</div>
+				<div className='container'>
+					<div className='content'>{data.data.attributes.content3}</div>
+				</div>
+				<div className='container'>
+					<div className='content'>{data.data.attributes.content4}</div>
+				</div>
+				<div className='container'>
+					<div className='content'>{data.data.attributes.content5}</div>
+				</div>
+				<div className='container'>
+					<div className='content'>{data.data.attributes.content6}</div>
+				</div>
+				<div className='container'>
 					<div className='quote'>{data.data.attributes.quote}</div>
+				</div>
+				<div className='container'>
+					<div className='quotename'>{data.data.attributes.quotename}</div>
 				</div>
 			</div>
 			<Play />
