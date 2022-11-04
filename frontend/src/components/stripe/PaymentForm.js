@@ -6,6 +6,21 @@ import validateFormInfo from '../../validation/validateBookingForm';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 
 const handleSubmit = (stripe, elements, intentKey, values) => async () => {
+				//put booking form info into strapi. Just need to add an "if booking !errors" kind of thing, so it posts only when the booking 100% goes through.
+				axios
+				.post('http://147.182.207.198:1337/api/bookings', {
+					data: {
+						firstname: values.firstname,
+						lastname: values.lastname,
+						email: values.email,
+						phone: values.phone,
+						breakfast: values.breakfast,
+					},
+				})
+				.then((response) => {
+					console.log(response);
+				});
+
 	//STRIPE
 
 	const cardElement = elements.getElement(CardElement);
@@ -24,26 +39,12 @@ export default function PaymentForm() {
 	const { handleChange, values, handleSubmitValidation, errors } =
 		useForm(validateFormInfo);
 
-	//put booking form info into strapi. Just need to add an "if booking !errors" kind of thing, so it posts only when the booking 100% goes through.
-	axios
-		.post('http://147.182.207.198:1337/api/bookings', {
-			data: {
-				firstname: values.firstname,
-				lastname: values.lastname,
-				email: values.email,
-				phone: values.phone,
-				breakfast: values.breakfast,
-			},
-		})
-		.then((response) => {
-			console.log(response);
-		});
 
 	const stripe = useStripe();
 	const elements = useElements();
 
 	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/stripeIntent'
+		'http://147.182.207.198:1337/api/stripeintent'
 	);
 
 	if (loading) {
@@ -63,13 +64,11 @@ export default function PaymentForm() {
 				}}
 			>
 				<fieldset>
-					<div>
-						<p>{values.firstname}</p>
-						<p>{values.lastname}</p>
-						<p>{values.email}</p>
-						<p>{values.phone}</p>
-						<p>{values.breakfast}</p>
-					</div>
+				<div>
+					<p>...</p>
+				</div>
+
+
 					<div>
 						<label>First Name</label>
 						<input
@@ -135,7 +134,7 @@ export default function PaymentForm() {
 				<CardElement />
 				<button onClick={handleSubmit(stripe, elements, secret)}>
 					Confirm Booking
-				</button>{' '}
+				</button>
 			</form>
 		</>
 	);
