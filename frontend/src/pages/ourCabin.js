@@ -1,6 +1,8 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
 import Play from '../components/youtube/play';
+import Gallery from '../components/gallery/gallery';
+import '../scss/pages/_ourcabin.scss';
 
 export default function OurCabin() {
 	const { loading, error, data } = useFetch(
@@ -14,37 +16,33 @@ export default function OurCabin() {
 	}
 
 	return (
-		<div>
+		<div className='ourcabin'>
 			<div>
-				<div className='container'>
-					<div className='heading1'>{data.data.attributes.h1}</div>
+				<div className=''>
+					<h1 className='heading1'>{data.data.attributes.h1}</h1>
 				</div>
-				<div className='container'>
-					<div className='content'>{data.data.attributes.content1}</div>
+				<div className='container content'>
+					<p className='content'>{data.data.attributes.content1}</p>
+					<p className='content'>{data.data.attributes.content2}</p>
+					<p className='content'>{data.data.attributes.content3}</p>
+					<p className='content'>{data.data.attributes.content4}</p>
+					<p className='content'>{data.data.attributes.content5}</p>
+					<p className='content'>{data.data.attributes.content6}</p>
 				</div>
-				<div className='container'>
-					<div className='content'>{data.data.attributes.content2}</div>
-				</div>
-				<div className='container'>
-					<div className='content'>{data.data.attributes.content3}</div>
-				</div>
-				<div className='container'>
-					<div className='content'>{data.data.attributes.content4}</div>
-				</div>
-				<div className='container'>
-					<div className='content'>{data.data.attributes.content5}</div>
-				</div>
-				<div className='container'>
-					<div className='content'>{data.data.attributes.content6}</div>
-				</div>
-				<div className='container'>
-					<div className='quote'>{data.data.attributes.quote}</div>
-				</div>
-				<div className='container'>
-					<div className='quotename'>{data.data.attributes.quotename}</div>
+
+				<div className='youtube-vid'>
+					<Play />
 				</div>
 			</div>
-			<Play />
+			<div className='quote-container'>
+				<div className='quote'>
+					<div>{data.data.attributes.quote}</div>
+					<p className='quotename'>{data.data.attributes.quotename}</p>
+				</div>
+			</div>
+
+			<Gallery />
+
 		</div>
 	);
 }

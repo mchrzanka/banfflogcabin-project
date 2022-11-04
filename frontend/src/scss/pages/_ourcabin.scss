@@ -1,0 +1,50 @@
+@use '../assets' as a;
+
+.ourcabin {
+    padding-top: 4rem;
+    background-color: a.$green;
+    color: a.$off-white;
+
+    h1 {
+        font-weight: 300;
+        background-color: a.$almost-black;
+        padding-bottom: 4rem;
+    }
+}
+
+
+.youtube-vid {
+    margin: 10rem auto;
+    width: 39rem;
+
+    @media only screen and (min-width: 820px) {
+        width: 82rem;
+    }
+}
+
+.content {
+    p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.quote-container {
+    background-color: a.$almost-black;
+
+    .quote {
+        // color: a.$off-white;
+        margin: 0 auto;
+        width: 30rem;
+        padding: 10rem 0;
+    }
+
+
+    .quotename {
+        text-align: right;
+        margin-right: 10rem;
+        font-size: 1.6rem;
+        font-family: a.$poppins;
+        line-height: 2.4em;
+    }
+
+}

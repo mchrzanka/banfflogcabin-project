@@ -5,7 +5,8 @@
 
 :root,
 html {
-	font-size: 62.5%; /* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
+	font-size: 62.5%;
+	/* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
 }
 
 
@@ -42,7 +43,7 @@ textarea,
 	font-family: f.$poppins;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
@@ -59,10 +60,7 @@ a{
 	margin: 0 auto;
 }
 
-main {
-	padding-top: 4rem;
-	background-color: c.$brown;
-}
+
 
 
 
@@ -71,6 +69,7 @@ main {
 
 
 @media screen and (min-width: 1000px) {
+
 	.heading1,
 	.quote,
 	h1,
