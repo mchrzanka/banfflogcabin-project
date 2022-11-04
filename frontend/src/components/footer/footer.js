@@ -46,7 +46,13 @@ const Footer = () => {
 
 
 							</li>
+							<li className='book'>
+								<a href='http://147.182.207.198:1337/admin/auth/login' aria-label='admin' className='facebook'>
+									
+									<p>Admin</p></a>
 
+
+							</li>
 						</ul>
 					</div>
 					<p>©2022 Banff Log Cabin</p>
