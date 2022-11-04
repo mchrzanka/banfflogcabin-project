@@ -75,11 +75,11 @@ function disableDates({ date, view }) {
 //PUTTING THE BOOKED DATES FROM STRAPI INTO AN ARRAY
 const strapiBookedDateStart = [data.data[0].attributes.dateStart]; //how can I store this variable while looping through the array to grab all of them, cause right now it's just getting the first input in the array
 const bookedDateStart = new Date(strapiBookedDateStart);
-// console.log("Initial date start: " + bookedDateStart);
+console.log("Initial date start: " + bookedDateStart);
 
 const strapiBookedDateEnd = [data.data[0].attributes.dateEnd];
 const bookedDateEnd = new Date(strapiBookedDateEnd);
-// console.log("Initial date end: " + bookedDateEnd);
+console.log("Initial date end: " + bookedDateEnd);
 
 // bookedDateStart.setDate(bookedDateStart.getDate() + 1);
 
@@ -89,8 +89,8 @@ const date1 = bookedDateStart;
 const date2 = bookedDateEnd;
 const diffTime = Math.abs(date2 - date1);
 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-// console.log((diffDays + 1) + " total booked days");
-// console.log((diffDays) + " = number of days to loop through");
+console.log((diffDays + 1) + " total booked days");
+console.log((diffDays) + " = number of days to loop through");
 
 //the array
 const strapiBookedDates = [data.data[0].attributes.dateStart, data.data[0].attributes.dateEnd];

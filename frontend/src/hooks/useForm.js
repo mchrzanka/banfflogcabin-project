@@ -51,6 +51,7 @@ const useForm = () => {
 
 	const handleSubmitValidation = (e) => {
 		e.preventDefault();
+
 		setErrors(validateFormInfo(values));
 	};
 

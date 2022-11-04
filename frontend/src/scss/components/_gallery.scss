@@ -1,0 +1,28 @@
+@use '../assets' as a;
+
+.gallery {
+
+    background-color: a.$almost-black;
+    padding: 2rem;
+    width: 100%;
+
+
+    .images img {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    @media only screen and (min-width: 820px) {
+        .images {
+            column-count: 2;
+            column-gap: 2rem;
+            margin: 0 auto;
+            max-width: 122rem;
+
+            img {
+                max-width: 60rem;
+            }
+        }
+    }
+
+}
