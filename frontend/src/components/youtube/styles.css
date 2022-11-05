@@ -1,20 +1,35 @@
 .Play {
-    font-family: sans-serif;
-    text-align: center;
-    margin: 0 auto;
-  }
+  text-align: center;
+  margin: 0 auto;
+}
 
-  .video-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-  }
+.video-responsive iframe {
+  height: 21rem;
+  width: 39rem;
+}
 
+
+
+@media only screen and (min-width: 820px) {
   .video-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 50%;
-    width: 50%;
-    position: absolute;
+    height: 33rem;
+    width: 60rem;
   }
+
+}
+
+@media only screen and (min-width: 1600px) {
+  .video-responsive iframe {
+    width: 100rem;
+    height: 60rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .video-responsive iframe {
+    width: 150rem;
+    height: 80rem;
+    margin-bottom: 8rem;
+  }
+}
