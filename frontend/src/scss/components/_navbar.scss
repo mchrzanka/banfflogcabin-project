@@ -164,13 +164,19 @@ nav {
 
                     }
                 }
-
-
             }
         }
 
         .hamburger span {
             display: none;
+        }
+    }
+
+    @media only screen and (min-width: 2000px) {
+        .mobile-menu {
+            ul {
+                width: 80rem;
+            }
         }
     }
 }

@@ -18,16 +18,26 @@ export default function OurCabin() {
 	return (
 		<div className='ourcabin'>
 			<div>
-				<div className=''>
-					<h1 className='heading1'>{data.data.attributes.h1}</h1>
+				<div className='title'>
+					<h1 className='heading1 container'>{data.data.attributes.h1}</h1>
 				</div>
 				<div className='container content'>
-					<p className='content'>{data.data.attributes.content1}</p>
-					<p className='content'>{data.data.attributes.content2}</p>
-					<p className='content'>{data.data.attributes.content3}</p>
-					<p className='content'>{data.data.attributes.content4}</p>
-					<p className='content'>{data.data.attributes.content5}</p>
-					<p className='content'>{data.data.attributes.content6}</p>
+					<div className='content-flex'>
+						<div className='col-1'>
+							<p className='content'>{data.data.attributes.content1}</p>
+							<p className='content'>{data.data.attributes.content2}</p>
+							<p className='content'>{data.data.attributes.content3}</p>
+						</div>
+						<div className='col-2'>
+							<p className='content'>{data.data.attributes.content4}</p>
+							<p className='content'>{data.data.attributes.content5}</p>
+							<p className='content'>{data.data.attributes.content6}</p>
+						</div>
+					</div>
+
+
+
+
 				</div>
 
 				<div className='youtube-vid'>
