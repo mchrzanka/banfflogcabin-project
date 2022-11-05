@@ -1,7 +1,7 @@
 @use '../assets' as a;
 
 .ourcabin {
-    padding-top: 2rem;
+    padding-top: 4rem;
     background-color: a.$green;
     color: a.$off-white;
 
@@ -32,7 +32,8 @@
         }
 
         h1 {
-            padding-top: 2rem;
+            padding-top: 3rem;
+            padding-bottom: 1rem;
             margin-left: 2rem;
         }
 

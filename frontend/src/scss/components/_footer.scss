@@ -37,6 +37,8 @@
 		margin-bottom: 3rem;
 		min-width: 28rem;
 
+
+
 		a {
 			display: flex;
 			flex-direction: row;
@@ -62,6 +64,12 @@
 			padding-top: 1rem;
 
 		}
+	}
+
+	.facebook-li:hover {
+
+		background-color: black;
+
 	}
 
 	.location {
@@ -98,6 +106,10 @@
 				height: 4.8rem;
 				margin-top: 7rem;
 				margin-left: 8rem;
+
+				a {
+					align-items: center;
+				}
 			}
 
 			.book {
