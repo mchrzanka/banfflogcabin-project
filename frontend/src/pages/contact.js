@@ -3,6 +3,7 @@ import ContactForm from '../components/forms/ContactForm';
 import useFetch from '../hooks/useFetch';
 import Map from '../components/map/Map';
 
+import '../scss/pages/_contact.scss'
 export default function Contact() {
 	const { loading, error, data } = useFetch(
 		'http://147.182.207.198:1337/api/contactpage'
