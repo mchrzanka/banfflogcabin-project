@@ -20,7 +20,8 @@ const ContactForm = () => {
 	return (
 		<div>
 			<form className='booking-form' onSubmit={handleSubmitValidationContact}>
-				<div>
+				
+				<div className='first'>
 					<label>First Name</label>
 					<input
 						type='text'
@@ -31,7 +32,7 @@ const ContactForm = () => {
 					/>
 					{errors.firstname && <p>{errors.firstname}</p>}
 				</div>
-				<div>
+				<div className='last'>
 					<label>Last Name</label>
 					<input
 						type='text'
@@ -42,7 +43,7 @@ const ContactForm = () => {
 					/>
 					{errors.lastname && <p>{errors.lastname}</p>}
 				</div>
-				<div>
+				<div className='email'>
 					<label>Email</label>
 					<input
 						type='text'
@@ -53,8 +54,8 @@ const ContactForm = () => {
 					/>
 					{errors.email && <p>{errors.email}</p>}
 				</div>
-				<div>
-					<label></label>
+				<div className='message'>
+					<label>message</label>
 					<textarea
 						name='message'
 						value={values.message}
@@ -63,7 +64,7 @@ const ContactForm = () => {
 					/>
 					{errors.message && <p>{errors.message}</p>}
 				</div>
-				<div>
+				<div className='button'>
 					<input
 						//onClick={sendEmail}
 						type='submit'
