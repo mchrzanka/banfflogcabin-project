@@ -1,0 +1,41 @@
+@use '../assets' as a;
+
+.booking-term{
+    background-color: #FCFBFC;
+ 
+    .heading1{
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+    .content{
+        font-weight: lighter;
+        line-height: 24px;
+        margin: 1.5rem;
+    }
+    .policy{
+        background-color: #F1F1F1;
+        margin-top: 4rem;
+        padding: 2rem 0.5rem;
+    }
+    .heading2{
+        text-align: center;
+    }
+
+     .wide-btn{
+            text-align: center;
+            margin: 0 0.5rem;
+            width: 100%;
+            
+        }
+        .booking-button{
+            display: flex;
+            margin: 4rem 0 8rem 0;
+        }
+      
+}
+@media only screen and (min-width: 820px) {
+    .booking-term{
+        
+    }
+}
