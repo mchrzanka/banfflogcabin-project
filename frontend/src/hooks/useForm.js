@@ -117,14 +117,6 @@ const useForm = () => {
       errors.firstname = "First name can only contain letters.";
       isError = true;
     }
-    //lastname
-    if (!values.lastname) {
-      errors.lastname = "Last name required.";
-      isError = true;
-    } else if (!/^[A-Za-z\s]+$/.test(values.lastname)) {
-      errors.lastname = "Last name can only contain letters.";
-      isError = true;
-    }
 
     //email
     if (!values.email) {
