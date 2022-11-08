@@ -1,7 +1,9 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
 import History from '../components/history/History';
-import '../scss/pages/_aboutus.scss'
+import '../scss/pages/_aboutus.scss';
+
+
 
 export default function AboutUs() {
 	const { loading, error, data } = useFetch(
@@ -28,9 +30,10 @@ export default function AboutUs() {
 					</div>
 					<div className='last-con'>
 						<div className='content'>{data.data.attributes.content2}</div>					
+						<div className='content'>{data.data.attributes.content3}</div>
+						<div className='content'>{data.data.attributes.content4}</div>
 					</div>
-				<div className='content'>{data.data.attributes.content3}</div>
-				<div className='content'>{data.data.attributes.content4}</div>
+				
 				</div>
 			</div>
 			<div>
