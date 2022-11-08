@@ -153,6 +153,8 @@ const Calen = () => {
         }}
       />
 
+<p>* Minimum booking is two days.</p>
+
       <input
         onClick={handleClick}
         type="submit"
@@ -160,7 +162,6 @@ const Calen = () => {
         name="selectDays"
         className="green"
       />
-      <p>Minimum booking is two days.</p>
 
       <div className =  {(click == true) && (diffDays > 2) ? "datesSelected show" : "datesSelected"}>
         <h2>Dates Selected:</h2>

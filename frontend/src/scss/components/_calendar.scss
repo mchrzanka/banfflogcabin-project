@@ -2,14 +2,63 @@
 
 .react-calendar {
   width: auto;
+
+  .react-calendar__tile--active, .react-calendar__tile--rangeEnd, .react-calendar__tile--rangeStart, .react-calendar__tile--range {
+    background-color: a.$green;
+  }
+
+  .react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus {
+    background: a.$green-hover;
+}
 }
 
 .datesSelected {
-    display: none;
+  display: none;
+}
+
+.show {
+  display: block;
+  background-color: a.$grey;
+}
+
+.react-calendar__navigation {
+  height: auto;
+
+
+  .react-calendar__navigation__label {
+    line-height: 1.25;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
-  .show{
-    display:block;
+  .react-calendar__navigation__arrow {
+    background-color: red;
+    box-shadow: none;
+    margin: 0 10px 0 0;
+    padding: 0;
+  }
+
+  .react-calendar__navigation__arrow {
+    background-color: red;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .react-calendar__navigation__arrow:nth-of-type(1) {
+    margin-right: 10px;
+  }
+
+  .react-calendar__navigation__arrow:nth-of-type(4) {
+    margin-right: 10px;
+  }
+
+  button:disabled {
     background-color: a.$grey;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
   }
-
+}
