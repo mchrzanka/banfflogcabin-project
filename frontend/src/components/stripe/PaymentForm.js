@@ -63,9 +63,8 @@ export default function PaymentForm() {
                 },
               })
               .then((response) => {
-                console.log("Form response: " + response);
               });
-
+			//put redirect to success page here
             console.log("Form submitted successfully");
           } else {
             // this should not happen....

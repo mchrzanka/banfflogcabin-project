@@ -15,7 +15,7 @@ const ContactForm = () => {
 		onSuccess,
 	} = useForm(validateFormInfo);
 
-	let successMessage = 'We have received your message and will be in touch!';
+	let successMessage = 'We have received your message and will be in touch shortly.';
 
 	return (
 		<div>
