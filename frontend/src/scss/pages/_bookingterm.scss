@@ -24,13 +24,13 @@
 
      .wide-btn{
             text-align: center;
-            margin: 0 0.5rem;
+            margin-right: 5rem;
             width: 100%;
             
         }
         .booking-button{
             display: flex;
-            margin: 4rem 0 8rem 0;
+            margin: 4rem 0 8rem 2rem;
         }
       
 }
@@ -50,6 +50,15 @@
         .heading2{
             font-size: 6.2rem;
         }
+        .policy{
+            padding: 5rem;
+            .content{
+                font-size: 1.8rem;
+              
+            }
+        }
+   
 
     }
+  
 }
