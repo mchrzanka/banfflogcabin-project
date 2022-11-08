@@ -1,6 +1,15 @@
-@use '../assets' as a;
+@use "../assets" as a;
 
 .react-calendar {
-    width: auto;
+  width: auto;
 }
+
+.datesSelected {
+    display: none;
+  }
+
+  .show{
+    display:block;
+    background-color: a.$grey;
+  }
 
