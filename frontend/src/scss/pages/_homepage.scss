@@ -1,0 +1,13 @@
+@use '../assets' as a;
+
+
+.h2-back {
+
+    background-color: a.$almost-black;
+    color: a.$off-white;
+    padding: 1rem 0;
+}
+
+.reviews {
+    background-color: a.$grey;
+}
