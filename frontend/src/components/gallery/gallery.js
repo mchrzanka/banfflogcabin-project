@@ -1,5 +1,4 @@
 import React from 'react';
-// import './styles.css';
 import '../../scss/components/_gallery.scss';
 
 import breakfast from '../../img/galleryImages/breakfast-outside.jpg';
@@ -15,14 +14,16 @@ import backdoor from '../../img/galleryImages/cabin-backdoor.jpg';
 export default function Gallery() {
     return <div className='gallery'>
         <div className='images'>
-            <img src={breakfast} />
-            <img src={bedroomone} />
-            <img src={kitchen} />
-            <img src={bathroom} />
-            <img src={customerbook} />
-            <img src={bedroomtwo} />
-            <img src={waffles} />
-            <img src={backdoor} />
+
+            <img src={breakfast} alt='Breakfast on table outside cabin' />
+            <img src={bedroomone} alt='View of breadroom from beside master bed' />
+            <img src={kitchen} alt='view of kicthen cooking space (sink, stove, fridge, microwave, cabnets)' />
+            <img src={bathroom} alt='View of bathroom toilet, sink and shower' />
+            <img src={customerbook} alt='Review left by customer in a book for reviews' />
+            <img src={bedroomtwo} alt='View of bedroom from footer of master bed' />
+            <img src={waffles} alt='Photo of breakfast waffels and berries' />
+            <img src={backdoor} alt='Outside view of cabin looking towards the back door' />
+
         </div>
     </div>
 }

@@ -5,7 +5,8 @@
 
 :root,
 html {
-	font-size: 62.5%; /* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
+	font-size: 62.5%;
+	/* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
 }
 
 
@@ -42,7 +43,7 @@ textarea,
 	font-family: f.$poppins;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
@@ -59,10 +60,7 @@ a{
 	margin: 0 auto;
 }
 
-main {
-	padding-top: 4rem;
-	background-color: c.$brown;
-}
+
 
 
 
@@ -71,6 +69,7 @@ main {
 
 
 @media screen and (min-width: 1000px) {
+
 	.heading1,
 	.quote,
 	h1,
@@ -81,5 +80,32 @@ main {
 	.heading2,
 	h2 {
 		font-family: HighSummit;
+	}
+}
+
+
+@media screen and (min-width: 2000px) {
+
+	.heading1,
+	.quote,
+	h1,
+	.h1-style {
+		font-size: 10rem;
+	}
+
+	.heading2,
+	h2 {
+		font-size: 7rem;
+	}
+
+	a,
+	p,
+	.content,
+	label,
+	input,
+	textarea,
+	.reviewer {
+		font-size: 2.1rem;
+
 	}
 }

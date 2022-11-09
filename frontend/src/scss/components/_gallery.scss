@@ -2,6 +2,11 @@
 
 .gallery {
 
+    background-color: a.$almost-black;
+    padding: 2rem;
+    width: 100%;
+
+
     .images img {
         width: 100%;
         margin-bottom: 2rem;
@@ -11,8 +16,8 @@
         .images {
             column-count: 2;
             column-gap: 2rem;
-            width: 122rem;
             margin: 0 auto;
+            max-width: 122rem;
 
             img {
                 max-width: 60rem;

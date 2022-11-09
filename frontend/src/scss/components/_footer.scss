@@ -1,118 +1,158 @@
-@use '../assets' as a;
+@use "../assets" as a;
 
 .site-footer {
-	background-color: a.$green;
-	text-align: center;
-	padding-top: 1.6rem;
+  background-color: a.$green;
+  text-align: center;
+  padding-top: 1.6rem;
 
-	.footer-padding {
-		width: 35rem;
-		margin: 0 auto;
-	}
+  .footer-padding {
+    width: 35rem;
+    margin: 0 auto;
+  }
 
-	p {
-		color: a.$off-white;
-	}
+  p {
+    color: a.$off-white;
+  }
 
-	.btn {
-		background-color: a.$brown;
-	}
+  .btn {
+    background-color: a.$brown;
+  }
 
-	ul li {
-		margin-bottom: 1rem;
-	}
+  ul li {
+    margin-bottom: 1rem;
+  }
 
-	padding-bottom: 5rem;
+  padding-bottom: 5rem;
 
-	.underline {
-		text-decoration: underline;
-	}
+  .underline {
+    text-decoration: underline;
+  }
 
+  .facebook-li {
+    background-color: a.$almost-black;
+    border-radius: 8px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    min-width: 28rem;
 
+    a {
+      display: flex;
+      flex-direction: row;
+      // min-width: 25rem;
+      margin: 0 auto;
+      justify-content: space-around;
+      padding: 1rem;
+      margin-top: -1.45rem;
+      color: a.$off-white;
 
-	.facebook-li {
-		background-color: a.$almost-black;
-		border-radius: 8px;
-		margin-top: 2rem;
-		margin-bottom: 3rem;
-		min-width: 28rem;
+      p {
+        margin-top: 1.5rem;
+      }
+    }
 
-		a {
-			display: flex;
-			flex-direction: row;
-			// min-width: 25rem;
-			margin: 0 auto;
-			justify-content: space-around;
-			padding: 1rem;
-			margin-top: -1.45rem;
-			color: a.$off-white;
+    .facebook {
+      fill: a.$off-white;
+    }
 
-			p {
-				margin-top: 1.5rem;
-			}
-		}
+    svg {
+      width: 22px;
+      padding-top: 1rem;
+    }
+  }
 
-		.facebook {
-			fill: a.$off-white;
+  .facebook-li:hover {
+    background-color: black;
+  }
 
-		}
+  .location {
+    margin-bottom: 3rem;
+  }
 
-		svg {
-			width: 22px;
-			padding-top: 1rem;
+  .contact {
+    margin-bottom: 3rem;
+  }
 
-		}
-	}
+  @media only screen and (min-width: 1000px) {
+    .footer-padding {
+      width: 100rem;
+      padding-top: 5rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
 
-	.location {
-		margin-bottom: 3rem;
-	}
+      .book {
+        order: 2;
+      }
 
-	.contact {
-		margin-bottom: 3rem;
-	}
+      .h1-style {
+        order: 1;
+        width: 100rem;
+      }
 
+      .admin {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.8rem;
 
+        .admin-link {
+          margin-top: 9rem;
+        }
+      }
 
+      .facebook-li {
+        height: 4.8rem;
+        margin-top: 7rem;
+        margin-left: 8rem;
 
-	@media only screen and (min-width: 1040px) {
-		.footer-padding {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
+        a {
+          align-items: center;
+        }
+      }
 
-			.book {
-				order: 2;
-			}
+      .book {
+        margin-top: 7rem;
+        margin-left: 8rem;
+      }
+    }
 
-			.h1-style {
-				order: 1;
-				width: 100vw;
-			}
+    .loc-cont {
+      text-align: left;
+    }
 
-			.facebook-li {
-				order: 3;
-				height: 4.8rem;
-				margin-top: 7rem;
-				margin-left: 8rem;
-			}
+    .h1-style {
+      text-align: left;
+    }
 
-			.book {
-				margin-top: 7rem;
-				margin-left: 8rem;
-			}
-		}
+    .copyright {
+      margin-top: -3.5rem;
+    }
+  }
 
-		.loc-cont {
-			text-align: left;
-		}
+  @media only screen and (min-width: 2000px) {
+    .footer-padding {
+      width: 150rem;
 
-		.h1-style {
-			text-align: left;
+      .h1-style {
+        width: 150rem;
+      }
 
-		}
+      .facebook-li {
+        margin-top: 7rem;
+        margin-left: 15rem;
+        width: 33rem;
+      }
 
-	}
+      .book {
+        width: 30%;
+        margin-top: 7rem;
+        margin-left: 0;
+      }
+    }
 
+    .loc-cont {
+      width: 30%;
+    }
+  }
 }
