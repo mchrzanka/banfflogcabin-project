@@ -22,7 +22,9 @@ function MyComponent() {
 				zoom={15}
 			>
 				{ /* Child components, such as markers, info windows, etc. */}
-				<></>
+				<
+					markers
+				></>
 			</GoogleMap>
 		</LoadScript>
 	)
