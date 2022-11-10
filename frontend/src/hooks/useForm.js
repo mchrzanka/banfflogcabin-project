@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import validateFormInfo from "../validation/validateBookingForm";
 
@@ -97,7 +97,7 @@ const useForm = () => {
       isError = true;
     }
 
-    if (isError == false) {
+    if (isError === false) {
       success();
     } 
   };
@@ -132,7 +132,7 @@ const useForm = () => {
       isError = true;
     }
 
-    if (isError == false) {
+    if (isError === false) {
       emailjs
         .send(
           process.env.REACT_APP_EMAILJS_SERVICE_ID,

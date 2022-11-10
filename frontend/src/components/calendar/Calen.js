@@ -187,12 +187,12 @@ const Calen = () => {
 			>
 				<h2>Dates Selected:</h2>
 				<div>
-					{firstDateDisplay(myArray) == true ? ( //DISPLAY FIRST & SECOND DATE SELECTED IF EXIST
+					{firstDateDisplay(myArray) === true ? ( //DISPLAY FIRST & SECOND DATE SELECTED IF EXIST
 						<p>{myArray[0].split('00:')[0] + ' - '}</p>
 					) : (
 						''
 					)}
-					{secondDateDisplay(myArray) == true ? (
+					{secondDateDisplay(myArray) === true ? (
 						<p>{myArray[1].split('00:')[0]}</p>
 					) : (
 						''

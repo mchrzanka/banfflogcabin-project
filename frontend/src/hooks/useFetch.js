@@ -11,7 +11,7 @@ const useFetch = (url) => {
 
 	useEffect(
 		() => {
-			const fetchData = async () => {
+			const fetchData = async () => { //THINK URL GOES IN HERE TOO
 				setLoading(true);
 
 				try {
@@ -30,7 +30,7 @@ const useFetch = (url) => {
 
 			fetchData();
 		},
-		[],
+		[], //THINK URL GOES IN HERE
 		{ url }
 	);
 
