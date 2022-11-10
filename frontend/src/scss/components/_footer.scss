@@ -4,6 +4,7 @@
   background-color: a.$green;
   text-align: center;
   padding-top: 1.6rem;
+  padding-bottom: 5rem;
 
   .footer-padding {
     width: 35rem;
@@ -21,8 +22,6 @@
   ul li {
     margin-bottom: 1rem;
   }
-
-  padding-bottom: 5rem;
 
   .underline {
     text-decoration: underline;
@@ -64,10 +63,7 @@
     background-color: black;
   }
 
-  .location {
-    margin-bottom: 3rem;
-  }
-
+  .location,
   .contact {
     margin-bottom: 3rem;
   }
@@ -117,10 +113,7 @@
       }
     }
 
-    .loc-cont {
-      text-align: left;
-    }
-
+    .loc-cont, 
     .h1-style {
       text-align: left;
     }
