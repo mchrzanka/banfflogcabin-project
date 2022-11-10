@@ -124,11 +124,33 @@ const Calen = () => {
 
 	//PUTTING THE BOOKED DATES FROM STRAPI INTO AN ARRAY
 	const strapiAllBookingData = [data.data];
+	const booked = [];
 
 	for (let i = 0; i < strapiAllBookingData.length + 1; i++) {
 		const strapiBookings = strapiAllBookingData[0][i];
+		//strapiBookings is the bookings in objects
 
-		console.log(strapiBookings);
+		let startDateOfBooking = strapiBookings.attributes.dateStart;
+		let endDateOfBooking = strapiBookings.attributes.dateEnd;
+
+		startDateOfBooking = new Date(startDateOfBooking);
+		endDateOfBooking = new Date(endDateOfBooking);
+
+		booked.push('' + startDateOfBooking);
+		//console.log('start date:' + startDateOfBooking);
+		//console.log(booked);
+
+		//math for figuring out the # of inbetween days
+		const timeDiff = Math.abs(endDateOfBooking - startDateOfBooking);
+		const dayDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24) + 1);
+
+		//console.log('Booking # ' + [i] + ' ' + 'Days booked: ' + dayDiff);
+
+		for (let i = 0; i < dayDiff - 1; i++) {
+			startDateOfBooking.setDate(startDateOfBooking.getDate() + 1);
+			booked.push('' + startDateOfBooking);
+			console.log(booked);
+		}
 	}
 
 	// //the array
