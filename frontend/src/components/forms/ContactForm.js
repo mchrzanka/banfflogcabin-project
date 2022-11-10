@@ -62,7 +62,7 @@ const ContactForm = () => {
             className="green"
           />
         </div>
-        <p>{onSuccess == true ? successMessage : ""}</p>
+        <p>{onSuccess === true ? successMessage : ""}</p>
       </form>
     </div>
   );

@@ -1,13 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-
-
-
-
-
-
-function SuccessIcon() {
+export default function SuccessPage() {
     return (
         <div className="Thankyou">
 
@@ -17,7 +10,3 @@ function SuccessIcon() {
 
     );
 };
-ReactDOM.render(
-    <SuccessIcon />,
-    document.getElementById('success')
-);

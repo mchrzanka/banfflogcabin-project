@@ -11,6 +11,9 @@
          border-radius: 0.8rem;
     }
 
+    .banner-desktop{
+        display: none;
+    }
     .heading2{
         margin-top: 8rem;
         margin-bottom: 1.5rem;
@@ -55,6 +58,14 @@
 }
 @media only screen and (min-width: 820px) {
     .about-us{
+        .banner-desktop {
+            display: block;
+        
+        }
+        
+        .banner-mobile{
+            display: none;
+        }
         .heading1{
         width: 98.3rem;
         color: #FCFBFC;
