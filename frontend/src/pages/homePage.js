@@ -22,7 +22,7 @@ export default function HomePage() {
 				<div className='heading1'>{data.data.attributes.h1}</div>
 				<picture>
 					<source media='(min-width:650px)' srcSet={cabin} />
-					<img src={cabinsm} alt='Flowers' />
+					<img src={cabinsm} alt='Banff Log Cabin at twilight' />
 				</picture>
 				<a className='tan' href='/bookingterms'>
 					Book Now

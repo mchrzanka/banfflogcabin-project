@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 import useForm from "../../hooks/useForm";
 import useFetch from "../../hooks/useFetch";
@@ -29,7 +29,7 @@ export default function PaymentForm() {
 
     const cardElement = elements.getElement(CardElement);
 
-    if (onSuccess == true) {
+    if (onSuccess === true) {
       stripe
         .confirmCardPayment(intentKey, {
           payment_method: {

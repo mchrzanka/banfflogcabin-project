@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useFetch from '../hooks/useFetch';
 
 import '../scss/pages/_bookingterm.scss'
