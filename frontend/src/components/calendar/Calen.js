@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../../scss/components/_calendar.scss';
@@ -11,27 +11,7 @@ const Calen = () => {
 	const [click, setClick] = useState(false);
 	const date = new Date();
 
-	//handles the select dates button. If the button is clicked, it will == true and the Dates Selected and calculated price will show.
-	const handleClick = () => setClick(!click);
-
-	//GRABBING BOOKED DATES FROM STRAPI
-	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/bookings'
-	);
-
-	if (loading) {
-		return <p>Loading...</p>;
-	} else if (error === []) {
-		return <p>Error</p>;
-	}
-
-	function numOfDays(firstDay, lastDay) {
-		const diffTime = Math.abs(lastDay - firstDay);
-		const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24) + 1);
-		pushCustChosenDays(diffDays);
-		return diffDays;
-	}
-
+	//CALENDAR FUNCTIONALITY
 	const firstDateDisplay = (myArray) => {
 		//console.log("firstDateDisplay" + myArray); the first day they click on
 		return myArray.length > 0 ? true : false;
@@ -77,28 +57,72 @@ const Calen = () => {
 		} else return false;
 	}
 
-	//THE START OF THE MATH FOR PRICING
+	/***
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
+	 */
 
+	//handles the "Select Dates" button. If the button is clicked, it will == true and the Dates Selected and calculated price will show.
+	const handleClick = () => setClick(!click);
+
+	//GRABBING BOOKED DATES FROM STRAPI
+	const { loading, error, data } = useFetch(
+		'http://147.182.207.198:1337/api/bookings'
+	);
+
+	if (loading) {
+		return <p>Loading...</p>;
+	} else if (error === []) {
+		return <p>Error</p>;
+	}
+
+	//THE START OF THE MATH FOR PRICING
 	//calculates how many days a person has chosen from the booking calendar
 	let firstDay = new Date(myArray[0]);
 	const lastDay = new Date(myArray[1]);
+
 	//sets the first day in the array
 	const chosenDays = [myArray[0]];
-	numOfDays(firstDay, lastDay);
+
+	//math for figuring out the # of inbetween days
+	const diffTime = Math.abs(lastDay - firstDay);
+	const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24) + 1);
+	pushCustChosenDays(diffDays);
 
 	//getting the dates in between based on the first and last day, and pushing them into the chosenDays array.
 	function pushCustChosenDays(diffDays) {
 		for (let i = 0; i < diffDays - 1; i++) {
 			firstDay.setDate(firstDay.getDate() + 1);
 			chosenDays.push('' + firstDay);
+			//console.log(chosenDays);
 		}
 	}
 
-	//PUTTING THE BOOKED DATES FROM STRAPI INTO AN ARRAY
-	// const strapiBookedDateStart = [data.data[0].attributes.dateStart];
-	// const bookedDateStart = new Date(strapiBookedDateStart);
-	// console.log('Initial date start: ' + bookedDateStart);
+	//PRICE LOGIC WILL GO HERE
+	if (diffDays > 2) {
+		if (click == true) {
+			//console.log("Ready to give you a PRICE!");
+		}
+	}
 
+	/**
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
+	 *
+	 */
+
+	//PUTTING THE BOOKED DATES FROM STRAPI INTO AN ARRAY
 	const strapiAllBookingData = [data.data];
 
 	for (let i = 0; i < strapiAllBookingData.length + 1; i++) {
@@ -106,26 +130,6 @@ const Calen = () => {
 
 		console.log(strapiBookings);
 	}
-
-	// {data.data.map((bookings) => (
-	//   <div key={bookings.id}>
-	//     <p>Date Start: {bookings.attributes.dateStart}</p>
-	//     <p>Date End: {bookings.attributes.dateEnd}</p>)
-
-	// const strapiBookedDateEnd = [data.data[0].attributes.dateEnd];
-	// const bookedDateEnd = new Date(strapiBookedDateEnd);
-	// console.log('Initial date end: ' + bookedDateEnd);
-
-	// bookedDateStart.setDate(bookedDateStart.getDate() + 1);
-
-	// console.log('The next day: ' + bookedDateStart);
-
-	// const date1 = bookedDateStart;
-	// const date2 = bookedDateEnd;
-	// const diffTime = Math.abs(date2 - date1);
-	// const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-	// console.log(diffDays + 1 + ' total booked days');
-	// console.log(diffDays + ' = number of days to loop through');
 
 	// //the array
 	// const strapiBookedDates = [
@@ -137,12 +141,6 @@ const Calen = () => {
 	//     if(date == 'Fri Nov 18 2022 00:00:00 GMT-0700 (Mountain Standard Time)')
 	//     return true;
 	//  }
-
-	// if (diffDays > 2) {
-	// 	if (click == true) {
-	// 		//console.log("MEGA CLICK");
-	// 	}
-	// }
 
 	return (
 		<div className='container'>
@@ -181,9 +179,9 @@ const Calen = () => {
 			/>
 
 			<div
-			// className={
-			// 	click == true && diffDays > 2 ? 'datesSelected show' : 'datesSelected'
-			// }
+				className={
+					click == true && diffDays > 2 ? 'datesSelected show' : 'datesSelected'
+				}
 			>
 				<h2>Dates Selected:</h2>
 				<div>
