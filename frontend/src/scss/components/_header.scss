@@ -1,19 +1,13 @@
 @use '../assets' as a;
 
 .site-header {
-    font-family: a.$poppins;
-    font-weight: a.$light-weight;
+	font-family: a.$poppins;
+	font-weight: a.$light-weight;
 
-    background-color: a.$green;
-    padding-bottom: 2rem;
+	background-color: a.$green;
+	//padding-bottom: 2rem;
 
-
-
-
-
-
-
-    @media only screen and (min-width: 820px) {
-        padding-bottom: 0;
-    }
+	@media only screen and (min-width: 820px) {
+		padding-bottom: 0;
+	}
 }
