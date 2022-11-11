@@ -46,6 +46,14 @@ export default function AboutUs() {
 			</div>
 		
 			<div>
+			<div className="history-desktop">
+					<img src={aboutmedium} alt="banner"></img>
+			</div>
+
+			<div className="history-mobile">
+					<img src={aboutmobile} alt="banner"></img>
+			</div>
+
 				<History />
 			</div>
 		</div>
