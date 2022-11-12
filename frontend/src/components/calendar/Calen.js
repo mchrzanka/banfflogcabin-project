@@ -137,8 +137,6 @@ const Calen = () => {
 		endDateOfBooking = new Date(endDateOfBooking);
 
 		booked.push('' + startDateOfBooking);
-		//console.log('start date:' + startDateOfBooking);
-		//console.log(booked);
 
 		//math for figuring out the # of inbetween days
 		const timeDiff = Math.abs(endDateOfBooking - startDateOfBooking);
