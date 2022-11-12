@@ -146,7 +146,7 @@ const Calen = () => {
 
 	return (
 		<div className='container'>
-			<h1>Booking Calendar</h1>
+			<h1>Select Your Dates</h1>
 			<p>Dates from Strapi for disabling:</p>
 			{data.data.map((bookings) => (
 				<div key={bookings.id}>
