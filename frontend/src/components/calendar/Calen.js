@@ -4,12 +4,15 @@ import 'react-calendar/dist/Calendar.css';
 import '../../scss/components/_calendar.scss';
 import { differenceInCalendarDays } from 'date-fns';
 import useFetch from '../../hooks/useFetch';
+import Price from '../../hooks/usePrice';
+
 
 const Calen = () => {
 	const [value, onChange] = useState(undefined);
 	const [myArray, updateMyArray] = useState([]);
 	const [click, setClick] = useState(false);
 	const date = new Date();
+
 
 	//CALENDAR FUNCTIONALITY
 	const firstDateDisplay = (myArray) => {
@@ -106,6 +109,11 @@ const Calen = () => {
 	}
 
 	//PRICE LOGIC WILL GO HERE
+	//bringing an array of the season objects with the name, startdate, enddate, and price.
+	const seasonPricingInfo = Price();
+	console.log(seasonPricingInfo);
+
+
 	if (diffDays > 2) {
 		if (click == true) {
       pushCustChosenDays(diffDays);
@@ -167,17 +175,6 @@ const Calen = () => {
 			//console.log(booked);
 		}
 	}
-
-	// //the array
-	// const strapiBookedDates = [
-	// 	data.data[0].attributes.dateStart,
-	// 	data.data[0].attributes.dateEnd,
-	// ];
-
-	// const tileDisabled = ({ activeStartDate, date, view }) => {
-	//     if(date == 'Fri Nov 18 2022 00:00:00 GMT-0700 (Mountain Standard Time)')
-	//     return true;
-	//  }
 
 	return (
 		<div className='container'>
