@@ -19,10 +19,13 @@ export default function Rates() {
 			<h1 className='heading1'>{data.data.attributes.h1}</h1>
 
 			<Pricing />
+			<p>Please Note:</p>
 			<p className='content'>{data.data.attributes.content1}</p>
+			<p className='content'>{data.data.attributes.content2}</p>
+			<p className='content'>{data.data.attributes.content3}</p>
 			<h2 className='heading2'>{data.data.attributes.h2}</h2>
 			<Ammenities/>
-			<p className='content'>{data.data.attributes.content2}</p>
+			<p className='content'>{data.data.attributes.content4}</p>
 		</div>
 	);
 }
