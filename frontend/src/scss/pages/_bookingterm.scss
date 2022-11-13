@@ -12,6 +12,7 @@
         font-weight: lighter;
         line-height: 24px;
         margin: 1.5rem;
+        padding-bottom: 1rem;
     }
     .policy{
         background-color: #F1F1F1;
@@ -22,20 +23,20 @@
         text-align: center;
     }
 
-     .wide-btn{
-            text-align: center;
-            margin-right: 5rem;
-            width: 100%;
-            
-        }
-        .booking-button{
-            display: flex;
-            margin: 4rem 0 8rem 2rem;
-        }
+     .booking-button{
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+     }
       
 }
+
 @media only screen and (min-width: 820px) {
     .booking-term{
+        .booking{
+            padding-top: 1.7rem;
+            padding-bottom: 1.5rem;
+        }
         .heading1{
             font-size: 9.8rem;
         }
@@ -57,7 +58,7 @@
               
             }
         }
-   
+      
 
     }
   

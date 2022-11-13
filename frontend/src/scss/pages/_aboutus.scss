@@ -1,27 +1,35 @@
 @use '../assets' as a;
 .about-us{
     background-color: #F1F1F1;
-   padding-left:2rem;
-   padding-right: 2rem;
   .heading1{
         text-align: center;
         background-color: #626E60;
          text-align: center;
-         margin:0 1rem;
          border-radius: 0.8rem;
+         margin-left:2rem;
+        margin-right: 2rem;
     }
 
+    .banner-desktop{
+        display: none;
+    }
     .heading2{
         margin-top: 8rem;
         margin-bottom: 1.5rem;
+        margin-left:2rem;
+        margin-right: 2rem;
     }
     .content{
         margin-bottom: 1.5rem;
         line-height: 1.5;
+        margin-left:2rem;
+        margin-right: 2rem;
     }
     .larger-text{
         margin: 4rem 0;
         font-size: 2.1rem;
+        margin-left:2rem;
+        margin-right: 2rem;
     }
     .history-year{
         text-align: center;
@@ -37,11 +45,14 @@
         position: relative;
         margin-top: 9.3rem;
         margin-bottom: -5rem;
+       
     }
     .history-desc{
         border: 1px solid #C09F80;
         padding: 6rem 1rem;
         border-radius: 0.8rem;
+        margin-left:2rem;
+        margin-right: 2rem;
     }
     .history-year::before{
         content: "";
@@ -50,18 +61,48 @@
         background-color: #C09F80;
         position: absolute;
         top: -9.3rem;
-
+        margin-left:2rem;
+        margin-right: 2rem;
+    }
+    .history-desktop{
+        display: none;
+    }
+    .heading1{
+        margin-top: -2rem;
+        position: relative;
     }
 }
+
+@media only screen and (min-width: 480px) {
+    .about-us{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+
 @media only screen and (min-width: 820px) {
     .about-us{
-        .heading1{
-        width: 98.3rem;
-        color: #FCFBFC;
-        margin: 0 auto;
-        padding: 2.5rem 0;
-        font-size: 9.8rem;
+        .banner-desktop {
+            display: block;
+            overflow: hidden;
+            img{
+                margin-top: -7rem;
+            }
+        }
         
+        .banner-mobile{
+            display: none;
+        }
+        .heading1{
+            color: #FCFBFC;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            font-size: 9.8rem;
+            width: 75rem;
+            margin-top: -4rem;
         }       
         .heading2{
             font-size: 6.1rem;
@@ -70,7 +111,7 @@
             font-size: 2.1rem;
         }
         .flex-con{
-            margin: 0 0 0 8rem;
+            
             display: flex;
             flex-wrap: wrap;
             align-items: top;
@@ -82,7 +123,7 @@
         
             .large-con{
                 width: 40%;
-                margin: -10rem -19rem 14rem 7rem;
+                margin: -15rem -8rem 17rem 1rem;
                 background-color: #cfcfcf;
                 padding: 4rem;
                 order: 1;
@@ -91,10 +132,34 @@
                 width: 60%;
             }
         }
+        .history-mobile{
+            display: none;
+        }
+        .history-desktop{
+            display: block;
+        }
     }
     .history{
-        width: 100rem;
+        width: 100%;
         text-align: center;
+        .history-desktop{
         margin: 0 auto;
+        height: 70rem;
+        overflow: hidden;
+        img{
+            margin-top: -7rem;
+        }
+    }
+    }
+
+    
+    
+}
+
+@media only screen and (min-width: 1440px) {
+    .about-us{
+        .banner-desktop{
+            height: 70rem;
+        }
     }
 }

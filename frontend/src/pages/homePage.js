@@ -23,10 +23,10 @@ export default function HomePage() {
 	return (
 		<div>
 			<div>
-				<div className=' heading1 '>{data.data.attributes.h1}</div>
-				<picture className='banner-img'>
-					<source media='(min-width:420px)' srcSet={homeBannerLG} />
-					<img src={homeBannerSM} alt='Flowers' />
+				<div className='heading1'>{data.data.attributes.h1}</div>
+				<picture>
+					<source media='(min-width:650px)' srcSet={cabin} />
+					<img src={cabinsm} alt='Banff Log Cabin at twilight' />
 				</picture>
 				<div className='container top-content'>
 					<div className='button'>

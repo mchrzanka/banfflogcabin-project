@@ -1,10 +1,5 @@
 import React from 'react';
-//npm install react-router-dom
 import '../../scss/components/_footer.scss';
-
-const handleClick = () => {
-	console.log('click');
-};
 
 const Footer = () => {
 	return (
