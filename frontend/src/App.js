@@ -31,7 +31,9 @@ function App() {
 						<Route path='/contact' element={<Contact />}></Route>
 						<Route path='/bookingterms' element={<BookingTerms />}></Route>
 						<Route path='/booking' element={<BookingPage />}></Route>
+
 						<Route path='/success' element={<SuccessPage />}></Route>
+
 					</Routes>
 				</main>
 				<Footer />
