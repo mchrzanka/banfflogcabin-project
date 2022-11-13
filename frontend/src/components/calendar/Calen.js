@@ -87,13 +87,6 @@ const Calen = () => {
 	let firstDay = new Date(myArray[0]);
 	let lastDay = new Date(myArray[1]);
 
-	//sets the first day in the array
-
-
-
-  //chosenDays.push(firstDay.toISOString());
-
-
 	//math for figuring out the # of inbetween days
 	const diffTime = Math.abs(lastDay - firstDay);
 	const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24) + 1);
