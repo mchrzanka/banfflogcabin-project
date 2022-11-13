@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function SuccessPage() {
+
     return (
         <div className="Thankyou">
 
@@ -9,4 +10,6 @@ export default function SuccessPage() {
         </div>
 
     );
+
 };
+

@@ -2,6 +2,7 @@ import React from 'react';
 import useFetch from '../hooks/useFetch';
 import Play from '../components/youtube/play';
 import Gallery from '../components/gallery/gallery';
+
 import '../scss/pages/_ourcabin.scss';
 
 export default function OurCabin() {
@@ -53,6 +54,6 @@ export default function OurCabin() {
 
 			<Gallery />
 
-		</div>
+		</div >
 	);
 }

@@ -9,11 +9,13 @@ import Rates from './pages/rates';
 import Contact from './pages/contact';
 import BookingPage from './pages/bookingPage';
 import BookingTerms from './pages/bookingTerms';
+import Success from './pages/success';
 
 //components import
 import SiteHeader from './components/header/header';
 import Footer from './components/footer/footer';
 import SuccessPage from './pages/success';
+
 
 function App() {
 	return (
@@ -29,7 +31,9 @@ function App() {
 						<Route path='/contact' element={<Contact />}></Route>
 						<Route path='/bookingterms' element={<BookingTerms />}></Route>
 						<Route path='/booking' element={<BookingPage />}></Route>
+
 						<Route path='/success' element={<SuccessPage />}></Route>
+
 					</Routes>
 				</main>
 				<Footer />

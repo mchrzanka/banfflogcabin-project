@@ -90,12 +90,12 @@ a {
 	.quote,
 	h1,
 	.h1-style {
-		font-size: 10rem;
+		font-size: 9.8rem;
 	}
 
 	.heading2,
 	h2 {
-		font-size: 7rem;
+		font-size: 6.4rem;
 	}
 
 	a,
@@ -105,7 +105,17 @@ a {
 	input,
 	textarea,
 	.reviewer {
-		font-size: 2.1rem;
+		font-size: 1.8rem;
 
 	}
 }
+
+// @ 1400px:
+//h1 Banff log cabin : 16rem; @ ~1000px 10rem ish
+//h1 9.8rem
+//h2 6.4rem
+//p's in mobile are 1.6rem, desktop are 1.8 rem. It looked massive at 2.1rem
+
+//at 768 (ipad mini) the font will change to the backup one
+
+// navbar when it goes back up should transition
