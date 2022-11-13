@@ -28,6 +28,8 @@ export default function Rates() {
 			<p className='content'>{data.data.attributes.content1}</p>
 			<p className='content'>{data.data.attributes.content2}</p>
 			<p className='content'>{data.data.attributes.content3}</p>
+
+			{/*AMMENITIES*/}
 			<h2 className='heading2'>{data.data.attributes.h2}</h2>
 			<Ammenities/>
 			<p className='content'>{data.data.attributes.content4}</p>
