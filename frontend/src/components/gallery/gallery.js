@@ -14,7 +14,6 @@ import backdoor from '../../img/galleryImages/cabin-backdoor.jpg';
 export default function Gallery() {
     return <div className='gallery'>
         <div className='images'>
-
             <img src={breakfast} alt='Breakfast on table outside log cabin' />
             <img src={bedroomone} alt='View of bedroom from beside master bed' />
             <img src={kitchen} alt='view of kitchen cooking space (sink, stove, fridge, microwave, cabnets)' />

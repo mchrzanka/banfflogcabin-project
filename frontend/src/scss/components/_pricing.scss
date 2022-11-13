@@ -1,1 +1,16 @@
 @use '../assets' as a;
+
+
+.pricing {
+    background-color: a.$almost-black;
+    color: a.$off-white;
+    border-radius: 12px;
+    margin: 2rem;
+
+    .block {
+        padding: 2rem 1rem;
+        text-align: center;
+        border-bottom: 2px solid a.$off-white;
+    }
+
+}
