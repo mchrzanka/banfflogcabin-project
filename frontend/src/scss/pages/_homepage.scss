@@ -1,5 +1,6 @@
 @use '../assets' as a;
 
+
 .heading1 {
     background-color: a.$green;
     padding: 4rem 1.6rem;
@@ -71,10 +72,7 @@
     }
 
 
-    svg {
-        fill: a.$off-white;
-        width: 4rem;
-    }
+
 
     .button {
         margin: 4rem auto;
@@ -85,16 +83,188 @@
     }
 
     .list {
-        div {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            margin-left: 4rem;
-            margin-bottom: 3rem;
+
+        .div1,
+        .div2 {
+            div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                margin-left: 4rem;
+                margin-bottom: 3rem;
+            }
+
+
+
+
+            svg {
+                fill: a.$off-white;
+                width: 5rem;
+            }
 
             p {
                 margin-left: 8rem;
+                margin-top: 1.5rem;
+            }
+        }
+
+        .elk {
+            margin-top: 8rem;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+        .div1,
+        .div2 {
+            margin: 2rem;
+
+            display: flex;
+            flex-direction: column;
+
+            p {
+                margin: 0;
+                margin-top: 1rem;
+                margin-left: 2rem;
+            }
+
+            div {
+                margin: 0;
+                margin-bottom: 2rem;
             }
         }
     }
 }
+
+@media screen and (min-width: 1000px) {
+
+    .container.top-content {
+        margin-bottom: 4rem;
+
+        .heading2 {
+            margin-top: 4rem;
+        }
+
+    }
+
+
+    .desktop {
+        // width: 101rem;
+        margin: 0 auto;
+    }
+
+
+
+    .cabin-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .cabin1 {
+            width: 50%;
+            height: 100%;
+
+        }
+
+        .cabin2 {
+            background-image: url('../../img/bedroom1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+
+            width: 50%;
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+    .ammenities {
+        .button {
+            margin: 0 auto;
+        }
+
+        .title {
+            margin-bottom: 0rem;
+        }
+
+        padding-bottom: 0;
+    }
+
+
+    .flex {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+
+
+        .flex-content {
+            width: 50%;
+
+            .button {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .elk {
+
+            background-image: url('../../img/ammenities-elk.jpg');
+            width: 50%;
+
+            background-position: center;
+            background-size: 70rem;
+            background-repeat: no-repeat;
+
+        }
+
+        .list {
+            margin-top: 4rem;
+            justify-content: none;
+
+            .div1,
+            .div2 {
+                margin: 0;
+
+                div {
+                    margin-bottom: 2rem;
+
+                    p {
+                        margin-left: 3rem;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    .banner-img {
+        margin: 0 auto;
+    }
+
+    .desktop {
+        max-width: 150rem;
+    }
+
+    .flex .elk {
+        background-size: 101rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {}
