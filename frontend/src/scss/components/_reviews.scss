@@ -1,1 +1,31 @@
 @use '../assets' as a;
+
+
+.reviews {
+    .content {
+        padding: 6rem 2.5rem;
+    }
+
+    .reviewer {
+        margin-top: 2rem;
+        text-align: right;
+    }
+
+
+
+}
+
+.flex-800 {
+    @media screen and (min-width: 800px) {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 5rem 0;
+        justify-content: space-between;
+
+        .reviews {
+            max-width: 31rem;
+        }
+    }
+}

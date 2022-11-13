@@ -22,6 +22,7 @@ export default function Gallery() {
             <img src={bedroomtwo} alt='View of rustic bedroom from footer of master bed' />
             <img src={waffles} alt='Tasty breakfast waffles and berries' />
             <img src={backdoor} alt='Outside view of cabin looking towards the back door' />
+
         </div>
     </div>
 }
