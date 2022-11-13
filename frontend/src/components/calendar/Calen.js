@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState} from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../../scss/components/_calendar.scss';
@@ -85,11 +85,12 @@ const Calen = () => {
 
 	//THE START OF THE MATH FOR PRICING
 	//calculates how many days a person has chosen from the booking calendar
+  const chosenDays = [];
 	let firstDay = new Date(myArray[0]);
-	const lastDay = new Date(myArray[1]);
+	let lastDay = new Date(myArray[1]);
 
 	//sets the first day in the array
-	const chosenDays = [myArray[0]];
+chosenDays.push(firstDay.toISOString());
 
 	//math for figuring out the # of inbetween days
 	const diffTime = Math.abs(lastDay - firstDay);
@@ -100,8 +101,8 @@ const Calen = () => {
 	function pushCustChosenDays(diffDays) {
 		for (let i = 0; i < diffDays - 1; i++) {
 			firstDay.setDate(firstDay.getDate() + 1);
-			chosenDays.push('' + firstDay);
-			//console.log(chosenDays);
+			chosenDays.push('' + firstDay.toISOString());
+			console.log(chosenDays);
 		}
 	}
 
@@ -123,6 +124,7 @@ const Calen = () => {
 	 */
 
 	//PUTTING THE BOOKED DATES FROM STRAPI INTO AN ARRAY
+
 	const strapiAllBookingData = [data.data];
 	const booked = [];
 
@@ -136,7 +138,7 @@ const Calen = () => {
 		startDateOfBooking = new Date(startDateOfBooking);
 		endDateOfBooking = new Date(endDateOfBooking);
 
-		booked.push('' + startDateOfBooking);
+		booked.push('' + startDateOfBooking.toISOString());
 
 		//math for figuring out the # of inbetween days
 		const timeDiff = Math.abs(endDateOfBooking - startDateOfBooking);
@@ -146,8 +148,8 @@ const Calen = () => {
 
 		for (let i = 0; i < dayDiff - 1; i++) {
 			startDateOfBooking.setDate(startDateOfBooking.getDate() + 1);
-			booked.push('' + startDateOfBooking);
-			console.log(booked);
+			booked.push('' + startDateOfBooking.toISOString());
+			//console.log(booked);
 		}
 	}
 
