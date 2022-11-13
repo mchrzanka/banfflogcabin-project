@@ -1,6 +1,9 @@
 import React from "react";
 import useFetch from "../../hooks/useFetch";
 
+
+import '../../scss/components/_pricing.scss'
+
 const Pricing = () => {
   const { loading, error, data } = useFetch(
     "http://147.182.207.198:1337/api/pricings"
@@ -14,16 +17,18 @@ const Pricing = () => {
 
   return (
     //since strapi update, the data is nested in attributes. So instead of putting {review.content}, you have to do {review.attributes.content}. There was also some issues with strapi passing data as an object now instead of as an array, so instead of data.map you have to do data.data.map, and make sure in useFetch.js the useState is [].
-    <div>
+    <div className="pricing">
       {data.data.map((pricing) => (
-        <div key={pricing.id}>
-          <div>{pricing.attributes.season}</div>
-          <div>
+        <div key={pricing.id} className='block'>
+          <p>{pricing.attributes.season}</p>
+          <p>
             {pricing.attributes.startdate} - {pricing.attributes.enddate}
-          </div>
-          <div>${pricing.attributes.price}</div>
+          </p>
+          <p>${pricing.attributes.price}/night</p>
         </div>
       ))}
+
+
     </div>
   );
 };
