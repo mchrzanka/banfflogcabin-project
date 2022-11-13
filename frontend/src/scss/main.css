@@ -206,7 +206,8 @@ table {
 }
 :root,
 html {
-  font-size: 62.5%; /* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
+  font-size: 62.5%;
+  /* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
 }
 
 .heading1,
@@ -255,11 +256,6 @@ a {
   margin: 0 auto;
 }
 
-main {
-  padding-top: 4rem;
-  background-color: #c09f80;
-}
-
 @media screen and (min-width: 1000px) {
   .heading1,
 .quote,
@@ -270,6 +266,27 @@ h1,
   .heading2,
 h2 {
     font-family: HighSummit;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .heading1,
+.quote,
+h1,
+.h1-style {
+    font-size: 10rem;
+  }
+  .heading2,
+h2 {
+    font-size: 7rem;
+  }
+  a,
+p,
+.content,
+label,
+input,
+textarea,
+.reviewer {
+    font-size: 2.1rem;
   }
 }
 .tan, a.dark, .green,
@@ -341,6 +358,56 @@ a.dark:visited {
 .react-calendar {
   width: auto;
 }
+.react-calendar .react-calendar__tile--active, .react-calendar .react-calendar__tile--rangeEnd, .react-calendar .react-calendar__tile--rangeStart, .react-calendar .react-calendar__tile--range {
+  background-color: #626e60;
+}
+.react-calendar .react-calendar__tile--active:enabled:hover, .react-calendar .react-calendar__tile--active:enabled:focus {
+  background: #4f5e4c;
+}
+
+.datesSelected {
+  display: none;
+}
+
+.show {
+  display: block;
+  background-color: #f1f1f1;
+}
+
+.react-calendar__navigation {
+  height: auto;
+}
+.react-calendar__navigation .react-calendar__navigation__label {
+  line-height: 1.25;
+  box-shadow: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.react-calendar__navigation .react-calendar__navigation__arrow {
+  background-color: red;
+  box-shadow: none;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+.react-calendar__navigation .react-calendar__navigation__arrow {
+  background-color: red;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.react-calendar__navigation .react-calendar__navigation__arrow:nth-of-type(1) {
+  margin-right: 10px;
+}
+.react-calendar__navigation .react-calendar__navigation__arrow:nth-of-type(4) {
+  margin-right: 10px;
+}
+.react-calendar__navigation button:disabled {
+  background-color: #f1f1f1;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
 
 .site-footer {
   background-color: #626e60;
@@ -349,7 +416,7 @@ a.dark:visited {
   padding-bottom: 5rem;
 }
 .site-footer .footer-padding {
-  width: 80%;
+  width: 35rem;
   margin: 0 auto;
 }
 .site-footer p {
@@ -360,6 +427,147 @@ a.dark:visited {
 }
 .site-footer ul li {
   margin-bottom: 1rem;
+}
+.site-footer .underline {
+  text-decoration: underline;
+}
+.site-footer .facebook-li {
+  background-color: #2f2f2f;
+  border-radius: 8px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  min-width: 28rem;
+}
+.site-footer .facebook-li a {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding: 1rem;
+  margin-top: -1.45rem;
+  color: #fcfbfc;
+}
+.site-footer .facebook-li a p {
+  margin-top: 1.5rem;
+}
+.site-footer .facebook-li .facebook {
+  fill: #fcfbfc;
+}
+.site-footer .facebook-li svg {
+  width: 22px;
+  padding-top: 1rem;
+}
+.site-footer .facebook-li:hover {
+  background-color: black;
+}
+.site-footer .location {
+  margin-bottom: 3rem;
+}
+.site-footer .contact {
+  margin-bottom: 3rem;
+}
+@media only screen and (min-width: 1000px) {
+  .site-footer .footer-padding {
+    width: 100rem;
+    padding-top: 5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .site-footer .footer-padding .book {
+    order: 2;
+  }
+  .site-footer .footer-padding .h1-style {
+    order: 1;
+    width: 100rem;
+  }
+  .site-footer .footer-padding .admin {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.8rem;
+  }
+  .site-footer .footer-padding .admin .admin-link {
+    margin-top: 9rem;
+  }
+  .site-footer .footer-padding .facebook-li {
+    height: 4.8rem;
+    margin-top: 7rem;
+    margin-left: 8rem;
+  }
+  .site-footer .footer-padding .facebook-li a {
+    align-items: center;
+  }
+  .site-footer .footer-padding .book {
+    margin-top: 7rem;
+    margin-left: 8rem;
+  }
+  .site-footer .loc-cont {
+    text-align: left;
+  }
+  .site-footer .h1-style {
+    text-align: left;
+  }
+  .site-footer .copyright {
+    margin-top: -3.5rem;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .site-footer .footer-padding {
+    width: 150rem;
+  }
+  .site-footer .footer-padding .h1-style {
+    width: 150rem;
+  }
+  .site-footer .footer-padding .facebook-li {
+    margin-top: 7rem;
+    margin-left: 15rem;
+    width: 33rem;
+  }
+  .site-footer .footer-padding .book {
+    width: 30%;
+    margin-top: 7rem;
+    margin-left: 0;
+  }
+  .site-footer .loc-cont {
+    width: 30%;
+  }
+}
+
+.gallery {
+  background-color: #2f2f2f;
+  padding: 2rem;
+  width: 100%;
+}
+.gallery .images img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 820px) {
+  .gallery .images {
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    margin: 0 auto;
+    max-width: 122rem;
+  }
+  .gallery .images img {
+    max-width: 60rem;
+  }
+}
+
+.site-header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background-color: #626e60;
+  padding-bottom: 2rem;
+}
+@media only screen and (min-width: 820px) {
+  .site-header {
+    padding-bottom: 0;
+  }
 }
 
 .history .history-desc {
@@ -444,11 +652,6 @@ nav .hamburger span {
   z-index: 1;
   transform-origin: 0 0;
   transition: 0.4s;
-}
-nav .hamburger span {
-  z-index: 2;
-  height: 4px;
-  position: relative;
   background-color: #2f2f2f;
 }
 nav span.roofline {
@@ -512,8 +715,313 @@ nav .hamburger.is-active span:nth-child(5) {
     display: none;
   }
 }
+@media only screen and (min-width: 2000px) {
+  nav .mobile-menu ul {
+    width: 80rem;
+  }
+}
 
-.heading1 {
+.about-us {
+  background-color: #F1F1F1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.about-us .heading1 {
   text-align: center;
   background-color: #626E60;
-}/*# sourceMappingURL=main.css.map */
+  text-align: center;
+  margin: 0 1rem;
+  border-radius: 0.8rem;
+}
+.about-us .banner-desktop {
+  display: none;
+}
+.about-us .heading2 {
+  margin-top: 8rem;
+  margin-bottom: 1.5rem;
+}
+.about-us .content {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.about-us .larger-text {
+  margin: 4rem 0;
+  font-size: 2.1rem;
+}
+.about-us .history-year {
+  text-align: center;
+  background-color: #626E60;
+  font-weight: light;
+  border-radius: 50%;
+  display: flex;
+  width: 15rem;
+  height: 13rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 9.3rem;
+  margin-bottom: -5rem;
+}
+.about-us .history-desc {
+  border: 1px solid #C09F80;
+  padding: 6rem 1rem;
+  border-radius: 0.8rem;
+}
+.about-us .history-year::before {
+  content: "";
+  height: 9.3rem;
+  width: 0.1rem;
+  background-color: #C09F80;
+  position: absolute;
+  top: -9.3rem;
+}
+
+@media only screen and (min-width: 820px) {
+  .about-us .banner-desktop {
+    display: block;
+  }
+  .about-us .banner-mobile {
+    display: none;
+  }
+  .about-us .heading1 {
+    width: 98.3rem;
+    color: #FCFBFC;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    font-size: 9.8rem;
+  }
+  .about-us .heading2 {
+    font-size: 6.1rem;
+  }
+  .about-us .content {
+    font-size: 2.1rem;
+  }
+  .about-us .flex-con {
+    margin: 0 0 0 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .about-us .flex-con .heading-con {
+    width: 60%;
+  }
+  .about-us .flex-con .large-con {
+    width: 40%;
+    margin: -10rem -19rem 14rem 7rem;
+    background-color: #cfcfcf;
+    padding: 4rem;
+    order: 1;
+  }
+  .about-us .flex-con .last-con {
+    width: 60%;
+  }
+  .history {
+    width: 100rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.contact .intro {
+  background-color: #626E60;
+  color: #FCFBFC;
+  padding: 2rem 2rem;
+  font-weight: 100;
+}
+.contact .heading1 {
+  text-align: center;
+  font-size: 6.6rem;
+}
+.contact .form {
+  background-color: #626E60;
+  color: #FCFBFC;
+  padding: 2rem 2rem;
+}
+.contact .find-us {
+  background-color: #F1F1F1;
+  padding: 5rem 2rem;
+}
+
+.first,
+.email,
+.message {
+  display: flex;
+  flex-wrap: wrap;
+}
+.first label,
+.email label,
+.message label {
+  font-size: 2rem;
+}
+.first input,
+.first textarea,
+.email input,
+.email textarea,
+.message input,
+.message textarea {
+  width: 100%;
+  border-radius: 0.8rem;
+  border: none;
+  padding: 1rem 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.button input {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+@media only screen and (min-width: 820px) {
+  .contact .heading1 {
+    font-size: 9.8rem;
+    margin-bottom: 3rem;
+  }
+  .contact .heading2 {
+    font-size: 9.8rem;
+  }
+  .contact .content {
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    line-height: 3.5rem;
+  }
+  .contact .flex-con {
+    display: flex;
+  }
+  .contact .flex-con .intro {
+    width: 50%;
+    padding: 12rem 5rem 10rem 5rem;
+    text-align: justify;
+  }
+  .contact .flex-con .form {
+    width: 50%;
+    padding: 14rem 5rem 10rem 5rem;
+  }
+  .contact .message textarea {
+    min-height: 25rem;
+  }
+  .find-map {
+    display: flex;
+    min-height: 30rem;
+  }
+  .find-map .find-us {
+    width: 50%;
+    padding: 15rem;
+  }
+  .find-map .map {
+    width: 50%;
+  }
+  .find-map .map > div:nth-child(2) {
+    min-height: 75rem;
+  }
+  .booking-form input {
+    font-size: 1.8rem;
+  }
+}
+.ourcabin {
+  padding-top: 4rem;
+  background-color: #626e60;
+  color: #fcfbfc;
+}
+.ourcabin .title {
+  background-color: #2f2f2f;
+  margin-bottom: 8rem;
+}
+.ourcabin h1 {
+  font-weight: 300;
+}
+@media only screen and (min-width: 820px) {
+  .ourcabin .content-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .ourcabin .content-flex .col-1,
+.ourcabin .content-flex .col-2 {
+    width: 45%;
+  }
+  .ourcabin h1 {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    margin-left: 2rem;
+  }
+  .ourcabin .heading1 {
+    max-width: 135rem;
+    margin: 0 auto;
+  }
+}
+
+.youtube-vid {
+  margin: 0 auto;
+  margin-top: 10rem;
+  margin-bottom: -1rem;
+  width: 39rem;
+}
+@media only screen and (min-width: 820px) {
+  .youtube-vid {
+    width: 82rem;
+    margin-bottom: 5rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .youtube-vid {
+    width: 100rem;
+    margin: 15rem auto;
+  }
+}
+@media only screen and (min-width: 3000px) {
+  .youtube-vid {
+    width: 150rem;
+    margin: 15rem auto;
+  }
+}
+
+.content p {
+  margin-bottom: 2rem;
+}
+
+.quote-container {
+  background-color: #2f2f2f;
+}
+.quote-container .quote {
+  margin: 0 auto;
+  width: 30rem;
+  padding: 10rem 0;
+}
+.quote-container .quotename {
+  text-align: right;
+  margin-right: 10rem;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 2.4em;
+}
+@media only screen and (min-width: 820px) {
+  .quote-container .quote {
+    width: 41rem;
+  }
+  .quote-container .quotename {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1175px) {
+  .quote-container .quote {
+    width: 60rem;
+  }
+  .quote-container .quotename {
+    margin-right: 2rem;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .quote-container .quote {
+    width: 110rem;
+    padding-top: 15rem;
+  }
+  .quote-container .quotename {
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,7 +1,7 @@
 import React from 'react';
 
+export default function SuccessPage() {
 
-export default function Success() {
     return (
         <div className="Thankyou">
 
@@ -10,4 +10,6 @@ export default function Success() {
         </div>
 
     );
+
 };
+
