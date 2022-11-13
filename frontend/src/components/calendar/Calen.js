@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../../scss/components/_calendar.scss';
@@ -47,14 +47,20 @@ const Calen = () => {
 	}
 
 	function disableDates({ date, view }) {
-		if (
-			view === 'month' &&
-			highlightedDates.find((dDate) => isSameDay(dDate, date))
-		) {
-			// Or: return "highlight background";
-			//   console.log(highlightedDates)
-			return true;
-		} else return false;
+		console.log(booked[1]);
+		if (view === 'month' ){
+			console.log(date.toISOString());
+			date = date.toISOString();
+			date = date.substr(0,10);
+			for(let i = 0; i < booked.length -1; i++){
+				booked[i] = booked[i].substr(0,10);
+				if(date == booked[i]){
+					console.log("YESS");
+					return true;
+				}
+			}
+		} 
+		return false;
 	}
 
 	/***
@@ -79,7 +85,11 @@ const Calen = () => {
 	let lastDay = new Date(myArray[1]);
 
 	//sets the first day in the array
+
+
+
   //chosenDays.push(firstDay.toISOString());
+
 
 	//math for figuring out the # of inbetween days
 	const diffTime = Math.abs(lastDay - firstDay);
@@ -150,7 +160,7 @@ const Calen = () => {
 		for (let i = 0; i < dayDiff - 1; i++) {
 			startDateOfBooking.setDate(startDateOfBooking.getDate() + 1);
 			booked.push('' + startDateOfBooking.toISOString());
-			//console.log(booked);
+			// console.log(booked);
 		}
 	}
 
