@@ -1,5 +1,22 @@
 @use '../assets' as a;
 
+.heading1 {
+    background-color: a.$green;
+    padding: 4rem 1.6rem;
+    text-align: center;
+    margin-top: -.5rem;
+    color: a.$off-white;
+}
+
+.button {
+    margin: 1rem auto;
+    width: fit-content;
+}
+
+// .heading2 {
+//     margin: 2rem 0;
+// }
+
 
 .h2-back {
 
@@ -10,4 +27,74 @@
 
 .reviews {
     background-color: a.$grey;
+}
+
+.ourcabin-ban {
+    background-color: a.$almost-black;
+    margin: 0;
+    padding: 1rem 1.6rem;
+    color: a.$off-white;
+}
+
+.cabin-content {
+    background-color: a.$green;
+    color: a.$off-white;
+    padding-bottom: 4rem;
+
+    .button {
+        margin: 4rem auto;
+        padding: 2rem;
+        border: 1px solid a.$brown;
+        border-radius: 8px;
+        color: a.$brown;
+    }
+
+    .content {
+        padding: 2rem 3rem;
+    }
+}
+
+.ammenities {
+    color: a.$off-white;
+    background-color: a.$green;
+    padding-bottom: 4rem;
+
+    .title {
+        background-color: a.$almost-black;
+        color: a.$off-white;
+        padding: 1rem 0;
+        margin-bottom: 6rem;
+
+        h2 {
+            margin-left: 1rem;
+        }
+    }
+
+
+    svg {
+        fill: a.$off-white;
+        width: 4rem;
+    }
+
+    .button {
+        margin: 4rem auto;
+        padding: 2rem;
+        border: 1px solid a.$brown;
+        border-radius: 8px;
+        color: a.$brown;
+    }
+
+    .list {
+        div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-left: 4rem;
+            margin-bottom: 3rem;
+
+            p {
+                margin-left: 8rem;
+            }
+        }
+    }
 }
