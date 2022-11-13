@@ -22,7 +22,7 @@ const Calen = () => {
 		return myArray.length === 2 ? true : false;
 	};
 
-	const pushDayArray = (value) => {
+	const pushDayArray = (value, diffDays) => {
 		if (myArray.length < 2) {
 			//MODULUS 2 DATE ARRAY NEVER GETS BIG
 			updateMyArray((arr) => [...arr, `${value} #${arr.length}`]);
@@ -78,17 +78,6 @@ const Calen = () => {
 	//handles the "Select Dates" button. If the button is clicked, it will == true and the Dates Selected and calculated price will show.
 	const handleClick = () => setClick(!click);
 
-	//GRABBING BOOKED DATES FROM STRAPI
-	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/bookings'
-	);
-
-	if (loading) {
-		return <p>Loading...</p>;
-	} else if (error === []) {
-		return <p>Error</p>;
-	}
-
 	//THE START OF THE MATH FOR PRICING
 	//calculates how many days a person has chosen from the booking calendar
   const chosenDays = [];
@@ -96,16 +85,17 @@ const Calen = () => {
 	let lastDay = new Date(myArray[1]);
 
 	//sets the first day in the array
+  //chosenDays.push(firstDay.toISOString());
 	console.log(firstDay);
 // chosenDays.push(firstDay.toISOString());
 
 	//math for figuring out the # of inbetween days
 	const diffTime = Math.abs(lastDay - firstDay);
 	const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24) + 1);
-	pushCustChosenDays(diffDays);
 
 	//getting the dates in between based on the first and last day, and pushing them into the chosenDays array.
 	function pushCustChosenDays(diffDays) {
+    chosenDays.push(firstDay.toISOString());
 		for (let i = 0; i < diffDays - 1; i++) {
 			firstDay.setDate(firstDay.getDate() + 1);
 			chosenDays.push('' + firstDay.toISOString());
@@ -116,6 +106,7 @@ const Calen = () => {
 	//PRICE LOGIC WILL GO HERE
 	if (diffDays > 2) {
 		if (click == true) {
+      pushCustChosenDays(diffDays);
 			//console.log("Ready to give you a PRICE!");
 		}
 	}
@@ -131,6 +122,17 @@ const Calen = () => {
 	 */
 
 	//PUTTING THE BOOKED DATES FROM STRAPI INTO AN ARRAY
+	//GRABBING BOOKED DATES FROM STRAPI
+	const { loading, error, data } = useFetch(
+		'http://147.182.207.198:1337/api/bookings'
+	);
+
+	if (loading) {
+		return <p>Loading...</p>;
+	} else if (error === []) {
+		return <p>Error</p>;
+	}
+
 
 	const strapiAllBookingData = [data.data];
 	const booked = [];
