@@ -47,15 +47,15 @@ const Calen = () => {
 	}
 
 	function disableDates({ date, view }) {
-		console.log(booked[1]);
+		//console.log(booked[1]);
 		if (view === 'month' ){
-			console.log(date.toISOString());
+			//console.log(date.toISOString());
 			date = date.toISOString();
 			date = date.substr(0,10);
 			for(let i = 0; i < booked.length -1; i++){
 				booked[i] = booked[i].substr(0,10);
 				if(date == booked[i]){
-					console.log("YESS");
+					//console.log("YESS");
 					return true;
 				}
 			}
@@ -101,7 +101,7 @@ const Calen = () => {
 		for (let i = 0; i < diffDays - 1; i++) {
 			firstDay.setDate(firstDay.getDate() + 1);
 			chosenDays.push('' + firstDay.toISOString());
-			console.log(chosenDays);
+			//console.log(chosenDays);
 		}
 	}
 
@@ -136,20 +136,24 @@ const Calen = () => {
 	}
 
 
-	const strapiAllBookingData = [data.data];
+	let strapiAllBookingData = [data.data]
+	strapiAllBookingData = strapiAllBookingData[0];
+	//console.log(strapiAllBookingData.length)
 	const booked = [];
 
-	for (let i = 0; i < strapiAllBookingData.length + 1; i++) {
-		const strapiBookings = strapiAllBookingData[0][i];
+	for (let i = 0; i < strapiAllBookingData.length; i++) {
+		const strapiBookings = strapiAllBookingData[i].attributes;
+		//console.log(strapiBookings);
 		//strapiBookings is the bookings in objects
 
-		let startDateOfBooking = strapiBookings.attributes.dateStart;
-		let endDateOfBooking = strapiBookings.attributes.dateEnd;
+		let startDateOfBooking = strapiBookings.dateStart;
+		let endDateOfBooking = strapiBookings.dateEnd;
 
-		startDateOfBooking = new Date(startDateOfBooking);
-		endDateOfBooking = new Date(endDateOfBooking);
+		//console.log(startDateOfBooking);
+		 startDateOfBooking = new Date(startDateOfBooking);
+		 endDateOfBooking = new Date(endDateOfBooking);
 
-		booked.push('' + startDateOfBooking.toISOString());
+		 booked.push('' + startDateOfBooking.toISOString());
 
 		//math for figuring out the # of inbetween days
 		const timeDiff = Math.abs(endDateOfBooking - startDateOfBooking);
@@ -160,7 +164,7 @@ const Calen = () => {
 		for (let i = 0; i < dayDiff - 1; i++) {
 			startDateOfBooking.setDate(startDateOfBooking.getDate() + 1);
 			booked.push('' + startDateOfBooking.toISOString());
-			// console.log(booked);
+			//console.log(booked);
 		}
 	}
 
