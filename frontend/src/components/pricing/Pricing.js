@@ -18,7 +18,7 @@ const Pricing = () => {
   let price = [data.data];
   price = price[0];
 
-  let seasonInfo = {};
+  let seasonInfo = [];
   let season;
 
   for (let i = 0; i < price.length; i++) {
@@ -31,7 +31,7 @@ const Pricing = () => {
     startDateOfSeason = new Date(startDateOfSeason);
     endDateOfSeason = new Date(endDateOfSeason);
 
-    seasonInfo = {
+    seasonInfo.push = {
       Start: startDateOfSeason.toISOString(),
       End: endDateOfSeason.toISOString(),
     };
@@ -45,9 +45,7 @@ console.log(Moment(seasonInfo.Start).format('MMM Do'));
       {data.data.map((pricing) => (
         <div key={pricing.id} className='block'>
           <p>{pricing.attributes.season}</p>
-          <p>
-          {Moment(seasonInfo.Start).format('MMM Do')} - {Moment(seasonInfo.End).format('MMM Do')}
-          </p>
+          <p>{Moment(pricing.attributes.startdate).format('MMM Do')} - {Moment(pricing.attributes.enddate).format('MMM Do')}</p>
           <p>${pricing.attributes.price}/night</p>
         </div>
       ))}
