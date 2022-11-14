@@ -15,8 +15,11 @@ h1 {
 	position: relative;
 	z-index: 3;
 }
-
-.container {
+.message-thanks {
+	justify-content: center;
+	margin: 2rem;
+}
+.container-anim {
 	z-index: 1;
 	position: relative;
 	overflow: hidden;
