@@ -55,10 +55,34 @@
     }
 }
 
+.cabin2 {
+    background-image: url('../../img/bedroom1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 30rem;
+
+}
+
+.elk {
+
+    background-image: url('../../img/ammenities-elk.jpg');
+    width: 100%;
+    height: 30rem;
+
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+
+
 .ammenities {
     color: a.$off-white;
     background-color: a.$green;
-    padding-bottom: 4rem;
+
 
     .title {
         background-color: a.$almost-black;
@@ -70,6 +94,7 @@
             margin-left: 1rem;
         }
     }
+
 
 
 
@@ -168,28 +193,21 @@
 
         .cabin1 {
             width: 50%;
-            height: 100%;
 
+            .cabin-content {
+                height: 100%;
+            }
         }
 
         .cabin2 {
-            background-image: url('../../img/bedroom1.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-
             width: 50%;
+            height: 46.8rem;
+            background-size: 80rem;
 
         }
 
 
     }
-
-
-
-
-
-
-
 
 
     .ammenities {
@@ -220,14 +238,9 @@
         }
 
         .elk {
-
-            background-image: url('../../img/ammenities-elk.jpg');
+            height: 61.5rem;
             width: 50%;
-
-            background-position: center;
             background-size: 70rem;
-            background-repeat: no-repeat;
-
         }
 
         .list {
