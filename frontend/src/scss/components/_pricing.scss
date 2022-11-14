@@ -11,6 +11,21 @@
         padding: 2rem 1rem;
         text-align: center;
         border-bottom: 2px solid a.$off-white;
+
+
+
     }
 
+
+    .extra {
+        text-align: left;
+        margin-left: 2rem;
+
+        .ex-p {
+            margin-bottom: 2rem;
+        }
+
+        border-bottom: 1px solid a.$almost-black;
+        border-radius: 12px;
+    }
 }

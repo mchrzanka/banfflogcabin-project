@@ -25,7 +25,12 @@ const Pricing = () => {
         </div>
       ))}
 
-
+      <div className="block extra">
+        <p>Please Note:</p>
+        <p className="ex-p">All prices will include an additional 5% GST.</p>
+        <p className="ex-p">Minimim booking of two nights required.</p>
+        <p className="ex-p">A deposit will be required at time of booking.</p>
+      </div>
     </div>
   );
 };
