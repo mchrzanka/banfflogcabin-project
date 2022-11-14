@@ -1,5 +1,4 @@
 import React from 'react';
-
 import '../scss/pages/_success.scss'
 
 
@@ -34,6 +33,13 @@ export default function SuccessPage() {
                 <div class="bird bird--four"></div>
             </div>
 
+            <div class="bird-container bird-container--five">
+                <div class="bird bird--five"></div>
+            </div>
+
+            <div class="bird-container bird-container--six">
+                <div class="bird bird--six"></div>
+            </div>
         </div>
 
 
