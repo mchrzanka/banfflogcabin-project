@@ -17,11 +17,8 @@ export default function Rates() {
 		return <p>Error</p>;
 	}
 
-
 	return (
-
 		<div className='mountains' >
-
 			<div >
 				<h1 className='rate-title'>{data.data.attributes.h1}</h1>
 				{/* PRICING */}
@@ -86,10 +83,7 @@ export default function Rates() {
 				</div>
 
 			</div>
+
 		</div >
-
-
-
-
 	);
 }
