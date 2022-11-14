@@ -172,14 +172,6 @@ const Calen = () => {
 	return (
 		<div className='container'>
 			<h1>Select Your Dates</h1>
-			<p>Dates from Strapi for disabling:</p>
-			{data.data.map((bookings) => (
-				<div key={bookings.id}>
-					<p>Date Start: {bookings.attributes.dateStart}</p>
-					<p>Date End: {bookings.attributes.dateEnd}</p>
-				</div>
-			))}
-
 			<Calendar
 				onChange={onChange}
 				//defaultValue={undefined}
