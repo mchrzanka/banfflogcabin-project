@@ -28,8 +28,13 @@ export default function HomePage() {
 				</picture>
 				<div className='container top-content'>
 					<div className='button'>
-						<a className='tan' href='/bookingterms'>
+						<a className='primary-btn btn main' href='/bookingterms'>
 							Book Now
+						</a>
+					</div>
+					<div className='button'>
+						<a className='secondary-btn btn main' href='/bookingterms'>
+							Secondary
 						</a>
 					</div>
 

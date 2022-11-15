@@ -1,58 +1,16 @@
 @use './colors' as c;
 @use './fonts' as f;
 
-body {
-	.tan, a.dark, .green,
-	button:not(.hamburger),
-	.btn,
-	input[type='submit'] {
-		font-size: 2.4rem;
-		border-radius: 4px;
-		display: inline-block;
-		padding: 0.6rem 3rem;
-		margin: .6rem auto 1.6rem auto;
-		box-shadow: 1px 2px c.$almost-black;
-		font-family: f.$poppins;
-	}
+.btn {
+	font-family: Poppins;
+	font-size: 1.8rem;
+	padding: 2rem;
 }
 
-.tan {
+.primary-btn {
 	background-color: c.$brown;
-	color: c.$almost-black;
-}
-.tan:hover, a.tan:focus {
-	background-color: c.$brown-hover;
-}
-.tan:visited {
-	color: c.$almost-black;
 }
 
-a.dark {
-	background-color: c.$almost-black;
-	color: c.$off-white;
-}
-a.dark:hover, a.dark:focus {
-	background-color: transparent;
-	color: c.$almost-black;
-}
-a.dark:visited {
-	color: c.$off-white;
-}
-
-.green {
-	background-color: c.$green;
-	color: c.$brown;
-	border: 1px solid c.$brown;
-}
-.green:hover, .green:focus {
-	background-color: c.$brown;
-	color: c.$almost-black;
-}
-.green:visited {
-	color: c.$brown;
-}
-
-.wide-btn {
-	min-width: 30rem;
-	width: 30rem;
+.secondary-btn {
+	background-color: none;
 }
