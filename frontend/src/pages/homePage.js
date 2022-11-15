@@ -34,12 +34,6 @@ export default function HomePage() {
 					<img src={homeBannerSM} alt='Flowers' />
 				</picture>
 				<div className='container top-content'>
-					<div className='button'>
-						<a className='secondary-btn btn' href='/bookingterms'>
-							Secondary
-						</a>
-					</div>
-
 					<div className='heading2'>{data.data.attributes.h21}</div>
 					<div className='content'>{data.data.attributes.content1}</div>
 				</div>
