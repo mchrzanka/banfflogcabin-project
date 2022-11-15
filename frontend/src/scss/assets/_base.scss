@@ -1,4 +1,4 @@
-//THIS IS GLOBAL. ALL SCSS WRITTEN HERE WILL AFFECT THE ENTIRE PROJECT. 
+//THIS IS GLOBAL. ALL SCSS WRITTEN HERE WILL AFFECT THE ENTIRE PROJECT.
 //PLEASE USE THIS FILE SPARINGLY.
 @use './colors' as c;
 @use './fonts' as f;
@@ -8,8 +8,6 @@ html {
 	font-size: 62.5%;
 	/* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
 }
-
-
 
 //GLOBAL STYLING
 
@@ -28,7 +26,7 @@ h1,
 .heading2,
 h2 {
 	font-family: f.$allura;
-	font-size: 3.6rem;
+	font-size: 4rem;
 	font-weight: normal;
 }
 
@@ -40,13 +38,14 @@ input,
 textarea,
 .reviewer {
 	font-size: 1.6rem;
+	line-height: 3.2rem;
 	font-family: f.$poppins;
+	font-weight: 300;
 }
 
 a {
 	text-decoration: none;
 }
-
 
 .larger-text {
 	font-size: 2.8rem;
@@ -60,16 +59,7 @@ a {
 	margin: 0 auto;
 }
 
-
-
-
-
-
-
-
-
-@media screen and (min-width: 1000px) {
-
+@media screen and (min-width: 768px) {
 	.heading1,
 	.quote,
 	h1,
@@ -83,9 +73,7 @@ a {
 	}
 }
 
-
 @media screen and (min-width: 2000px) {
-
 	.heading1,
 	.quote,
 	h1,
@@ -106,7 +94,6 @@ a {
 	textarea,
 	.reviewer {
 		font-size: 1.8rem;
-
 	}
 }
 
