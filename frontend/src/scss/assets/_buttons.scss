@@ -1,16 +1,38 @@
 @use './colors' as c;
 @use './fonts' as f;
 
+.button {
+	width: 100%;
+	text-align: center;
+}
+
 .btn {
 	font-family: Poppins;
 	font-size: 1.8rem;
 	padding: 2rem;
+	border-radius: 8px;
+	width: 100%;
+}
+
+.main {
+	position: absolute;
+
+	.primary-btn {
+		display: inline;
+		padding: 2rem 10rem;
+		font-size: 2.4rem;
+	}
 }
 
 .primary-btn {
 	background-color: c.$brown;
+	color: c.$almost-black;
+	display: block;
 }
 
 .secondary-btn {
 	background-color: none;
+	border: 1px solid c.$brown;
+	color: c.$brown;
+	display: block;
 }

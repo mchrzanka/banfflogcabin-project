@@ -21,19 +21,21 @@ export default function HomePage() {
 	return (
 		<div>
 			<div className='home-page'>
-				<div className=' heading1 '>{data.data.attributes.h1}</div>
+				<div className=' heading1 '>
+					{data.data.attributes.h1}{' '}
+					<div className='button main'>
+						<a className='primary-btn btn ' href='/bookingterms'>
+							Book Now
+						</a>
+					</div>
+				</div>
 				<picture className='banner-img'>
 					<source media='(min-width:420px)' srcSet={homeBannerLG} />
 					<img src={homeBannerSM} alt='Flowers' />
 				</picture>
 				<div className='container top-content'>
 					<div className='button'>
-						<a className='primary-btn btn main' href='/bookingterms'>
-							Book Now
-						</a>
-					</div>
-					<div className='button'>
-						<a className='secondary-btn btn main' href='/bookingterms'>
+						<a className='secondary-btn btn' href='/bookingterms'>
 							Secondary
 						</a>
 					</div>
