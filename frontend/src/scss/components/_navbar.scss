@@ -94,10 +94,12 @@
 				padding: 2rem;
 				text-align: center;
 				font-size: 1.8rem;
+				transition: 0.3s;
 			}
 
 			a:hover {
 				background-color: a.$green-hover;
+				transition: 0.3s;
 			}
 		}
 
@@ -106,10 +108,12 @@
 
 			a {
 				color: a.$almost-black;
+				transition: 0.3s;
 			}
 
 			a:hover {
 				background-color: a.$brown-hover;
+				transition: 0.3s;
 			}
 		}
 	}

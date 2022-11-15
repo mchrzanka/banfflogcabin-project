@@ -4,6 +4,7 @@
 .button {
 	width: 100%;
 	text-align: center;
+	padding: 2rem 1.6rem;
 }
 
 .btn {
@@ -28,6 +29,12 @@
 	background-color: c.$brown;
 	color: c.$almost-black;
 	display: block;
+	transition: 0.3s;
+}
+
+.primary-btn:hover {
+	background-color: c.$brown-hover;
+	transition: 0.3s;
 }
 
 .secondary-btn {
@@ -35,4 +42,23 @@
 	border: 1px solid c.$brown;
 	color: c.$brown;
 	display: block;
+	transition: 0.3s;
+}
+
+.secondary-btn:hover {
+	background-color: c.$brown;
+	color: c.$almost-black;
+	transition: 0.3s;
+}
+
+.facebook-btn {
+	background-color: c.$almost-black;
+	color: c.$off-white;
+	display: block;
+	transition: 0.3s;
+}
+
+.facebook-btn:hover {
+	background-color: rgb(20, 20, 20);
+	transition: 0.3s;
 }
