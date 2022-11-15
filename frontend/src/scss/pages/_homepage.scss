@@ -1,6 +1,6 @@
 @use '../assets' as a;
 
-
+.home-page{
 .heading1 {
     background-color: a.$green;
     padding: 4rem 1.6rem;
@@ -281,4 +281,4 @@
     }
 }
 
-@media screen and (min-width: 2000px) {}
+}

@@ -22,7 +22,7 @@ export default function HomePage() {
 
 	return (
 		<div>
-			<div>
+			<div className='home-page'>
 
 				<div className=' heading1 '>{data.data.attributes.h1}</div>
 				<picture className='banner-img'>
