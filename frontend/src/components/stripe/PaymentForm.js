@@ -2,13 +2,14 @@ import React from "react";
 import axios from "axios";
 import useForm from "../../hooks/useForm";
 import useFetch from "../../hooks/useFetch";
+import {Navigate} from "react-router-dom";
 import validateFormInfo from "../../validation/validateBookingForm";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 
 export default function PaymentForm() {
   const { handleChange, values, handleSubmitValidation, errors, onSuccess } =
     useForm(validateFormInfo);
-
+  let done = false;
   const stripe = useStripe();
   const elements = useElements();
 
@@ -23,7 +24,7 @@ export default function PaymentForm() {
   }
 
   let secret = data.client_secret;
-
+  done = true;
   const handleSubmit = (stripe, elements, intentKey) => async () => {
     //STRIPE
 
@@ -66,6 +67,7 @@ export default function PaymentForm() {
               });
 			//put redirect to success page here
             console.log("Form submitted successfully");
+            done = true;
           } else {
             // this should not happen....
             console.dir("something went wrong...");
@@ -150,6 +152,7 @@ export default function PaymentForm() {
           Confirm Booking
         </button>
       </form>
+      {done && <Navigate to="/success" />}
     </>
   );
 }
