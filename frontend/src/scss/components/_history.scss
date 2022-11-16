@@ -1,15 +1,72 @@
 @use '../assets' as a;
 
 .history {
+padding: 0 1.6rem 8rem 1.6rem;
+
 	.history-desc {
 		font-size: 1.6rem;
 		font-family: a.$poppins;
 		font-weight: a.$light-weight;
+		line-height: 3.2rem;
+		border: 1px solid #C09F80;
+		padding: 8rem 2rem 4rem 2rem;
+		border-radius: 0.8rem;
 	}
 
 	.history-year {
 		font-size: 4rem;
 		font-family: a.$poppins;
 		font-weight: a.$light-weight;
+		color: a.$off-white;
+		text-align: center;
+		background-color: a.$green;
+		display: flex;
+		font-weight: light;
+		border-radius: 50%;
+		justify-content: center;
+		width: 15rem;
+		height: 15rem;
+		align-items: center;
+		position: relative;
+		margin: 9.3rem auto -5rem auto;
 	}
+
+	.history-year::before {
+		content: "";
+		height: 9.3rem;
+		width: .1rem;
+		background-color: #C09F80;
+		position: absolute;
+		top: -9.3rem;
+		margin-left: 2rem;
+		margin-right: 2rem;
+
+	}
+
+
+	@media only screen and (min-width: 768px) {
+		.history-desc {
+			font-size: 1.8rem;
+
+		}
+	}
+
+
+	@media only screen and (min-width: 1440px) {
+
+	
+				.history-desc {
+					width: 85%;
+					margin: 0 auto;
+				}
+
+				.history-desc {
+					width: 75rem;
+					padding-top: 9rem;
+					font-size: 1.8rem;
+				}
+	
+			}
+
+
 }

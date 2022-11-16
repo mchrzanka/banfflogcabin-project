@@ -41,54 +41,14 @@
 
     }
 
-    .flex-con{
+    .flex-con {
         padding-bottom: 8rem;
-    }
-
-    .history-year {
-        text-align: center;
-        background-color: #626E60;
-        font-weight: light;
-        border-radius: 50%;
-        display: flex;
-        width: 15rem;
-        height: 13rem;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        position: relative;
-        margin-top: 9.3rem;
-        margin-bottom: -5rem;
-
-    }
-
-    .history-desc {
-        border: 1px solid #C09F80;
-        padding: 6rem 1rem;
-        border-radius: 0.8rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
-
-    }
-
-    .history-year::before {
-        content: "";
-        height: 9.3rem;
-        width: .1rem;
-        background-color: #C09F80;
-        position: absolute;
-        top: -9.3rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
-
     }
 
     .history-desktop {
         display: none;
     }
-    .history-year{
-        color: #FCFBFC;
-    }
+
 }
 
 @media only screen and (min-width: 480px) {
@@ -137,21 +97,6 @@
             width: 40%;
         }
 
-        .flex-con {
-            padding: 8rem 0;
-            max-width: 150rem;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            gap: 4rem;
-
-            .quote {
-                width: 40%;
-                padding: 4rem;
-            }
-        }
-
         .history-mobile {
             display: none;
         }
@@ -175,52 +120,46 @@
             }
         }
     }
-
-
-
 }
 
 @media only screen and (min-width: 1440px) {
+
+    .flex-con {
+        padding: 8rem 0;
+        max-width: 150rem;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 4rem;
+
+        .quote {
+            width: 40%;
+            padding: 4rem;
+        }
+    }
+
     .about-us {
         .banner-desktop {
             height: 70rem;
-        padding-bottom: 5rem;
-        .history-desc{
-            width: 85%;
-            margin: 0 auto;
+            padding-bottom: 5rem;
+
         }
-        
     }
 
-  
-    
-}
-}
+    .history-desktop {
+        height: 65rem;
 
-@media only screen and (min-width: 1440px) {
-    .about-us{
-        .banner-desktop{
-            height: 80rem;
-
+        img {
+            top: -20rem
         }
-        .history-desktop{
-            height: 65rem; 
-                img{
-                    top: -20rem
-                }
-                
-        }
-        .history-desc{
-            width: 75rem;
-            padding-top: 9rem;
-            font-size: 1.8rem;
-        }
-        .heading1{
-          
-            margin-top: -5.5rem;
-        }     
 
     }
-    
-  
+
+    .heading1 {
+
+        margin-top: -5.5rem;
+    }
+
+
 }
