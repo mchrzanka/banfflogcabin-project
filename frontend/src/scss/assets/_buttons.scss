@@ -56,6 +56,14 @@
 	color: c.$off-white;
 	display: block;
 	transition: 0.3s;
+
+	svg{
+		width: 2rem;
+	}
+
+	svg path {
+		fill: c.$off-white;
+	}
 }
 
 .facebook-btn:hover {

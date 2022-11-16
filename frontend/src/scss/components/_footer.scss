@@ -7,25 +7,36 @@
   padding-bottom: 5rem;
 
   .footer-padding {
-    width: 35rem;
     margin: 0 auto;
+  }
+
+  .h1-style{
+    line-height: 8rem;
+    font-size: 5.2rem;
   }
 
   p {
     color: a.$off-white;
-  }
-
-  .btn {
-    background-color: a.$brown;
+    line-height: 3.2rem;
   }
 
   ul li {
     margin-bottom: 1rem;
   }
 
-  .underline {
-    text-decoration: underline;
+  .location, .contact{
+    padding-top: 4rem;
   }
+
+  .contact{
+    padding-bottom: 4rem;
+  }
+
+.location p:first-of-type, .contact p:first-of-type{
+  border-bottom: 1px solid a.$off-white;
+  max-width: 14rem;
+  margin: 0 auto 1.6rem auto;
+}
 
   .facebook-li {
     background-color: a.$almost-black;
@@ -70,7 +81,6 @@
 
   @media only screen and (min-width: 1020px) {
     .footer-padding {
-      width: 150rem;
       padding-top: 5rem;
       margin: 0 auto;
       display: flex;
