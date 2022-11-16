@@ -68,6 +68,7 @@
         border-radius: 0.8rem;
         margin-left: 2rem;
         margin-right: 2rem;
+
     }
 
     .history-year::before {
@@ -79,10 +80,14 @@
         top: -9.3rem;
         margin-left: 2rem;
         margin-right: 2rem;
+
     }
 
     .history-desktop {
         display: none;
+    }
+    .history-year{
+        color: #FCFBFC;
     }
 }
 
@@ -114,9 +119,9 @@
         .heading1 {
             color: #FCFBFC;
             margin: 0 auto;
-            padding: 2.5rem 0;
+            padding: 3rem 0 2rem 0;
             font-size: 9.8rem;
-            width: 75rem;
+            width: 65rem;
             margin-top: -4rem;
         }
 
@@ -179,6 +184,43 @@
     .about-us {
         .banner-desktop {
             height: 70rem;
+        padding-bottom: 5rem;
+        .history-desc{
+            width: 85%;
+            margin: 0 auto;
         }
+        
     }
+
+  
+    
+}
+}
+
+@media only screen and (min-width: 1440px) {
+    .about-us{
+        .banner-desktop{
+            height: 80rem;
+
+        }
+        .history-desktop{
+            height: 65rem; 
+                img{
+                    top: -20rem
+                }
+                
+        }
+        .history-desc{
+            width: 75rem;
+            padding-top: 9rem;
+            font-size: 1.8rem;
+        }
+        .heading1{
+          
+            margin-top: -5.5rem;
+        }     
+
+    }
+    
+  
 }
