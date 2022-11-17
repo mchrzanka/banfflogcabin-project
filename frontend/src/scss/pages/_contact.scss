@@ -4,22 +4,26 @@
 	.intro {
 		background-color: #626e60;
 		color: #fcfbfc;
-		padding: 2rem 2rem;
+		padding: 4rem 1.6rem 2rem 1.6rem;
 		font-weight: 100;
+
+		.content {
+			max-width: 70rem;
+		}
 	}
 	.heading1 {
-		text-align: center;
 		font-size: 6.6rem;
+		text-align: center;
 	}
 	.form {
 		background-color: #626e60;
 		color: #fcfbfc;
-		padding: 2rem 2rem;
+		padding: 2rem 1.6rem 4rem 1.6rem;
 	}
 
 	.find-us {
 		background-color: #f1f1f1;
-		padding: 5rem 2rem;
+		padding: 6rem 1.6rem;
 	}
 	.find-map {
 		.map {
@@ -36,7 +40,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	label {
-		font-size: 2rem;
+		font-size: 1.8rem;
+		font-weight: 300;
 	}
 	input,
 	textarea {
@@ -45,13 +50,14 @@
 		border: none;
 		padding: 1rem 0.5rem;
 		margin-bottom: 2rem;
+		font-family: a.$poppins;
+		font-size: 1.6rem;
 	}
 }
 
 @media only screen and (min-width: 820px) {
 	.contact {
 		.heading1 {
-			font-size: 9.8rem;
 			margin-bottom: 3rem;
 		}
 		.heading2 {
@@ -64,10 +70,18 @@
 		}
 		.flex-con {
 			display: flex;
+			background-color: a.$green;
+			align-items: center;
+			gap: 5rem;
+
 			.intro {
 				width: 50%;
-				padding: 12rem 5rem 10rem 5rem;
 				text-align: justify;
+
+				.find-pad {
+					max-width: 60%;
+					margin: 0 auto;
+				}
 			}
 			.form {
 				width: 50%;
@@ -77,6 +91,16 @@
 		.message {
 			textarea {
 				min-height: 25rem;
+				font-size: 1.8rem;
+			}
+		}
+
+		.find-us {
+			padding: 20rem 1.6rem;
+
+			.find-pad {
+				max-width: 60%;
+				margin: 0 auto;
 			}
 		}
 		.find-map {
@@ -84,7 +108,6 @@
 			min-height: 30rem;
 			.find-us {
 				width: 50%;
-				padding: 15rem;
 			}
 			.map {
 				width: 50%;
@@ -96,6 +119,33 @@
 		.booking-form {
 			input {
 				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1020px) {
+	.contact {
+		.heading1 {
+			font-size: 9.8rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	.contact {
+		.intro {
+			padding: 20rem 1.6rem;
+
+			div {
+				margin: 0 auto;
+			}
+			.heading1 {
+				font-size: 12rem;
+			}
+
+			.content {
+				max-width: 60%;
 			}
 		}
 	}

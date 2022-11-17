@@ -1,165 +1,153 @@
 @use '../assets' as a;
 
-
 .about-us {
+	.heading1 {
+		background-color: #626e60;
+		text-align: center;
+		border-radius: 0.8rem;
+		margin-left: 2rem;
+		margin-right: 2rem;
+		margin-top: -2rem;
+		position: relative;
+		color: a.$off-white;
+	}
 
-    .heading1 {
-        background-color: #626E60;
-        text-align: center;
-        border-radius: 0.8rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        margin-top: -2rem;
-        position: relative;
-        color: a.$off-white;
-    }
+	.banner-desktop {
+		display: none;
+	}
 
-    .banner-desktop {
-        display: none;
-    }
+	.heading2 {
+		width: 100%;
+		padding: 6rem 2rem 1.5rem;
+	}
 
-    .heading2 {
-        width: 100%;
-        padding: 6rem 2rem 1.5rem;
-    }
+	.content {
+		margin-bottom: 1.5rem;
+		line-height: 3.2rem;
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
 
-    .content {
-        margin-bottom: 1.5rem;
-        line-height: 3.2rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
+	.quote {
+		margin-top: 8rem;
+		padding: 4rem 4rem;
+		background-color: a.$grey;
+		font-size: 2.1rem;
+		font-family: a.$poppins;
+		font-weight: 300;
+		line-height: 3.2rem;
+	}
 
-    .quote {
-        margin-top: 8rem;
-        padding: 4rem 4rem;
-        background-color: a.$grey;
-        font-size: 2.1rem;
-        font-family: a.$poppins;
-        font-weight: 300;
-        line-height: 3.2rem;
+	.flex-con {
+		padding-bottom: 8rem;
+	}
 
-    }
-
-    .flex-con {
-        padding-bottom: 8rem;
-    }
-
-    .history-desktop {
-        display: none;
-    }
-
+	.history-desktop {
+		display: none;
+	}
 }
 
 @media only screen and (min-width: 480px) {
-    .about-us {
-        img {
-            width: 100%;
-        }
-    }
+	.about-us {
+		img {
+			width: 100%;
+		}
+	}
 }
 
-
-
 @media only screen and (min-width: 820px) {
-    .about-us {
-        .banner-desktop {
-            display: block;
-            overflow: hidden;
+	.about-us {
+		.banner-desktop {
+			display: block;
+			overflow: hidden;
 
-            img {
-                margin-top: -7rem;
-            }
-        }
+			img {
+				margin-top: -7rem;
+			}
+		}
 
-        .banner-mobile {
-            display: none;
-        }
+		.banner-mobile {
+			display: none;
+		}
 
-        .heading1 {
-            color: #FCFBFC;
-            margin: 0 auto;
-            padding: 3rem 0 2rem 0;
-            font-size: 9.8rem;
-            width: 65rem;
-            margin-top: -4rem;
-        }
+		.heading1 {
+			color: #fcfbfc;
+			margin: 0 auto;
+			padding: 3rem 0 2rem 0;
+			font-size: 9.8rem;
+			width: 65rem;
+			margin-top: -4rem;
+		}
 
-        .heading2 {
-            font-size: 6.1rem;
-        }
+		.heading2 {
+			font-size: 6.1rem;
+		}
 
-        .content {
-            font-size: 1.8rem;
-        }
+		.content {
+			font-size: 1.8rem;
+		}
 
-        .content1 {
-            width: 40%;
-        }
+		.content1 {
+			width: 40%;
+		}
 
-        .history-mobile {
-            display: none;
-        }
+		.history-mobile {
+			display: none;
+		}
 
-        .history-desktop {
-            display: block;
-        }
-    }
+		.history-desktop {
+			display: block;
+		}
+	}
 
-    .history {
-        width: 100%;
-        text-align: center;
+	.history {
+		width: 100%;
+		text-align: center;
 
-        .history-desktop {
-            margin: 0 auto;
-            height: 70rem;
-            overflow: hidden;
+		.history-desktop {
+			margin: 0 auto;
+			height: 70rem;
+			overflow: hidden;
 
-            img {
-                margin-top: -7rem;
-            }
-        }
-    }
+			img {
+				margin-top: -7rem;
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 1440px) {
+	.about-us {
+		.banner-desktop {
+			height: 70rem;
+			padding-bottom: 5rem;
+		}
 
-    .flex-con {
-        padding: 8rem 0;
-        max-width: 150rem;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 4rem;
+		.flex-con {
+			padding: 8rem 0;
+			max-width: 150rem;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			gap: 4rem;
 
-        .quote {
-            width: 40%;
-            padding: 4rem;
-        }
-    }
+			.quote {
+				width: 40%;
+				padding: 4rem;
+			}
+		}
+	}
 
-    .about-us {
-        .banner-desktop {
-            height: 70rem;
-            padding-bottom: 5rem;
+	.history-desktop {
+		height: 65rem;
 
-        }
-    }
+		img {
+			top: -20rem;
+		}
+	}
 
-    .history-desktop {
-        height: 65rem;
-
-        img {
-            top: -20rem
-        }
-
-    }
-
-    .heading1 {
-
-        margin-top: -5.5rem;
-    }
-
-
+	.heading1 {
+		margin-top: -5.5rem;
+	}
 }
