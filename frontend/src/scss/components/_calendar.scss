@@ -52,12 +52,26 @@
 			font-family: a.$poppins;
 		}
 
+		.react-calendar__navigation__arrow:disabled {
+			background-color: a.$grey;
+			color: rgb(209, 209, 209);
+
+			&:hover {
+				background-color: a.$grey;
+			}
+		}
+
 		.react-calendar__navigation__arrow:hover {
 			background-color: a.$green;
 		}
 
 		.react-calendar__tile--hover {
 			background: a.$green;
+		}
+
+		.react-calendar__tile:disabled {
+			background-color: a.$grey;
+			color: rgb(209, 209, 209);
 		}
 
 		.react-calendar__navigation button:enabled:focus,
