@@ -22,12 +22,17 @@ const Footer = () => {
 									<p>Our Location</p>
 									<p>222 Glen Crescent Banff,</p>
 									<p>AB T1L 1A6 +1</p>
-									<p>(403) 762-3516</p>
 								</li>
 								<li className='contact'>
 									<p>Contact Us</p>
-									<p>+1 (403) 762-3516</p>
-									<p>reservations@banfflogcabin.ca</p>
+									<p>
+										<a href='tel:(403) 762-3516'>+1 (403) 762-3516</a>
+									</p>
+									<p>
+										<a href='mailto:reservations@banfflogcabin.ca'>
+											reservations@banfflogcabin.ca
+										</a>
+									</p>
 								</li>
 							</div>
 

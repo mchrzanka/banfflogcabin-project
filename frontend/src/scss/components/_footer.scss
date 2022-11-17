@@ -45,45 +45,17 @@
 		margin: 0 auto 1.6rem auto;
 	}
 
-	.facebook-li {
-		background-color: a.$almost-black;
-		border-radius: 8px;
-		margin-top: 2rem;
-		margin-bottom: 3rem;
-		min-width: 28rem;
-
-		a {
-			display: flex;
-			flex-direction: row;
-			// min-width: 25rem;
-			margin: 0 auto;
-			justify-content: space-around;
-			padding: 1rem;
-			margin-top: -1.45rem;
-			color: a.$off-white;
-
-			p {
-				margin-top: 1.5rem;
-			}
-		}
-
-		.facebook {
-			fill: a.$off-white;
-		}
-
-		svg {
-			width: 22px;
-			padding-top: 1rem;
-		}
-	}
-
-	.facebook-li:hover {
-		background-color: black;
-	}
-
 	.location,
 	.contact {
 		margin-bottom: 3rem;
+
+		a {
+			color: a.$off-white;
+		}
+	}
+
+	.copyright {
+		padding-top: 6rem;
 	}
 
 	@media only screen and (min-width: 1020px) {
@@ -143,22 +115,6 @@
 	@media only screen and (min-width: 2000px) {
 		.footer-padding {
 			width: 150rem;
-
-			.h1-style {
-				width: 150rem;
-			}
-
-			.facebook-li {
-				margin-top: 7rem;
-				margin-left: 15rem;
-				width: 33rem;
-			}
-
-			.book {
-				width: 30%;
-				margin-top: 7rem;
-				margin-left: 0;
-			}
 		}
 
 		.loc-cont {
