@@ -1,8 +1,12 @@
 @use '../assets' as a;
 
 .contact {
+	.errors {
+		color: rgb(255, 37, 37);
+	}
+
 	.intro {
-		background-color: #626e60;
+		background-color: a.$green;
 		color: #fcfbfc;
 		padding: 4rem 1.6rem 2rem 1.6rem;
 		font-weight: 100;
@@ -16,13 +20,13 @@
 		text-align: center;
 	}
 	.form {
-		background-color: #626e60;
+		background-color: a.$green;
 		color: #fcfbfc;
 		padding: 2rem 1.6rem 4rem 1.6rem;
 	}
 
 	.find-us {
-		background-color: #f1f1f1;
+		background-color: a.$grey;
 		padding: 6rem 1.6rem;
 	}
 	.find-map {
