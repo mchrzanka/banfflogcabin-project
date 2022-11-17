@@ -53,6 +53,12 @@
 		font-family: a.$poppins;
 		font-size: 1.6rem;
 	}
+
+	input::placeholder,
+	textarea::placeholder {
+		color: rgb(196, 196, 196);
+		font-weight: 300;
+	}
 }
 
 @media only screen and (min-width: 820px) {
