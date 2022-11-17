@@ -97,10 +97,11 @@ export default function Rates() {
 								<p>Free Off Street Parking</p>
 							</div>
 						</div>
-						<div className='ammen-bonus'>
-							<p>{data.data.attributes.content4}</p>
-							<p>{data.data.attributes.content5}</p>
-						</div>
+
+					</div>
+					<div className='ammen-bonus'>
+						<p>{data.data.attributes.content4}</p>
+						<p>{data.data.attributes.content5}</p>
 					</div>
 				</div>
 			</div>
