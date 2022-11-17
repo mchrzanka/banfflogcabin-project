@@ -19,7 +19,9 @@
 
     .extra {
         text-align: left;
-        margin-left: 2rem;
+        margin: 2rem;
+        max-width: 45rem;
+
 
         .ex-p {
             margin-bottom: 2rem;
@@ -42,9 +44,26 @@
         .block {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
             padding: 4rem 3rem;
+
+
         }
+
+        .block:nth-child(even) {
+            .squiggle {
+                margin-left: 10rem;
+            }
+        }
+
+        .season,
+        .price {
+            width: 16rem;
+            text-align: left;
+        }
+
+
+
     }
 
 }
