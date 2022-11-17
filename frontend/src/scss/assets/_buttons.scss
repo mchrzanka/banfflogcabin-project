@@ -5,6 +5,7 @@
 	width: 100%;
 	text-align: center;
 	padding: 2rem 1.6rem;
+	margin: 0 auto;
 }
 
 .btn {
@@ -15,7 +16,14 @@
 	width: 100%;
 }
 
+.footer {
+	font-size: 2.4rem;
+}
+
 .main {
+	width: 100%;
+	text-align: center;
+	padding: 2rem 1.6rem;
 	position: absolute;
 
 	.primary-btn {
@@ -54,19 +62,33 @@
 .facebook-btn {
 	background-color: c.$almost-black;
 	color: c.$off-white;
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: 2rem;
 	transition: 0.3s;
 
-	svg{
+	svg {
 		width: 2rem;
 	}
 
 	svg path {
 		fill: c.$off-white;
 	}
+
+	p {
+		font-size: 1.8rem;
+	}
 }
 
 .facebook-btn:hover {
 	background-color: rgb(20, 20, 20);
 	transition: 0.3s;
+}
+
+@media only screen and (min-width: 768px) {
+	.button {
+		max-width: 40rem;
+	}
 }

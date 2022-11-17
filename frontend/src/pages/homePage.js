@@ -23,7 +23,7 @@ export default function HomePage() {
 			<div className='home-page'>
 				<div className=' heading1 '>
 					{data.data.attributes.h1}{' '}
-					<div className='button main'>
+					<div className='main'>
 						<a className='primary-btn btn ' href='/bookingterms'>
 							Book Now
 						</a>
