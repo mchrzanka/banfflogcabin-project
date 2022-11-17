@@ -13,45 +13,47 @@ export default function PaymentForm() {
   const stripe = useStripe();
   const elements = useElements();
 
-  const { loading, error, data } = useFetch(
-    "http://147.182.207.198:1337/api/stripeIntent"
-  );
+	const { loading, error, data } = useFetch(
+		'http://147.182.207.198:1337/api/stripeIntent'
+	);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  } else if (error === []) {
-    return <p>Error</p>;
-  }
+	if (loading) {
+		return <p>Loading...</p>;
+	} else if (error === []) {
+		return <p>Error</p>;
+	}
+
 
   let secret = data.client_secret;
   done = true;
   const handleSubmit = (stripe, elements, intentKey) => async () => {
     //STRIPE
 
-    const cardElement = elements.getElement(CardElement);
 
-    if (onSuccess === true) {
-      stripe
-        .confirmCardPayment(intentKey, {
-          payment_method: {
-            card: cardElement,
-            billing_details: {
-              name: "TEST",
-            },
-          },
-        })
-        .then((resp) => {
-          // the request itself worked, lets look at what the api response is
+		const cardElement = elements.getElement(CardElement);
 
-          // The API says there is a problem
-          if (resp.error) {
-            console.error(resp.error);
-            return;
-          }
+		if (onSuccess === true) {
+			stripe
+				.confirmCardPayment(intentKey, {
+					payment_method: {
+						card: cardElement,
+						billing_details: {
+							name: 'TEST',
+						},
+					},
+				})
+				.then((resp) => {
+					// the request itself worked, lets look at what the api response is
 
-          if (resp?.paymentIntent?.status === "succeeded") {
-            console.dir("IT WORKED!");
-            console.dir(resp.paymentIntent);
+					// The API says there is a problem
+					if (resp.error) {
+						console.error(resp.error);
+						return;
+					}
+
+					if (resp?.paymentIntent?.status === 'succeeded') {
+						console.dir('IT WORKED!');
+						console.dir(resp.paymentIntent);
 
             axios
               .post("http://147.182.207.198:1337/api/bookings", {

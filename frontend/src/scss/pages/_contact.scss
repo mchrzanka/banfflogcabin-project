@@ -1,114 +1,102 @@
 @use '../assets' as a;
 
-.contact{
-    .intro{
-        background-color: #626E60;
-        color: #FCFBFC;
-        padding: 2rem 2rem;
-        font-weight: 100;
+.contact {
+	.intro {
+		background-color: #626e60;
+		color: #fcfbfc;
+		padding: 2rem 2rem;
+		font-weight: 100;
+	}
+	.heading1 {
+		text-align: center;
+		font-size: 6.6rem;
+	}
+	.form {
+		background-color: #626e60;
+		color: #fcfbfc;
+		padding: 2rem 2rem;
+	}
 
-    }
-    .heading1{
-        text-align: center;
-        font-size: 6.6rem;
-    }
-    .form{
-        background-color: #626E60;
-        color: #FCFBFC;
-        padding: 2rem 2rem;
-    }
-
-    .find-us{
-        background-color: #F1F1F1;
-        padding: 5rem 2rem;
-    }
-    .find-map{
-        .map{
-            & > div:nth-child(2){
-                height: 400px;
-            }
-        }
-    }
+	.find-us {
+		background-color: #f1f1f1;
+		padding: 5rem 2rem;
+	}
+	.find-map {
+		.map {
+			& > div:nth-child(2) {
+				height: 400px;
+			}
+		}
+	}
 }
 
 .first,
 .email,
-.message{
-    display: flex;
-    flex-wrap: wrap;
-    label{
-        font-size: 2rem;
-    }
-    input,
-    textarea{
-        width: 100%;
-        border-radius: .8rem;
-        border: none;
-        padding: 1rem .5rem;
-        margin-bottom: 2rem;
-    }
-
+.message {
+	display: flex;
+	flex-wrap: wrap;
+	label {
+		font-size: 2rem;
+	}
+	input,
+	textarea {
+		width: 100%;
+		border-radius: 0.8rem;
+		border: none;
+		padding: 1rem 0.5rem;
+		margin-bottom: 2rem;
+	}
 }
-.button input{
-    width: 100%;
-    border-radius: .8rem;
-}
-
 
 @media only screen and (min-width: 820px) {
-    .contact{
-        .heading1{
-            font-size: 9.8rem;
-            margin-bottom: 3rem;
-        }
-        .heading2{
-            font-size: 9.8rem;
-        }
-        .content{
-            font-size: 1.8rem;
-            padding-left: 1rem;
-            line-height: 3.5rem;
-        }
-        .flex-con{
-            display: flex;
-            .intro{
-                width: 50%;
-                padding: 12rem 5rem 10rem 5rem;
-                text-align: justify;
-            }
-            .form{
-                width: 50%;
-                padding: 14rem 5rem 10rem 5rem;
-            }
-        }
-        .message{
-            textarea{
-                min-height: 25rem;
-            }
-            
-        }
-        .find-map{
-            display: flex;
-            min-height: 30rem;
-            .find-us{
-                width:50%;
-                padding: 15rem;
-            }
-            .map{
-                width: 50%;
-                & > div:nth-child(2){
-                 height: 100%;
-                }
-            }
-        }
-        .booking-form{
-            input{
-                font-size: 1.8rem;
-            }
-           }
-        
-    }
-
-
- 
+	.contact {
+		.heading1 {
+			font-size: 9.8rem;
+			margin-bottom: 3rem;
+		}
+		.heading2 {
+			font-size: 9.8rem;
+		}
+		.content {
+			font-size: 1.8rem;
+			padding-left: 1rem;
+			line-height: 3.5rem;
+		}
+		.flex-con {
+			display: flex;
+			.intro {
+				width: 50%;
+				padding: 12rem 5rem 10rem 5rem;
+				text-align: justify;
+			}
+			.form {
+				width: 50%;
+				padding: 14rem 5rem 10rem 5rem;
+			}
+		}
+		.message {
+			textarea {
+				min-height: 25rem;
+			}
+		}
+		.find-map {
+			display: flex;
+			min-height: 30rem;
+			.find-us {
+				width: 50%;
+				padding: 15rem;
+			}
+			.map {
+				width: 50%;
+				& > div:nth-child(2) {
+					height: 100%;
+				}
+			}
+		}
+		.booking-form {
+			input {
+				font-size: 1.8rem;
+			}
+		}
+	}
 }
