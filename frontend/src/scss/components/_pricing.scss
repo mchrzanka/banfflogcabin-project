@@ -28,4 +28,23 @@
         border-bottom: 1px solid a.$almost-black;
         border-radius: 12px;
     }
+
+
+    @media screen and (min-width: 430px) {
+        margin: 4rem;
+
+    }
+
+    @media screen and (min-width: 860px) {
+        max-width: 92rem;
+        margin: 4rem auto;
+
+        .block {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 4rem 3rem;
+        }
+    }
+
 }

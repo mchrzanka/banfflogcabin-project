@@ -65,7 +65,52 @@
     background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../../img/rates-bg-sm.jpg');
     height: 100%;
     width: 100vw;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
     padding-top: 3rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.9));
+    background-repeat: no-repeat;
+    background-size: 93rem;
+}
+
+@media screen and (min-width: 430px) {
+
+    .mountains {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../../img/rates-bg-md.jpg');
+        background-size: 232rem;
+    }
+}
+
+@media screen and (min-width: 860px) {
+
+    .rlist {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+    }
+
+    .price-ammenities .title h2 {
+        max-width: 92rem;
+        margin: 0 auto;
+    }
+
+    .price-ammenities .ammen-bonus,
+    .rlist {
+        max-width: 92rem;
+        margin: 2rem auto;
+
+    }
+
+    .mountains {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../../img/rates-bg-lg.jpg');
+        background-size: 223rem;
+        background-position-y: 100%;
+    }
+}
+
+@media screen and (min-width: 2280px) {
+
+    .mountains {
+        background-size: 310rem;
+    }
 }
