@@ -5,6 +5,8 @@ import useForm from '../../hooks/useForm';
 
 //form validation
 import validateFormInfo from '../../validation/validateBookingForm';
+import '../../scss/components/_forms.scss'
+
 
 const ContactForm = () => {
 	const {
@@ -19,7 +21,7 @@ const ContactForm = () => {
 		'We have received your message and will be in touch shortly.';
 
 	return (
-		<div>
+		<div className="contact-form">
 			<form className='booking-form' onSubmit={handleSubmitValidationContact}>
 				<div className='first'>
 					<label>Your Name</label>
