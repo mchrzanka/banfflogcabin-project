@@ -15,27 +15,25 @@ const Pricing = () => {
 		return <p>Error</p>;
 	}
 
-	return (
-		<div className='pricing'>
-			{data.data.map((pricing) => (
-				<div key={pricing.id} className='block'>
-					<p>{pricing.attributes.season}</p>
-					<p>
-						{Moment(pricing.attributes.startdate).format('MMM Do')} -{' '}
-						{Moment(pricing.attributes.enddate).format('MMM Do')}
-					</p>
-					<p>${pricing.attributes.price}/night</p>
-				</div>
-			))}
 
-			<div className='extra'>
-				<p>Please Note:</p>
-				<p className='ex-p'>All prices will include an additional 5% GST.</p>
-				<p className='ex-p'>Minimim booking of two nights required.</p>
-				<p className='ex-p'>A deposit will be required at time of booking.</p>
-			</div>
-		</div>
-	);
+  return (
+    <div className="pricing">
+      {data.data.map((pricing) => (
+        <div key={pricing.id} className='block'>
+          <p className="season">{pricing.attributes.season}</p>
+          <p className="date">{Moment(pricing.attributes.startdate).format('MMM Do')} - {Moment(pricing.attributes.enddate).format('MMM Do')}</p>
+          <p className="price">${pricing.attributes.price}/night</p>
+        </div>
+      ))}
+
+      <div className=" extra">
+        <p>Please Note:</p>
+        <p className="ex-p">All prices will include an additional 5% GST.</p>
+        <p className="ex-p">Minimim booking of two nights required.</p>
+        <p className="ex-p">A deposit will be required at time of booking.</p>
+      </div>
+    </div>
+  );
 };
 
 export default Pricing;
