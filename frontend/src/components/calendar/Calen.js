@@ -77,16 +77,6 @@ const Calen = () => {
 	const diffTime = Math.abs(lastDay - firstDay);
 	const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24) + 1);
 
-	//getting the dates in between based on the first and last day, and pushing them into the chosenDays array.
-	function pushCustChosenDays(diffDays) {
-		chosenDays.push(firstDay.toISOString());
-		for (let i = 0; i < diffDays - 1; i++) {
-			firstDay.setDate(firstDay.getDate() + 1);
-			chosenDays.push('' + firstDay.toISOString());
-			//console.log(chosenDays);
-		}
-	}
-
 	//PRICE LOGIC WILL GO HERE
 	//bringing an array of the season objects with the name, startdate, enddate, and price.
 	const seasonPricingInfo = Price();
@@ -94,11 +84,64 @@ const Calen = () => {
 
 	if (diffDays > 2) {
 		if (click == true) {
-			pushCustChosenDays(diffDays);
+
+			//getting the dates in between based on the first and last day, and pushing them into the chosenDays array.
+			chosenDays.push(firstDay.toISOString());
+
+			for (let i = 0; i < diffDays - 1; i++) {
+				firstDay.setDate(firstDay.getDate() + 1);
+				chosenDays.push('' + firstDay.toISOString());
+
+			}
+			//this does math for the deposit price, need to pass depositPrice variable into stripe
 			const depositPerNight = 150;
 
 			depositPrice = depositPerNight * diffDays;
-			console.log(depositPrice);
+			//console.log(depositPrice);
+
+
+
+
+
+			//AZURE
+
+			let totalPrice = 0;
+
+			for (let i = 0; i < seasonPricingInfo.length; i++) { //loop thru each season
+				// console.log(seasonPricingInfo[i].name);
+				// console.log(seasonPricingInfo[i].Start);
+				// console.log(seasonPricingInfo[i].End);
+				// console.log(seasonPricingInfo[i].Price);
+				//console.log(chosenDays[i]);
+				// if (chosenDays[i] !== undefined) {
+				startMonth = 0;
+				endMonth = 0;
+				startDay = 0;
+				endDay = 0;
+
+				// } //PER DAY
+				for (let j = 0; j < chosenDays.length; j++) { //loop thru each day
+					let month = parseInt(chosenDays[j].substr(5, 2));
+					let day = parseInt(chosenDays[j].substr(8, 2));
+					console.log(month);
+					console.log(day);
+					if (month > startMonth && month < endMonth){
+						totalPrice += seasonPricingInfo[i].Price;
+					} 
+					else {
+						if ( (month == startMonth && day > startDay) ||  (month == endMonth && day < endDay)){
+							totalPrice += seasonPricingInfo[i].Price;
+						}
+					}
+				}
+			}
+			totalPrice *= 1.05; //tax
+			//IF CHOSENDAYS.LENGTH > 2
+
+
+
+
+
 		}
 	}
 
@@ -202,18 +245,18 @@ const Calen = () => {
 
 
 					<div>
-				{showItem ? (
-					<div>
-						<StripeContainer />
+						{showItem ? (
+							<div>
+								<StripeContainer />
+							</div>
+						) : (
+							<>
+								{' '}
+								<button className='tan' onClick={() => { console.log(Calen.data); setShowItem(true); }}>Continue</button>
+
+							</>
+						)}
 					</div>
-				) : (
-					<>
-						{' '}
-						<button className='tan' onClick={() => {console.log(Calen.data); setShowItem(true);}}>Continue</button>
-						
-					</>
-				)}
-			</div>
 
 				</div>
 			</div>
