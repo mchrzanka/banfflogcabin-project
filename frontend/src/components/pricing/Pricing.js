@@ -1,19 +1,20 @@
-import React from "react";
-import useFetch from "../../hooks/useFetch";
+import React from 'react';
+import useFetch from '../../hooks/useFetch';
 import Moment from 'moment';
 
 import '../../scss/components/_pricing.scss';
 
 const Pricing = () => {
-  const { loading, error, data } = useFetch(
-    "http://147.182.207.198:1337/api/pricings"
-  );
+	const { loading, error, data } = useFetch(
+		'http://147.182.207.198:1337/api/pricings'
+	);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  } else if (error === []) {
-    return <p>Error</p>;
-  }
+	if (loading) {
+		return <p>Loading...</p>;
+	} else if (error === []) {
+		return <p>Error</p>;
+	}
+
 
   return (
     <div className="pricing">

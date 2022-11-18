@@ -5,13 +5,15 @@ import useFetch from '../../hooks/useFetch';
 import { Navigate } from 'react-router-dom';
 import validateFormInfo from '../../validation/validateBookingForm';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { useState } from 'react';
 
 export default function PaymentForm() {
 	const { handleChange, values, handleSubmitValidation, errors, onSuccess } =
 		useForm(validateFormInfo);
-	let done = false;
+		const [done, setDone] = useState();
 	const stripe = useStripe();
 	const elements = useElements();
+
 
 	const { loading, error, data } = useFetch(
 		'http://147.182.207.198:1337/api/stripeIntent'
@@ -24,7 +26,6 @@ export default function PaymentForm() {
 	}
 
 	let secret = data.client_secret;
-	done = true;
 	const handleSubmit = (stripe, elements, intentKey) => async () => {
 		//STRIPE
 
@@ -66,7 +67,7 @@ export default function PaymentForm() {
 							.then((response) => {});
 						//put redirect to success page here
 						console.log('Form submitted successfully');
-						done = true;
+						setDone(true);
 					} else {
 						// this should not happen....
 						console.dir('something went wrong...');

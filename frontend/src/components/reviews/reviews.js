@@ -15,7 +15,6 @@ const Reviews = () => {
 	}
 
 	return (
-		//since strapi update, the data is nested in attributes. So instead of putting {review.content}, you have to do {review.attributes.content}. There was also some issues with strapi passing data as an object now instead of as an array, so instead of data.map you have to do data.data.map, and make sure in useFetch.js the useState is [].
 		<div className='flex-800 container'>
 			{data.data.map((review) => (
 				<div key={review.id} className='reviews '>
