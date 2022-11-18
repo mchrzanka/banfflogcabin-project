@@ -97,6 +97,17 @@
 
 		.history-desktop {
 			display: block;
+			height: 40rem;
+			overflow: hidden;
+			position: relative;
+		   
+			img{
+				width: 100%;
+				position: absolute;
+				top: -10rem;
+		 
+			}
+		
 		}
 	}
 
@@ -119,7 +130,7 @@
 @media only screen and (min-width: 1440px) {
 	.about-us {
 		.banner-desktop {
-			height: 70rem;
+			height: 80rem;
 			padding-bottom: 5rem;
 		}
 
@@ -137,15 +148,16 @@
 				padding: 4rem;
 			}
 		}
-	}
-
-	.history-desktop {
-		height: 65rem;
-
-		img {
-			top: -20rem;
+		.history-desktop {
+			height: 65rem;
+	
+			img {
+				top: -20rem;
+			}
 		}
 	}
+
+
 
 	.heading1 {
 		margin-top: -5.5rem;
