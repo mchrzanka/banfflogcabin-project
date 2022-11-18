@@ -50,9 +50,9 @@ export default function HomePage() {
 									<div className='content container '>
 										{data.data.attributes.content2}
 									</div>
-									<div className='button '>
-										<a>Our Cabin</a>
-									</div>
+									<div className='button'>
+    <a className='secondary-btn btn' href='/ourcabin'>Our Cabin</a>
+</div>
 								</div>
 							</div>
 							<div className='cabin2'></div>
@@ -183,7 +183,7 @@ export default function HomePage() {
 										</div>
 									</div>
 									<div className='button '>
-										<a>Our Rates</a>
+									<a className='secondary-btn btn' href='/rates'>Our Rates</a>
 									</div>
 								</div>
 

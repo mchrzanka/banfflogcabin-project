@@ -54,6 +54,9 @@ const ContactForm = () => {
 					{errors.message && <p className='errors'>{errors.message}</p>}
 				</div>
 				<div className='button'>
+					<a className='secondary-btn btn' href='/bookingterms' type='submit' name='contact' value='Submit' >Submit</a>
+				</div>
+				<div className='button'>
 					<input
 						//onClick={sendEmail}
 						type='submit'
