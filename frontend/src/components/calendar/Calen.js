@@ -114,10 +114,10 @@ const Calen = () => {
 				// console.log(seasonPricingInfo[i].Price);
 				//console.log(chosenDays[i]);
 				// if (chosenDays[i] !== undefined) {
-				startMonth = 0;
-				endMonth = 0;
-				startDay = 0;
-				endDay = 0;
+				let startMonth = 0;
+				let endMonth = 0;
+				let startDay = 0;
+				let endDay = 0;
 
 				// } //PER DAY
 				for (let j = 0; j < chosenDays.length; j++) { //loop thru each day
