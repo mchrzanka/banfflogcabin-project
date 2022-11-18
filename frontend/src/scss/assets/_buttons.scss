@@ -1,58 +1,94 @@
 @use './colors' as c;
 @use './fonts' as f;
 
-body {
-	.tan, a.dark, .green,
-	button:not(.hamburger),
-	.btn,
-	input[type='submit'] {
+.button {
+	width: 100%;
+	text-align: center;
+	padding: 2rem 1.6rem;
+	margin: 0 auto;
+}
+
+.btn {
+	font-family: Poppins;
+	font-size: 1.8rem;
+	padding: 2rem;
+	border-radius: 8px;
+	width: 100%;
+}
+
+.footer {
+	font-size: 2.4rem;
+}
+
+.main {
+	width: 100%;
+	text-align: center;
+	padding: 2rem 1.6rem;
+	position: absolute;
+
+	.primary-btn {
+		display: inline;
+		padding: 2rem 10rem;
 		font-size: 2.4rem;
-		border-radius: 4px;
-		display: inline-block;
-		padding: 0.6rem 3rem;
-		margin: .6rem auto 1.6rem auto;
-		box-shadow: 1px 2px c.$almost-black;
-		font-family: f.$poppins;
 	}
 }
 
-.tan {
+.primary-btn {
 	background-color: c.$brown;
 	color: c.$almost-black;
-}
-.tan:hover, a.tan:focus {
-	background-color: c.$brown-hover;
-}
-.tan:visited {
-	color: c.$almost-black;
+	display: block;
+	transition: 0.3s;
 }
 
-a.dark {
+.primary-btn:hover {
+	background-color: c.$brown-hover;
+	transition: 0.3s;
+}
+
+.secondary-btn {
+	background-color: none;
+	border: 1px solid c.$brown;
+	color: c.$brown;
+	display: block;
+	transition: 0.3s;
+}
+
+.secondary-btn:hover {
+	background-color: c.$brown;
+	color: c.$almost-black;
+	transition: 0.3s;
+}
+
+.facebook-btn {
 	background-color: c.$almost-black;
 	color: c.$off-white;
-}
-a.dark:hover, a.dark:focus {
-	background-color: transparent;
-	color: c.$almost-black;
-}
-a.dark:visited {
-	color: c.$off-white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: 2rem;
+	transition: 0.3s;
+
+	svg {
+		width: 2rem;
+	}
+
+	svg path {
+		fill: c.$off-white;
+	}
+
+	p {
+		font-size: 1.8rem;
+	}
 }
 
-.green {
-	background-color: c.$green;
-	color: c.$brown;
-	border: 1px solid c.$brown;
-}
-.green:hover, .green:focus {
-	background-color: c.$brown;
-	color: c.$almost-black;
-}
-.green:visited {
-	color: c.$brown;
+.facebook-btn:hover {
+	background-color: rgb(20, 20, 20);
+	transition: 0.3s;
 }
 
-.wide-btn {
-	min-width: 30rem;
-	width: 30rem;
+@media only screen and (min-width: 768px) {
+	.button {
+		max-width: 40rem;
+	}
 }

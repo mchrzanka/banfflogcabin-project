@@ -117,13 +117,13 @@ const useForm = () => {
 
 		//firstname
 		if (!values.firstname) {
-			errors.firstname = 'First name required';
+			errors.firstname = 'First name required.';
 			isError = true;
 		} else if (!/^[A-Za-z\s]+$/.test(values.firstname)) {
 			errors.firstname = 'First name can only contain letters.';
 			isError = true;
 		} else if (values.firstname.trim() === '') {
-			errors.firstname = 'First name required';
+			errors.firstname = 'First name required.';
 			isError = true;
 		}
 

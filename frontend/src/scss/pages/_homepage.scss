@@ -1,284 +1,231 @@
 @use '../assets' as a;
 
-.home-page{
-.heading1 {
-    background-color: a.$green;
-    padding: 4rem 1.6rem;
-    text-align: center;
-    margin-top: -.5rem;
-    color: a.$off-white;
+.home-page {
+	.heading1 {
+		background-color: a.$green;
+		padding: 4rem 1.6rem;
+		text-align: center;
+		margin-top: -0.5rem;
+		color: a.$off-white;
+	}
+
+	.container.top-content {
+		padding-bottom: 8rem;
+		max-width: 110rem;
+
+		.heading2 {
+			padding: 6rem 0 1rem 0;
+		}
+	}
+
+	.ourcabin-ban,
+	.ammenities-ban {
+		background-color: a.$almost-black;
+		padding: 2rem 0 2rem 1.6rem;
+		color: a.$off-white;
+		line-height: auto;
+
+		.heading2 {
+			max-width: 70rem;
+			margin: 0 auto;
+		}
+	}
+
+	.cabin-content {
+		background-color: a.$green;
+		color: a.$off-white;
+		padding-bottom: 4rem;
+
+		.content {
+			padding: 4rem 1.6rem;
+			max-width: 70rem;
+		}
+	}
+
+	.cabin2 {
+		background-image: url('../../img/bedroom1.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+
+		width: 100%;
+		height: auto;
+	}
+
+	.elk {
+		background-image: url('../../img/ammenities-elk.jpg');
+		width: 100%;
+		height: 30rem;
+
+		background-position: center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+	.ammenities {
+		color: a.$off-white;
+		background-color: a.$green;
+
+		.list {
+			padding: 4rem 1.6rem;
+			max-width: 80rem;
+			margin: 0 auto;
+
+			.div1,
+			.div2 {
+				div {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					margin-bottom: 3rem;
+					align-items: center;
+				}
+
+				svg {
+					fill: a.$off-white;
+					width: 5rem;
+				}
+
+				p {
+					margin-left: 4rem;
+				}
+			}
+
+			.elk {
+				margin-top: 8rem;
+			}
+		}
+
+		.reviews {
+			background-color: a.$grey;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		.heading1 {
+			padding: 10rem 0;
+			font-size: 8rem;
+		}
+		.list {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+
+			.div1,
+			.div2 {
+				margin: 2rem;
+
+				display: flex;
+				flex-direction: column;
+
+				p {
+					margin: 0;
+					margin-top: 1rem;
+					margin-left: 2rem;
+				}
+
+				div {
+					margin: 0;
+					margin-bottom: 2rem;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 1000px) {
+		.heading1 {
+			font-size: 10rem;
+		}
+		.container.top-content {
+			margin-bottom: 4rem;
+
+			.heading2 {
+				margin-top: 4rem;
+			}
+		}
+
+		.desktop {
+			// width: 101rem;
+			margin: 0 auto;
+		}
+
+		.cabin-flex {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+
+			.cabin1 {
+				width: 50%;
+
+				.cabin-content {
+					height: 100%;
+				}
+			}
+
+			.cabin2 {
+				width: 50%;
+				height: 46.8rem;
+				background-size: 80rem;
+			}
+		}
+
+		.ammenities {
+			.title {
+				margin-bottom: 0rem;
+			}
+
+			padding-bottom: 0;
+		}
+
+		.flex {
+			display: flex;
+			flex-direction: row-reverse;
+			flex-wrap: nowrap;
+
+			.flex-content {
+				width: 50%;
+			}
+
+			.elk {
+				height: 61.5rem;
+				width: 50%;
+				background-size: 70rem;
+			}
+
+			.list {
+				.div1,
+				.div2 {
+					margin: 0;
+
+					div {
+						margin-bottom: 2rem;
+
+						p {
+							margin-left: 3rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 1400px) {
+		.banner-img {
+			margin: 0 auto;
+			width: fit-content;
+		}
+
+		.desktop {
+			max-width: 150rem;
+		}
+
+		.flex .elk {
+			background-size: 101rem;
+		}
+	}
 }
-
-.button {
-    margin: 1rem auto;
-    width: fit-content;
-}
-
-// .heading2 {
-//     margin: 2rem 0;
-// }
-
 
 .h2-back {
-
-    background-color: a.$almost-black;
-    color: a.$off-white;
-    padding: 1rem 0;
-}
-
-.reviews {
-    background-color: a.$grey;
-}
-
-.ourcabin-ban {
-    background-color: a.$almost-black;
-    margin: 0;
-    padding: 1rem 1.6rem;
-    color: a.$off-white;
-}
-
-.cabin-content {
-    background-color: a.$green;
-    color: a.$off-white;
-    padding-bottom: 4rem;
-
-    .button {
-        margin: 4rem auto;
-        padding: 2rem;
-        border: 1px solid a.$brown;
-        border-radius: 8px;
-        color: a.$brown;
-    }
-
-    .content {
-        padding: 2rem 3rem;
-    }
-}
-
-.cabin2 {
-    background-image: url('../../img/bedroom1.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-
-    width: 100%;
-    height: 30rem;
-
-}
-
-.elk {
-
-    background-image: url('../../img/ammenities-elk.jpg');
-    width: 100%;
-    height: 30rem;
-
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-
-}
-
-
-
-.ammenities {
-    color: a.$off-white;
-    background-color: a.$green;
-
-
-    .title {
-        background-color: a.$almost-black;
-        color: a.$off-white;
-        padding: 1rem 0;
-        margin-bottom: 6rem;
-
-        h2 {
-            margin-left: 1rem;
-        }
-    }
-
-
-
-
-
-    .button {
-        margin: 4rem auto;
-        padding: 2rem;
-        border: 1px solid a.$brown;
-        border-radius: 8px;
-        color: a.$brown;
-    }
-
-    .list {
-
-        .div1,
-        .div2 {
-            div {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                margin-left: 4rem;
-                margin-bottom: 3rem;
-            }
-
-
-
-
-            svg {
-                fill: a.$off-white;
-                width: 5rem;
-            }
-
-            p {
-                margin-left: 8rem;
-                margin-top: 1.5rem;
-            }
-        }
-
-        .elk {
-            margin-top: 8rem;
-        }
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-
-        .div1,
-        .div2 {
-            margin: 2rem;
-
-            display: flex;
-            flex-direction: column;
-
-            p {
-                margin: 0;
-                margin-top: 1rem;
-                margin-left: 2rem;
-            }
-
-            div {
-                margin: 0;
-                margin-bottom: 2rem;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1000px) {
-
-    .container.top-content {
-        margin-bottom: 4rem;
-
-        .heading2 {
-            margin-top: 4rem;
-        }
-
-    }
-
-
-    .desktop {
-        // width: 101rem;
-        margin: 0 auto;
-    }
-
-
-
-    .cabin-flex {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-
-        .cabin1 {
-            width: 50%;
-
-            .cabin-content {
-                height: 100%;
-            }
-        }
-
-        .cabin2 {
-            width: 50%;
-            height: 46.8rem;
-            background-size: 80rem;
-
-        }
-
-
-    }
-
-
-    .ammenities {
-        .button {
-            margin: 0 auto;
-        }
-
-        .title {
-            margin-bottom: 0rem;
-        }
-
-        padding-bottom: 0;
-    }
-
-
-    .flex {
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: nowrap;
-
-
-        .flex-content {
-            width: 50%;
-
-            .button {
-                margin-bottom: 3rem;
-            }
-        }
-
-        .elk {
-            height: 61.5rem;
-            width: 50%;
-            background-size: 70rem;
-        }
-
-        .list {
-            margin-top: 4rem;
-            justify-content: none;
-
-            .div1,
-            .div2 {
-                margin: 0;
-
-                div {
-                    margin-bottom: 2rem;
-
-                    p {
-                        margin-left: 3rem;
-                    }
-
-                }
-            }
-        }
-
-    }
-}
-
-
-@media screen and (min-width: 1400px) {
-    .banner-img {
-        margin: 0 auto;
-        width: fit-content;
-    }
-
-    .desktop {
-        max-width: 150rem;
-    }
-
-    .flex .elk {
-        background-size: 101rem;
-    }
-}
-
+	background-color: a.$almost-black;
+	padding: 2rem 0 2rem 1.6rem;
 }

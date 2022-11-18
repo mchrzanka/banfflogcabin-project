@@ -6,13 +6,12 @@ import { differenceInCalendarDays } from 'date-fns';
 import useFetch from '../../hooks/useFetch';
 import Price from '../../hooks/usePrice';
 
-
 const Calen = () => {
 	const [value, onChange] = useState(undefined);
 	const [myArray, updateMyArray] = useState([]);
 	const [click, setClick] = useState(false);
 	const date = new Date();
-
+	let depositPrice = 0;
 
 	//CALENDAR FUNCTIONALITY
 	const firstDateDisplay = (myArray) => {
@@ -34,35 +33,20 @@ const Calen = () => {
 		}
 	};
 
-	const all_disabled_dates = [
-		'2023-03-24',
-		'2022-12-30',
-		'2022-11-05',
-		'2022-10-20',
-	];
-	const alleventDates = new Date(all_disabled_dates);
-	const highlightedDates = all_disabled_dates.map(
-		(dateString) => new Date(dateString)
-	);
-
-	function isSameDay(a, b) {
-		return differenceInCalendarDays(a, b) === 0;
-	}
-
 	function disableDates({ date, view }) {
 		//console.log(booked[1]);
-		if (view === 'month' ){
+		if (view === 'month') {
 			//console.log(date.toISOString());
 			date = date.toISOString();
-			date = date.substr(0,10);
-			for(let i = 0; i < booked.length -1; i++){
-				booked[i] = booked[i].substr(0,10);
-				if(date == booked[i]){
+			date = date.substr(0, 10);
+			for (let i = 0; i < booked.length - 1; i++) {
+				booked[i] = booked[i].substr(0, 10);
+				if (date == booked[i]) {
 					//console.log("YESS");
 					return true;
 				}
 			}
-		} 
+		}
 		return false;
 	}
 
@@ -83,7 +67,7 @@ const Calen = () => {
 
 	//THE START OF THE MATH FOR PRICING
 	//calculates how many days a person has chosen from the booking calendar
-  const chosenDays = [];
+	const chosenDays = [];
 	let firstDay = new Date(myArray[0]);
 	let lastDay = new Date(myArray[1]);
 
@@ -93,7 +77,7 @@ const Calen = () => {
 
 	//getting the dates in between based on the first and last day, and pushing them into the chosenDays array.
 	function pushCustChosenDays(diffDays) {
-    chosenDays.push(firstDay.toISOString());
+		chosenDays.push(firstDay.toISOString());
 		for (let i = 0; i < diffDays - 1; i++) {
 			firstDay.setDate(firstDay.getDate() + 1);
 			chosenDays.push('' + firstDay.toISOString());
@@ -104,13 +88,15 @@ const Calen = () => {
 	//PRICE LOGIC WILL GO HERE
 	//bringing an array of the season objects with the name, startdate, enddate, and price.
 	const seasonPricingInfo = Price();
-	console.log(seasonPricingInfo);
-
+	//console.log(seasonPricingInfo);
 
 	if (diffDays > 2) {
 		if (click == true) {
-      pushCustChosenDays(diffDays);
-			//console.log("Ready to give you a PRICE!");
+			pushCustChosenDays(diffDays);
+			const depositPerNight = 150;
+
+			depositPrice = depositPerNight * diffDays;
+			console.log(depositPrice);
 		}
 	}
 
@@ -136,8 +122,7 @@ const Calen = () => {
 		return <p>Error</p>;
 	}
 
-
-	let strapiAllBookingData = [data.data]
+	let strapiAllBookingData = [data.data];
 	strapiAllBookingData = strapiAllBookingData[0];
 	//console.log(strapiAllBookingData.length)
 	const booked = [];
@@ -151,10 +136,10 @@ const Calen = () => {
 		let endDateOfBooking = strapiBookings.dateEnd;
 
 		//console.log(startDateOfBooking);
-		 startDateOfBooking = new Date(startDateOfBooking);
-		 endDateOfBooking = new Date(endDateOfBooking);
+		startDateOfBooking = new Date(startDateOfBooking);
+		endDateOfBooking = new Date(endDateOfBooking);
 
-		 booked.push('' + startDateOfBooking.toISOString());
+		booked.push('' + startDateOfBooking.toISOString());
 
 		//math for figuring out the # of inbetween days
 		const timeDiff = Math.abs(endDateOfBooking - startDateOfBooking);
@@ -170,33 +155,29 @@ const Calen = () => {
 	}
 
 	return (
-		<div className='container'>
-			<h1>Select Your Dates</h1>
-			<Calendar
-				onChange={onChange}
-				//defaultValue={undefined}
-				value={value}
-				tileDisabled={disableDates}
-				// disableDates={}
-
-				selectRange={true}
-				minDate={date}
-				onClickDay={(value, event) => {
-					//alert(`Clicked day: ${value}`);
-					pushDayArray(value);
-				}}
-			/>
-
-			<p>* Minimum booking is two days.</p>
-
-			<input
-				onClick={handleClick}
-				type='submit'
-				value='Select Days'
-				name='selectDays'
-				className='green'
-			/>
-
+		<div className='calendar-content'>
+			<div className='container'>
+				<h1>Select Your Dates</h1>
+				<Calendar
+					onChange={onChange}
+					//defaultValue={undefined}
+					value={value}
+					tileDisabled={disableDates}
+					// disableDates={}
+					selectRange={true}
+					minDate={date}
+					onClickDay={(value, event) => {
+						//alert(`Clicked day: ${value}`);
+						pushDayArray(value);
+					}}
+				/>
+				<p className='min-booking'>* Minimum booking is two nights.</p>
+				<div className='button'>
+					<a className='secondary-btn btn' href='#' onClick={handleClick}>
+						Select Dates
+					</a>
+				</div>
+			</div>
 			<div
 				className={
 					click == true && diffDays > 2 ? 'datesSelected show' : 'datesSelected'
@@ -214,6 +195,8 @@ const Calen = () => {
 					) : (
 						''
 					)}
+					<p>Deposit Price: ${depositPrice}.00</p>
+					<p>Total Price:</p>
 				</div>
 			</div>
 		</div>
