@@ -5,11 +5,13 @@
 	color: a.$off-white;
 	border-radius: 12px;
 	margin: 0 1.6rem;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
 	.block {
-		padding: 2rem 1rem;
+		padding: 1rem;
 		text-align: center;
-		border-bottom: 2px solid a.$off-white;
+		border-bottom: 2px solid rgb(92, 92, 92);
 	}
 
 	.extra {
@@ -21,10 +23,11 @@
 		p {
 			padding-bottom: 1rem;
 			font-size: 14px;
+			line-height: 2.4rem;
 		}
 	}
 
-	@media screen and (min-width: 860px) {
+	@media screen and (min-width: 768px) {
 		max-width: 75rem;
 		margin: 2rem auto 4rem auto;
 

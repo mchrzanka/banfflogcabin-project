@@ -9,7 +9,7 @@
 .price-ammenities {
 	color: a.$off-white;
 	background-color: a.$green;
-	padding-bottom: 4rem;
+	padding-bottom: 2rem;
 
 	.title {
 		background-color: a.$almost-black;
@@ -60,15 +60,12 @@
 			rgba(255, 255, 255, 0.2),
 			rgba(255, 255, 255, 0.2)
 		),
-		url('../../img/rates-bg-sm.jpg');
-	height: 100%;
-	width: 100vw;
-	padding-bottom: 8rem;
+		url('../../img/rates-bg-test.jpg');
+	padding-bottom: 6rem;
 	padding-top: 3rem;
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: cover;
-	width: 100%;
 
 	.button {
 		margin-bottom: 3rem;
@@ -82,7 +79,7 @@
 				rgba(255, 255, 255, 0.2)
 			),
 			url('../../img/rates-bg-md.jpg');
-		//background-size: 232rem;
+		background-size: cover;
 	}
 }
 
