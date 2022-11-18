@@ -109,6 +109,20 @@
 	.show {
 		display: block;
 		background-color: a.$grey;
+		padding: 2rem 1.6rem;
+		text-align: center;
+
+		h2 {
+			font-family: a.$poppins;
+			font-weight: 300;
+			font-size: 2.4rem;
+			color: a.$almost-black;
+			padding-bottom: 1rem;
+		}
+
+		p {
+			color: a.$almost-black;
+		}
 	}
 
 	.react-calendar__navigation {

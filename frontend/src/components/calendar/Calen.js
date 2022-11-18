@@ -11,6 +11,7 @@ const Calen = () => {
 	const [myArray, updateMyArray] = useState([]);
 	const [click, setClick] = useState(false);
 	const date = new Date();
+	let depositPrice = 0;
 
 	//CALENDAR FUNCTIONALITY
 	const firstDateDisplay = (myArray) => {
@@ -31,21 +32,6 @@ const Calen = () => {
 			updateMyArray((arr) => [`${value} #${'1'}`]);
 		}
 	};
-
-	const all_disabled_dates = [
-		'2023-03-24',
-		'2022-12-30',
-		'2022-11-05',
-		'2022-10-20',
-	];
-	const alleventDates = new Date(all_disabled_dates);
-	const highlightedDates = all_disabled_dates.map(
-		(dateString) => new Date(dateString)
-	);
-
-	function isSameDay(a, b) {
-		return differenceInCalendarDays(a, b) === 0;
-	}
 
 	function disableDates({ date, view }) {
 		//console.log(booked[1]);
@@ -102,12 +88,15 @@ const Calen = () => {
 	//PRICE LOGIC WILL GO HERE
 	//bringing an array of the season objects with the name, startdate, enddate, and price.
 	const seasonPricingInfo = Price();
-	console.log(seasonPricingInfo);
+	//console.log(seasonPricingInfo);
 
 	if (diffDays > 2) {
 		if (click == true) {
 			pushCustChosenDays(diffDays);
-			//console.log("Ready to give you a PRICE!");
+			const depositPerNight = 150;
+
+			depositPrice = depositPerNight * diffDays;
+			console.log(depositPrice);
 		}
 	}
 
@@ -166,7 +155,7 @@ const Calen = () => {
 	}
 
 	return (
-		<div class='calendar-content'>
+		<div className='calendar-content'>
 			<div className='container'>
 				<h1>Select Your Dates</h1>
 				<Calendar
@@ -188,26 +177,26 @@ const Calen = () => {
 						Select Dates
 					</a>
 				</div>
-				<div
-					className={
-						click == true && diffDays > 2
-							? 'datesSelected show'
-							: 'datesSelected'
-					}
-				>
-					<h2>Dates Selected:</h2>
-					<div>
-						{firstDateDisplay(myArray) === true ? ( //DISPLAY FIRST & SECOND DATE SELECTED IF EXIST
-							<p>{myArray[0].split('00:')[0] + ' - '}</p>
-						) : (
-							''
-						)}
-						{secondDateDisplay(myArray) === true ? (
-							<p>{myArray[1].split('00:')[0]}</p>
-						) : (
-							''
-						)}
-					</div>
+			</div>
+			<div
+				className={
+					click == true && diffDays > 2 ? 'datesSelected show' : 'datesSelected'
+				}
+			>
+				<h2>Dates Selected:</h2>
+				<div>
+					{firstDateDisplay(myArray) === true ? ( //DISPLAY FIRST & SECOND DATE SELECTED IF EXIST
+						<p>{myArray[0].split('00:')[0] + ' - '}</p>
+					) : (
+						''
+					)}
+					{secondDateDisplay(myArray) === true ? (
+						<p>{myArray[1].split('00:')[0]}</p>
+					) : (
+						''
+					)}
+					<p>Deposit Price: ${depositPrice}.00</p>
+					<p>Total Price:</p>
 				</div>
 			</div>
 		</div>
