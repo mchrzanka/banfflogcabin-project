@@ -5,11 +5,13 @@ import '../../scss/components/_calendar.scss';
 import { differenceInCalendarDays } from 'date-fns';
 import useFetch from '../../hooks/useFetch';
 import Price from '../../hooks/usePrice';
+import StripeContainer from '../stripe/StripeContainer';
 
 const Calen = () => {
 	const [value, onChange] = useState(undefined);
 	const [myArray, updateMyArray] = useState([]);
 	const [click, setClick] = useState(false);
+	const [showItem, setShowItem] = useState(false);
 	const date = new Date();
 	let depositPrice = 0;
 
@@ -197,6 +199,22 @@ const Calen = () => {
 					)}
 					<p>Deposit Price: ${depositPrice}.00</p>
 					<p>Total Price:</p>
+
+
+					<div>
+				{showItem ? (
+					<div>
+						<StripeContainer />
+					</div>
+				) : (
+					<>
+						{' '}
+						<button className='tan' onClick={() => {console.log(Calen.data); setShowItem(true);}}>Continue</button>
+						
+					</>
+				)}
+			</div>
+
 				</div>
 			</div>
 		</div>
