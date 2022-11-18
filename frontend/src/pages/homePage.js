@@ -4,6 +4,9 @@ import Reviews from '../components/reviews/reviews';
 import useFetch from '../hooks/useFetch';
 import homeBannerSM from '../img/banner-home-sm.jpg';
 import homeBannerLG from '../img/banner-home-lg.jpg';
+import tripadvisor from '../img/TripAdvisorLogo.png';
+import awardsbadge from '../img/AwardsBadge.png';
+import roadTripAlberta from '../img/roadtripalberta.jpg';
 
 import '../scss/pages/_homepage.scss';
 
@@ -192,15 +195,21 @@ export default function HomePage() {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div>
-				<div className='h2-back'>
-					<h2 className='container'>Reviews</h2>
+				<div>
+					<div className='h2-back'>
+						<h2 className='container'>Reviews</h2>
+					</div>
+					<div className='reviews'>
+						<Reviews />
+					</div>
+					<div className='awards'>
+						<img src={tripadvisor} alt='Tripadvisor Logo' />
+						<img src={awardsbadge} alt='The best log cabin retreat award' />
+						<img src={roadTripAlberta} alt='Road trip alberta badge' />
+					</div>
 				</div>
-				<div className='reviews'>
-					<Reviews />
-				</div>
 			</div>
+
 		</div>
 	);
 }

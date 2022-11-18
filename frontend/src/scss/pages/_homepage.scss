@@ -48,7 +48,7 @@
 		background-repeat: no-repeat;
 
 		width: 100%;
-		height: auto;
+		height: 30rem;
 	}
 
 	.elk {
@@ -100,11 +100,24 @@
 		}
 	}
 
+
+	.awards {
+		background-color: a.$almost-black;
+		padding: 1rem 0;
+
+		img {
+			width: 18rem;
+			margin: 3rem auto;
+		}
+	}
+
+
 	@media screen and (min-width: 768px) {
 		.heading1 {
 			padding: 10rem 0;
 			font-size: 8rem;
 		}
+
 		.list {
 			display: flex;
 			flex-direction: row;
@@ -136,6 +149,7 @@
 		.heading1 {
 			font-size: 10rem;
 		}
+
 		.container.top-content {
 			margin-bottom: 4rem;
 
@@ -164,7 +178,7 @@
 
 			.cabin2 {
 				width: 50%;
-				height: 46.8rem;
+				height: 51.8rem;
 				background-size: 80rem;
 			}
 		}
@@ -187,12 +201,13 @@
 			}
 
 			.elk {
-				height: 61.5rem;
+				height: 70.5rem;
 				width: 50%;
-				background-size: 70rem;
+				background-size: 80rem;
 			}
 
 			.list {
+
 				.div1,
 				.div2 {
 					margin: 0;
