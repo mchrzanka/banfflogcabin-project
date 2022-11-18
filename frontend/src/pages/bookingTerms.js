@@ -39,11 +39,9 @@ export default function BookingTerms() {
 			</div>
 
 			<div className='booking-button'>
-				<div className='button'>
-					<a href='/booking' aria-label='book' className='tan wide-btn'>
-						Continue
-					</a>
-				</div>
+			<div className='button'>
+    <a className='primary-btn btn' href='/bookingterms'>Continue</a>
+</div>
 			</div>
 		</div>
 	);
