@@ -108,17 +108,18 @@ const Calen = () => {
 			let totalPrice = 0;
 
 			for (let i = 0; i < seasonPricingInfo.length; i++) { //loop thru each season
-				// console.log(seasonPricingInfo[i].name);
+				console.log(seasonPricingInfo[i].name);
 				// console.log(seasonPricingInfo[i].Start);
 				// console.log(seasonPricingInfo[i].End);
-				// console.log(seasonPricingInfo[i].Price);
+				console.log(seasonPricingInfo[i].Price);
 				//console.log(chosenDays[i]);
 				// if (chosenDays[i] !== undefined) {
-				let startMonth = 0;
-				let endMonth = 0;
-				let startDay = 0;
-				let endDay = 0;
-
+				let startMonth = parseInt(seasonPricingInfo[i].Start.substr(5, 2));
+				let endMonth = parseInt(seasonPricingInfo[i].End.substr(5, 2));
+				let startDay = parseInt(seasonPricingInfo[i].Start.substr(8, 2));
+				let endDay = parseInt(seasonPricingInfo[i].End.substr(8, 2));
+				console.log("STARTMONTH",startMonth);
+				console.log("ENDDAY",endDay);
 				// } //PER DAY
 				for (let j = 0; j < chosenDays.length; j++) { //loop thru each day
 					let month = parseInt(chosenDays[j].substr(5, 2));
@@ -129,13 +130,14 @@ const Calen = () => {
 						totalPrice += seasonPricingInfo[i].Price;
 					} 
 					else {
-						if ( (month == startMonth && day > startDay) ||  (month == endMonth && day < endDay)){
+						if ( (month === startMonth && day > startDay) ||  (month === endMonth && day < endDay)){
 							totalPrice += seasonPricingInfo[i].Price;
 						}
 					}
 				}
 			}
-			totalPrice *= 1.05; //tax
+			totalPrice *= 1.08; //tax
+			console.log("price",totalPrice);
 			//IF CHOSENDAYS.LENGTH > 2
 
 
