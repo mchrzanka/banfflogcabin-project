@@ -54,6 +54,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
 	.heading1,
 	.quote,
 	h1,
@@ -68,6 +69,7 @@ a {
 }
 
 @media screen and (min-width: 2000px) {
+
 	.heading1,
 	.quote,
 	h1,
@@ -87,7 +89,8 @@ a {
 	input,
 	textarea,
 	.reviewer {
-		font-size: 1.8rem;
+		font-size: 2.1rem;
+		line-height: 4rem;
 	}
 }
 
