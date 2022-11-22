@@ -54,8 +54,8 @@ export default function HomePage() {
 										{data.data.attributes.content2}
 									</div>
 									<div className='button'>
-    <a className='secondary-btn btn' href='/ourcabin'>Our Cabin</a>
-</div>
+										<a className='secondary-btn btn' href='/ourcabin'>Our Cabin</a>
+									</div>
 								</div>
 							</div>
 							<div className='cabin2'></div>
@@ -186,7 +186,7 @@ export default function HomePage() {
 										</div>
 									</div>
 									<div className='button '>
-									<a className='secondary-btn btn' href='/rates'>Our Rates</a>
+										<a className='secondary-btn btn' href='/rates'>Our Rates</a>
 									</div>
 								</div>
 
@@ -195,17 +195,20 @@ export default function HomePage() {
 						</div>
 					</div>
 				</div>
-				<div>
+				<div className='spacer-home'>
 					<div className='h2-back'>
 						<h2 className='container'>Reviews</h2>
 					</div>
 					<div className='reviews'>
 						<Reviews />
 					</div>
-					<div className='awards'>
-						<img src={tripadvisor} alt='Tripadvisor Logo' />
-						<img src={awardsbadge} alt='The best log cabin retreat award' />
-						<img src={roadTripAlberta} alt='Road trip alberta badge' />
+					<div className='awards-bg'>
+						<div className='awards'>
+							<img src={tripadvisor} alt='Tripadvisor Logo' />
+							<img src={awardsbadge} alt='The best log cabin retreat award' />
+							<img src={roadTripAlberta} alt='Road trip alberta badge' />
+						</div>
+
 					</div>
 				</div>
 			</div>
