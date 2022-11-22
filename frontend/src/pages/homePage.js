@@ -38,6 +38,7 @@ export default function HomePage() {
 				</picture>
 				<div className='container top-content'>
 					<div className='heading2'>{data.data.attributes.h21}</div>
+					<div className='content trip_advisor'>{data.data.attributes.tripadvisor}</div>
 					<div className='content'>{data.data.attributes.content1}</div>
 				</div>
 

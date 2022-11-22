@@ -45,6 +45,17 @@ const ContactForm = () => {
 					/>
 					{errors.email && <p className='errors'>{errors.email}</p>}
 				</div>
+				<div className='phone'>
+						<label>Phone</label>
+						<input
+							type='tel'
+							name='phone'
+							value={values.phone}
+							onChange={handleChange}
+							placeholder='888-888-8888'
+						/>
+						{errors.phone && <p className='errors'>{errors.phone}</p>}
+					</div>
 				<div className='message'>
 					<label>Message</label>
 					<textarea

@@ -217,6 +217,7 @@ const Calen = () => {
 					}}
 				/>
 				<p className='min-booking'>* Minimum booking is two nights.</p>
+				<p className='min-booking'>** No babies, no minors, no pets. Sorry.</p>
 				<div className='button'>
 					<a className='secondary-btn btn' href='#' onClick={handleClick}>
 						Select Dates

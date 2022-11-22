@@ -2,7 +2,13 @@
 
 .contact {
 	.errors {
-		color: rgb(255, 37, 37);
+		color: a.$almost-black;
+		background-color: rgb(241, 111, 111);
+		padding: .1rem 1.5rem;
+		border-radius: .8rem;
+		font-weight: normal;
+		font-size: 1.4rem;
+		margin-bottom: 3rem;
 	}
 
 	.intro {
