@@ -40,7 +40,7 @@ export default function BookingTerms() {
 
 			<div className='booking-button'>
 			<div className='button'>
-    <a className='primary-btn btn' href='/bookingterms'>Continue</a>
+    <a className='primary-btn btn' href='/booking'>Continue</a>
 </div>
 			</div>
 		</div>
