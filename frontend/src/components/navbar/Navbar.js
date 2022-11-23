@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <header>
-        <div className="navContainer">
+        <nav role="navigation" className="navContainer">
           <div className="logo-container">
             <a href="/">
               <img
@@ -56,7 +56,7 @@ const Navbar = () => {
             <span className="line"></span>
             <span className="line"></span>
           </div>
-        </div>
+        </nav>
       </header>
     </>
   );
