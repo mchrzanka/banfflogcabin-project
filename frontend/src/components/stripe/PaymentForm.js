@@ -7,6 +7,43 @@ import validateFormInfo from '../../validation/validateBookingForm';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useState } from 'react';
 
+
+const CARD_OPTIONS = {
+  iconStyle: "solid",
+  style: {
+    base: {
+      iconColor: "#626e60",
+      backgroundColor: "white", //#f1f1f1
+      color: "#2f2f2f",
+      fontWeight: 500,
+      fontFamily: "Poppins, Roboto, Open Sans, sans-serif",
+      fontSize: "17px",
+      fontSmoothing: "antialiased",
+      ":-webkit-autofill": { color: "#fce883" },
+    },
+    invalid: {
+      iconColor: "maroon",
+      color: "maroon"
+    },
+    '::placeholder': {
+      color: 'gray',
+    },
+  }
+}
+
+
+const stripe_style = {
+  backgroundColor: "white",
+  display: "block",
+  padding: "10px",
+  borderRadius: "8px",
+  maxWidth: "55rem",
+  margin: "1.5rem auto",
+}
+
+
+
+
 export default function PaymentForm() {
 	const { handleChange, values, handleSubmitValidation, errors, onSuccess } =
 		useForm(validateFormInfo);
@@ -29,7 +66,32 @@ export default function PaymentForm() {
 	const handleSubmit = (stripe, elements, intentKey) => async () => {
 		//STRIPE
 
-		const cardElement = elements.getElement(CardElement);
+
+    
+    // let cardElement = elements.create('card', {
+    //   style: {
+    //     base: {
+    //       iconColor: 'orange',
+    //       color: 'orange',
+    //       fontWeight: '500',
+    //       fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
+    //       fontSize: '26px',
+    //       fontSmoothing: 'antialiased',
+    //       ':-webkit-autofill': {
+    //         color: 'orange',
+    //       },
+    //       '::placeholder': {
+    //         color: 'orange',
+    //       },
+    //     },
+    //     invalid: {
+    //       iconColor: 'orange',
+    //       color: 'orange',
+    //     },
+    //   },
+    // });
+
+		let cardElement = elements.getElement('card');
 
 		if (onSuccess === true) {
 			stripe
@@ -147,8 +209,10 @@ export default function PaymentForm() {
 						<label>Payment Amount</label>
 					</div>
 				</fieldset>
-				<CardElement />
-				<button onClick={handleSubmit(stripe, elements, secret)}>
+        <div style={stripe_style}>
+			  	<CardElement options={CARD_OPTIONS}/>
+        </div>
+				<button className="btn primary-btn" onClick={handleSubmit(stripe, elements, secret)}>
 					Confirm Booking
 				</button>
 			</form>
