@@ -136,7 +136,9 @@ const Calen = () => {
 					}
 				}
 			}
-			totalPrice *= 1.08; //tax
+			totalPrice *= 1.05; //tax
+			totalPrice *= 1.03; //fee
+			totalPrice = Math.round(totalPrice);
 			console.log("price",totalPrice);
 			//IF CHOSENDAYS.LENGTH > 2
 
