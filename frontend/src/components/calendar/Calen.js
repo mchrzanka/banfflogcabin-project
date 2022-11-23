@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../../scss/components/_calendar.scss';
-import { differenceInCalendarDays } from 'date-fns';
+import { differenceInCalendarDays, sub } from 'date-fns';
 import useFetch from '../../hooks/useFetch';
 import Price from '../../hooks/usePrice';
 import StripeContainer from '../stripe/StripeContainer';
@@ -83,6 +83,9 @@ const Calen = () => {
 	//console.log(seasonPricingInfo);
 
 	let totalPrice = 0;
+	let gst = 0;
+	let creditCardFee = 0;
+	let subtotal = 0;
 
 
 	if (diffDays > 2) {
@@ -129,25 +132,24 @@ const Calen = () => {
 					console.log(month);
 					console.log(day);
 					if (month > startMonth && month < endMonth) {
-						totalPrice += seasonPricingInfo[i].Price;
+						subtotal += seasonPricingInfo[i].Price;
 					}
 					else {
 						if ((month === startMonth && day > startDay) || (month === endMonth && day < endDay)) {
-							totalPrice += seasonPricingInfo[i].Price;
+							subtotal += seasonPricingInfo[i].Price;
 						}
 					}
 				}
 			}
-			totalPrice *= 1.05; //tax
-			totalPrice *= 1.03; //fee
-			totalPrice = Math.round(totalPrice);
-			console.log("price",totalPrice);
-			//IF CHOSENDAYS.LENGTH > 2
 
+			gst = subtotal * 0.05
+			creditCardFee = (subtotal * 1.05) * 0.03
+			totalPrice = subtotal + gst + creditCardFee
 
-
-
-
+			subtotal = subtotal.toFixed(2);
+			gst = gst.toFixed(2);
+			creditCardFee = creditCardFee.toFixed(2);
+			totalPrice = totalPrice.toFixed(2);
 		}
 	}
 
@@ -277,8 +279,25 @@ const Calen = () => {
 					) : (
 						''
 					)}
+					<div className='all-prices'>
+						<div>
+							<p>Subtotal</p>
+							<p>GST</p>
+							<p>Credit Card Fee</p>
+						</div>
+						<div>
+							<p>${subtotal}</p>
+							<p>${gst}</p>
+							<p>${creditCardFee}</p>
+						</div>
+						<div className='total-price'>
+							<p>Total Price</p>
+							<p>${totalPrice}</p></div>
+					</div>
+					<p>
+						Amount Due Now
+					</p>
 					<p>Deposit Price: ${depositPrice}.00</p>
-					<p>Total Price: ${totalPrice}</p>
 
 
 					<div>
@@ -293,7 +312,7 @@ const Calen = () => {
 									<input
 										onClick={() => { console.log(Calen.data); setShowItem(true); }}
 										type='submit'
-										value='Confirm Booking'
+										value='Continue'
 										name='contact'
 										className='primary-btn btn'
 									/>

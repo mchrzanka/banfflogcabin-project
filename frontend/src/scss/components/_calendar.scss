@@ -124,6 +124,26 @@
 		p {
 			color: a.$almost-black;
 		}
+
+		.total-price{
+			display:flex;
+			gap: 6rem;
+			justify-content: center;
+			border-top: 1px solid a.$almost-black;
+		
+		}
+
+		.all-prices{
+			display:flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 2rem 0;
+			gap: 6rem;
+
+			div{
+				text-align: left;
+			}
+		}
 	}
 
 	.react-calendar__navigation {
