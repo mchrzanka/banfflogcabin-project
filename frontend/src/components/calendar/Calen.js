@@ -82,6 +82,9 @@ const Calen = () => {
 	const seasonPricingInfo = Price();
 	//console.log(seasonPricingInfo);
 
+	let totalPrice = 0;
+
+
 	if (diffDays > 2) {
 		if (click == true) {
 
@@ -105,7 +108,6 @@ const Calen = () => {
 
 			//AZURE
 
-			let totalPrice = 0;
 
 			for (let i = 0; i < seasonPricingInfo.length; i++) { //loop thru each season
 				console.log(seasonPricingInfo[i].name);
@@ -118,26 +120,26 @@ const Calen = () => {
 				let endMonth = parseInt(seasonPricingInfo[i].End.substr(5, 2));
 				let startDay = parseInt(seasonPricingInfo[i].Start.substr(8, 2));
 				let endDay = parseInt(seasonPricingInfo[i].End.substr(8, 2));
-				console.log("STARTMONTH",startMonth);
-				console.log("ENDDAY",endDay);
+				console.log("STARTMONTH", startMonth);
+				console.log("ENDDAY", endDay);
 				// } //PER DAY
 				for (let j = 0; j < chosenDays.length; j++) { //loop thru each day
 					let month = parseInt(chosenDays[j].substr(5, 2));
 					let day = parseInt(chosenDays[j].substr(8, 2));
 					console.log(month);
 					console.log(day);
-					if (month > startMonth && month < endMonth){
+					if (month > startMonth && month < endMonth) {
 						totalPrice += seasonPricingInfo[i].Price;
-					} 
+					}
 					else {
-						if ( (month === startMonth && day > startDay) ||  (month === endMonth && day < endDay)){
+						if ((month === startMonth && day > startDay) || (month === endMonth && day < endDay)) {
 							totalPrice += seasonPricingInfo[i].Price;
 						}
 					}
 				}
 			}
 			totalPrice *= 1.08; //tax
-			console.log("price",totalPrice);
+			console.log("price", totalPrice);
 			//IF CHOSENDAYS.LENGTH > 2
 
 
@@ -204,7 +206,7 @@ const Calen = () => {
 	return (
 		<div className='calendar-content'>
 			<div className='container'>
-				<h1>Select Your Dates</h1>
+				{/* <h1>Select Your Dates</h1>
 				<Calendar
 					onChange={onChange}
 					//defaultValue={undefined}
@@ -219,12 +221,42 @@ const Calen = () => {
 					}}
 				/>
 				<p className='min-booking'>* Minimum booking is two nights.</p>
-				<p className='min-booking'>** No babies, no minors, no pets. Sorry.</p>
-				<div className='button'>
+				<p className='min-booking'>** No babies, no minors, no pets. Sorry.</p> */}
+
+				{showItem ? (
+					<h1>Payment</h1>
+				) : (
+					<>
+						<h1>Select Your Dates</h1>
+						<Calendar
+							onChange={onChange}
+							//defaultValue={undefined}
+							value={value}
+							tileDisabled={disableDates}
+							// disableDates={}
+							selectRange={true}
+							minDate={date}
+							onClickDay={(value, event) => {
+								//alert(`Clicked day: ${value}`);
+								pushDayArray(value);
+							}}
+						/>
+						<p className='min-booking'>* Minimum booking is two nights.</p>
+						<p className='min-booking'>** No babies, no minors, no pets. Sorry.</p>
+
+						<div className='button'>
+							<a className='secondary-btn btn' href='#' onClick={handleClick}>
+								Select Dates
+							</a>
+						</div>
+					</>
+				)}
+
+				{/* <div className='button'>
 					<a className='secondary-btn btn' href='#' onClick={handleClick}>
 						Select Dates
 					</a>
-				</div>
+				</div> */}
 			</div>
 			<div
 				className={
@@ -244,7 +276,7 @@ const Calen = () => {
 						''
 					)}
 					<p>Deposit Price: ${depositPrice}.00</p>
-					<p>Total Price:</p>
+					<p>Total Price: ${totalPrice}</p>
 
 
 					<div>
@@ -255,7 +287,15 @@ const Calen = () => {
 						) : (
 							<>
 								{' '}
-								<button className='tan' onClick={() => { console.log(Calen.data); setShowItem(true); }}>Continue</button>
+								<div className='button'>
+									<input
+										onClick={() => { console.log(Calen.data); setShowItem(true); }}
+										type='submit'
+										value='Confirm Booking'
+										name='contact'
+										className='primary-btn btn'
+									/>
+								</div>
 
 							</>
 						)}

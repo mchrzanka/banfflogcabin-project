@@ -212,9 +212,15 @@ export default function PaymentForm() {
         <div style={stripe_style}>
 			  	<CardElement options={CARD_OPTIONS}/>
         </div>
-				<button className="btn primary-btn" onClick={handleSubmit(stripe, elements, secret)}>
-					Confirm Booking
-				</button>
+		<div className='button'>
+					<input
+						onClick={handleSubmit(stripe, elements, secret)}
+						type='submit'
+						value='Confirm Booking'
+						name='contact'
+						className='primary-btn btn'
+					/>
+				</div>
 			</form>
 			{done && <Navigate to='/success' />}
 		</>
