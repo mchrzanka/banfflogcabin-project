@@ -45,7 +45,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div
+          <button
             onClick={handleClick}
             aria-label="Main Menu"
             className={isActive ? "hamburger hammy-is-active" : "hamburger"}
@@ -55,7 +55,7 @@ const Navbar = () => {
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
-          </div>
+          </button>
         </nav>
       </header>
     </>

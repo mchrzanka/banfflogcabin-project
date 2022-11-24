@@ -212,8 +212,8 @@ export default function PaymentForm() {
 							placeholder='Tell us of any dietary restrictions.'
 						/>
 					</div>
-					<div>
-						<label>Payment Amount</label>
+					<div className='amount'>
+						<label>Payment Amount: </label>
 					</div>
 				</fieldset>
 
