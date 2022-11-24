@@ -5,8 +5,9 @@ export default function PmntFail() {
     return (
         <div className='container-pmnt'>
             <div className='message-thanks'>
-                <h1>Sorry Your Payment Did Not Process</h1>
-                <h2>Please Try Another Medhod</h2>
+                <h1>PAYMENT FAILED</h1>
+                <h2>Your Transaction has failed due to unknown error.</h2>
+                <h2>Please try again!</h2>
 
             </div>
 
