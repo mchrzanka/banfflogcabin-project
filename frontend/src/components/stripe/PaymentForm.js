@@ -147,6 +147,7 @@ export default function PaymentForm() {
 		<>
 			<form onSubmit={handleSubmitValidation}>
 				<fieldset>
+				<h3>Booking Details</h3>
 					<div>
 						<label>First Name</label>
 						<input
@@ -209,9 +210,14 @@ export default function PaymentForm() {
 						<label>Payment Amount</label>
 					</div>
 				</fieldset>
+
+				<h3>Card Details</h3>
         <div style={stripe_style}>
 			  	<CardElement options={CARD_OPTIONS}/>
         </div>
+		<div>
+			<p>By submitting this form, I understand and agree to the booking terms.</p>
+		</div>
 		<div className='button'>
 					<input
 						onClick={handleSubmit(stripe, elements, secret)}
