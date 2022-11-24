@@ -17,12 +17,10 @@ const Calen = () => {
 
   //CALENDAR FUNCTIONALITY
   const firstDateDisplay = (myArray) => {
-    //console.log("firstDateDisplay" + myArray); the first day they click on
     return myArray.length > 0 ? true : false;
   };
 
   const secondDateDisplay = (myArray) => {
-    //console.log("secondDateDisplay" + myArray); //the end day they click on
     return myArray.length === 2 ? true : false;
   };
 
@@ -44,7 +42,6 @@ const Calen = () => {
       for (let i = 0; i < booked.length - 1; i++) {
         booked[i] = booked[i].substr(0, 10);
         if (date == booked[i]) {
-          //console.log("YESS");
           return true;
         }
       }
@@ -53,12 +50,6 @@ const Calen = () => {
   }
 
   /***
-   *
-   *
-   *
-   *
-   *
-   *
    *
    *
    *
@@ -106,25 +97,16 @@ const Calen = () => {
 
       for (let i = 0; i < seasonPricingInfo.length; i++) {
         //loop thru each season
-        console.log(seasonPricingInfo[i].name);
-        // console.log(seasonPricingInfo[i].Start);
-        // console.log(seasonPricingInfo[i].End);
-        console.log(seasonPricingInfo[i].Price);
-        //console.log(chosenDays[i]);
         // if (chosenDays[i] !== undefined) {
         let startMonth = parseInt(seasonPricingInfo[i].Start.substr(5, 2));
         let endMonth = parseInt(seasonPricingInfo[i].End.substr(5, 2));
         let startDay = parseInt(seasonPricingInfo[i].Start.substr(8, 2));
         let endDay = parseInt(seasonPricingInfo[i].End.substr(8, 2));
-        console.log("STARTMONTH", startMonth);
-        console.log("ENDDAY", endDay);
         // } //PER DAY
         for (let j = 0; j < chosenDays.length; j++) {
           //loop thru each day
           let month = parseInt(chosenDays[j].substr(5, 2));
           let day = parseInt(chosenDays[j].substr(8, 2));
-          console.log(month);
-          console.log(day);
           if (month > startMonth && month < endMonth) {
             subtotal += seasonPricingInfo[i].Price;
           } else {
@@ -149,9 +131,9 @@ const Calen = () => {
     }
   }
 
+
+
   /**
-   *
-   *
    *
    *
    *
@@ -227,7 +209,11 @@ const Calen = () => {
             </p>
 
             <div className="button">
-              <a className="secondary-btn btn select" href="#" onClick={handleClick}>
+              <a
+                className="secondary-btn btn select"
+                href="#"
+                onClick={handleClick}
+              >
                 Select Dates
               </a>
             </div>
@@ -239,38 +225,41 @@ const Calen = () => {
           click == true && diffDays > 2 ? "datesSelected show" : "datesSelected"
         }
       >
-		<div className="date-pricing">
-        <h2>Dates Selected</h2>
-        <div>
-          {firstDateDisplay(myArray) === true &&secondDateDisplay(myArray) === true ? ( //DISPLAY FIRST & SECOND DATE SELECTED IF EXIST
-            <p>{myArray[0].split("00:")[0] + " - "}{myArray[1].split("00:")[0]}</p>
-          ) : (
-            ""
-          )}
-          <div className="all-prices">
-            <div>
-              <p>Subtotal</p>
-              <p>GST</p>
-              <p>Credit Card Fee</p>
-              <hr></hr>
-              <p>Total Price</p>
-			  <p>Due Now</p>
+        <div className="date-pricing">
+          <h2>Dates Selected</h2>
+          <div>
+            {firstDateDisplay(myArray) === true &&
+            secondDateDisplay(myArray) === true ? ( //DISPLAY FIRST & SECOND DATE SELECTED IF EXIST
+              <p>
+                {myArray[0].split("00:")[0] + " - "}
+                {myArray[1].split("00:")[0]}
+              </p>
+            ) : (
+              ""
+            )}
+            <div className="all-prices">
+              <div>
+                <p>Subtotal</p>
+                <p>GST</p>
+                <p>Credit Card Fee</p>
+                <hr></hr>
+                <p>Total Price</p>
+                <p>Due Now</p>
+              </div>
+              <div>
+                <p>${subtotal}</p>
+                <p>${gst}</p>
+                <p>${creditCardFee}</p>
+                <p>${totalPrice}</p>
+                <p>${depositPrice}.00</p>
+              </div>
             </div>
-            <div>
-              <p>${subtotal}</p>
-              <p>${gst}</p>
-              <p>${creditCardFee}</p>
-              <p>${totalPrice}</p>
-			  <p>${depositPrice}.00</p>
+
+            <div className="remainder">
+              <p>*Remainder to be paid upon arrival.</p>
             </div>
           </div>
-
-          <div className="remainder">
-
-				<p>*Remainder to be paid upon arrival.</p>
-		  </div>
         </div>
-		</div>
         <div>
           {showItem ? (
             <div>
@@ -298,4 +287,4 @@ const Calen = () => {
     </div>
   );
 };
-export default Calen;
+export  default Calen; 

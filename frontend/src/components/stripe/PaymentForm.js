@@ -6,6 +6,7 @@ import { Navigate } from 'react-router-dom';
 import validateFormInfo from '../../validation/validateBookingForm';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useState } from 'react';
+import Calen from '../calendar/Calen';
 
 import '../../scss/components/_paymentform.scss'
 
@@ -66,32 +67,6 @@ export default function PaymentForm() {
 	let secret = data.client_secret;
 	const handleSubmit = (stripe, elements, intentKey) => async () => {
 		//STRIPE
-
-
-    
-    // let cardElement = elements.create('card', {
-    //   style: {
-    //     base: {
-    //       iconColor: 'orange',
-    //       color: 'orange',
-    //       fontWeight: '500',
-    //       fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
-    //       fontSize: '26px',
-    //       fontSmoothing: 'antialiased',
-    //       ':-webkit-autofill': {
-    //         color: 'orange',
-    //       },
-    //       '::placeholder': {
-    //         color: 'orange',
-    //       },
-    //     },
-    //     invalid: {
-    //       iconColor: 'orange',
-    //       color: 'orange',
-    //     },
-    //   },
-    // });
-
 		let cardElement = elements.getElement('card');
 
 		if (onSuccess === true) {
@@ -213,7 +188,7 @@ export default function PaymentForm() {
 						/>
 					</div>
 					<div className='amount'>
-						<label>Payment Amount: </label>
+						<label>Payment Amount:</label>
 					</div>
 				</fieldset>
 
