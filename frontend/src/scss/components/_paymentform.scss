@@ -1,0 +1,149 @@
+@use '../assets' as a;
+.pay-form{
+    background-color: a.$off-white;
+    padding: 0 2rem;
+    h3{
+        text-align: start;
+        font-size: 3.6rem;
+        font-weight: normal;
+        margin-bottom: 1rem;
+    }
+    ::placeholder{
+        color: #c4c4c4;
+        font-size: 1.8rem;
+    }
+    p.errors{
+        color: #2f2f2f;
+        background-color: rgb(241, 111, 111);
+        padding: 0.3rem 1.5rem;
+        border-radius: 0.8rem;
+        font-weight: normal;
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+        line-height: 1.2;
+        display: inline-block;
+    }
+}
+.booking-details {
+    background-color: a.$off-white;
+    color: #2F2F2F;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    h3{
+        font-family: a.$highsummit;
+    }
+    .label-input-con{
+        text-align: start;
+        label {
+            font-size: 2rem;
+            font-weight: 300;
+            text-align: start;
+        }
+    }
+    .name{
+        display: flex;
+        gap: 2rem;
+        .label-input-con{
+            text-align: start;
+        }
+        input::placeholder,
+        textarea::placeholder {
+            color: rgb(196, 196, 196);
+            font-weight: 300;
+        }
+        input {
+            width: 100%;
+            border-radius: 0.8rem;
+            border: none;
+            padding: 1.2rem 0.5rem;
+            margin-bottom: 2rem;
+            font-family: a.$poppins;
+            font-size: 1.6rem;
+            background-color: a.$grey;
+        }
+    }
+    .phone-email{
+        input {
+            width: 100%;
+            border-radius: 0.8rem;
+            border: none;
+            padding: 1.2rem 0.5rem;
+            margin-bottom: 2rem;
+            font-family: a.$poppins;
+            font-size: 1.6rem;
+            background-color: a.$grey;
+        }
+    }
+    .diet-restriction{
+        text-align: start;
+        
+        label{
+            font-size: 2rem;
+        }
+
+        p{
+            margin-top: 1rem;
+            line-height: 1.2;
+            font-size: 1.6rem;
+            font-family: a.$poppins;
+            font-style: italic;
+        }
+        textarea{
+            margin-top: 1rem;
+            width: 100%;
+            border-radius: 8px;
+            min-height: 10rem;
+            font-size: 1.8rem;
+            background-color: a.$grey;
+            border: none;
+            padding: 1.2rem 0.5rem;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 820px) {
+    .booking-details{
+        width: 60rem;
+        margin: 0 auto;
+        padding: 7rem 0;
+        .label-input-con{
+            padding-top: 1rem;
+            width: 100%;
+        }
+        .phone-email{
+            display: flex;
+            width: 100%;
+            gap: 2rem;
+            input{
+                width: 100%;
+            }
+        }
+        .diet-restriction{
+            p{
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .booking-details{
+        width: 100rem;
+        .label-input-con{
+            padding-top: 2rem;
+        }
+        .name{
+            gap: 4rem;
+        }
+        .phone-email{
+            gap: 4rem;
+        }
+        .diet-restriction{
+            p{
+                line-height: 1.5;
+            }
+        }
+    }
+}
