@@ -72,7 +72,7 @@ const ContactForm = () => {
 						type='submit'
 						value='Submit'
 						name='contact'
-						className='secondary-btn btn'
+						className='primary-btn btn'
 					/>
 				</div>
 				<p>{onSuccess === true ? successMessage : ''}</p>
