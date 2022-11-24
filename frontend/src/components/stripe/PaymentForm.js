@@ -7,6 +7,7 @@ import validateFormInfo from '../../validation/validateBookingForm';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useState } from 'react';
 
+import '../../scss/components/_paymentform.scss'
 
 const CARD_OPTIONS = {
   iconStyle: "solid",
@@ -145,32 +146,35 @@ export default function PaymentForm() {
 
 	return (
 		<>
-			<form onSubmit={handleSubmitValidation}>
-				<fieldset>
+			<form className="pay-form" onSubmit={handleSubmitValidation}>
+				<fieldset className="booking-details">
 				<h3>Booking Details</h3>
-					<div>
-						<label>First Name</label>
-						<input
-							type='text'
-							name='firstname'
-							value={values.firstname}
-							onChange={handleChange}
-							placeholder='Jane'
-						/>
-						{errors.firstname && <p className='errors'>{errors.firstname}</p>}
-					</div>
-					<div>
-						<label>Last Name</label>
-						<input
-							type='text'
-							name='lastname'
-							value={values.lastname}
-							onChange={handleChange}
-							placeholder='Doe'
-						/>
-						{errors.lastname && <p className='errors'>{errors.lastname}</p>}
-					</div>
-					<div>
+				<div className="name">
+						<div className='label-input-con'>
+							<label>First Name</label>
+							<input
+								type='text'
+								name='firstname'
+								value={values.firstname}
+								onChange={handleChange}
+								placeholder='Jane'
+							/>
+							{errors.firstname && <p className='errors'>{errors.firstname}</p>}
+						</div>
+						<div className='label-input-con'>
+							<label>Last Name</label>
+							<input
+								type='text'
+								name='lastname'
+								value={values.lastname}
+								onChange={handleChange}
+								placeholder='Doe'
+							/>
+							{errors.lastname && <p className='errors'>{errors.lastname}</p>}
+						</div>
+				</div>
+				<div className="phone-email">
+					<div className='label-input-con'>
 						<label>Email</label>
 						<input
 							type='text'
@@ -181,7 +185,7 @@ export default function PaymentForm() {
 						/>
 						{errors.email && <p className='errors'>{errors.email}</p>}
 					</div>
-					<div>
+					<div className='label-input-con'>
 						<label>Phone</label>
 						<input
 							type='tel'
@@ -192,7 +196,9 @@ export default function PaymentForm() {
 						/>
 						{errors.phone && <p className='errors'>{errors.phone}</p>}
 					</div>
-					<div>
+				</div>
+
+					<div className="diet-restriction">
 						<label>Dietary Restrictions</label>
 						<p>
 							Banff Log Cabin delivers breakfast in the morning. Please let us
