@@ -32,7 +32,7 @@ function App() {
 						<Route path='/contact' element={<Contact />}></Route>
 						<Route path='/bookingterms' element={<BookingTerms />}></Route>
 						<Route path='/booking' element={<BookingPage />}></Route>
-						<Route path='/pmntfail' element={<PmntFail />}></Route>
+						<Route path='/paymentfailed' element={<PmntFail />}></Route>
 						<Route path='/success' element={<SuccessPage />}></Route>
 
 					</Routes>
