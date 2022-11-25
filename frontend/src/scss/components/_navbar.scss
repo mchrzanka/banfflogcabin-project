@@ -10,6 +10,8 @@
 	.logo {
 		z-index: 99;
 		padding: 2rem 0 2rem 2rem;
+		height: auto;
+		width: 15rem;
 	}
 
 	.hamburger {
@@ -22,6 +24,8 @@
 		background: none;
 		border: none;
 		z-index: 99;
+		margin-right: 2rem;
+	
 	}
 
 	.hamburger span {
@@ -123,7 +127,7 @@
 	}
 
 	// Desktop Navigation Changes
-	@media only screen and (min-width: 820px) {
+	@media only screen and (min-width: 1000px) {
 		.navContainer {
 			align-items: center;
 			justify-content: space-between;
@@ -132,6 +136,7 @@
 
 		.logo {
 			padding: 0 0 0 2rem;
+width: 22rem;
 		}
 
 		.mobile-menu {

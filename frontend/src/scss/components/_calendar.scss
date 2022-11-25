@@ -12,7 +12,7 @@
 		color: a.$almost-black;
 		max-width: 70rem;
 		margin: 0 auto;
-		padding-top: 3rem;
+		//padding-top: 3rem;
 		font-size: 1.4rem;
 	}
 
@@ -25,6 +25,7 @@
 		border: none;
 		max-width: 70rem;
 		margin: 0 auto;
+		padding-bottom: 3rem;
 
 		.react-calendar__tile {
 			padding-inline: 0;
@@ -109,6 +110,20 @@
 	.show {
 		display: block;
 		background-color: a.$grey;
+		padding: 2rem 1.6rem;
+		text-align: center;
+
+		h2 {
+			font-family: a.$poppins;
+			font-weight: 300;
+			font-size: 2.4rem;
+			color: a.$almost-black;
+			padding-bottom: 1rem;
+		}
+
+		p {
+			color: a.$almost-black;
+		}
 	}
 
 	.react-calendar__navigation {

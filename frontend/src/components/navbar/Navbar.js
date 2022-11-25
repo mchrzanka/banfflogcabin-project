@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../scss/components/_navbar.scss";
+import logo from "../../img/logo.png"
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -12,13 +13,12 @@ const Navbar = () => {
     <>
       <header>
         <div className="navContainer">
-          <div className="logo">
+          <div className="logo-container">
             <a href="/">
               <img
-                width="40"
-                height="40"
                 alt="Banff Log Cabin Logo"
-                src="https://miro.medium.com/max/1400/0*0fClPmIScV5pTLoE.jpg"
+                src={logo}
+                className="logo"
               />
             </a>
           </div>

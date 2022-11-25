@@ -1,5 +1,4 @@
 import React from 'react';
-import Ammenities from '../components/ammenities/Ammenities';
 import useFetch from '../hooks/useFetch';
 import Pricing from './../components/pricing/Pricing';
 
@@ -22,6 +21,11 @@ export default function Rates() {
 				<h1 className='rate-title'>{data.data.attributes.h1}</h1>
 				{/* PRICING */}
 				<Pricing />
+				<div className='button'>
+					<a className='primary-btn btn' href='/bookingterms'>
+						Book Now
+					</a>
+				</div>
 
 				{/*AMMENITIES*/}
 				<div className='price-ammenities'>
@@ -97,7 +101,6 @@ export default function Rates() {
 								<p>Free Off Street Parking</p>
 							</div>
 						</div>
-
 					</div>
 					<div className='ammen-bonus'>
 						<p>{data.data.attributes.content4}</p>

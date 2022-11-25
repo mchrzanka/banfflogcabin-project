@@ -136,6 +136,23 @@ const useForm = () => {
 			isError = true;
 		}
 
+		//phone
+		if (!values.phone) {
+			errors.phone = 'Phone number required.';
+			isError = true;
+		} else if (
+			!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(
+				values.phone
+			)
+		) {
+			errors.phone = 'Phone number is invalid.';
+			isError = true;
+		} else if (values.phone.length < 10 || values.phone.length > 20) {
+			errors.phone = 'Phone number must be between 10 to 20 numbers.';
+			isError = true;
+		}
+
+		//message
 		if (!values.message) {
 			errors.message = 'Message required.';
 			isError = true;

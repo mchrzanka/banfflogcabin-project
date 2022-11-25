@@ -18,6 +18,10 @@
 		}
 	}
 
+	.trip_advisor{
+		margin-bottom: 2rem;
+	}
+
 	.ourcabin-ban,
 	.ammenities-ban {
 		background-color: a.$almost-black;
@@ -48,7 +52,7 @@
 		background-repeat: no-repeat;
 
 		width: 100%;
-		height: auto;
+		height: 30rem;
 	}
 
 	.elk {
@@ -66,7 +70,7 @@
 		background-color: a.$green;
 
 		.list {
-			padding: 4rem 1.6rem;
+			padding: 4rem 1.6rem 0 1.6rem;
 			max-width: 80rem;
 			margin: 0 auto;
 
@@ -100,11 +104,28 @@
 		}
 	}
 
+
+	.awards-bg {
+		background-color: a.$almost-black;
+
+
+		.awards {
+			padding: 1rem 0;
+
+			img {
+				width: 18rem;
+				margin: 3rem auto;
+			}
+		}
+	}
+
+
 	@media screen and (min-width: 768px) {
 		.heading1 {
 			padding: 10rem 0;
 			font-size: 8rem;
 		}
+
 		.list {
 			display: flex;
 			flex-direction: row;
@@ -133,9 +154,15 @@
 	}
 
 	@media screen and (min-width: 1000px) {
+
+		.spacer-home {
+			margin-top: 12rem;
+		}
+
 		.heading1 {
 			font-size: 10rem;
 		}
+
 		.container.top-content {
 			margin-bottom: 4rem;
 
@@ -164,8 +191,8 @@
 
 			.cabin2 {
 				width: 50%;
-				height: 46.8rem;
-				background-size: 80rem;
+				height: 67.8rem;
+				background-size: 102rem;
 			}
 		}
 
@@ -187,12 +214,13 @@
 			}
 
 			.elk {
-				height: 61.5rem;
+				height: 70.5rem;
 				width: 50%;
-				background-size: 70rem;
+				background-size: 80rem;
 			}
 
 			.list {
+
 				.div1,
 				.div2 {
 					margin: 0;
@@ -207,6 +235,26 @@
 				}
 			}
 		}
+
+		.awards-bg {
+			.awards {
+				max-width: 150rem;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-around;
+				padding: 4rem 0;
+
+				img {
+					width: 20rem;
+					height: fit-content;
+					margin: auto;
+				}
+
+
+			}
+		}
+
+
 	}
 
 	@media screen and (min-width: 1400px) {
@@ -223,4 +271,9 @@
 			background-size: 101rem;
 		}
 	}
+}
+
+.h2-back {
+	background-color: a.$almost-black;
+	padding: 2rem 0 2rem 1.6rem;
 }

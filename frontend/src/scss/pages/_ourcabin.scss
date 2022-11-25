@@ -1,128 +1,122 @@
 @use '../assets' as a;
 
 .ourcabin {
-    padding-top: 4rem;
-    background-color: a.$green;
-    color: a.$off-white;
+	padding-top: 4rem;
+	background-color: a.$green;
+	color: a.$off-white;
 
-    .title {
-        background-color: a.$almost-black;
-        margin-bottom: 8rem;
+	.title {
+		background-color: a.$almost-black;
+		margin-bottom: 8rem;
+		padding: 2rem 0;
+	}
 
-    }
+	h1 {
+		font-weight: 300;
+	}
 
-    h1 {
-        font-weight: 300;
+	@media only screen and (min-width: 820px) {
+		.content-flex {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			width: 100%;
+			margin: 0 auto;
+			justify-content: space-around;
 
-    }
+			.col-1,
+			.col-2 {
+				width: 45%;
+			}
+		}
 
-    @media only screen and (min-width: 820px) {
-        .content-flex {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            width: 100%;
-            margin: 0 auto;
-            justify-content: space-around;
+		h1 {
+			padding-top: 3rem;
+			padding-bottom: 1rem;
+			margin-left: 2rem;
+		}
 
-            .col-1,
-            .col-2 {
-                width: 45%;
-            }
-        }
-
-        h1 {
-            padding-top: 3rem;
-            padding-bottom: 1rem;
-            margin-left: 2rem;
-        }
-
-        .heading1 {
-            max-width: 135rem;
-            margin: 0 auto;
-        }
-    }
-
-
+		.heading1 {
+			max-width: 135rem;
+			margin: 0 auto;
+		}
+	}
 }
 
-
 .youtube-vid {
-    margin: 0 auto;
-    margin-top: 10rem;
-    margin-bottom: -1rem;
-    width: 39rem;
+	margin: 0 auto;
+	margin-top: 10rem;
+	margin-bottom: -1rem;
+	width: 39rem;
 
-    @media only screen and (min-width: 820px) {
-        width: 82rem;
-        margin-bottom: 5rem;
-    }
+	@media only screen and (min-width: 820px) {
+		width: 82rem;
+		margin-bottom: 5rem;
+	}
 
-    @media only screen and (min-width: 1600px) {
-        width: 100rem;
-        margin: 15rem auto;
-    }
+	@media only screen and (min-width: 1600px) {
+		width: 100rem;
+		margin: 15rem auto;
+	}
 
-    @media only screen and (min-width: 3000px) {
-        width: 150rem;
-        margin: 15rem auto;
-    }
+	@media only screen and (min-width: 3000px) {
+		width: 150rem;
+		margin: 15rem auto;
+	}
 }
 
 .content {
-    p {
-        margin-bottom: 2rem;
-
-    }
+	p {
+		margin-bottom: 2rem;
+	}
 }
 
 .quote-container {
-    background-color: a.$almost-black;
+	background-color: a.$almost-black;
 
-    .quote {
-        // color: a.$off-white;
-        margin: 0 auto;
-        width: 30rem;
-        padding: 10rem 0;
-    }
+	.quote {
+		// color: a.$off-white;
+		margin: 0 auto;
+		width: 30rem;
+		padding: 10rem 0;
+	}
 
+	.quotename {
+		text-align: right;
+		margin-right: 10rem;
+		font-size: 1.6rem;
+		font-family: a.$poppins;
+		line-height: 2.4em;
+	}
 
-    .quotename {
-        text-align: right;
-        margin-right: 10rem;
-        font-size: 1.6rem;
-        font-family: a.$poppins;
-        line-height: 2.4em;
-    }
+	@media only screen and (min-width: 820px) {
+		.quote {
+			width: 41rem;
+		}
 
-    @media only screen and (min-width: 820px) {
-        .quote {
-            width: 41rem;
-        }
+		.quotename {
+			margin-right: 0;
+		}
+	}
 
-        .quotename {
-            margin-right: 0;
-        }
-    }
+	@media only screen and (min-width: 1175px) {
+		.quote {
+			width: 60rem;
+		}
 
-    @media only screen and (min-width: 1175px) {
-        .quote {
-            width: 60rem;
-        }
+		.quotename {
+			margin-right: 2rem;
+		}
+	}
 
-        .quotename {
-            margin-right: 2rem;
-        }
-    }
+	@media only screen and (min-width: 2000px) {
+		.quote {
+			width: 110rem;
+			padding-top: 15rem;
+		}
 
-    @media only screen and (min-width: 2000px) {
-        .quote {
-            width: 110rem;
-            padding-top: 15rem;
-        }
-
-        .quotename {
-            margin-right: 0;
-        }
-    }
+		.quotename {
+			margin-right: 0;
+		}
+	}
 }
