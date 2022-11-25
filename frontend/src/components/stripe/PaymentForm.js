@@ -47,8 +47,6 @@ export default function PaymentForm({ depositPriceStateSave }) {
   const stripe = useStripe();
   const elements = useElements();
 
-  console.log(depositPriceStateSave);
-
   const { loading, error, data } = useFetch(
     "http://147.182.207.198:1337/api/stripeIntent"
   );
