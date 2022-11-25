@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
+
+.container-pmnt {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 50vh;
+	background-image: url('../../img/snow-forest.jpg');
+	background-blend-mode: soft-light;
+	background-size: cover;
+	background-position: center center;
+	padding: 2rem;
+
+    *,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h1, h2 {
+	font-family: 'Arima Madurai', cursive;
+	color:white;
+	font-weight: 500;
+	letter-spacing: 1px;
+	position: relative;
+	z-index: 3;
+}
+
+.message-thanks {
+	justify-content: center;
+	margin: 4rem;
+	background-image:linear-gradient(rgba(1, 1, 1, 0.712), rgba(0, 0, 0, 0.596));
+	border-radius: 12px;
+
+
+
+}
+}

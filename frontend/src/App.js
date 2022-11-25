@@ -10,7 +10,7 @@ import Contact from './pages/contact';
 import BookingPage from './pages/bookingPage';
 import BookingTerms from './pages/bookingTerms';
 import SuccessPage from './pages/success';
-import PmntFail from './pages/pmntfail';
+import PmntFail from './pages/paymentfailed';
 
 //components import
 import SiteHeader from './components/header/header';
