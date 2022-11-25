@@ -203,6 +203,7 @@ table {
   font-family: HighSummit;
   src: url("../../font/HighSummit.otf");
   src: url("../../font/HighSummit.ttf");
+  font-display: swap;
 }
 :root,
 html {
