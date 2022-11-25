@@ -15,6 +15,7 @@ import Success from './pages/success';
 import SiteHeader from './components/header/header';
 import Footer from './components/footer/footer';
 import SuccessPage from './pages/success';
+import PmntFail from './pages/pmntfail';
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
 						<Route path='/contact' element={<Contact />}></Route>
 						<Route path='/bookingterms' element={<BookingTerms />}></Route>
 						<Route path='/booking' element={<BookingPage />}></Route>
-
+						<Route path='/pmntfail' element={<PmntFail />}></Route>
 						<Route path='/success' element={<SuccessPage />}></Route>
 
 					</Routes>
