@@ -9,12 +9,12 @@ import Rates from './pages/rates';
 import Contact from './pages/contact';
 import BookingPage from './pages/bookingPage';
 import BookingTerms from './pages/bookingTerms';
-import Success from './pages/success';
+import SuccessPage from './pages/success';
+import PmntFail from './pages/pmntfail';
 
 //components import
 import SiteHeader from './components/header/header';
 import Footer from './components/footer/footer';
-import SuccessPage from './pages/success';
 
 
 function App() {
