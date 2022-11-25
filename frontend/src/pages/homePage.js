@@ -34,7 +34,7 @@ export default function HomePage() {
         </div>
         <picture className="banner-img">
           <source media="(min-width:420px)" srcSet={homeBannerLG} />
-          <img src={homeBannerSM} alt="Flowers" />
+          <img src={homeBannerSM} alt="Banff Log Cabin with mountain background" width="1494" height="871" />
         </picture>
         <div className="container top-content">
           <div className="heading2">{data.data.attributes.h21}</div>
