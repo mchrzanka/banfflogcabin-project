@@ -12,8 +12,8 @@ const Calen = () => {
   const [myArray, updateMyArray] = useState([]);
   const [click, setClick] = useState(false);
   const [showItem, setShowItem] = useState(false);
+  const [deposit, setDeposit] = useState("");
   const date = new Date();
-  let depositPrice = 0;
 
   //CALENDAR FUNCTIONALITY
   const firstDateDisplay = (myArray) => {
@@ -77,6 +77,7 @@ const Calen = () => {
   let gst = 0;
   let creditCardFee = 0;
   let subtotal = 0;
+  let depositPrice = 0;
 
   if (diffDays > 2) {
     if (click == true) {
@@ -91,9 +92,6 @@ const Calen = () => {
       const depositPerNight = 150;
 
       depositPrice = depositPerNight * diffDays;
-      //console.log(depositPrice);
-
-      //AZURE
 
       for (let i = 0; i < seasonPricingInfo.length; i++) {
         //loop thru each season
@@ -130,8 +128,6 @@ const Calen = () => {
       totalPrice = totalPrice.toFixed(2);
     }
   }
-
-
 
   /**
    *
@@ -183,6 +179,11 @@ const Calen = () => {
       booked.push("" + startDateOfBooking.toISOString());
       //console.log(booked);
     }
+  }
+
+  //save the depositPrice into a state so we can pass it around
+  function depositPriceStateSave(depositPrice) {
+    setDeposit(depositPrice);
   }
 
   return (
@@ -263,7 +264,7 @@ const Calen = () => {
         <div>
           {showItem ? (
             <div>
-              <StripeContainer />
+              <StripeContainer depositPriceStateSave={deposit}/>
             </div>
           ) : (
             <>
@@ -271,7 +272,7 @@ const Calen = () => {
               <div className="button">
                 <input
                   onClick={() => {
-                    console.log(Calen.data);
+                    depositPriceStateSave(depositPrice);
                     setShowItem(true);
                   }}
                   type="submit"
@@ -287,4 +288,4 @@ const Calen = () => {
     </div>
   );
 };
-export  default Calen; 
+export default Calen;
