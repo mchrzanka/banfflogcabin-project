@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
+@use '../assets' as a;
 
 *,
 *::before,
@@ -7,9 +7,9 @@
 }
 
 h1, h2 {
-	font-family: 'Arima Madurai', cursive;
 	color:white;
-	font-weight: 500;
+	font-family: a.$poppins;
+	font-weight: 300;
 	letter-spacing: 1px;
 	position: relative;
 	z-index: 3;
