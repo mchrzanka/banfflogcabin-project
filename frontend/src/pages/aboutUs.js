@@ -21,18 +21,19 @@ export default function AboutUs() {
 	return (
 		<div className="about-us">
 			<div>
-				<div className="banner-desktop">
-					<img src={hostdesktop} alt="banner"></img>
+				<div className="banner-about">
+					<div className="banner-desktop">
+						<img src={hostdesktop} alt="banner"></img>
+					</div>
+					<div className="banner-mobile">
+						<img src={hostmobile} alt="banner"></img>
+					</div>
+					<div className="heading-content">
+						<div className='heading1'>{data.data.attributes.h1}</div>
+						<div className='content'>{data.data.attributes.content1}</div>
+					</div>
 				</div>
-				<div className="banner-mobile">
-					<img src={hostmobile} alt="banner"></img>
-				</div>
 
-				{/* HEY JEHAN this is the text that should be beside the img */}
-				<div className='content'>{data.data.attributes.content1}</div>
-
-
-				<div className='heading1'>{data.data.attributes.h1}</div>
 				<div className="flex-con">
 					<div>
 						<div className='heading2'>{data.data.attributes.h2}</div>
@@ -56,6 +57,7 @@ export default function AboutUs() {
 				<div className="history-mobile">
 					<img src={aboutmobile} alt="banner"></img>
 				</div>
+
 
 				{/* HEY JEHAN this is the text that should be beside the img */}
 				<div className='content'>{data.data.attributes.content5}</div>

@@ -15,7 +15,9 @@ export default function History() {
 
 	return (
 		<div className='history'>
-			{data.data.map((ourhistory) => (
+				
+					
+			{data.data.map((ourhistory) => (	
 				<div key={ourhistory.id}>
 					<div className='heading1'>{ourhistory.attributes.h2}</div>
 					<div className='history-year'>{ourhistory.attributes.year}</div>
@@ -37,7 +39,10 @@ export default function History() {
 					<div className='history-year'>{ourhistory.attributes.year9}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc9}</div>
 				</div>
+				
 			))}
+
+				
 		</div>
 	);
 }

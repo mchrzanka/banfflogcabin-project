@@ -1,15 +1,15 @@
 @use '../assets' as a;
 
 .about-us {
-	.heading1 {
+	.heading-content {
 		background-color: #626e60;
 		text-align: center;
-		border-radius: 0.8rem;
-		margin-left: 2rem;
-		margin-right: 2rem;
-		margin-top: -2rem;
 		position: relative;
 		color: a.$off-white;
+		margin-top: -2rem;
+	}
+	.heading-content .content{
+		text-align: start;
 	}
 
 	.banner-desktop {
@@ -60,23 +60,33 @@
 		.banner-desktop {
 			display: block;
 			overflow: hidden;
-
-			img {
-				margin-top: -7rem;
+			img{
+				margin-top: -2rem;
 			}
+		}
+		.banner-about{
+			display: flex;
+			height:  36rem;
+			.banner-desktop{
+				width: 60%;
+			}
+			.heading-content{
+				width: 40%;
+			}
+			
 		}
 
 		.banner-mobile {
 			display: none;
 		}
 
-		.heading1 {
+		.heading-content {
 			color: #fcfbfc;
 			margin: 0 auto;
 			padding: 3rem 0 2rem 0;
 			font-size: 9.8rem;
 			width: 65rem;
-			margin-top: -4rem;
+			
 		}
 
 		.heading2 {
@@ -129,9 +139,23 @@
 
 @media only screen and (min-width: 1440px) {
 	.about-us {
-		.banner-desktop {
-			height: 80rem;
-			padding-bottom: 5rem;
+		.banner-about{
+			height: 60rem;
+			.banner-desktop{
+				width: 80%;
+			}
+			.heading-content{
+				width: 50%;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: center;
+				padding: 8rem;
+			}
+			.heading-content .heading1{
+				font-size: 9.8rem;
+			
+			}
+	
 		}
 
 		.flex-con {
@@ -159,7 +183,23 @@
 
 
 
-	.heading1 {
+	.heading-content {
 		margin-top: -5.5rem;
+	}
+}
+@media only screen and (min-width: 2000px){
+	.about-us {
+		.banner-about{
+			height: 80rem;
+		
+			.banner-desktop{
+				width: 60%;
+			}
+			.heading-content{
+				width: 40%;
+			
+				padding: 18rem;
+			}
+		}
 	}
 }
