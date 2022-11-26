@@ -1,6 +1,8 @@
 @use './assets/reset';
 @use './assets/base';
 @use './assets/buttons';
+@use './assets/fonts';
+@use './assets/colors';
 
 @use './components/calendar';
 @use './components/footer';
@@ -9,12 +11,15 @@
 @use './components/header';
 @use './components/history';
 @use './components/navbar';
+@use './components/paymentform';
 @use './components/pricing';
 @use './components/reviews';
 @use './components/stripe';
 
 @use './pages/aboutus';
+@use './pages/bookingterm';
 @use './pages/contact';
 @use './pages/homepage';
 @use './pages/ourcabin';
 @use './pages/rates';
+@use './pages/success';

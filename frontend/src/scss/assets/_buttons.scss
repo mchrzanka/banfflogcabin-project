@@ -39,6 +39,7 @@
 	color: c.$almost-black;
 	display: block;
 	transition: 0.3s;
+	border: none;
 }
 
 .primary-btn:hover {
@@ -48,8 +49,8 @@
 
 .secondary-btn {
 	background-color: none;
-	border: 1px solid c.$brown;
-	color: c.$brown;
+	border: 1px solid #906B47;
+	color:#906B47;
 	display: block;
 	transition: 0.3s;
 	background: none;

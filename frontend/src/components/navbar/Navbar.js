@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <header>
-        <div className="navContainer">
+        <nav role="navigation" className="navContainer">
           <div className="logo-container">
             <a href="/">
               <img
@@ -45,7 +45,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div
+          <button
             onClick={handleClick}
             aria-label="Main Menu"
             className={isActive ? "hamburger hammy-is-active" : "hamburger"}
@@ -55,8 +55,8 @@ const Navbar = () => {
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
-          </div>
-        </div>
+          </button>
+        </nav>
       </header>
     </>
   );

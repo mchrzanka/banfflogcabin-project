@@ -8,10 +8,11 @@ const publishableKey =
 
 const stripePromise = loadStripe(publishableKey);
 
-export default function StripeContainer() {
+export default function StripeContainer({depositPriceStateSave}) {
+
 	return (
 		<Elements stripe={stripePromise}>
-			<PaymentForm />
+			<PaymentForm depositPriceStateSave={depositPriceStateSave}/>
 		</Elements>
 	);
 }
