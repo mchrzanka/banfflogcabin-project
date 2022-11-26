@@ -44,6 +44,7 @@ export default function PaymentForm({ depositPriceStateSave }) {
   const { handleChange, values, handleSubmitValidation, errors, onSuccess } =
     useForm(validateFormInfo);
   const [done, setDone] = useState();
+  const [failed, setFailed] = useState();
   const stripe = useStripe();
   const elements = useElements();
   let clientName = "";
@@ -65,7 +66,6 @@ export default function PaymentForm({ depositPriceStateSave }) {
 
     if (onSuccess === true) {
       clientName = values.firstname + " " + values.lastname;
-      console.log(clientName);
 
       stripe
         .confirmCardPayment(intentKey, {
@@ -83,6 +83,8 @@ export default function PaymentForm({ depositPriceStateSave }) {
 
           // The API says there is a problem
           if (resp.error) {
+            //console.log("here");
+            setFailed(true);
             console.error(resp.error);
             return;
           }
@@ -98,7 +100,9 @@ export default function PaymentForm({ depositPriceStateSave }) {
                   lastname: values.lastname,
                   email: values.email,
                   phone: values.phone,
-                  breakfast: values.breakfast,
+                  dietrestriction: values.breakfast,
+                  dateStart: depositPriceStateSave[1],
+                  dateEnd: depositPriceStateSave[2],
                 },
               })
               .then((response) => {});
@@ -108,15 +112,19 @@ export default function PaymentForm({ depositPriceStateSave }) {
           } else {
             // this should not happen....
             console.dir("something went wrong...");
+            setFailed(true);
             console.dir(resp);
           }
         })
         .catch((e) => {
           // something went wrong with confirmCardPayment
+          setFailed(true);
           console.error(e);
         });
     }
   };
+
+
 
   return (
     <>
@@ -191,7 +199,7 @@ export default function PaymentForm({ depositPriceStateSave }) {
         <fieldset className="card-details">
           <h3>Card Details</h3>
           <div className="amount">
-            <p>Due Now: ${depositPriceStateSave}.00</p>
+            <p>Due Now: ${depositPriceStateSave[0]}.00</p>
           </div>
           <div style={stripe_style}>
             <CardElement options={CARD_OPTIONS} />
@@ -214,6 +222,7 @@ export default function PaymentForm({ depositPriceStateSave }) {
         </fieldset>
       </form>
       {done && <Navigate to="/success" />}
+      {failed && <Navigate to="/paymentfailed" />}
     </>
   );
 }
