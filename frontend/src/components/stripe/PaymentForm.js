@@ -47,8 +47,6 @@ export default function PaymentForm({ depositPriceStateSave }) {
   const stripe = useStripe();
   const elements = useElements();
 
-  console.log(depositPriceStateSave);
-
   const { loading, error, data } = useFetch(
     "http://147.182.207.198:1337/api/stripeIntent"
   );
@@ -192,12 +190,6 @@ export default function PaymentForm({ depositPriceStateSave }) {
           <div style={stripe_style}>
             <CardElement options={CARD_OPTIONS} />
           </div>
-          <div>
-            <p className="side-text">
-              By submitting this form, I understand and agree to the booking
-              terms.
-            </p>
-          </div>
           <div className="button">
             <input
               onClick={handleSubmit(stripe, elements, secret)}
@@ -206,6 +198,12 @@ export default function PaymentForm({ depositPriceStateSave }) {
               name="contact"
               className="primary-btn btn"
             />
+          </div>
+          <div>
+            <p className="side-text">
+              By submitting this form, I understand and agree to the booking
+              terms.
+            </p>
           </div>
         </fieldset>
       </form>

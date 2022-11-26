@@ -9,13 +9,12 @@ import Rates from './pages/rates';
 import Contact from './pages/contact';
 import BookingPage from './pages/bookingPage';
 import BookingTerms from './pages/bookingTerms';
-import Success from './pages/success';
+import SuccessPage from './pages/success';
+import PmntFail from './pages/paymentfailed';
 
 //components import
 import SiteHeader from './components/header/header';
 import Footer from './components/footer/footer';
-import SuccessPage from './pages/success';
-import PmntFail from './pages/pmntfail';
 
 
 function App() {
@@ -32,7 +31,8 @@ function App() {
 						<Route path='/contact' element={<Contact />}></Route>
 						<Route path='/bookingterms' element={<BookingTerms />}></Route>
 						<Route path='/booking' element={<BookingPage />}></Route>
-						<Route path='/pmntfail' element={<PmntFail />}></Route>
+						<Route path='/paymentfailed' element={<PmntFail />}></Route>
+
 						<Route path='/success' element={<SuccessPage />}></Route>
 
 					</Routes>
