@@ -15,7 +15,6 @@ const CARD_OPTIONS = {
     base: {
       iconColor: "#626e60",
       backgroundColor: "#f1f1f1",
-      padding: "10px",
       color: "#2f2f2f",
       lineHeight: "3",
       fontWeight: 500,
@@ -28,9 +27,9 @@ const CARD_OPTIONS = {
       iconColor: "maroon",
       color: "maroon",
     },
-    "::placeholder": {
-      color: "gray",
-    },
+    // "::placeholder": {
+    //   color: "gray",
+    // },
   },
 };
 
@@ -40,12 +39,14 @@ const stripe_style = {
   margin: "1.5rem auto",
 };
 
+
 export default function PaymentForm({ depositPriceStateSave }) {
   const { handleChange, values, handleSubmitValidation, errors, onSuccess } =
     useForm(validateFormInfo);
   const [done, setDone] = useState();
   const stripe = useStripe();
   const elements = useElements();
+  let clientName = "";
 
   const { loading, error, data } = useFetch(
     "http://147.182.207.198:1337/api/stripeIntent"
@@ -63,14 +64,19 @@ export default function PaymentForm({ depositPriceStateSave }) {
     let cardElement = elements.getElement("card");
 
     if (onSuccess === true) {
+      clientName = values.firstname + " " + values.lastname;
+      console.log(clientName);
+
       stripe
         .confirmCardPayment(intentKey, {
           payment_method: {
             card: cardElement,
             billing_details: {
-              name: "TEST",
+              name: clientName,
             },
           },
+          receipt_email: values.email,
+          //amount: depositPriceStateSave,
         })
         .then((resp) => {
           // the request itself worked, lets look at what the api response is

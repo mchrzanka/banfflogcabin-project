@@ -203,6 +203,7 @@ table {
   font-family: HighSummit;
   src: url("../../font/HighSummit.otf");
   src: url("../../font/HighSummit.ttf");
+  font-display: swap;
 }
 :root,
 html {
@@ -1988,8 +1989,8 @@ a {
 .bird-container--one {
   -webkit-animation-duration: 15s;
           animation-duration: 15s;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 .bird-container--two {
   -webkit-animation-duration: 16s;
