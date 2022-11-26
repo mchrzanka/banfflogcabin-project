@@ -4,11 +4,13 @@ import '../scss/pages/_paymentfailed.scss';
 export default function PmntFail() {
     return (
         <div className='container-pmnt'>
-            <div className='message-thanks'>
+            <div className='message-pmnt'>
                 <h1>PAYMENT FAILED</h1>
-                <h2>Your Transaction has failed due to an unknown error.</h2>
-                <h2>Please try again!</h2>
-
+                <p>Your Transaction has failed due to an unknown error.</p>
+                <p>Please try again!</p>
+                <a className="primary-btn btn " href="/bookingterms">
+                    Back to Booking
+                </a>
             </div>
 
         </div>
