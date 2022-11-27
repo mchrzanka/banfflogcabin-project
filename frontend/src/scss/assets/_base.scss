@@ -12,10 +12,10 @@ html {
 //GLOBAL STYLING
 
 body img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: attr(width) / attr(height);
-} 
+	width: 100%;
+	height: auto;
+	aspect-ratio: attr(width) / attr(height);
+}
 
 .heading1,
 .quote,
@@ -43,8 +43,8 @@ label,
 input,
 textarea,
 .reviewer {
-	font-size: 1.6rem;
-	line-height: 3.2rem;
+	font-size: 2rem;
+	line-height: 4rem;
 	font-family: f.$poppins;
 	font-weight: 300;
 }
