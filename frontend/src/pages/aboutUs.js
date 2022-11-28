@@ -50,19 +50,22 @@ export default function AboutUs() {
 			</div>
 
 			<div className='our-history'>
-				<div className="history-desktop">
-					<img src={aboutmedium} alt="banner"></img>
+				<div className="history-banner">
+					<div className="history-desktop">
+						<img src={aboutmedium} alt="banner"></img>
+					</div>
+
+					<div className="history-mobile">
+						<img src={aboutmobile} alt="banner"></img>
+					</div>
+
+					<div className="history-heading-content">
+						<div className="heading1">Our History</div>
+						<div className='content'>{data.data.attributes.content5}</div>
+					</div>
 				</div>
-
-				<div className="history-mobile">
-					<img src={aboutmobile} alt="banner"></img>
-				</div>
-
-
-				{/* HEY JEHAN this is the text that should be beside the img */}
-				<div className='content'>{data.data.attributes.content5}</div>
-
-				<History />
+					<History />
+				
 			</div>
 		</div>
 	);
