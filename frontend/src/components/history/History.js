@@ -20,23 +20,23 @@ export default function History() {
 			{data.data.map((ourhistory) => (	
 				<div key={ourhistory.id}>
 					<div className='heading1'>{ourhistory.attributes.h2}</div>
-					<div className='history-year'>{ourhistory.attributes.year}</div>
+					<div className='history-year '>{ourhistory.attributes.year}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc}</div>
-					<div className='history-year'>{ourhistory.attributes.year2}</div>
+					<div className='history-year line'>{ourhistory.attributes.year2}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc2}</div>
-					<div className='history-year'>{ourhistory.attributes.year3}</div>
+					<div className='history-year line'>{ourhistory.attributes.year3}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc3}</div>
-					<div className='history-year'>{ourhistory.attributes.year4}</div>
+					<div className='history-year line'>{ourhistory.attributes.year4}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc4}</div>
-					<div className='history-year'>{ourhistory.attributes.year5}</div>
+					<div className='history-year line'>{ourhistory.attributes.year5}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc5}</div>
-					<div className='history-year'>{ourhistory.attributes.year6}</div>
+					<div className='history-year line'>{ourhistory.attributes.year6}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc6}</div>
-					<div className='history-year'>{ourhistory.attributes.year7}</div>
+					<div className='history-year line'>{ourhistory.attributes.year7}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc7}</div>
-					<div className='history-year'>{ourhistory.attributes.year8}</div>
+					<div className='history-year line'>{ourhistory.attributes.year8}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc8}</div>
-					<div className='history-year'>{ourhistory.attributes.year9}</div>
+					<div className='history-year line'>{ourhistory.attributes.year9}</div>
 					<div className='history-desc'>{ourhistory.attributes.yearDesc9}</div>
 				</div>
 				

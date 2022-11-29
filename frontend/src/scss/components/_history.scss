@@ -30,7 +30,7 @@ padding: 0 1.6rem 8rem 1.6rem;
 		margin: 9.3rem auto -5rem auto;
 	}
 
-	.history-year::before {
+		.line::before {
 		content: "";
 		height: 9.3rem;
 		width: .1rem;
@@ -39,11 +39,12 @@ padding: 0 1.6rem 8rem 1.6rem;
 		top: -9.3rem;
 		margin-left: 2rem;
 		margin-right: 2rem;
-		
-		
 	}
 
+	
+}
 
+	
 
 	@media only screen and (min-width: 768px) {
 		.history-desc {
@@ -70,4 +71,3 @@ padding: 0 1.6rem 8rem 1.6rem;
 			}
 
 
-}
