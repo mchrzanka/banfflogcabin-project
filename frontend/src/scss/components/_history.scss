@@ -30,7 +30,7 @@
     margin: 9.3rem auto -5rem auto;
   }
 
-  .history-year::before {
+  .history-year:not(:first-child):before {
     content: "";
     height: 9.3rem;
     width: 0.1rem;
