@@ -2,6 +2,7 @@ import React from 'react';
 import useFetch from '../hooks/useFetch';
 import Play from '../components/youtube/play';
 import Gallery from '../components/gallery/gallery';
+import Cabin from '../img/cabin-winter.jpg';
 
 import '../scss/pages/_ourcabin.scss';
 
@@ -20,25 +21,24 @@ export default function OurCabin() {
 		<div className='ourcabin'>
 			<div>
 				<div className='title'>
-					<h1 className='heading1 container'>{data.data.attributes.h1}</h1>
+					<h1 className='heading1'>{data.data.attributes.h1}</h1>
 				</div>
 				<div className='container content'>
 					<div className='content-flex'>
-						<div className='col-1'>
+					<div className='first-div'>
+							<p className='quote top'>Perfect getaway for two.</p>
+							<img src={Cabin} alt="Banff log cabin in the winter so cozy" />
+						</div>
+						<div className='written-content'>
 							<p className='content'>{data.data.attributes.content1}</p>
 							<p className='content'>{data.data.attributes.content2}</p>
 							<p className='content'>{data.data.attributes.content3}</p>
-						</div>
-						<div className='col-2'>
+
 							<p className='content'>{data.data.attributes.content4}</p>
 							<p className='content'>{data.data.attributes.content5}</p>
 							<p className='content'>{data.data.attributes.content6}</p>
 						</div>
 					</div>
-
-
-
-
 				</div>
 
 				<div className='youtube-vid'>
