@@ -1,5 +1,9 @@
 @use '../assets' as a;
 
+git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+
 .about-us {
 	.heading-content {
 		background-color: #626e60;
@@ -36,11 +40,12 @@
 		font-size: 2.1rem;
 		font-family: a.$poppins;
 		font-weight: 300;
-		line-height: 3.2rem;
+		line-height: 4rem;
 	}
 
 	.flex-con {
 		padding-bottom: 8rem;
+		padding-top: 4rem;
 	}
 
 	.history-desktop {
