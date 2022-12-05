@@ -8,6 +8,11 @@ import aboutmobile from '.././img/about-mobile.jpg';
 import hostdesktop from '.././img/host-desktop.jpg';
 import hostmobile from '.././img/host-mobile.jpg';
 export default function AboutUs() {
+
+	let currentYear = new Date().getFullYear();
+	let anniversaryYears = currentYear - 1994;
+
+
 	const { loading, error, data } = useFetch(
 		'http://147.182.207.198:1337/api/aboutpage'
 	);
@@ -37,7 +42,7 @@ export default function AboutUs() {
 				<div className="flex-con">
 					<div>
 						<div className='heading2'>{data.data.attributes.h2}</div>
-
+						<div className='content'>Malcolm is more widely known as a professional photographer for Alpine Peak Photography and has lived in Banff for over 40 years with his wife Sharon of {anniversaryYears} years and 3 beautiful daughters. </div>
 						<div className='content'>{data.data.attributes.content2}</div>
 						<div className='content'>{data.data.attributes.content3}</div>
 						<div className='content'>{data.data.attributes.content4}</div>
