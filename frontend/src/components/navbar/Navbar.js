@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../scss/components/_navbar.scss';
+import logo from '../../img/logo.png';
 
 const Navbar = () => {
 	const [isActive, setIsActive] = useState(false);
@@ -11,15 +12,10 @@ const Navbar = () => {
 	return (
 		<>
 			<header>
-				<div className='navContainer'>
-					<div className='logo'>
+				<nav role='navigation' className='navContainer'>
+					<div className='logo-container'>
 						<a href='/'>
-							{/* <img
-                width="40"
-                height="40"
-                alt="Banff Log Cabin Logo"
-                src="https://miro.medium.com/max/1400/0*0fClPmIScV5pTLoE.jpg"
-              /> */}
+							<img alt='Banff Log Cabin Logo' src={logo} className='logo' />
 						</a>
 					</div>
 					<div className={isActive ? 'mobile-menu is-active' : 'mobile-menu'}>
@@ -45,7 +41,7 @@ const Navbar = () => {
 						</ul>
 					</div>
 
-					<div
+					<button
 						onClick={handleClick}
 						aria-label='Main Menu'
 						className={isActive ? 'hamburger hammy-is-active' : 'hamburger'}
@@ -55,8 +51,8 @@ const Navbar = () => {
 						<span className='line'></span>
 						<span className='line'></span>
 						<span className='line'></span>
-					</div>
-				</div>
+					</button>
+				</nav>
 			</header>
 		</>
 	);

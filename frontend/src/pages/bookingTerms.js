@@ -30,21 +30,21 @@ export default function BookingTerms() {
 				</div>
 			</div>
 
+			<div className='booking-button'>
+				<div className='button'>
+					<a className='primary-btn btn' href='/booking'>Continue To Booking</a>
+				</div>
+			</div>
+
 			<div className="policy">
 				<div className='content-con'>
 					<div className='heading2'>{data.data.attributes.h2}</div>
 					<div className='content'>{data.data.attributes.canc1}</div>
-					<div className='content'>{data.data.attributes.canc2}</div>					
+					<div className='content'>{data.data.attributes.canc2}</div>
 				</div>
 			</div>
 
-			<div className='booking-button'>
-				<div className='content-con'>
-					<a href='/booking' aria-label='book' className='tan wide-btn'>
-						Continue
-					</a>
-				</div>
-			</div>
+
 		</div>
 	);
 }

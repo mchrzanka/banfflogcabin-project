@@ -1,15 +1,17 @@
 @use '../assets' as a;
 
 .about-us {
-	.heading1 {
+	.heading-content {
 		background-color: #626e60;
 		text-align: center;
-		border-radius: 0.8rem;
-		margin-left: 2rem;
-		margin-right: 2rem;
-		margin-top: -2rem;
 		position: relative;
 		color: a.$off-white;
+		margin-top: -2rem;
+		padding: 4rem 0;
+	}
+
+	.heading-content .content {
+		text-align: start;
 	}
 
 	.banner-desktop {
@@ -18,7 +20,7 @@
 
 	.heading2 {
 		width: 100%;
-		padding: 6rem 2rem 1.5rem;
+		padding: 2rem 2rem 1.5rem;
 	}
 
 	.content {
@@ -35,94 +37,149 @@
 		font-size: 2.1rem;
 		font-family: a.$poppins;
 		font-weight: 300;
-		line-height: 3.2rem;
+		line-height: 4rem;
 	}
 
 	.flex-con {
 		padding-bottom: 8rem;
+		padding-top: 4rem;
 	}
 
 	.history-desktop {
 		display: none;
 	}
-}
 
-@media only screen and (min-width: 480px) {
-	.about-us {
-		img {
-			width: 100%;
-		}
-	}
-}
-
-@media only screen and (min-width: 820px) {
-	.about-us {
-		.banner-desktop {
-			display: block;
-			overflow: hidden;
-
-			img {
-				margin-top: -7rem;
-			}
-		}
-
-		.banner-mobile {
-			display: none;
-		}
-
-		.heading1 {
-			color: #fcfbfc;
-			margin: 0 auto;
-			padding: 3rem 0 2rem 0;
-			font-size: 9.8rem;
-			width: 65rem;
-			margin-top: -4rem;
-		}
-
-		.heading2 {
-			font-size: 6.1rem;
-		}
-
-		.content {
-			font-size: 1.8rem;
-		}
-
-		.content1 {
-			width: 40%;
-		}
-
-		.history-mobile {
-			display: none;
-		}
-
-		.history-desktop {
-			display: block;
-		}
-	}
-
-	.history {
-		width: 100%;
+	.history-heading-content {
+		background-color: #626e60;
 		text-align: center;
+		position: relative;
+		color: a.$off-white;
+		margin-top: -2rem;
+		padding: 4rem 0;
+	}
 
-		.history-desktop {
-			margin: 0 auto;
-			height: 70rem;
-			overflow: hidden;
 
+
+
+	@media only screen and (min-width: 480px) {
+		.about-us {
 			img {
-				margin-top: -7rem;
+				width: 100%;
 			}
 		}
 	}
-}
 
-@media only screen and (min-width: 1440px) {
-	.about-us {
-		.banner-desktop {
-			height: 70rem;
-			padding-bottom: 5rem;
+	@media only screen and (min-width: 820px) {
+		.about-us {
+			.banner-desktop {
+				display: block;
+				overflow: hidden;
+
+				img {
+					margin-top: -2rem;
+				}
+			}
+
+			.banner-about {
+				display: flex;
+				height: 36rem;
+
+				.banner-desktop {
+					width: 60%;
+				}
+
+				.heading-content {
+					width: 40%;
+					padding-top: 8rem;
+				}
+
+			}
+
+			.banner-mobile {
+				display: none;
+			}
+
+			.heading-content {
+				color: #fcfbfc;
+				margin: 0 auto;
+				font-size: 9.8rem;
+				width: 65rem;
+
+			}
+
+			.heading2 {
+				font-size: 6.1rem;
+			}
+
+			.content {
+				font-size: 1.8rem;
+			}
+
+			.content1 {
+				width: 40%;
+			}
+
+			.history-mobile {
+				display: none;
+			}
+
+			.history-banner {
+				display: flex;
+				flex-direction: row-reverse;
+				padding: 0;
+				margin-top: 0;
+			}
+
+			.history-desktop {
+				display: block;
+				overflow: hidden;
+				position: relative;
+				width: 55%;
+				margin: 0 auto;
+
+				img {
+					width: 100%;
+					position: absolute;
+					height: 45rem;
+					margin-top: -5rem;
+
+
+				}
+
+			}
+
+			.history-heading-content {
+				width: 45%;
+				height: 40rem;
+				margin-top: 0;
+				padding-top: 7rem;
+
+				.content {
+					text-align: start;
+				}
+			}
+
+
 		}
 
+		.history {
+			width: 100%;
+			text-align: center;
+
+			.history-desktop {
+				margin: 0 auto;
+				height: 70rem;
+				overflow: hidden;
+
+				img {
+					margin-top: -7rem;
+				}
+			}
+		}
+	}
+
+
+	@media only screen and (min-width:1100px) {
 		.flex-con {
 			padding: 8rem 0;
 			max-width: 150rem;
@@ -133,21 +190,80 @@
 			gap: 4rem;
 
 			.quote {
-				width: 40%;
+				width: 50%;
 				padding: 4rem;
 			}
 		}
 	}
 
-	.history-desktop {
-		height: 65rem;
+	@media only screen and (min-width: 1440px) {
+		.about-us {
+			.banner-about {
+				height: 60rem;
 
-		img {
-			top: -20rem;
+				.banner-desktop {
+					width: 80%;
+				}
+
+				.heading-content {
+					width: 50%;
+					display: flex;
+					flex-wrap: wrap;
+					align-content: center;
+					padding: 8rem;
+				}
+
+				.heading-content .heading1 {
+					font-size: 9.8rem;
+
+				}
+
+			}
+
+		}
+
+		.history-banner {
+			.history-heading-content {
+
+				padding: 7rem 5rem;
+
+				.heading1 {
+					text-align: start;
+
+				}
+
+				.content {
+					text-align: start;
+
+				}
+
+
+			}
+		}
+
+
+
+		.heading-content {
+			margin-top: -5.5rem;
 		}
 	}
 
-	.heading1 {
-		margin-top: -5.5rem;
+	@media only screen and (min-width: 2000px) {
+		.about-us {
+			.banner-about {
+				height: 80rem;
+
+				.banner-desktop {
+					width: 60%;
+				}
+
+				.heading-content {
+					width: 40%;
+
+					padding: 18rem;
+				}
+			}
+		}
 	}
+
 }

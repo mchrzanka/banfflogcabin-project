@@ -7,9 +7,16 @@
 html {
 	font-size: 62.5%;
 	/* 10/16 = 0.625 * 100 = 62.5%, so we're working in a base of 10 for font size.*/
+	scroll-behavior: smooth;
 }
 
 //GLOBAL STYLING
+
+body img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: attr(width) / attr(height);
+}
 
 .heading1,
 .quote,
@@ -37,8 +44,8 @@ label,
 input,
 textarea,
 .reviewer {
-	font-size: 1.6rem;
-	line-height: 3.2rem;
+	font-size: 2rem;
+	line-height: 4rem;
 	font-family: f.$poppins;
 	font-weight: 300;
 }
@@ -54,6 +61,7 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
 	.heading1,
 	.quote,
 	h1,
@@ -68,6 +76,7 @@ a {
 }
 
 @media screen and (min-width: 2000px) {
+
 	.heading1,
 	.quote,
 	h1,
@@ -87,7 +96,8 @@ a {
 	input,
 	textarea,
 	.reviewer {
-		font-size: 1.8rem;
+		font-size: 2.1rem;
+		line-height: 4rem;
 	}
 }
 

@@ -3,6 +3,9 @@
 .booking-term {
 	background-color: a.$off-white;
 
+
+
+
 	.content-con {
 		max-width: 70rem;
 		margin: 0 auto;
@@ -12,41 +15,63 @@
 		text-align: center;
 		padding-top: 4rem;
 	}
+
 	.content {
 		font-weight: 300;
 		line-height: 24px;
 		margin: 1.5rem;
 	}
+
 	.policy {
 		background-color: a.$grey;
-		margin-top: 6rem;
+		margin-top: 2rem;
 		padding: 2rem 0;
 	}
+
 	.heading2 {
 		text-align: center;
+	}
+
+	.wide-btn {
+		background-color: #c09f80;
+		color: #2f2f2f;
+		display: block;
+		transition: 0.3s;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		font-family: Poppins;
+		font-size: 1.8rem;
+		padding: 2rem;
+		border-radius: 8px;
+		width: 100%;
 	}
 }
 
 @media only screen and (min-width: 820px) {
 	.booking-term {
 		.booking {
-			padding-top: 1.7rem;
-			padding-bottom: 1.5rem;
+			padding-top: .82rem;
+			padding-bottom: .75rem;
 		}
+
 		.heading1 {
 			font-size: 9.8rem;
 		}
+
 		.content {
 			font-size: 1.8rem;
 			margin-bottom: 2rem;
 		}
+
 		.content-con {
 			width: 60rem;
 			margin: 0 auto;
 		}
+
 		.heading2 {
 			font-size: 6.2rem;
 		}
+
 		.policy {
 			.content {
 				font-size: 1.8rem;

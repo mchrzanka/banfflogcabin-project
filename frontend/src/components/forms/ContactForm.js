@@ -5,6 +5,8 @@ import useForm from '../../hooks/useForm';
 
 //form validation
 import validateFormInfo from '../../validation/validateBookingForm';
+import '../../scss/components/_forms.scss'
+
 
 const ContactForm = () => {
 	const {
@@ -19,7 +21,7 @@ const ContactForm = () => {
 		'We have received your message and will be in touch shortly.';
 
 	return (
-		<div>
+		<div className="contact-form">
 			<form className='booking-form' onSubmit={handleSubmitValidationContact}>
 				<div className='first'>
 					<label>Your Name</label>
@@ -43,6 +45,17 @@ const ContactForm = () => {
 					/>
 					{errors.email && <p className='errors'>{errors.email}</p>}
 				</div>
+				<div className='phone'>
+						<label>Phone</label>
+						<input
+							type='tel'
+							name='phone'
+							value={values.phone}
+							onChange={handleChange}
+							placeholder='888-888-8888'
+						/>
+						{errors.phone && <p className='errors'>{errors.phone}</p>}
+					</div>
 				<div className='message'>
 					<label>Message</label>
 					<textarea
@@ -59,7 +72,7 @@ const ContactForm = () => {
 						type='submit'
 						value='Submit'
 						name='contact'
-						className='green'
+						className='primary-btn btn'
 					/>
 				</div>
 				<p>{onSuccess === true ? successMessage : ''}</p>
