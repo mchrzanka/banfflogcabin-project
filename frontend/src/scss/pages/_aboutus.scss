@@ -46,6 +46,14 @@
 	.history-desktop {
 		display: none;
 	}
+	.history-heading-content {
+		background-color: #626e60;
+		text-align: center;
+		position: relative;
+		color: a.$off-white;
+		margin-top: -2rem;
+		padding: 4rem 0;
+	}
 }
 
 @media only screen and (min-width: 480px) {
@@ -106,20 +114,40 @@
 			display: none;
 		}
 
+		.history-banner{
+			display: flex;
+			flex-direction: row-reverse;
+			padding: 0;
+			margin-top: 0;
+		}
 		.history-desktop {
 			display: block;
-			height: 40rem;
 			overflow: hidden;
 			position: relative;
-		   
+		   	width: 55%;
+			margin: 0 auto;
 			img{
 				width: 100%;
 				position: absolute;
-				top: -10rem;
-		 
+				height: 45rem;
+				margin-top: -5rem;
+				
+				
 			}
-		
+			
 		}
+		.history-heading-content{
+			width: 45%;
+			height: 40rem;
+			margin-top: 0;
+			padding-top: 7rem;
+
+			.content{
+				text-align: start;
+			}
+		}
+	
+
 	}
 
 	.history {
@@ -177,12 +205,22 @@
 	
 		}
 
-		.history-desktop {
-			height: 65rem;
-	
-			img {
-				top: -20rem;
-			}
+	}
+	.history-banner{
+		.history-heading-content{
+		
+				padding: 7rem 5rem;
+			
+				.heading1{
+					text-align: start;
+				
+				}
+				.content{
+					text-align: start;
+					
+				}
+			
+			
 		}
 	}
 

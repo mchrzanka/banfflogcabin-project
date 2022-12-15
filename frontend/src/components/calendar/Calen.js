@@ -12,7 +12,7 @@ const Calen = () => {
   const [myArray, updateMyArray] = useState([]);
   const [click, setClick] = useState(false);
   const [showItem, setShowItem] = useState(false);
-  const [deposit, setDeposit] = useState("");
+  const [deposit, setDeposit] = useState([]);
   const date = new Date();
 
   //CALENDAR FUNCTIONALITY
@@ -182,8 +182,11 @@ const Calen = () => {
   }
 
   //save the depositPrice into a state so we can pass it around
-  function depositPriceStateSave(depositPrice) {
-    setDeposit(depositPrice);
+  function depositPriceStateSave(depositPrice, chosenDays) {
+    let firstDay = chosenDays[0];
+    let lastDay = chosenDays[chosenDays.length - 1];
+
+    setDeposit([...deposit, depositPrice, firstDay, lastDay]);
   }
 
   return (
@@ -264,7 +267,7 @@ const Calen = () => {
         <div>
           {showItem ? (
             <div>
-              <StripeContainer depositPriceStateSave={deposit}/>
+              <StripeContainer depositPriceStateSave={deposit} />
             </div>
           ) : (
             <>
@@ -272,7 +275,7 @@ const Calen = () => {
               <div className="button">
                 <input
                   onClick={() => {
-                    depositPriceStateSave(depositPrice);
+                    depositPriceStateSave(depositPrice, chosenDays);
                     setShowItem(true);
                   }}
                   type="submit"
