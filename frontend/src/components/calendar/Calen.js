@@ -215,7 +215,7 @@ const Calen = () => {
             <div className="button">
               <a
                 className="secondary-btn btn select"
-                href="#"
+                href="#pricing"
                 onClick={handleClick}
               >
                 Select Dates
@@ -229,11 +229,11 @@ const Calen = () => {
           click == true && diffDays > 2 ? "datesSelected show" : "datesSelected"
         }
       >
-        <div className="date-pricing">
+        <div className="date-pricing" id='pricing'>
           <h2>Dates Selected</h2>
           <div>
             {firstDateDisplay(myArray) === true &&
-            secondDateDisplay(myArray) === true ? ( //DISPLAY FIRST & SECOND DATE SELECTED IF EXIST
+              secondDateDisplay(myArray) === true ? ( //DISPLAY FIRST & SECOND DATE SELECTED IF EXIST
               <p>
                 {myArray[0].split("00:")[0] + " - "}
                 {myArray[1].split("00:")[0]}
@@ -241,7 +241,7 @@ const Calen = () => {
             ) : (
               ""
             )}
-            <div className="all-prices">
+            <div className="all-prices" >
               <div>
                 <p>Subtotal</p>
                 <p>GST</p>
