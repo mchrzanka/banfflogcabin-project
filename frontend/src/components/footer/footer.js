@@ -13,9 +13,9 @@ const Footer = () => {
 									Book Now
 								</a>
 							</div>
-							
+
 							<div className='li'>
-							<p className='h1-style'>Banff Log Cabin</p>
+								<p className='h1-style'>Banff Log Cabin</p>
 							</div>
 
 							<div className='loc-cont'>
@@ -55,7 +55,7 @@ const Footer = () => {
 					<p className='copyright'>©2022 Banff Log Cabin</p>
 					<div className='admin-link'>
 						<a
-							href='http://147.182.207.198:1337/admin/auth/login'
+							href='https://strapi-qzpr.onrender.com/admin/auth/login'
 							aria-label='admin'
 							className='facebook'
 						>

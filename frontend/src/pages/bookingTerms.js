@@ -1,10 +1,10 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
 
-import '../scss/pages/_bookingterm.scss'
+import '../scss/pages/_bookingterm.scss';
 export default function BookingTerms() {
 	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/termspage'
+		'https://strapi-qzpr.onrender.com/api/termspage'
 	);
 
 	if (loading) {
@@ -14,8 +14,8 @@ export default function BookingTerms() {
 	}
 
 	return (
-		<div className="booking-term">
-			<div className="booking">
+		<div className='booking-term'>
+			<div className='booking'>
 				<div className='content-con'>
 					<div className='heading1'>{data.data.attributes.h1}</div>
 					<div className='content'>{data.data.attributes.term1}</div>
@@ -32,19 +32,19 @@ export default function BookingTerms() {
 
 			<div className='booking-button'>
 				<div className='button'>
-					<a className='primary-btn btn' href='/booking'>Continue To Booking</a>
+					<a className='primary-btn btn' href='/booking'>
+						Continue To Booking
+					</a>
 				</div>
 			</div>
 
-			<div className="policy">
+			<div className='policy'>
 				<div className='content-con'>
 					<div className='heading2'>{data.data.attributes.h2}</div>
 					<div className='content'>{data.data.attributes.canc1}</div>
 					<div className='content'>{data.data.attributes.canc2}</div>
 				</div>
 			</div>
-
-
 		</div>
 	);
 }

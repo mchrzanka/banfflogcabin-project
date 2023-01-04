@@ -12,7 +12,7 @@ export default function AboutUs() {
 	let anniversaryYears = currentYear - 1994;
 
 	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/aboutpage'
+		'https://strapi-qzpr.onrender.com/api/aboutpage'
 	);
 
 	if (loading) {

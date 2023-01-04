@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import useFetch from '../../hooks/useFetch';
 
 export default function Ammenities() {
 	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/ammenities'
+		'https://strapi-qzpr.onrender.com/api/ammenities'
 	);
 
 	if (loading) {
@@ -12,14 +12,13 @@ export default function Ammenities() {
 		return <p>Error</p>;
 	}
 
-
-  return (
-    <div>
+	return (
+		<div>
 			{data.data.map((ammenities) => (
 				<div key={ammenities.id}>
 					<p>{ammenities.attributes.ammenity}</p>
 				</div>
 			))}
-    </div>
-  )
+		</div>
+	);
 }

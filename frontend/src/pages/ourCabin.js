@@ -8,7 +8,7 @@ import '../scss/pages/_ourcabin.scss';
 
 export default function OurCabin() {
 	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/ourcabinpage'
+		'https://strapi-qzpr.onrender.com/api/ourcabinpage'
 	);
 
 	if (loading) {

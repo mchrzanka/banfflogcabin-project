@@ -1,11 +1,11 @@
 //shortcut : rfc tab (creates a react functional component)
 import React from 'react';
 import useFetch from '../../hooks/useFetch';
-import '../../scss/components/_reviews.scss'
+import '../../scss/components/_reviews.scss';
 
 const Reviews = () => {
 	const { loading, error, data } = useFetch(
-		'http://147.182.207.198:1337/api/reviews'
+		'https://strapi-qzpr.onrender.com/api/reviews'
 	);
 
 	if (loading) {
@@ -22,7 +22,6 @@ const Reviews = () => {
 						<div>{review.attributes.Content}</div>
 						<div className='reviewer'>{review.attributes.Reviewer}</div>
 					</div>
-
 				</div>
 			))}
 		</div>
