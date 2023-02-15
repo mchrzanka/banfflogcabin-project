@@ -38,7 +38,6 @@ export default function OurCabin() {
 						<p className='content'>{data.data.attributes.content6}</p>
 					</div>
 				</div>
-
 				<div className='youtube-vid'>
 					<YoutubeVideo />
 				</div>
