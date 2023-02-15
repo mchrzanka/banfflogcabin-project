@@ -30,6 +30,23 @@
 		margin-top: -1rem;
 	}
 
+	.find-us {
+		text-align: center;
+		padding: 6rem 1.6rem 4rem;
+
+		.h2 {
+			padding-bottom: 2rem;
+		}
+	}
+
+	.map-bg {
+		background: url('../../img/map-small.PNG');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 40rem;
+	}
+
 	@media only screen and (min-width: 768px) {
 	}
 
