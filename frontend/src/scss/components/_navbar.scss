@@ -107,15 +107,16 @@
 		}
 
 		.booknow-nav {
-			background-color: a.$brown;
+			border-bottom: 1px solid a.$brown;
 
 			a {
-				color: a.$almost-black;
 				transition: 0.3s;
+				color: a.$brown;
 			}
 
 			a:hover {
-				background-color: a.$brown-hover;
+				background-color: a.$brown;
+				color: a.$green;
 				transition: 0.3s;
 			}
 		}
@@ -135,7 +136,7 @@
 
 		.logo {
 			padding: 0 0 0 2rem;
-			width: 22rem;
+			width: 20rem;
 		}
 
 		.mobile-menu {

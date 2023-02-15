@@ -17,7 +17,7 @@ export default function BookingTerms() {
 		<div className='booking-term'>
 			<div className='booking'>
 				<div className='content-con'>
-					<div className='heading1'>{data.data.attributes.h1}</div>
+					<div className='h1'>{data.data.attributes.h1}</div>
 					<div className='content'>{data.data.attributes.term1}</div>
 					<div className='content'>{data.data.attributes.term2}</div>
 					<div className='content'>{data.data.attributes.term3}</div>
@@ -40,7 +40,7 @@ export default function BookingTerms() {
 
 			<div className='policy'>
 				<div className='content-con'>
-					<div className='heading2'>{data.data.attributes.h2}</div>
+					<div className='h2'>{data.data.attributes.h2}</div>
 					<div className='content'>{data.data.attributes.canc1}</div>
 					<div className='content'>{data.data.attributes.canc2}</div>
 				</div>

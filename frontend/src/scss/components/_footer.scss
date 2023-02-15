@@ -7,16 +7,13 @@
 
 	.footer-padding {
 		margin: 0 auto;
-
-		.li {
-			width: 100%;
-		}
 	}
 
 	.h1-style {
 		line-height: 8rem;
 		font-size: 5.2rem;
 		padding-top: 2rem;
+		font-family: a.$highsummit;
 	}
 
 	p {
@@ -26,6 +23,17 @@
 
 	.li {
 		margin-bottom: 1rem;
+	}
+
+	.logo-container {
+		height: 10rem;
+		margin-top: 2rem;
+
+		img {
+			height: 10rem;
+			width: auto;
+			margin: 0 auto;
+		}
 	}
 
 	.location,
@@ -57,16 +65,31 @@
 		padding-top: 6rem;
 	}
 
-	@media only screen and (min-width: 1020px) {
+	@media only screen and (min-width: 1000px) {
 		.footer-padding {
 			margin: 0 auto;
 			display: flex;
 			flex-direction: row;
-			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+
+			.logo-container {
+				height: 20rem;
+				margin-top: 0rem;
+
+				img {
+					height: 20rem;
+				}
+			}
 
 			.location p:first-of-type,
 			.contact p:first-of-type {
 				margin: 0 0 1.6rem 0;
+			}
+
+			.location,
+			.contact {
+				text-align: left;
 			}
 
 			.contact {
@@ -75,6 +98,7 @@
 
 			.button {
 				margin: 0 auto;
+				max-width: 30rem;
 			}
 
 			p {
@@ -84,49 +108,31 @@
 			.h1-style {
 				font-size: 4rem;
 			}
-
-			.book {
-				order: 2;
-			}
-
-			.h1-style {
-				order: 1;
-				width: 100rem;
-			}
-
-			.admin {
-				order: 3;
-				display: flex;
-				flex-direction: column;
-
-				.admin-link {
-					margin-top: 9rem;
-				}
-
-				.button {
-					min-width: 40rem;
-				}
-			}
-		}
-
-		.loc-cont,
-		.h1-style {
-			text-align: left;
-			width: 30%;
 		}
 
 		.copyright {
 			padding-top: 2rem;
+		}
+
+		.li {
+			width: 33%;
+			order: 2;
+		}
+
+		.loc-cont {
+			order: 1;
+			width: 33%;
+		}
+
+		.footer-buttons {
+			width: 33%;
+			order: 3;
 		}
 	}
 
 	@media only screen and (min-width: 2000px) {
 		.footer-padding {
 			width: 150rem;
-		}
-
-		.loc-cont {
-			min-width: 40rem;
 		}
 	}
 }

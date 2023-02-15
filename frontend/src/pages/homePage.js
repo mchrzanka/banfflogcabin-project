@@ -24,7 +24,7 @@ export default function HomePage() {
 	return (
 		<div>
 			<div className='home-page'>
-				<div className=' heading1 '>
+				<div className=' heading1 h1 '>
 					{data.data.attributes.h1}{' '}
 					<div className='main'>
 						<a className='primary-btn btn ' href='/bookingterms'>
@@ -42,7 +42,7 @@ export default function HomePage() {
 					/>
 				</picture>
 				<div className='container top-content'>
-					<div className='heading2'>{data.data.attributes.h21}</div>
+					<div className='h2'>{data.data.attributes.h21}</div>
 					<div className='content trip_advisor'>
 						{data.data.attributes.tripadvisor}
 					</div>

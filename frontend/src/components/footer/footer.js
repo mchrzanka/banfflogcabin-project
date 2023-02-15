@@ -1,6 +1,6 @@
 import React from 'react';
+import logo from '../../img/logo.png';
 import '../../scss/components/_footer.scss';
-
 const Footer = () => {
 	return (
 		<>
@@ -8,23 +8,25 @@ const Footer = () => {
 				<div className='container'>
 					<div>
 						<div id='footerItems' className='footer-padding'>
-							<div className='button book'>
-								<a className='primary-btn btn footer' href='/bookingterms'>
-									Book Now
-								</a>
-							</div>
-
 							<div className='li'>
-								<p className='h1-style'>Banff Log Cabin</p>
+								<div className='logo-container'>
+									<a href='/'>
+										<img
+											alt='Banff Log Cabin Logo'
+											src={logo}
+											className='logo'
+										/>
+									</a>
+								</div>
 							</div>
 
 							<div className='loc-cont'>
-								<div className='location li'>
+								<div className='location'>
 									<p>Our Location</p>
 									<p>222 Glen Crescent Banff,</p>
 									<p>AB T1L 1A6 +1</p>
 								</div>
-								<div className='contact li'>
+								<div className='contact'>
 									<p>Contact Us</p>
 									<p>
 										<a href='tel:(403) 762-3516'>+1 (403) 762-3516</a>
@@ -37,7 +39,12 @@ const Footer = () => {
 								</div>
 							</div>
 
-							<div className='admin'>
+							<div className='footer-buttons'>
+								<div className='button book'>
+									<a className='primary-btn btn footer' href='/bookingterms'>
+										Book Now
+									</a>
+								</div>
 								<div className='button'>
 									<a
 										className='facebook-btn btn'
@@ -52,7 +59,9 @@ const Footer = () => {
 							</div>
 						</div>
 					</div>
-					<p className='copyright'>©2022 Banff Log Cabin</p>
+					<p className='copyright'>
+						©{new Date().getFullYear()} Banff Log Cabin
+					</p>
 					<div className='admin-link'>
 						<a
 							href='https://strapi-qzpr.onrender.com/admin/auth/login'

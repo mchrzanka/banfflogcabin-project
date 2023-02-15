@@ -9,6 +9,15 @@
 		color: a.$off-white;
 	}
 
+	.banner-img {
+		height: 40rem;
+
+		img {
+			height: 40rem;
+			object-fit: cover;
+		}
+	}
+
 	.container.top-content {
 		padding-bottom: 8rem;
 		max-width: 110rem;
@@ -18,7 +27,7 @@
 		}
 	}
 
-	.trip_advisor{
+	.trip_advisor {
 		margin-bottom: 2rem;
 	}
 
@@ -35,9 +44,8 @@
 		}
 	}
 
-	.flex-content{
+	.flex-content {
 		padding-bottom: 4rem;
-
 	}
 
 	.cabin-content {
@@ -109,10 +117,8 @@
 		}
 	}
 
-
 	.awards-bg {
 		background-color: a.$almost-black;
-
 
 		.awards {
 			padding: 1rem 0;
@@ -123,7 +129,6 @@
 			}
 		}
 	}
-
 
 	@media screen and (min-width: 768px) {
 		.heading1 {
@@ -161,13 +166,20 @@
 	}
 
 	@media screen and (min-width: 1000px) {
-
 		.spacer-home {
 			margin-top: 12rem;
 		}
 
 		.heading1 {
 			font-size: 10rem;
+		}
+
+		.banner-img {
+			height: 90rem;
+
+			img {
+				height: 90rem;
+			}
 		}
 
 		.container.top-content {
@@ -227,7 +239,6 @@
 			}
 
 			.list {
-
 				.div1,
 				.div2 {
 					margin: 0;
@@ -256,20 +267,11 @@
 					height: fit-content;
 					margin: auto;
 				}
-
-
 			}
 		}
-
-
 	}
 
-	@media screen and (min-width: 1400px) {
-		.banner-img {
-			margin: 0 auto;
-			width: fit-content;
-		}
-
+	@media screen and (min-width: 1200px) {
 		.desktop {
 			max-width: 150rem;
 		}
