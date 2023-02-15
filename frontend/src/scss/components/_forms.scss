@@ -2,6 +2,7 @@
 .form {
 	background-color: a.$green;
 	color: a.$off-white;
+	padding: 0rem 1.6rem;
 }
 .first,
 .email,
@@ -9,16 +10,18 @@
 .phone {
 	display: flex;
 	flex-wrap: wrap;
+
 	label {
 		font-size: 1.6rem;
 		font-weight: 300;
 	}
+
 	input,
 	textarea {
 		width: 100%;
 		border-radius: 0.8rem;
 		border: none;
-		padding: 1rem 0.5rem;
+		padding: 1.5rem 1rem;
 		outline: none;
 		margin-bottom: 2rem;
 		font-family: a.$poppins;
