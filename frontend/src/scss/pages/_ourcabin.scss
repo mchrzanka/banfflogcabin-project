@@ -14,10 +14,13 @@
 
 	.cabininfo {
 		padding: 0rem 1.6rem;
+		max-width: 140rem;
+		margin: 0 auto;
 
 		img {
-			-webkit-box-shadow: -10px -10px 0px 3px #2f2f2f;
-			box-shadow: -10px -10px 0px 3px #2f2f2f;
+			-webkit-box-shadow: -17px -19px 0px 3px rgba(47, 47, 47, 1);
+			-moz-box-shadow: -17px -19px 0px 3px rgba(47, 47, 47, 1);
+			box-shadow: -17px -19px 0px 3px rgba(47, 47, 47, 1);
 			height: 40rem;
 			object-fit: cover;
 		}
@@ -59,6 +62,31 @@
 	}
 
 	@media only screen and (min-width: 1000px) {
+		padding-top: 8rem;
+
+		.cabininfo {
+			display: flex;
+			gap: 4rem;
+			align-items: center;
+			padding: 6rem 0rem;
+
+			img {
+				height: 60rem;
+				object-fit: cover;
+			}
+
+			.first-div {
+				width: 40%;
+			}
+
+			.second-div {
+				width: 60%;
+			}
+		}
+
+		.youtube-vid {
+			margin: 8rem auto 12rem;
+		}
 	}
 
 	@media only screen and (min-width: 1400px) {
