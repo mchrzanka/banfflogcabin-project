@@ -4,6 +4,11 @@
 	.flex-con {
 		background-color: a.$green;
 
+		.contactheader-bg {
+			max-width: 140rem;
+			margin: 0 auto;
+		}
+
 		.intro {
 			padding: 4rem 1.6rem;
 
@@ -30,12 +35,18 @@
 		margin-top: -1rem;
 	}
 
-	.find-us {
+	.findheader {
 		text-align: center;
 		padding: 6rem 1.6rem 4rem;
 
 		.h2 {
 			padding-bottom: 2rem;
+		}
+
+		p {
+			color: a.$almost-black;
+			max-width: 56rem;
+			margin: 0 auto;
 		}
 	}
 
@@ -50,7 +61,38 @@
 	@media only screen and (min-width: 768px) {
 	}
 
-	@media only screen and (min-width: 1020px) {
+	@media only screen and (min-width: 1000px) {
+		.contactheader-bg {
+			display: flex;
+			padding-top: 8rem;
+			gap: 4rem;
+
+			.intro {
+				width: 50%;
+			}
+		}
+
+		.find {
+			display: flex;
+			align-items: center;
+			gap: 4rem;
+
+			.findheader {
+				width: 50%;
+			}
+		}
+
+		.findmap {
+			width: 50%;
+
+			.map-bg {
+				background: url('../../img/map.PNG');
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				height: 70rem;
+			}
+		}
 	}
 
 	@media only screen and (min-width: 2000px) {

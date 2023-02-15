@@ -3,41 +3,43 @@
 	background-color: a.$green;
 	color: a.$off-white;
 	padding: 0rem 1.6rem 6rem;
-}
-.first,
-.email,
-.message,
-.phone {
-	display: flex;
-	flex-wrap: wrap;
 
-	label {
-		font-size: 1.6rem;
-		font-weight: 300;
+	.first,
+	.email,
+	.message,
+	.phone {
+		display: flex;
+		flex-wrap: wrap;
+
+		label {
+			font-size: 1.6rem;
+			font-weight: 300;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			border-radius: 0.8rem;
+			border: none;
+			padding: 1.5rem 1rem;
+			outline: none;
+			margin-bottom: 2rem;
+			font-family: a.$poppins;
+			font-size: 1.6rem;
+		}
+
+		textarea {
+			min-height: 15rem;
+		}
+
+		input::placeholder,
+		textarea::placeholder {
+			color: rgb(196, 196, 196);
+			font-weight: 300;
+		}
 	}
 
-	input,
-	textarea {
-		width: 100%;
-		border-radius: 0.8rem;
-		border: none;
-		padding: 1.5rem 1rem;
-		outline: none;
-		margin-bottom: 2rem;
-		font-family: a.$poppins;
-		font-size: 1.6rem;
+	@media only screen and (min-width: 1000px) {
+		width: 50%;
 	}
-
-	textarea {
-		min-height: 15rem;
-	}
-
-	input::placeholder,
-	textarea::placeholder {
-		color: rgb(196, 196, 196);
-		font-weight: 300;
-	}
-}
-
-@media only screen and (min-width: 768px) {
 }
