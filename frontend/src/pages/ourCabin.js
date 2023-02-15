@@ -1,6 +1,6 @@
 import React from 'react';
+import YoutubeVideo from '../components/youtube/Youtube';
 import useFetch from '../hooks/useFetch';
-import Play from '../components/youtube/play';
 import Gallery from '../components/gallery/gallery';
 import Cabin from '../img/cabin-winter.jpg';
 
@@ -40,12 +40,12 @@ export default function OurCabin() {
 				</div>
 
 				<div className='youtube-vid'>
-					<Play />
+					<YoutubeVideo />
 				</div>
 			</div>
 			<div className='quote-container'>
 				<div className='quote'>
-					<div>{data.data.attributes.quote}</div>
+					<h1>{data.data.attributes.quote}</h1>
 					<p className='quotename'>{data.data.attributes.quotename}</p>
 				</div>
 			</div>
