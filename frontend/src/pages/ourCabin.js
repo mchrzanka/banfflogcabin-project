@@ -19,24 +19,23 @@ export default function OurCabin() {
 
 	return (
 		<div className='ourcabin'>
-			<div>
+			<div className='cabintopcontent'>
 				<div className='title'>
-					<h1 className='heading1'>{data.data.attributes.h1}</h1>
+					<h1 className='h1'>
+						{data.data.attributes.h1} - the perfect getaway for two!
+					</h1>
 				</div>
-				<div className='container content'>
-					<div className='content-grid'>
-						<div className='first-div'>
-							<p className='quote top'>Perfect getaway for two.</p>
-							<img src={Cabin} alt='Banff log cabin in the winter so cozy' />
-						</div>
-						<div className='second-div'>
-							<p className='content'>{data.data.attributes.content1}</p>
-							<p className='content'>{data.data.attributes.content2}</p>
-							<p className='content'>{data.data.attributes.content3}</p>
-							<p className='content'>{data.data.attributes.content4}</p>
-							<p className='content'>{data.data.attributes.content5}</p>
-							<p className='content'>{data.data.attributes.content6}</p>
-						</div>
+				<div className='cabininfo'>
+					<div className='first-div'>
+						<img src={Cabin} alt='Banff log cabin in the winter so cozy' />
+					</div>
+					<div className='second-div'>
+						<p className='content'>{data.data.attributes.content1}</p>
+						<p className='content'>{data.data.attributes.content2}</p>
+						<p className='content'>{data.data.attributes.content3}</p>
+						<p className='content'>{data.data.attributes.content4}</p>
+						<p className='content'>{data.data.attributes.content5}</p>
+						<p className='content'>{data.data.attributes.content6}</p>
 					</div>
 				</div>
 
@@ -45,7 +44,7 @@ export default function OurCabin() {
 				</div>
 			</div>
 			<div className='quote-container'>
-				<div className='quote janet'>
+				<div className='quote'>
 					<div>{data.data.attributes.quote}</div>
 					<p className='quotename'>{data.data.attributes.quotename}</p>
 				</div>
