@@ -16,21 +16,16 @@ export default function Rates() {
 	}
 
 	return (
-		<div className='mountains'>
-			<div>
-				<h1 className='rate-title'>{data.data.attributes.h1}</h1>
+		<div className='mountain-bg'>
+			<div className='rates-page'>
+				<h1 className='h1'>{data.data.attributes.h1}</h1>
 				{/* PRICING */}
 				<Pricing />
-				<div className='button'>
-					<a className='primary-btn btn' href='/bookingterms'>
-						Book Now
-					</a>
-				</div>
 
-				{/*AMMENITIES*/}
+				{/* AMMENITIES
 				<div className='price-ammenities'>
 					<div className='title'>
-						<h2 className='heading2'>{data.data.attributes.h2}</h2>
+						<h1 className='h1'>{data.data.attributes.h2}</h1>
 					</div>
 					<div className='rlist'>
 						<div className='rdiv1'>
@@ -106,6 +101,12 @@ export default function Rates() {
 						<p>{data.data.attributes.content4}</p>
 						<p>{data.data.attributes.content5}</p>
 					</div>
+				</div> */}
+
+				<div className='button'>
+					<a className='primary-btn btn' href='/bookingterms'>
+						Book Your Stay
+					</a>
 				</div>
 			</div>
 		</div>

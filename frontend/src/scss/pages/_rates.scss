@@ -1,88 +1,76 @@
 @use '../assets' as a;
 
-.rate-title {
-	font-weight: 200;
-	text-align: center;
-	margin: 3rem 0 1rem 0;
-}
-
-.price-ammenities {
-	color: a.$off-white;
-	background-color: a.$green;
-	padding-bottom: 2rem;
-
-	.title {
-		background-color: a.$almost-black;
-		color: a.$off-white;
-		padding: 2rem 0 2rem 1.6rem;
-		margin-bottom: 4rem;
-
-		h2 {
-			margin-left: 1.6rem;
-		}
-	}
-
-	.rlist {
-		.rdiv1,
-		.rdiv2 {
-			div {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: nowrap;
-				margin-left: 4rem;
-				margin-bottom: 1.6rem;
-				align-items: center;
-
-				svg {
-					fill: a.$off-white;
-					width: 5rem;
-				}
-
-				p {
-					margin-left: 4rem;
-				}
-			}
-		}
-	}
-
-	.ammen-bonus {
-		margin: 2rem 1.6rem;
-		padding-top: 2rem;
-
-		p:first-of-type {
-			margin-bottom: 2rem;
-		}
-	}
-}
-
-.mountains {
+.mountain-bg {
 	background-image: linear-gradient(
 			rgba(255, 255, 255, 0.2),
 			rgba(255, 255, 255, 0.2)
 		),
-		url('../../img/rates-bg-test.jpg');
+		url('../../img/rates-bg-lg.jpg');
 	padding-bottom: 6rem;
-	padding-top: 3rem;
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: cover;
-
-	.button {
-		margin-bottom: 3rem;
-	}
 }
 
-@media screen and (min-width: 430px) {
-	.mountains {
-		background-image: linear-gradient(
-				rgba(255, 255, 255, 0.2),
-				rgba(255, 255, 255, 0.2)
-			),
-			url('../../img/rates-bg-md.jpg');
-		background-size: cover;
+.rates-page {
+	padding: 8rem 1.6rem 1rem;
+
+	.h1 {
+		text-align: center;
+		padding: 4rem 0rem 1rem;
+		border-radius: 0.8rem 0.8rem 0 0;
+		background-color: a.$almost-black;
+		max-width: 92rem;
+		margin: 0 auto;
+	}
+
+	.price-ammenities {
+		max-width: 92rem;
+		margin: 0 auto;
+		border-radius: 0.8rem;
+		background-color: a.$almost-black;
+		padding-bottom: 2rem;
+		margin-top: 8rem;
+
+		.title {
+			color: a.$off-white;
+			padding: 2rem 1.6rem;
+			text-align: center;
+		}
+
+		.rlist {
+			.rdiv1,
+			.rdiv2 {
+				div {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					margin-left: 4rem;
+					margin-bottom: 1.6rem;
+					align-items: center;
+
+					svg {
+						fill: a.$off-white;
+						width: 5rem;
+					}
+
+					p {
+						margin-left: 4rem;
+					}
+				}
+			}
+		}
+
+		.ammen-bonus {
+			margin: 2rem 1.6rem;
+			padding-top: 2rem;
+
+			p:first-of-type {
+				margin-bottom: 2rem;
+			}
+		}
 	}
 }
-
 @media screen and (min-width: 860px) {
 	.rlist {
 		display: flex;
@@ -104,13 +92,5 @@
 	.rlist {
 		max-width: 75rem;
 		margin: 2rem auto;
-	}
-
-	.mountains {
-		background-image: linear-gradient(
-				rgba(255, 255, 255, 0.2),
-				rgba(255, 255, 255, 0.2)
-			),
-			url('../../img/rates-bg-lg.jpg');
 	}
 }

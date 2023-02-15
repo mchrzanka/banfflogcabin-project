@@ -1,73 +1,50 @@
 @use '../assets' as a;
 
 .pricing {
-    background-color: a.$almost-black;
-    color: a.$off-white;
-    border-radius: 12px;
-    margin: 2rem;
-    	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	background-color: a.$almost-black;
+	color: a.$off-white;
+	border-radius: 0rem 0rem 0.8rem 0.8rem;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+		rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
 	.block {
-		padding: 1rem;
+		padding: 2rem;
 		text-align: center;
 		border-bottom: 2px solid rgb(92, 92, 92);
 	}
 
-    .extra {
-    		text-align: left;
-		border-bottom: 1px solid a.$almost-black;
-		border-radius: 12px;
-		padding: 2rem 1.6rem 1rem 1.6rem;
-    
-    		p {
+	.extra {
+		padding: 1rem 1.6rem 0rem;
+		p {
 			padding-bottom: 1rem;
 			font-size: 14px;
-			line-height: 2.4rem;
 		}
+	}
 
-        .ex-p {
-            margin-bottom: 2rem;
-        }
+	@media screen and (min-width: 860px) {
+		max-width: 92rem;
+		margin: 0 auto;
 
-        border-bottom: 1px solid a.$almost-black;
-        border-radius: 12px;
-    }
-
-
-    @media screen and (min-width: 430px) {
-        margin: 4rem;
-
-    }
-
-    @media screen and (min-width: 860px) {
-        max-width: 92rem;
-        margin: 4rem auto;
-
-        .block {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 4rem 3rem;
-
+		.block {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 4rem 3rem;
 
 			p {
 				font-size: 1.8rem;
 			}
 
-            .season,
-            .date,
-            .price {
-               width: 20rem;
-                text-align: left;
-            }
-        }
-
+			.season,
+			.date,
+			.price {
+				width: 20rem;
+				text-align: left;
+			}
+		}
 
 		.extra {
 			padding: 2rem;
 		}
-
-    }
-
+	}
 }
