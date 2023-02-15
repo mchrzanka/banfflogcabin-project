@@ -18,21 +18,16 @@ body img {
 	aspect-ratio: attr(width) / attr(height);
 }
 
-.heading1,
+.h1,
 .quote,
-h1,
-.h1-style {
-	font-family: f.$allura;
+h1 {
+	font-family: f.$highsummit;
 	font-size: 6.4rem;
 }
 
-.h1-style {
-	color: c.$off-white;
-}
-
-.heading2,
+.h2,
 h2 {
-	font-family: f.$allura;
+	font-family: f.$highsummit;
 	font-size: 4rem;
 	font-weight: normal;
 }
@@ -44,8 +39,7 @@ label,
 input,
 textarea,
 .reviewer {
-	font-size: 2rem;
-	line-height: 4rem;
+	font-size: 1.6rem;
 	font-family: f.$poppins;
 	font-weight: 300;
 }
@@ -61,44 +55,9 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-
-	.heading1,
-	.quote,
-	h1,
-	.h1-style {
-		font-family: HighSummit;
-	}
-
-	.heading2,
-	h2 {
-		font-family: HighSummit;
-	}
 }
 
 @media screen and (min-width: 2000px) {
-
-	.heading1,
-	.quote,
-	h1,
-	.h1-style {
-		font-size: 9.8rem;
-	}
-
-	.heading2,
-	h2 {
-		font-size: 6.4rem;
-	}
-
-	a,
-	p,
-	.content,
-	label,
-	input,
-	textarea,
-	.reviewer {
-		font-size: 2.1rem;
-		line-height: 4rem;
-	}
 }
 
 // @ 1400px:

@@ -1,16 +1,16 @@
 @use '../assets' as a;
 .form {
-    background-color: a.$green;
-    color: #fcfbfc;
-    padding: 2rem 1.6rem 4rem 1.6rem;
+	background-color: a.$green;
+	color: a.$off-white;
 }
 .first,
 .email,
-.message, .phone {
+.message,
+.phone {
 	display: flex;
 	flex-wrap: wrap;
 	label {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		font-weight: 300;
 	}
 	input,
@@ -19,9 +19,14 @@
 		border-radius: 0.8rem;
 		border: none;
 		padding: 1rem 0.5rem;
+		outline: none;
 		margin-bottom: 2rem;
 		font-family: a.$poppins;
 		font-size: 1.6rem;
+	}
+
+	textarea {
+		min-height: 15rem;
 	}
 
 	input::placeholder,
@@ -31,17 +36,5 @@
 	}
 }
 
-@media only screen and (min-width: 820px) {
-    .message {
-        textarea {
-            min-height: 25rem;
-            font-size: 1.8rem;
-        }
-    }
-    .booking-form {
-        input {
-            font-size: 1.8rem;
-        }
-    }
+@media only screen and (min-width: 768px) {
 }
-
