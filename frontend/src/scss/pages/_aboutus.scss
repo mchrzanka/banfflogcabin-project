@@ -7,26 +7,21 @@
 		position: relative;
 		color: a.$off-white;
 		margin-top: -2rem;
-		padding: 4rem 0;
-	}
-	.heading-content .content {
-		text-align: start;
+		padding: 6rem 0;
 	}
 
 	.banner-desktop {
 		display: none;
 	}
 
-	.heading2 {
-		width: 100%;
-		padding: 2rem 2rem 1.5rem;
+	.h2 {
+		padding: 4rem 1.6rem 1rem;
 	}
 
 	.content {
-		margin-bottom: 1.5rem;
+		margin-bottom: 2rem;
 		line-height: 3.2rem;
-		margin-left: 2rem;
-		margin-right: 2rem;
+		padding: 0rem 1.6rem;
 	}
 
 	.quote {
@@ -37,6 +32,7 @@
 		font-family: a.$poppins;
 		font-weight: 300;
 		line-height: 4rem;
+		text-align: center;
 	}
 
 	.flex-con {
@@ -47,36 +43,31 @@
 	.history-desktop {
 		display: none;
 	}
+
 	.history-heading-content {
 		background-color: #626e60;
 		text-align: center;
 		position: relative;
 		color: a.$off-white;
-		margin-top: -2rem;
-		padding: 4rem 0;
-	}
-}
+		padding: 6rem 0;
 
-@media only screen and (min-width: 480px) {
-	.about-us {
-		img {
-			width: 100%;
+		.content {
+			margin-bottom: 0rem;
 		}
 	}
 }
 
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 768px) {
 	.about-us {
 		.banner-desktop {
 			display: block;
 			overflow: hidden;
-			img {
-				margin-top: -2rem;
-			}
 		}
+
 		.banner-about {
 			display: flex;
-			height: 36rem;
+			height: 40rem;
+
 			.banner-desktop {
 				width: 60%;
 			}
@@ -91,22 +82,16 @@
 		}
 
 		.heading-content {
-			color: #fcfbfc;
 			margin: 0 auto;
-			font-size: 9.8rem;
-			width: 65rem;
-		}
+			text-align: left;
 
-		.heading2 {
-			font-size: 6.1rem;
+			.h1 {
+				padding: 0rem 1.6rem;
+			}
 		}
 
 		.content {
 			font-size: 1.8rem;
-		}
-
-		.content1 {
-			width: 40%;
 		}
 
 		.history-mobile {
@@ -125,23 +110,20 @@
 			position: relative;
 			width: 55%;
 			margin: 0 auto;
+
 			img {
-				width: 100%;
-				position: absolute;
-				height: 45rem;
-				margin-top: -5rem;
+				height: 50rem;
 				object-fit: cover;
 			}
 		}
 		.history-heading-content {
 			width: 45%;
-			height: 40rem;
-			margin-top: 0;
-			padding-top: 7rem;
-
-			.content {
-				text-align: start;
-			}
+			height: 50rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: left;
+			padding: 8rem;
 		}
 	}
 
@@ -163,8 +145,8 @@
 
 @media only screen and (min-width: 1100px) {
 	.about-us .flex-con {
-		padding: 8rem 0;
-		max-width: 180rem;
+		padding: 10rem 0;
+		max-width: 140rem;
 		margin: 0 auto;
 		display: flex;
 		flex-wrap: nowrap;
@@ -194,18 +176,6 @@
 			}
 			.heading-content .heading1 {
 				font-size: 9.8rem;
-			}
-		}
-	}
-	.history-banner {
-		.history-heading-content {
-			padding: 7rem 5rem;
-
-			.heading1 {
-				text-align: start;
-			}
-			.content {
-				text-align: start;
 			}
 		}
 	}
