@@ -68,6 +68,17 @@ a {
 	h2 {
 		font-size: 6.4rem;
 	}
+
+	a,
+	p,
+	.content,
+	label,
+	input,
+	textarea,
+	.reviewer {
+		font-size: 1.8rem;
+		line-height: 4rem;
+	}
 }
 
 @media screen and (min-width: 2000px) {
