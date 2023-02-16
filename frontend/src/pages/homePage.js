@@ -26,11 +26,9 @@ export default function HomePage() {
 			<div className='home-page'>
 				<div className=' heading1 h1 '>
 					{data.data.attributes.h1}{' '}
-					<div className='main'>
-						<a className='primary-btn btn ' href='/bookingterms'>
-							Book Now
-						</a>
-					</div>
+					<a className='home-primary-btn btn' href='/bookingterms'>
+						Book Cabin
+					</a>
 				</div>
 				<picture className='banner-img'>
 					<source media='(min-width:420px)' srcSet={homeBannerLG} />

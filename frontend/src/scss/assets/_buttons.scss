@@ -21,17 +21,20 @@
 	font-size: 2.4rem;
 }
 
-.main {
-	width: 100%;
-	text-align: center;
-	padding: 2rem 1.6rem;
+.home-primary-btn {
+	//display: inline;
+	font-size: 2rem;
 	position: absolute;
-
-	.primary-btn {
-		display: inline;
-		padding: 2rem 10rem;
-		font-size: 2.4rem;
-	}
+	width: 40rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto -3rem;
+	background-color: c.$brown;
+	color: c.$almost-black;
+	display: block;
+	transition: 0.3s;
+	border: none;
 }
 
 .primary-btn {
@@ -42,7 +45,8 @@
 	border: none;
 }
 
-.primary-btn:hover {
+.primary-btn:hover,
+.home-primary-btn:hover {
 	background-color: c.$brown-hover;
 	transition: 0.3s;
 }
