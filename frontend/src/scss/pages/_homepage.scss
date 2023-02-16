@@ -31,31 +31,32 @@
 		margin-bottom: 2rem;
 	}
 
-	.ourcabin-ban,
-	.ammenities-ban {
-		background-color: a.$almost-black;
-		padding: 2rem 0 2rem 1.6rem;
-		color: a.$off-white;
-		// line-height: auto;
+	.button {
+		padding: 0 1.6rem;
+	}
 
-		.heading2 {
+	.ourcabin-header,
+	.ammenities-header {
+		background-color: a.$almost-black;
+		padding: 2rem 1.6rem;
+		color: a.$off-white;
+
+		.h2 {
 			max-width: 70rem;
 			margin: 0 auto;
 		}
 	}
 
-	.flex-content {
-		padding-bottom: 4rem;
-	}
-
 	.cabin-content {
 		background-color: a.$green;
 		color: a.$off-white;
-		padding-bottom: 4rem;
+		padding-bottom: 6rem;
 
 		.content {
-			padding: 6rem 1.6rem;
+			padding: 4rem 1.6rem 6rem;
 			max-width: 70rem;
+			margin: 0 auto;
+			line-height: 3.2rem;
 		}
 	}
 
@@ -64,18 +65,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		width: 100%;
-		height: 30rem;
-	}
-
-	.elk {
-		background-image: url('../../img/ammenities-elk.jpg');
-		width: 100%;
-		height: 30rem;
-		background-size: cover;
-		background-position: center;
-		background-size: 100%;
-		background-repeat: no-repeat;
+		height: 40rem;
 	}
 
 	.ammenities {
@@ -83,7 +73,7 @@
 		background-color: a.$green;
 
 		.list {
-			padding: 4rem 1.6rem 0 1.6rem;
+			padding: 4rem 1.6rem;
 			max-width: 80rem;
 			margin: 0 auto;
 
@@ -99,6 +89,7 @@
 
 				svg {
 					fill: a.$off-white;
+					height: 5rem;
 					width: 5rem;
 				}
 
@@ -106,10 +97,14 @@
 					margin-left: 4rem;
 				}
 			}
+		}
 
-			.elk {
-				margin-top: 8rem;
-			}
+		.elk {
+			background-image: url('../../img/ammenities-elk.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 40rem;
 		}
 
 		.reviews {

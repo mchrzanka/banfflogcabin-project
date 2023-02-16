@@ -44,16 +44,14 @@ export default function HomePage() {
 					<div className='desktop'>
 						<div className='cabin-flex'>
 							<div className='cabin1'>
-								<div className='ourcabin-ban'>
-									<div className='heading2'>{data.data.attributes.h22}</div>
+								<div className='ourcabin-header'>
+									<div className='h2'>{data.data.attributes.h22}</div>
 								</div>
 								<div className='cabin-content'>
-									<div className='content container '>
-										{data.data.attributes.content2}
-									</div>
+									<div className='content'>{data.data.attributes.content2}</div>
 									<div className='button'>
 										<a className='primary-btn btn' href='/ourcabin'>
-											Our Cabin
+											Explore The Cabin
 										</a>
 									</div>
 								</div>
@@ -64,8 +62,8 @@ export default function HomePage() {
 						<div className='ammenities'>
 							<div className='flex'>
 								<div className='flex-content'>
-									<div className='ammenities-ban'>
-										<div className='heading2'>Ammenities</div>
+									<div className='ammenities-header'>
+										<div className='h2'>Ammenities</div>
 									</div>
 									<div className='list'>
 										<div className='div1'>
