@@ -1,30 +1,29 @@
 @use '../assets' as a;
 
 .home-page {
-	.heading1 {
+	.h1 {
 		background-color: a.$green;
 		padding: 6rem 1.6rem;
 		text-align: center;
-		margin-top: -0.5rem;
 		color: a.$off-white;
 		position: relative;
 	}
 
 	.banner-img {
+		background: url('../../img/banner-home-lg.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 		height: 40rem;
-
-		img {
-			height: 40rem;
-			object-fit: cover;
-		}
+		max-width: 200rem;
 	}
 
 	.container.top-content {
-		padding-bottom: 8rem;
-		max-width: 110rem;
+		padding: 8rem 1.6rem;
+		max-width: 100rem;
 
-		.heading2 {
-			padding: 6rem 0 1rem 0;
+		.content {
+			line-height: 3.2rem;
 		}
 	}
 
@@ -132,8 +131,7 @@
 	}
 
 	@media screen and (min-width: 768px) {
-		.heading1 {
-			padding: 10rem 0;
+		.h1 {
 			font-size: 8rem;
 		}
 
@@ -171,16 +169,12 @@
 			margin-top: 12rem;
 		}
 
-		.heading1 {
+		.h1 {
 			font-size: 10rem;
 		}
 
 		.banner-img {
 			height: 90rem;
-
-			img {
-				height: 90rem;
-			}
 		}
 
 		.container.top-content {
@@ -273,6 +267,11 @@
 	}
 
 	@media screen and (min-width: 1200px) {
+		.h1 {
+			font-size: 12rem;
+			padding: 10rem 0rem;
+		}
+
 		.desktop {
 			max-width: 150rem;
 		}

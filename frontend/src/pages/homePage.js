@@ -24,21 +24,13 @@ export default function HomePage() {
 	return (
 		<div>
 			<div className='home-page'>
-				<div className=' heading1 h1 '>
+				<div className='h1 '>
 					{data.data.attributes.h1}{' '}
 					<a className='home-primary-btn btn' href='/bookingterms'>
 						Book Cabin
 					</a>
 				</div>
-				<picture className='banner-img'>
-					<source media='(min-width:420px)' srcSet={homeBannerLG} />
-					<img
-						src={homeBannerSM}
-						alt='Banff Log Cabin with mountain background'
-						width='1494'
-						height='871'
-					/>
-				</picture>
+				<div className='banner-img'></div>
 				<div className='container top-content'>
 					<div className='h2'>{data.data.attributes.h21}</div>
 					<div className='content trip_advisor'>
