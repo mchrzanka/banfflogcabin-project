@@ -72,6 +72,10 @@
 		color: a.$off-white;
 		background-color: a.$green;
 
+		.flex-content {
+			padding-bottom: 6rem;
+		}
+
 		.list {
 			padding: 4rem 1.6rem;
 			max-width: 80rem;
@@ -106,9 +110,13 @@
 			background-repeat: no-repeat;
 			height: 40rem;
 		}
+	}
 
-		.reviews {
-			background-color: a.$grey;
+	.reviews {
+		.h2 {
+			color: a.$almost-black;
+			text-align: center;
+			padding: 6rem 1.6rem;
 		}
 	}
 
@@ -132,63 +140,25 @@
 
 		.list {
 			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
 			justify-content: space-around;
-			align-items: center;
-			margin-bottom: 2rem;
-
-			.div1,
-			.div2 {
-				margin: 2rem;
-				padding-bottom: 2rem;
-				display: flex;
-				flex-direction: column;
-
-				p {
-					margin: 0;
-					margin-top: 1rem;
-					margin-left: 2rem;
-				}
-
-				div {
-					margin: 0;
-					margin-bottom: 2rem;
-				}
-			}
 		}
 	}
 
 	@media screen and (min-width: 1000px) {
-		.spacer-home {
-			margin-top: 12rem;
-		}
-
-		.h1 {
-			font-size: 10rem;
-		}
-
 		.banner-img {
 			height: 90rem;
 		}
 
 		.container.top-content {
-			margin-bottom: 4rem;
-
-			.heading2 {
-				margin-top: 4rem;
-			}
+			margin: 4rem auto;
 		}
 
-		.desktop {
-			// width: 101rem;
+		.cabin-ammenities {
 			margin: 0 auto;
 		}
 
 		.cabin-flex {
 			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
 
 			.cabin1 {
 				width: 50%;
@@ -200,8 +170,7 @@
 
 			.cabin2 {
 				width: 50%;
-				height: 67.8rem;
-				background-size: 102rem;
+				height: 65rem;
 			}
 		}
 
@@ -216,16 +185,15 @@
 		.flex {
 			display: flex;
 			flex-direction: row-reverse;
-			flex-wrap: nowrap;
 
 			.flex-content {
 				width: 50%;
+				padding-bottom: 0rem;
 			}
 
 			.elk {
-				height: 70.5rem;
+				height: 65rem;
 				width: 50%;
-				background-size: 80rem;
 			}
 
 			.list {
@@ -267,17 +235,12 @@
 			padding: 10rem 0rem;
 		}
 
-		.desktop {
+		.cabin-ammenities {
 			max-width: 150rem;
 		}
 
-		.flex .elk {
-			background-size: 101rem;
+		.reviews {
+			padding: 10rem 0rem;
 		}
 	}
-}
-
-.h2-back {
-	background-color: a.$almost-black;
-	padding: 2rem 0 2rem 1.6rem;
 }

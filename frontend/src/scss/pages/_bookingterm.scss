@@ -3,15 +3,12 @@
 .booking-term {
 	background-color: a.$off-white;
 
-
-
-
 	.content-con {
 		max-width: 70rem;
 		margin: 0 auto;
 	}
 
-	.heading1 {
+	.h1 {
 		text-align: center;
 		padding-top: 4rem;
 	}
@@ -28,7 +25,7 @@
 		padding: 2rem 0;
 	}
 
-	.heading2 {
+	.h2 {
 		text-align: center;
 	}
 
@@ -50,11 +47,11 @@
 @media only screen and (min-width: 820px) {
 	.booking-term {
 		.booking {
-			padding-top: .82rem;
-			padding-bottom: .75rem;
+			padding-top: 0.82rem;
+			padding-bottom: 0.75rem;
 		}
 
-		.heading1 {
+		.h1 {
 			font-size: 9.8rem;
 		}
 
@@ -68,7 +65,7 @@
 			margin: 0 auto;
 		}
 
-		.heading2 {
+		.h2 {
 			font-size: 6.2rem;
 		}
 

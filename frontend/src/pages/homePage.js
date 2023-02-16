@@ -41,7 +41,7 @@ export default function HomePage() {
 
 				<div>
 					{/* OUR CABIN STUFF */}
-					<div className='desktop'>
+					<div className='cabin-ammenities'>
 						<div className='cabin-flex'>
 							<div className='cabin1'>
 								<div className='ourcabin-header'>
@@ -194,19 +194,18 @@ export default function HomePage() {
 						</div>
 					</div>
 				</div>
-				<div className='spacer-home'>
-					<div className='h2-back'>
-						<h2 className='container'>Reviews</h2>
+				<div className='reviews'>
+					<div>
+						<h2 className='h2'>What People are Saying</h2>
 					</div>
-					<div className='reviews'>
-						<Reviews />
-					</div>
-					<div className='awards-bg'>
-						<div className='awards'>
-							<img src={tripadvisor} alt='Tripadvisor Logo' />
-							<img src={awardsbadge} alt='The best log cabin retreat award' />
-							<img src={roadTripAlberta} alt='Road trip alberta badge' />
-						</div>
+
+					<Reviews />
+				</div>
+				<div className='awards-bg'>
+					<div className='awards'>
+						<img src={tripadvisor} alt='Tripadvisor Logo' />
+						<img src={awardsbadge} alt='The best log cabin retreat award' />
+						<img src={roadTripAlberta} alt='Road trip alberta badge' />
 					</div>
 				</div>
 			</div>

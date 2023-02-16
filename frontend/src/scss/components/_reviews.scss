@@ -1,8 +1,20 @@
 @use '../assets' as a;
 
-.reviews {
+.single-review {
+	padding: 0rem 1.6rem 6rem;
+	max-width: 50rem;
+
 	.content {
-		padding: 6rem 2.5rem;
+		padding: 2rem 2.5rem;
+
+		.stars {
+			display: flex;
+			height: 2rem;
+			margin-bottom: 1rem;
+			justify-content: space-around;
+			width: 12rem;
+			fill: a.$green;
+		}
 	}
 
 	.reviewer {
@@ -10,17 +22,9 @@
 		text-align: right;
 	}
 }
-
-.flex-800 {
-	@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
+	.review-flex {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		padding: 5rem 0;
-		justify-content: space-between;
-
-		.reviews {
-			max-width: 40rem;
-		}
+		justify-content: center;
 	}
 }
