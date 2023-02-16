@@ -14,41 +14,29 @@
 	}
 
 	.content {
-		font-weight: 300;
-		line-height: 24px;
-		margin: 1.5rem;
+		line-height: 3.2rem;
+		margin: 1rem 1.6rem;
 	}
 
 	.policy {
 		background-color: a.$grey;
 		margin-top: 2rem;
-		padding: 2rem 0;
+		padding: 4rem 0;
 	}
 
 	.h2 {
 		text-align: center;
 	}
 
-	.wide-btn {
-		background-color: #c09f80;
-		color: #2f2f2f;
-		display: block;
-		transition: 0.3s;
-		margin-top: 2rem;
-		margin-bottom: 2rem;
-		font-family: Poppins;
-		font-size: 1.8rem;
-		padding: 2rem;
-		border-radius: 8px;
-		width: 100%;
+	.button {
+		padding: 2rem 1.6rem 4rem;
 	}
 }
 
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 768px) {
 	.booking-term {
 		.booking {
-			padding-top: 0.82rem;
-			padding-bottom: 0.75rem;
+			padding-top: 4rem;
 		}
 
 		.h1 {

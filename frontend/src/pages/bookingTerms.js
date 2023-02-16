@@ -30,12 +30,10 @@ export default function BookingTerms() {
 				</div>
 			</div>
 
-			<div className='booking-button'>
-				<div className='button'>
-					<a className='primary-btn btn' href='/booking'>
-						Continue To Booking
-					</a>
-				</div>
+			<div className='button'>
+				<a className='primary-btn btn' href='/booking'>
+					Continue To Booking
+				</a>
 			</div>
 
 			<div className='policy'>
