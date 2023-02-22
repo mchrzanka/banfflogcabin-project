@@ -2,7 +2,6 @@ b# Banff Log Cabin Project!
 
 ## Hi welcome to the repo!
 
-There are two folders:
 
 </br>
 
@@ -42,8 +41,5 @@ npm run start
 
 </br>
 
-### **strapi**
-
-> > Try to avoid this folder unless you've been tasked into it. For best measures, try not to touch it.
 
 
