@@ -1,4 +1,4 @@
-b# Banff Log Cabin Project!
+Banff Log Cabin Project - initially hosted frontend on vercel, strapi cms backend on digital ocean. Moved backend to render.
 
 ## Hi welcome to the repo!
 
