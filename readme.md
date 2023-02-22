@@ -15,8 +15,6 @@ b# Banff Log Cabin Project!
 
 > > Please follow the naming conventions. Try and make the files all named the same way (hooks start with "use", components are always capitalized, stylesheets are "whatTheStyleIsFor.scss" etc.)</br>
 
-> > In each component, there are the .js files and the .scss files. Please look into navbar for an example.
-
 > > The css folder holds the reset and the global scss.
 
 **Commands:**
