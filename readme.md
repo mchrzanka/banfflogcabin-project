@@ -44,14 +44,6 @@ npm run start
 
 ### **strapi**
 
-> > Try to avoid this folder unless you've been tasked into it. For best measures, try not to touch it lol.
+> > Try to avoid this folder unless you've been tasked into it. For best measures, try not to touch it.
 
-</br>
-</br>
-</br>
 
-## To practice pushes and branching, please write your name below, make a branch, and push it up. Do not push it into main, it will fail. If you're not sure how this works, there's lots of youtube videos. Thanks :)
-
-- Maya
-
-pee pee - The Moth Queen
